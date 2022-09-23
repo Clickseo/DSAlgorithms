@@ -5,7 +5,7 @@
 #define arrMAXSIZE 15
 
 void	selectionSort(int* pArr, int num);	// 선택 정렬
-// void	bubbleSort(int* pArr, int num);	// 버블 정렬
+// void	bubbleSort(int* pArr, int num);		// 버블 정렬
 // void	insertionSort(int* pArr, int num);	// 삽입 정렬
 // void	shellSort(int* pArr, int num);		// 쉘 정렬
 // void	intervalSort(int* pArr, int num, int start, int interval);
