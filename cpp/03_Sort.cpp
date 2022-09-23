@@ -1,13 +1,21 @@
+/*	
+	정렬: 알고리즘 구현
+
+	1) 기초적인 정렬 알고리즘: 선택.버블.삽입. 쉘 정렬
+	2) 고급 정렬 알고리즘: 퀵.병합 정렬
+	3) 특수 정렬 알고리즘: 계수.기수.버킷 정렬
+*/
+
 #include <iostream>
 #include <random>       // C++ 11에서 추가
 using namespace std;    // C++11 이전 방법: C 스타일 난수 생성(srand와 rand 함수)
 
 #define arrMAXSIZE 15
 
-void	selectionSort(int* pArr, int num);    // 선택 정렬
-# void	bubbleSort(int* pArr, int num);     // 버블 정렬
+void	selectionSort(int* pArr, int num);	// 선택 정렬
+# void	bubbleSort(int* pArr, int num);		// 버블 정렬
 # void	insertionSort(int* pArr, int num);	// 삽입 정렬
-# void	shellSort(int* pArr, int num);      // 쉘 정렬
+# void	shellSort(int* pArr, int num);		// 쉘 정렬
 # void	intervalSort(int* pArr, int num, int start, int interval);
 
 void	SWAP(int* pa, int* pb);
