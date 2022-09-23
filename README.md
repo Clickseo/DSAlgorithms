@@ -1,2 +1,2 @@
 # DSAlgorithms
-DSAlgorithms
+Data Structures and Algorithms
