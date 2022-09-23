@@ -10,7 +10,7 @@
 // clock 함수: 프로그램에 의해 프로세서가 소비된 시간을 반환하는 함수
 // CLOCKS_PER_SEC: 초당 clock ticks의 수를 나타낸 매크로 상수(시스템에 따라 기본값이 다름)
 
-int  Fibo(int  num);
+int  Fibo(int num);
 
 int main(void)
 {
@@ -39,7 +39,7 @@ int main(void)
 }
 
 // 재귀적 용법: 피보나치 수열
-int  Fibo(int  num) {
+int  Fibo(int num) {
 	// 재귀 호출: 탈출 조건
 	if(num == 1 || num == 2)
 		return 1;
@@ -47,7 +47,7 @@ int  Fibo(int  num) {
 }
 
 /* 비재귀적 용법: 피보나치 수열
-int  Fibo(int  num) {
+int  Fibo(int num) {
 	if (num == 0 || num == 1)
 		return 1;
 
