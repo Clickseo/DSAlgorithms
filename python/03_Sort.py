@@ -19,6 +19,12 @@ def selectionSort(S):
 # def  shellSort(S):
 # def  intervalSort(S, start, interval):
 
+# 퀵 정렬: 오름차순
+# def  quickSort(S, first:int, last:int):
+
+# 병합 정렬: 오름차순
+# def  mergeSort(S, first:int, last:int):
+
 if __name__ == '__main__' :
     sList = []
     while len(sList)<=15 :
@@ -31,5 +37,7 @@ if __name__ == '__main__' :
     # bubbleSort(sList)
     # insertionSort(sList)
     # shellSort(sList)
+    # quickSort(sList, 0, len(sList)-1)
+    # mergeSort(sList, 0, len(sList)-1)
 
     print(f'정렬 후: {sList}')
