@@ -8,14 +8,14 @@
 import time
 
 # 피보나치수열: 재귀적 용법
-def Fibo(num) :
+def Fibo(num:int) -> int:
     if num==1 or num==2 :
         return 1
     return Fibo(num-1) + Fibo(num-2)
 
 # 피보나치수열: 비재귀적 용법
 '''
-def Fibo(num) :
+def Fibo(num:int) -> int:
     if num==1 or num==2 :
         return 1
     first, second = 1, 1
