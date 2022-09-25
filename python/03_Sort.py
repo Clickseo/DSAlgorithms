@@ -52,5 +52,5 @@ if __name__ == '__main__' :
     # shellSort(sList)
     # quickSort(sList, 0, len(sList)-1)
     # mergeSort(sList, 0, len(sList)-1)
-
+    # countingSort(sList)
     print(f'정렬 후: {sList}')
