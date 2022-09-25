@@ -1,7 +1,15 @@
+'''
+    * 정렬: 알고리즘 구현
+    
+    1) 기초적인 정렬 알고리즘: 선택.버블.삽입.쉘 정렬
+    2) 고급 정렬 알고리즘: 퀵.병합 정렬
+    3) 특수 정렬 알고리즘: 계수.기수.버킷 정렬
+'''
+
 import random
 
 # 선택 정렬: 오름차순
-def selectionSort(S):
+def selectionSort(S) -> None:
     for i in range(len(S)) :
         smIndex = i;
         for j in range(i, len(S)) :
@@ -10,20 +18,25 @@ def selectionSort(S):
         S[smIndex], S[i] = S[i], S[smIndex]
 
 # 버블 정렬: 오름차순
-# def bubbleSort(S):
+# def bubbleSort(S) -> None:
 
 # 삽입 정렬: 오름차순
-# def insertionSort(S):
+# def insertionSort(S) -> None:
 
 # 쉘 정렬: 오름차순
-# def  shellSort(S):
-# def  intervalSort(S, start, interval):
+# def  shellSort(S) -> None:
+# def  intervalSort(S, start:int , interval:int ) -> None:
 
+# 2) 고급 정렬 알고리즘: 퀵.병합 정렬
 # 퀵 정렬: 오름차순
-# def  quickSort(S, first:int, last:int):
+# def  quickSort(S, first:int, last:int) -> None:
 
 # 병합 정렬: 오름차순
-# def  mergeSort(S, first:int, last:int):
+# def  mergeSort(S, first:int, last:int) -> None:
+
+# 3) 특수 정렬 알고리즘: 계수.기수.버킷 정렬
+# 계수 정렬: 오름차순
+# def countingSort(S) -> None:
 
 if __name__ == '__main__' :
     sList = []
