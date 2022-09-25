@@ -38,7 +38,7 @@ int main(void)
 	return 0;
 }
 
-// 재귀적 용법: 피보나치 수열
+// 피보나치 수열: 재귀적 용법
 int  Fibo(int num) {
 	// 재귀 호출: 탈출 조건
 	if(num == 1 || num == 2)
@@ -46,7 +46,7 @@ int  Fibo(int num) {
 	return Fibo(num - 1) + Fibo(num - 2);
 }
 
-/* 비재귀적 용법: 피보나치 수열
+/* 피보나치 수열: 비재귀적 용법(동적 프로그래밍: 변수)
 int  Fibo(int num) {
 	if (num == 0 || num == 1)
 		return 1;
