@@ -59,7 +59,7 @@ int main(void)
 }
 
 // 선택 정렬: 오름차순
-void   selectionSort(int* pArr, int  num) {
+void   selectionSort(int* pArr, int num) {
 	int* pSm;
 	for (int i = 0; i < num; i++) {
 		pSm = pArr + i;
@@ -81,7 +81,7 @@ void  SWAP(int* pa, int* pb) {
 	return;
 }
 
-void  PRINT(int* pArr, int  num) {
+void  PRINT(int* pArr, int num) {
 	for (int i = 0; i < num; i++) {
 		cout.width(3);
 		cout << *(pArr + i);
