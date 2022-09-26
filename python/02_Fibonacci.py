@@ -13,17 +13,6 @@ def Fibo(num:int) -> int:
         return 1
     return Fibo(num-1) + Fibo(num-2)
 
-# 피보나치수열: 비재귀적 용법
-'''
-def Fibo(num:int) -> int:
-    if num==1 or num==2 :
-        return 1
-    first, second = 1, 1
-    for i in range(3, num+1) :
-        first, second = second, first + second
-    return second
-'''
-
 if __name__ == '__main__' :
     print('### 피보나치 수열 구하기 ###')
     num = int(input('몇 번째 수열까지 출력할까요: '))
