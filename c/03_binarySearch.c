@@ -10,7 +10,7 @@
 
 #define arrMAXSIZE 10
 
-// 이진 탐색 -- 알고리즘 구현(재귀적 용법)
+// 이진 탐색: 재귀적 용법
 int	binarySearch(int* pArr, int first, int last, int key);
 void	PRINT(int* pArr, int num);
 
@@ -33,7 +33,7 @@ int main(void)
 	return 0;
 }
 
-// 이진 탐색 -- 알고리즘 구현(재귀적 용법)
+// 이진 탐색: 재귀적 용법
 int	binarySearch(int* pArr, int first, int last, int  key) {
 	// 재귀함수의 탈출 조건
 	if (first >  last)
