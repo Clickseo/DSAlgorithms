@@ -45,19 +45,3 @@ int  Fibo(int num) {
 		return 1;
 	return Fibo(num - 1) + Fibo(num - 2);
 }
-
-/* 피보나치 수열: 비재귀적 용법(동적 프로그래밍: 변수)
-int  Fibo(int num) {
-	if (num == 0 || num == 1)
-		return 1;
-
-	int	first, second, res = 0;
-	first = second = 1;
-	for (int i = 3; i <= num; i++) {
-		res = first + second;
-		first = second;
-		second = res;
-	}
-	return res;
-}
-*/
