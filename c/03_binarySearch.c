@@ -6,35 +6,35 @@
 */
 
 #include <stdio.h>
-#include <stdbool.h>		// bool, true, false
+#include <stdbool.h>	// bool, true, false
 
 #define arrMAXSIZE 10
 
-int	binarySearch(int* pArr,  int  first,  int  last,  int  key);
+// 이진 탐색 -- 알고리즘 구현(재귀적 용법)
+int	binarySearch(int* pArr, int first, int last, int key);
 void	PRINT(int* pArr, int num);
 
 int main(void)
 {
 	int	arr[arrMAXSIZE] = { 5, 9, 13, 17, 21, 28, 37, 46, 55, 88 };
-	printf("원시 데이터: ");	PRINT(arr, arrMAXSIZE);
+	printf("원시 데이터: ");
+	PRINT(arr, arrMAXSIZE);
 
 	int	key;
 	while(true) {
 		printf("검색 데이터 입력(검색 종료: 0): ");
-		scanf_s("%d", &key);	// scanf("%d", &key);
-		if(key == 0)
-			break;
+		scanf_s("%d", &key);	// scanf("%d", &key);		
+		if(key == 0)	break;
 
 		int	index = binarySearch(arr,  0, arrMAXSIZE - 1,  key);
 		if (index == EOF)	printf("없다고!!! \n");
-		else
-     			printf("검색 데이터: %d 번째 위치 %d \n", arr[index], index + 1);
+		else	printf("검색 데이터: %d 번째 위치 %d \n", arr[index], index + 1);
 	}
 	return 0;
 }
 
-// 이진탐색: 재귀적용법
-int	binarySearch(int* pArr,  int  first,  int  last,  int  key) {
+// 이진 탐색 -- 알고리즘 구현(재귀적 용법)
+int	binarySearch(int* pArr, int first, int last, int  key) {
 	// 재귀함수의 탈출 조건
 	if (first >  last)
 		return  EOF;
