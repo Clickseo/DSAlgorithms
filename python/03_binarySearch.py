@@ -6,10 +6,14 @@
 '''
 
 # 이진 탐색 -- 알고리즘 구현(재귀적 용법)
-def	binarySearch(S, first:int, last:int, key:int) -> int:
-    mid = (first + last) // 2	# 검색 범위(first ~ last)에서 중간 원소의 위치 계산
-    if first > last :		# 재귀 함수 탈출 조건
+def binarySearch(S, first:int, last:int, key:int) -> int:
+    # 재귀 함수 탈출 조건
+    if first > last :
         return None
+
+    # 중간 원소의 위치 계산: 검색 범위(first ~ last)에서...
+    mid = (first + last) // 2
+
     if S[mid] == key : return mid
     elif S[mid] < key : index = binarySearch(S, mid + 1, last, key)
     elif S[mid] > key : index = binarySearch(S, first, mid - 1, key)
