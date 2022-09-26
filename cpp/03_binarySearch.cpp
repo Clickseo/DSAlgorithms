@@ -11,13 +11,15 @@ using namespace std;
 
 #define arrMAXSIZE 10
 
+// 이진 탐색 -- 알고리즘 구현(재귀적 용법)
 int	binarySearch(int* pArr, int  first, int  last, int  key);
 void	PRINT(int* pArr, int num);
 
 int main(void)
 {
 	int	arr[arrMAXSIZE] = { 5, 9, 13, 17, 21, 28, 37, 46, 55, 88 };
-	cout << "원시 데이터: ";	PRINT(arr, arrMAXSIZE);
+	cout << "원시 데이터: ";
+	PRINT(arr, arrMAXSIZE);
 
 	int	key;
 	while(true) {
@@ -28,13 +30,12 @@ int main(void)
 
 		int	index = binarySearch(arr, 0, arrMAXSIZE - 1, key);
 		if (index == EOF)	cout << "없다고!!!" << endl;
-		else
-			cout << "검색 데이터: " << arr[index]	<< ", 위치(index): " << index + 1 << endl;
+		else	cout << "검색 데이터: " << arr[index] << ", 위치(index): " << index + 1 << endl;
 	}
 	return 0;
 }
 
-// 이진탐색: 재귀적용법
+// 이진 탐색 -- 알고리즘 구현(재귀적 용법)
 int	binarySearch(int  *pArr,  int  first,  int  last,  int  key) {
 	// 재귀함수의 탈출 조건
 	if ( first >  last )
