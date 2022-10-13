@@ -31,5 +31,5 @@ class LinkedStack :
         print('\n STACK [', end = ' ')
         while temp :
             print(temp.data, end = ' ')
-            temp = temp.link()
+            temp = temp.link
         print(']\n')
