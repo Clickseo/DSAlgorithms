@@ -6,7 +6,7 @@ inline void error(const char* message);
 template <typename E>
 class stackNode {
 private:
-	E			        data;
+	E			data;
 	stackNode<E>*	link;
 	template <typename E> friend class LinkedStack;
 };
@@ -20,12 +20,66 @@ public:
 	~LinkedStack();
 	stackNode<E>* makeStackNode(const int& num) const;
 	void		push(const E& e);
-	E		    pop(void);
-	E		    peek(void) const;
+	E		pop(void);
+	E		peek(void) const;
 	bool		isEmpty(void) const;
 	// bool	isFull(void) const;
 	void		printStack(void) const;
 };
+
+template <typename E>
+LinkedStack<E>::LinkedStack() : top(NULL) {}
+
+template <typename E>
+LinkedStack<E>::~LinkedStack() {}
+
+template <typename E>
+stackNode<E>* LinkedStack<E>::makeStackNode(const int& num) const {
+	stackNode<E>* nNode = new stackNode<int>;
+	nNode->data = num;
+	nNode->link = NULL;
+	return nNode;
+}
+
+template <typename E>
+void	LinkedStack<E>::push(const E& e) {
+	stackNode<E>* newSNode = makeStackNode(e);
+	newSNode->link = top;
+	top = newSNode;
+}
+
+template <typename E>
+E	LinkedStack<E>::pop(void) {
+	if (isEmpty()) error("스택 공백 에러");	// throw "ERROR::STACK IS EMPTY";
+	stackNode<int>* temp = top;
+	E data = temp->data;
+	top = temp->link;
+	free(temp);
+	return  data;
+}
+
+template <typename E>
+E	LinkedStack<E>::peek(void) const {
+	if (isEmpty()) error("스택 공백 에러");	// throw "ERROR::STACK IS EMPTY";
+	return  top->data;
+}
+
+template <typename E>
+bool	LinkedStack<E>::isEmpty(void) const {
+	return top == NULL;
+}
+
+template <typename E>
+void	LinkedStack<E>::printStack(void) const {
+	stackNode<E>* temp = top;
+	cout << "\n STACK [";
+	while (temp) {
+		cout.width(3);
+		cout << temp->data;
+		temp = temp->link;
+	}
+	cout << " ]" << endl;
+}
 
 inline void error(const char* message) {
 	cout << message;
@@ -34,7 +88,7 @@ inline void error(const char* message) {
 
 int main(void)
 {
-	int			          num, choice;
+	int			num, choice;
 	LinkedStack<int>	s;
 
 	while (true) {
