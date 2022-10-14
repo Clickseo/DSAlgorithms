@@ -18,7 +18,7 @@ int main(void)
 	return 0;
 }
 
-# 재귀적 용법: 계승(Factorial) 구하기
+// 재귀적 용법: 계승(Factorial) 구하기
 int  Factorial(int num)	{
 	if(num == 0)
 		return 1;
@@ -26,7 +26,7 @@ int  Factorial(int num)	{
 }
 
 /*
-# 반복적 용법: 계승(Factorial) 구하기
+// 반복적 용법: 계승(Factorial) 구하기
 int  Factorial(int num)	{
 	int	res = 1;
 	for (int i = 1; i <= num; i++)
