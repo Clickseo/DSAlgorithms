@@ -13,7 +13,7 @@
 #if 1
 
 // 이진 탐색: 재귀적 용법
-int		binarySearch(int* pArr, int first, int last, int key);
+int	binarySearch(int* pArr, int first, int last, int key);
 void	PRINT(int* pArr, int num);
 
 int main(void)
