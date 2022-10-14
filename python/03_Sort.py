@@ -40,7 +40,6 @@ def bubbleSort(S) :
         # print(S)
 '''
 
-
 # 삽입 정렬: 오름차순
 def insertionSort(S) -> None:
     for i in range(1, len(S)) :
@@ -49,7 +48,7 @@ def insertionSort(S) -> None:
             S[j+1] = S[j]
             j-=1
         S[j+1] = temp
-        # print(S)        
+        # print(S)
 
 # 쉘 정렬: 오름차순
 def  shellSort(S) -> None:
@@ -59,7 +58,7 @@ def  shellSort(S) -> None:
         for i in range(interval) :
             intervalSort(S, i, interval)
             # print(S)
-        # print(f'interval: {interval} {S} \n')            
+        # print(f'interval: {interval} {S} \n')
 
 # 쉘 정렬에 쓰이는 삽입 정렬: interval 간격만큼 삽입 정렬
 def  intervalSort(S, start:int, interval: int) -> None:
@@ -83,8 +82,8 @@ def  quickSort(S, first:int, last:int) -> None:
             S[i], S[j] = S[j], S[i]
             i += 1
     S[i], S[last] = S[last], S[i]	# 기준 값을 가운데로
-    quickSort(S, first, i - 1)    # 왼쪽 부분 정렬
-    quickSort(S, i + 1, last)	    # 오른쪽 부분 정렬
+    quickSort(S, first, i - 1)      # 왼쪽 부분 정렬
+    quickSort(S, i + 1, last)	      # 오른쪽 부분 정렬
     
 # 병합 정렬: 오름차순
 def  mergeSort(S, first:int, last:int) -> None:
@@ -94,10 +93,10 @@ def  mergeSort(S, first:int, last:int) -> None:
 
     # 중간 원소의 위치(주소) 계산: pFirst와 pLast 범위에서...
     mid = (first + last) // 2
-    mergeSort(S, first, mid)	     # 왼쪽 부분집합 정렬
+    mergeSort(S, first, mid)	      # 왼쪽 부분집합 정렬
     mergeSort(S, mid + 1, last)	   # 오른쪽 부분집합 정렬
 
-    # 병합(merge): 정렬된 두 부분집합 병합    
+    # 병합(merge): 정렬된 두 부분집합 병합
     i, j, t = first, mid + 1, 0    # 시작 위치: 왼쪽 부분집합, 오른쪽 부분집합
     temp = [0 for i in range(len(S))]
     while i <= mid and j <= last :
