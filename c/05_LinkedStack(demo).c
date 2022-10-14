@@ -5,8 +5,8 @@
 
 int main(void)
 {
-	int				    num, choice;
-	LinkedStack*  s = stackCreate();
+	int		num, choice;
+	LinkedStack*	s = stackCreate();
 
 	while (true) {
 		system("cls");
