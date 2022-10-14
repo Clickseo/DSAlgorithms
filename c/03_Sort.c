@@ -7,17 +7,17 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// srand, rand
+#include <stdlib.h>	// srand, rand
 #include <stdbool.h>	// bool, true, false
-#include <time.h>		  // time
+#include <time.h>	// time
 
 #define arrMAXSIZE 15
 
 // 1) 기초적인 정렬 알고리즘
 void	selectionSort(int* pArr, int num);	// 선택 정렬
-void	bubbleSort(int* pArr, int num);		  // 버블 정렬
+void	bubbleSort(int* pArr, int num);		// 버블 정렬
 void	insertionSort(int* pArr, int num);	// 삽입 정렬
-void	shellSort(int* pArr, int num);		  // 쉘 정렬
+void	shellSort(int* pArr, int num);		// 쉘 정렬
 void	intervalSort(int* pArr, int num, int start, int interval);
 
 // 2) 고급 정렬 알고리즘
@@ -159,12 +159,12 @@ void  quickSort(int* pArr, int* pFirst, int* pLast) {
 	// 분할: 기준 값의 왼쪽(작은 값)과 오른쪽(큰 값) 부분 집합
 	int* pi = pFirst - 1;
 	for (int* pj = pFirst; pj < pLast; pj++)
-		if (*pj <= *pLast)		// 기준 값(pivot): 마지막 원소
+		if (*pj <= *pLast)	// 기준 값(pivot): 마지막 원소
 			SWAP(++pi, pj);
 	SWAP(pi + 1, pLast);		// 기준 값을 가운데로 위치 시킨다.
 	// PRINT(pFirst, (int)(pLast - pFirst) + 1);
 
-	int* mid = pi + 1;					// 기준 값의 위치(주소)
+	int* mid = pi + 1;			// 기준 값의 위치(주소)
 	quickSort(pArr, pFirst, mid - 1);	// 왼쪽 부분 정렬
 	quickSort(pArr, mid + 1, pLast);	// 오른쪽 부분 정렬
 }
@@ -177,8 +177,8 @@ void  mergeSort(int* pArr, int* pFirst, int* pLast) {
 
 	// 중간 원소의 위치(주소) 계산: pFirst와 pLast 범위에서...
 	int* pMid = pFirst + (int)(pLast - pFirst) / 2;
-	mergeSort(pArr, pFirst, pMid);		// 왼쪽 부분집합 정렬
-	mergeSort(pArr, pMid + 1, pLast);	// 오른쪽 부분집합 정렬
+	mergeSort(pArr, pFirst, pMid);			// 왼쪽 부분집합 정렬
+	mergeSort(pArr, pMid + 1, pLast);		// 오른쪽 부분집합 정렬
 
 	// 각각의 부분집합을 병합(merge)할 메모리 공간 확보
 	int	num = (int)(pLast - pFirst) + 1;
@@ -217,7 +217,7 @@ void	contingSort(int* pArr, int num) {
 			maxNum = pArr[i];
 
 	// countArr : 원본 데이터에서 각 항목들의 발생 횟수를 저장한다.
-	//				단, 원본 데이터의 값 자체가 countArr의 첨자가 된다.
+	//		단, 원본 데이터의 값 자체가 countArr 의 첨자가 된다.
 	countArr = (int*)calloc(maxNum + 1, sizeof(int));
 	if (countArr == NULL) {
 		printf("동적 메모리 공간 할당 실패!!!");
