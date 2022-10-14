@@ -1,3 +1,9 @@
+'''	
+  피보나치 수열: 성능 평가
+	  1) 재귀적 용법
+	  2) 비재귀적 용법
+'''
+
 #include <stdio.h>
 #include <time.h>     // clock, clock_t, CLOCKS_PER_SEC
 // clock 함수: 프로그램에 의해 프로세서가 소비된 시간을 반환하는 함수
