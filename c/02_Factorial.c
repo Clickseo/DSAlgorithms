@@ -6,9 +6,9 @@ int main(void)
 
 	printf("임의의 정수: ");
 	scanf_s("%d", &num);
-  // scanf("%d", &num);
+  	// scanf("%d", &num);
 	
-  printf("%d Factorial: %d \n", num, Factorial(num) );
+  	printf("%d Factorial: %d \n", num, Factorial(num) );
 	return 0;
 }
 
