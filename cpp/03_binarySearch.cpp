@@ -12,7 +12,7 @@ using namespace std;
 
 #if 1
 // 이진 탐색 -- 알고리즘 구현 / 재귀적 용법
-int		binarySearch(int* pArr, int  first, int  last, int  key);
+int	binarySearch(int* pArr, int  first, int  last, int  key);
 void	PRINT(int* pArr, int  num);
 
 int main(void)
@@ -21,7 +21,7 @@ int main(void)
 	cout << "원시 데이터: ";
 	PRINT(arr, arrMAXSIZE);
 
-	int		key;
+	int	key;
 	while (true) {
 		cout << "검색 데이터 입력(검색 종료: 0) : ";
 		cin >> key;
@@ -43,7 +43,7 @@ int	binarySearch(int* pArr, int  first, int  last, int  key) {
 
 	// 중간 원소의 위치(첨자) 계산: first ~ last 범위에서...
 	int	index, mid = (first + last) / 2;
-
+	
 	if (*(pArr + mid) == key)		return  mid;
 	else if (*(pArr + mid) < key)	index = binarySearch(pArr, mid + 1, last, key);
 	else if (*(pArr + mid) > key)	index = binarySearch(pArr, first, mid - 1, key);
@@ -61,7 +61,7 @@ int main(void)
 	cout << "원시 데이터: ";
 	PRINT(arr, arrMAXSIZE);
 
-	int		key;
+	int	key;
 	while (true) {
 		cout << "검색 데이터 입력(검색 종료: 0) : ";
 		cin >> key;
