@@ -25,7 +25,7 @@ void	quickSort(int* pArr, int* pFirst, int* pLast);	// 퀵 정렬
 void	mergeSort(int* pArr, int* pFirst, int* pLast);	// 병합 정렬
 
 // 3) 특수 정렬 알고리즘: 계수.기수.버킷 정렬
-void  contingSort(int* pArr, int num);
+void  	contingSort(int* pArr, int num);
 
 void	SWAP(int* pa, int* pb);
 void	PRINT(int* pArr, int num);
