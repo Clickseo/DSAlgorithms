@@ -1,7 +1,7 @@
 '''	
-  피보나치 수열: 성능 평가
-	  1) 재귀적 용법
-	  2) 비재귀적 용법
+	피보나치(Fibonacci) 수열: 성능 평가
+		1) 재귀적 용법
+		2) 비재귀적 용법
 '''
 
 #include <stdio.h>
@@ -37,7 +37,7 @@ int main(void)
 	return 0;
 }
 
-// 재귀적 용법: 피보나치 수열
+// 재귀적 용법: 피보나치(Fibonacci) 수열
 int  Fibo(int  num) {
 	// 재귀 함수: 탈출 조건
 	if(num == 1 || num == 2)
@@ -45,7 +45,7 @@ int  Fibo(int  num) {
 	return Fibo(num - 1) + Fibo(num - 2);
 }
 
-/* 비재귀적 용법: 피보나치 수열
+/* 비재귀적 용법: 피보나치(Fibonacci) 수열
 int  Fibo(int  num) {
 	if(num == 0 || num == 1)
 		return 1;
