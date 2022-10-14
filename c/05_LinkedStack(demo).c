@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>			  // system
-#include <stdbool.h>		  // bool, true, false
+#include <stdlib.h>		// system
+#include <stdbool.h>		// bool, true, false
 #include "LinkedStack.h"	// ListStack, stackNode
 
 int main(void)
