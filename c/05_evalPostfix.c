@@ -1,17 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>			    // atoi
-#include "LinkedStack.h"	  // ListStack, stackNode
+#include <stdlib.h>		// atoi
+#include "LinkedStack.h"	// ListStack, stackNode
 
 #define	bufferMAXSIZE	1024
 
 element	evalPostfix(char* exp);
-void	  InfixToPostfix(char* postfix, char* infix);
-int		  isOperator(int op);
-int		  precedence(int op);
+void	InfixToPostfix(char* postfix, char* infix);
+int	isOperator(int op);
+int	precedence(int op);
 
 int main(void)
 {
-	int		res;
+	int	res;
 	char	infixStr[bufferMAXSIZE], postfixStr[bufferMAXSIZE];
 
 	printf("수식 입력: ");
@@ -27,7 +27,7 @@ int main(void)
 }
 
 element  evalPostfix(char* exp) {
-	int		op1, op2, res;
+	int	op1, op2, res;
 	char	temp[1024], * p;
 	LinkedStack* s = stackCreate();
 	while (*exp) {
@@ -43,10 +43,10 @@ element  evalPostfix(char* exp) {
 			op2 = pop(s);
 			op1 = pop(s);
 			switch (*exp) {
-        case '+': push(s, op1 + op2);	break;
-        case '-': push(s, op1 - op2);	break;
-        case '*': push(s, op1 * op2);	break;
-        case '/': push(s, op1 / op2);	break;
+				case '+': push(s, op1 + op2);	break;
+				case '-': push(s, op1 - op2);	break;
+				case '*': push(s, op1 * op2);	break;
+				case '/': push(s, op1 / op2);	break;
 			}
 			exp++;
 		}
