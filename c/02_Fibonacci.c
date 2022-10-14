@@ -3,7 +3,7 @@
 // clock 함수: 프로그램에 의해 프로세서가 소비된 시간을 반환하는 함수
 // CLOCKS_PER_SEC: 초당 clock ticks의 수를 나타낸 매크로 상수(시스템에 따라 기본값이 다름)
 
-int  Fibo(int  num);
+int  Fibo(int num);
 
 int main(void)
 {
