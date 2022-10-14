@@ -7,15 +7,15 @@
 */
 
 #include <iostream>
-#include <random>		  // C++ 11에서 추가
+#include <random>	// C++ 11에서 추가
 using namespace std;	// C++11 이전: C 스타일 난수 생성(srand와 rand 함수)
 
 #define arrMAXSIZE 15
 
 void	selectionSort(int* pArr, int num);	// 선택 정렬
-void	bubbleSort(int* pArr, int num);		  // 버블 정렬
+void	bubbleSort(int* pArr, int num);		// 버블 정렬
 void	insertionSort(int* pArr, int num);	// 삽입 정렬
-void	shellSort(int* pArr, int num);		  // 쉘 정렬
+void	shellSort(int* pArr, int num);		// 쉘 정렬
 void	intervalSort(int* pArr, int num, int start, int interval);
 
 // 3) 특수 정렬 알고리즘: 계수.기수.버킷 정렬
@@ -34,7 +34,7 @@ int main(void)
 	*/
 
 	// C++ 스타일 난수 생성
-	random_device rd;		  // 시드 설정: random_device 생성
+	random_device rd;		// 시드 설정: random_device 생성
 	mt19937 gen(rd());		// 난수 생성 엔진(mt19937) 초기화
 	uniform_int_distribution<int> dis(0, 99);	// 균등 분포 정의: 범위 지정
 	for (int i = 0; i < arrMAXSIZE; i++)
@@ -162,12 +162,12 @@ void  quickSort(int* pArr, int* pFirst, int* pLast) {
 	// 분할: 기준 값의 왼쪽(작은 값)과 오른쪽(큰 값) 부분 집합
 	int* pi = pFirst - 1;
 	for (int* pj = pFirst; pj < pLast; pj++)
-		if (*pj <= *pLast)		// 기준 값(pivot): 마지막 원소
+		if (*pj <= *pLast)	// 기준 값(pivot): 마지막 원소
 			SWAP(++pi, pj);
 	SWAP(pi + 1, pLast);		// 기준 값을 가운데로 위치 시킨다.
 	// PRINT(pFirst, (int)(pLast - pFirst) + 1);
 
-	int* mid = pi + 1;					      // 기준 값의 위치(주소)
+	int* mid = pi + 1;			// 기준 값의 위치(주소)
 	quickSort(pArr, pFirst, mid - 1);	// 왼쪽 부분 정렬
 	quickSort(pArr, mid + 1, pLast);	// 오른쪽 부분 정렬
 }
@@ -192,11 +192,11 @@ void  mergeSort(int* pArr, int* pFirst, int* pLast) {
 	}
 
 	// 병합(merge): 정렬된 두 부분집합 병합
-	int* pi = pFirst;	  // 시작 위치: 왼쪽 부분집합
+	int* pi = pFirst;	// 시작 위치: 왼쪽 부분집합
 	int* pj = pMid + 1;	// 시작 위치: 오른쪽 부분집합
 	int* pt = pTemp;
 	while (pi <= pMid && pj <= pLast) {
-		if (*pi <= *pj) 	*pt++ = *pi++;
+		if (*pi <= *pj) *pt++ = *pi++;
 		else *pt++ = *pj++;
 	}
 	while (pi <= pMid)	*pt++ = *pi++;
@@ -219,7 +219,7 @@ void	contingSort(int* pArr, int num) {
 			maxNum = pArr[i];
 
 	// countArr : 원본 데이터에서 각 항목들의 발생 횟수를 저장한다.
-	//				      단, 원본 데이터의 값 자체가 countArr의 첨자가 된다.
+	//		단, 원본 데이터의 값 자체가 countArr의 첨자가 된다.
 	countArr = new (nothrow) int[maxNum + 1] {0};
 	if (countArr == nullptr) {
 		cout << "동적 메모리 공간 할당 실패!!!" << endl;
