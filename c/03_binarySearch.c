@@ -13,7 +13,7 @@
 #if 1
 
 // 이진 탐색: 재귀적 용법
-int	  binarySearch(int* pArr, int first, int last, int key);
+int	binarySearch(int* pArr, int first, int last, int key);
 void	PRINT(int* pArr, int num);
 
 int main(void)
@@ -44,7 +44,7 @@ int	binarySearch(int* pArr, int  first, int  last, int  key) {
 	// 중간 원소의 위치(첨자) 계산: 검색 범위(first ~ last)에서...
 	int	index, mid = (first + last) / 2;
 
-	if (*(pArr + mid) == key)		return  mid;
+	if (*(pArr + mid) == key)	return  mid;
 	else if (*(pArr + mid) < key)	index = binarySearch(pArr, mid + 1, last, key);
 	else if (*(pArr + mid) > key)	index = binarySearch(pArr, first, mid - 1, key);
 	return index;
@@ -82,7 +82,7 @@ int* binarySearch(int* pArr, int* pFirst, int* pLast, int key) {
 		// 중간 원소의 위치(주소) 계산: 검색 범위(first ~ last)에서...
 		int* pMid = pFirst + (pLast - pFirst) / 2;
 
-		if (*pMid == key)		return  pMid;
+		if (*pMid == key)	return  pMid;
 		else if (*pMid < key)	pFirst = pMid + 1;
 		else if (*pMid > key)	pLast = pMid - 1;
 	}
