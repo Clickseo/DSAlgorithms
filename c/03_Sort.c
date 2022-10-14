@@ -8,15 +8,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>	// exit, srand, rand
-#include <time.h>		// time
+#include <time.h>	// time
 
 #define	arrMAXSIZE	30000
 
 // 기초적인 정렬 알고리즘
 void	selectionSort(int* pArr, int num);	// 선택 정렬
-void	bubbleSort(int* pArr, int num);		  // 버블 정렬
+void	bubbleSort(int* pArr, int num);		// 버블 정렬
 void	insertionSort(int* pArr, int num);	// 삽입 정렬
-void	shellSort(int* pArr, int num);		  // 쉘 정렬
+void	shellSort(int* pArr, int num);		// 쉘 정렬
 void	intervalSort(int* pArr, int num, int start, int interval);
 
 // 고급 정렬 알고리즘
