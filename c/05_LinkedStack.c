@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>		      // malloc, free
-#include "LinkedStack.h"		// ListStack, stackNode
+#include <stdlib.h>		// malloc, free
+#include "LinkedStack.h"	// ListStack, stackNode
 
 // 빈 스택 생성
 LinkedStack* stackCreate(void) {
