@@ -56,11 +56,11 @@ def InfixToPostfix(infix) :
         else :
             print('잘못된 수식!!!')
             return
-	# 스택에 남은 연산자를 모두 pop 한다.
+    # 스택에 남은 연산자를 모두 pop 한다.
     while not s.isEmpty() :
         postfix.append(s.pop())
     return postfix
-  
+
 def  evalPostfix(sList) -> int :
     s = LinkedStack()
     for st in sList :
