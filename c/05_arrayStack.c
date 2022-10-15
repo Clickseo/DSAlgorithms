@@ -15,14 +15,14 @@ typedef struct _arrayStack {
 	int	top;
 }arrayStack;
 
-arrayStack* stackCreate(void);
-void	stackDestroy(arrayStack*);
-void	push(arrayStack*, element);
-element	pop(arrayStack*);
-element	peek(arrayStack*);
-_Bool	isEmpty(arrayStack*);
-_Bool	isFull(arrayStack*);
-void	printStack(arrayStack*);
+arrayStack* 	stackCreate(void);
+void		stackDestroy(arrayStack*);
+void		push(arrayStack*, element);
+element		pop(arrayStack*);
+element		peek(arrayStack*);
+_Bool		isEmpty(arrayStack*);
+_Bool		isFull(arrayStack*);
+void		printStack(arrayStack*);
 
 int main(void)
 {
@@ -42,16 +42,16 @@ int main(void)
 
 		switch (choice) {
 			case 1: printf("\n삽입 할 데이터 입력: ");
-					scanf_s("%d", &num);
-					// scanf("%d", &num);
-					push(s, num);
-					break;
+				scanf_s("%d", &num);
+				// scanf("%d", &num);
+				push(s, num);
+				break;
 			case 2: printf("삭제 된 데이터: %3d \n", pop(s));
-					break;
-			case 3: printStack(s);
-					break;
+				break;
+			case 3: rintStack(s);
+				break;
 			case 4: printf("프로그램 종료... \n");
-					return 0;
+				return 0;
 			default: printf("잘못 선택 하셨습니다. \n");
 		}
 		system("pause");
