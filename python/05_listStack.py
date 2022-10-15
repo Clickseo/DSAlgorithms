@@ -1,6 +1,10 @@
 '''
 	스택: 알고리즘 구현 -- 순차자료구조(리스트)
-		- ListStack : stack
+	파일명: listStack.py
+		- 스택 생성 및 삭제
+		- 삽입, 삭제, 확인   : push, pop, popAll, peek
+		- 빈 스택 여부 판단  : isEmpty
+		- 전체 원소 출력     : printStack
 '''
 
 class ListStack:
