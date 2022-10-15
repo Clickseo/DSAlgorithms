@@ -1,8 +1,8 @@
-/*
+'''
 	이중 연결 리스트: 알고리즘 구현
 		- DNode		: 노드(data, Llink, Rlink)
 		- DLinkedList	: head
-*/
+'''
 
 class DNode:
     # def __init__(self, data, Llink:'SNode', Rlink:'SNode'):
