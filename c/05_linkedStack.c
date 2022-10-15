@@ -7,7 +7,7 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>			  // malloc, free
+#include <stdlib.h>		// malloc, free
 #include "LinkedStack.h"	// ListStack, stackNode
 
 // 빈 스택 생성
