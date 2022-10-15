@@ -15,11 +15,11 @@ class SNode :
     def setLink(self, link):  self.__link = link
 
 class SLinkedList :
-    def __init__(self): 		  # 생성자
+    def __init__(self): 		# 생성자
         self.__head = None		# 첫 번째 노드
         # self.__head = SNode('dummy', None)
         # self.__numItems = 0
-	   # self.__tail = None		  # 맨 마지막 노드
+	# self.__tail = None		# 맨 마지막 노드
         # self.__count = 0		# 노드의 총 개수
 
     # 빈 리스트 여부 판단
