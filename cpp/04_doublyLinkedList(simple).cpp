@@ -10,7 +10,7 @@ using namespace std;
 // 노드: 데이터, 링크
 class DNode {
 private:
-	int		  data;
+	int	data;
 	DNode*  Llink;
 	DNode*  Rlink;
 	friend class DLinkedList;
