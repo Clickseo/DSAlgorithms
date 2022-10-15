@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>		    // system
+#include <stdlib.h>		// system
 #include <stdbool.h>	  	// bool, true, false
 #include "LinkedStack.h"	// ListStack, stackNode
 
 int main(void)
 {
-	int		        num, choice;
+	int		num, choice;
 	LinkedStack*	s = stackCreate();
 
 	while (true) {
