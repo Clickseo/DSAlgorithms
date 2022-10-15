@@ -12,22 +12,22 @@
 typedef int element;
 typedef struct _arrayStack {
 	element	stack[stackMAXSIZE];
-	int		  top;
+	int	top;
 }arrayStack;
 
 arrayStack* stackCreate(void);
-void			  stackDestroy(arrayStack*);
-void			  push(arrayStack*, element);
-element		  pop(arrayStack*);
-element		  peek(arrayStack*);
-_Bool		    isEmpty(arrayStack*);
-_Bool		    isFull(arrayStack*);
-void			  printStack(arrayStack*);
+void	stackDestroy(arrayStack*);
+void	push(arrayStack*, element);
+element	pop(arrayStack*);
+element	peek(arrayStack*);
+_Bool	isEmpty(arrayStack*);
+_Bool	isFull(arrayStack*);
+void	printStack(arrayStack*);
 
 int main(void)
 {
-	int			    num, choice;
-	arrayStack* s = stackCreate();
+	int		num, choice;
+	arrayStack*	s = stackCreate();
 
 	while (true) {
 		system("cls");
