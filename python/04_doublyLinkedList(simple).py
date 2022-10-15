@@ -1,6 +1,6 @@
 /*
 	이중 연결 리스트: 알고리즘 구현
-		- DNode		    : 노드(data, Llink, Rlink)
+		- DNode		: 노드(data, Llink, Rlink)
 		- SLinkedList	: head
 */
 
