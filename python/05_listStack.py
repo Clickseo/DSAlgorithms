@@ -14,11 +14,11 @@ class ListStack:
         
     # POP : 스택에서 데이터 삭제
     def pop(self):
-		    return self.__stack.pop()
+        return self.__stack.pop()
 
     # PEEK : 스택 맨 위의 원소 확인
     def peek(self):
-		    if self.isEmpty():
+        if self.isEmpty():
             return None
         else:
             return self.__stack[-1]
