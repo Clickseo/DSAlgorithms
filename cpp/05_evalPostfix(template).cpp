@@ -14,7 +14,7 @@ inline void error(const char* message);
 template <typename E>
 class stackNode {
 private:
-	E			        data;
+	E		data;
 	stackNode<E>*	link;
 	template <typename E> friend class LinkedStack;
 };
@@ -26,10 +26,10 @@ private:
 public:
 	LinkedStack();
 	~LinkedStack();
-	stackNode<E>* makeStackNode(const int& num) const;
+	stackNode<E>* 	makeStackNode(const int& num) const;
 	void		push(const E& e);
-	E		    pop(void);
-	E		    peek(void) const;
+	E		pop(void);
+	E		peek(void) const;
 	bool		isEmpty(void) const;
 	void		printStack(void) const;
 };
@@ -100,8 +100,8 @@ using namespace std;
 
 int 	evalPostfix(char* str);
 void	InfixToPostfix(char* postfix, char* infix);
-int	  isOperator(int op);
-int	  precedence(int op);
+int	isOperator(int op);
+int	precedence(int op);
 
 int main(void)
 {
@@ -137,10 +137,10 @@ int  evalPostfix(char* str) {
 			op2 = s.pop();
 			op1 = s.pop();
 			switch (*str) {
-        case '+': s.push(op1 + op2);	break;
-        case '-': s.push(op1 - op2);	break;
-        case '*': s.push(op1 * op2);	break;
-        case '/': s.push(op1 / op2);	break;
+				case '+': s.push(op1 + op2);	break;
+				case '-': s.push(op1 - op2);	break;
+				case '*': s.push(op1 * op2);	break;
+				case '/': s.push(op1 / op2);	break;
 			}
 			str++;
 		}
