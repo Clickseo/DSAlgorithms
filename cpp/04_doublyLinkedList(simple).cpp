@@ -1,6 +1,6 @@
 /*
 	이중 연결 리스트: 알고리즘 구현
-		- DNode		    : 노드(data, Llink, Rlink)
+		- DNode		: 노드(data, Llink, Rlink)
 		- DLinkedList	: head
 */
 
@@ -19,21 +19,21 @@ private:
 // 단순 연결 리스트
 class DLinkedList {
 private:
-	DNode*	  head;		  // 첫 번째 노드
-	// SNode*	tail;		  // 맨 마지막 노드
+	DNode*	  	head;		// 첫 번째 노드
+	// SNode*	tail;		// 맨 마지막 노드
 	// int		count;		// 노드의 총 개수
 public:
-	DLinkedList();						              // 생성자
-	~DLinkedList();						              // 소멸자: 전체 노드 삭제
-	bool	isEmpty() const;					        // 빈 리스트 여부 판단
-	int		countDNode() const;			          // 탐색: 노드의 총 개수(count)
-	DNode*	frontDNode() const;			        // 탐색: 첫 번째 노드
-	DNode*	rearDNode() const;				      // 탐색: 맨 마지막 노드
-	DNode*	makeDNode(const int& e) const;	// 새로운 노드 생성
-	void	addRear(const int& e);				    // 삽입: 맨 마지막 노드
-	void	removeFront();					          // 삭제: 첫 번째 노드
-	void	printSLinkedList();					      // 리스트의 전체 노드 출력(순방향)
-	void	revPrintSLinkedList();				    // 리스트의 전체 노드 출력(역방향)
+	DLinkedList();					// 생성자
+	~DLinkedList();					// 소멸자: 전체 노드 삭제
+	bool	isEmpty() const;			// 빈 리스트 여부 판단
+	int		countDNode() const;		// 탐색: 노드의 총 개수(count)
+	DNode*	frontDNode() const;			// 탐색: 첫 번째 노드
+	DNode*	rearDNode() const;			// 탐색: 맨 마지막 노드
+	DNode*	makeDNode(const int& e) const;		// 새로운 노드 생성
+	void	addRear(const int& e);		    	// 삽입: 맨 마지막 노드
+	void	removeFront();				// 삭제: 첫 번째 노드
+	void	printSLinkedList();			// 리스트의 전체 노드 출력(순방향)
+	void	revPrintSLinkedList();			// 리스트의 전체 노드 출력(역방향)
 };
 
 // 생성자
