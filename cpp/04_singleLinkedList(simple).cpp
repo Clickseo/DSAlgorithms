@@ -1,6 +1,6 @@
 /*
 	단순 연결 리스트: 알고리즘 구현
-		- SNode 	    : 노드(data, link)
+		- SNode 	: 노드(data, link)
 		- SLinkedList	: head
 */
 
@@ -10,7 +10,7 @@ using namespace std;
 // 노드 클래스: 데이터, 링크
 class SNode {
 private:
-	int		  data;
+	int	data;
 	SNode*	link;
     friend class SLinkedList;
 };
@@ -18,20 +18,20 @@ private:
 // 단순 연결 리스트
 class SLinkedList {
 private:
-	SNode*	  head;
-	// SNode*	tail;		// 맨 마지막 노드
-	// int	  count;	// 노드의 총 개수
+	SNode*	  	head;
+	// SNode*	tail;	// 맨 마지막 노드
+	// int	  	count;	// 노드의 총 개수
 public:
-	SLinkedList();							            // 생성자
-	~SLinkedList();						              // 소멸자: 전체 노드 삭제
-	bool		isEmpty() const;				        // 빈 리스트 여부 판단
-	int		countSNode() const;				        // 탐색: 노드의 총 개수(count)
-	SNode*	frontSNode() const;				      // 탐색: 첫 번째 노드
-	SNode*	rearSNode() const;				      // 탐색: 맨 마지막 노드
-	SNode*	makeSNode(const int& e) const;	// 새로운 노드 생성
-	void		addRear(const int& e);			    // 삽입: 맨 마지막 노드
-	void		removeFront();					        // 삭제: 첫 번째 노드
-	void		printSLinkedList();				      // 리스트의 전체 노드 출력
+	SLinkedList();					// 생성자
+	~SLinkedList();					// 소멸자: 전체 노드 삭제
+	bool	isEmpty() const;			// 빈 리스트 여부 판단
+	int	countSNode() const;			// 탐색: 노드의 총 개수(count)
+	SNode*	frontSNode() const;			// 탐색: 첫 번째 노드
+	SNode*	rearSNode() const;			// 탐색: 맨 마지막 노드
+	SNode*	makeSNode(const int& e) const;		// 새로운 노드 생성
+	void	addRear(const int& e);			// 삽입: 맨 마지막 노드
+	void	removeFront();				// 삭제: 첫 번째 노드
+	void	printSLinkedList();			// 리스트의 전체 노드 출력
 };
 
 // 생성자
