@@ -5,31 +5,31 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// exit
+#include <stdlib.h>	// exit
 #include <stdbool.h>	// bool, true, false
 
 // 노드: 데이터, 링크
 typedef struct _SNode {
-	int				      data;
+	int		data;
 	struct  _SNode* link;
 }SNode;
 
 // 단순 연결 리스트
 typedef struct _SLinkedList {
-	SNode* head;			  // 첫 번째 노드
-	// SNode*	tail;		  // 맨 마지막 노드
+	SNode* 		head;		// 첫 번째 노드
+	// SNode*	tail;		// 맨 마지막 노드
 	// int		count;		// 노드의 총 개수
 }SLinkedList;
 
 // 단순 연결 리스트: 함수 정의
-_Bool	  isEmpty(SLinkedList* sList);					      // 빈 리스트 여부 판단
-int		  countSNode(SLinkedList* sList);					    // 탐색: 노드의 총 개수(count)
-SNode*	frontSNode(SLinkedList* sList);					    // 탐색: 첫 번째 노드
-SNode*	rearSNode(SLinkedList* sList);					    // 탐색: 맨 마지막 노드(tail)
-SNode*	makeSNode(int num);								          // 새로운 노드 생성
-void	  addRear(SLinkedList* sList, SNode* node);		// 노드 삽입: 맨 마지막 노드로...
-void	  removeFront(SLinkedList* sList);				    // 노드 삭제: 첫 번째 노드를...
-void	  printSLinkedList(SLinkedList* sList);			  // 리스트의 전체 노드 출력
+_Bool	isEmpty(SLinkedList* sList);			// 빈 리스트 여부 판단
+int	countSNode(SLinkedList* sList);			// 탐색: 노드의 총 개수(count)
+SNode*	frontSNode(SLinkedList* sList);			// 탐색: 첫 번째 노드
+SNode*	rearSNode(SLinkedList* sList);			// 탐색: 맨 마지막 노드(tail)
+SNode*	makeSNode(int num);				// 새로운 노드 생성
+void	addRear(SLinkedList* sList, SNode* node);	// 노드 삽입: 맨 마지막 노드로...
+void	removeFront(SLinkedList* sList);		// 노드 삭제: 첫 번째 노드를...
+void	printSLinkedList(SLinkedList* sList);		// 리스트의 전체 노드 출력
 
 int main(void)
 {
@@ -50,7 +50,7 @@ int main(void)
 			break;
 
 		SNode* newSNode = makeSNode(num);	// 새로운 노드 생성		
-		addRear(sList, newSNode);			    // 맨 마지막 노드로 삽입
+		addRear(sList, newSNode);		// 맨 마지막 노드로 삽입
 	}
 
 	// 전체 원소 출력
@@ -79,7 +79,7 @@ int		countSNode(SLinkedList* sList) {
 	if (isEmpty(sList))
 		return 0;
 
-	int		count = 0;
+	int	count = 0;
 	SNode* rNode = sList->head;
 	while (rNode->link) {
 		count++;
