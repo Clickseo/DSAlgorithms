@@ -2,9 +2,9 @@
 	스택 활용: 후위 표기법을 이용한 수식 계산
 		- evalPostfix		: 후위 표기법으로 수식 계산
 		- InfixToPostfix	: 중위 표기법을 후위 표기법으로 변환
-			    중위 표기: (A + B) - C
-			    후위 표기: A B + C -
-			    전위 표기: - + A B C
+			중위 표기: (A + B) - C
+			후위 표기: A B + C -
+			전위 표기: - + A B C
 '''
 
 from LinkedStack import LinkedStack
@@ -35,21 +35,21 @@ def InfixToPostfix(infix) :
     
     postfix = []
     for st in infix :
-		# 1) '(' 는 스택에 push
+        # 1) '(' 는 스택에 push
         if st == '(' :
             s.push(st)
-		# 2) ')'를 만나면 '('가 나올 때까지 pop 한 후에 '('는 버린다.
+        # 2) ')'를 만나면 '('가 나올 때까지 pop 한 후에 '('는 버린다.
         elif st == ')' :
             while s.peek() != '(' :
                 postfix.append(s.pop())
             s.pop()     # '(' 를 버린다.
-		# 3) 연산자인 경우...
+        # 3) 연산자인 경우...
         elif isOperator(st) :
             while not s.isEmpty() and precedence(s.peek()) >= precedence(st) :
                 # 자신보다 높은 우선순위의 연산자는 스택에서 pop
                 postfix.append(s.pop())
             s.push(st)    # 자신을 push
-		# 4) 피연산자인 경우...
+        # 4) 피연산자인 경우...
         elif str.isdigit(st) :
             postfix.append(st)
         elif st == ' ' : continue
@@ -60,14 +60,14 @@ def InfixToPostfix(infix) :
     while not s.isEmpty() :
         postfix.append(s.pop())
     return postfix
-    
+  
 def  evalPostfix(sList) -> int :
     s = LinkedStack()
     for st in sList :
-		# 1) 피연산자 일 경우...
+        # 1) 피연산자 일 경우...
         if str.isdigit(st) :
             s.push(st)
-        # 1) 연산자 일 경우...
+        # 2) 연산자 일 경우...
         elif isOperator(st) :	
             op2 = int(s.pop())
             op1 = int(s.pop())
@@ -79,7 +79,7 @@ def  evalPostfix(sList) -> int :
             else :
                 print('잘못된 수식!!!')
                 return
-	# 스택에 남은 최종 결과 값
+    # 스택에 남은 최종 결과 값
     if not s.isEmpty() :
         res = s.pop()
     return res
