@@ -17,9 +17,9 @@ typedef struct _DNode {
 
 // 단순 연결 리스트
 typedef struct _DLinkedList {
-	DNode*		head;	  // 첫 번째 노드
-	// SNode*	tail;	  // 맨 마지막 노드
-	// int		count;	// 노드의 총 개수
+	DNode*		head;	  	// 첫 번째 노드
+	// SNode*	tail;	  	// 맨 마지막 노드
+	// int		count;		// 노드의 총 개수
 }DLinkedList;
 
 // 단순 연결 리스트: 함수 정의
