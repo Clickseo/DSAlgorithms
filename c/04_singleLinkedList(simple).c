@@ -1,7 +1,7 @@
 /*
 	단순 연결 리스트: 알고리즘 구현
-		- SNode : 노드(데이터, 링크)
-		- SLinkedList : head
+		- SNode 	: 노드(data, link)
+		- SLinkedList	: head
 */
 
 #include <stdio.h>
