@@ -4,8 +4,8 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>			  // system
-#include <stdbool.h>		  // bool, true, false
+#include <stdlib.h>		// system
+#include <stdbool.h>		// bool, true, false
 #include "LinkedStack.h"	// ListStack, stackNode
 
 int main(void)
@@ -26,16 +26,16 @@ int main(void)
 
 		switch (choice) {
 			case 1: printf("\n삽입 할 데이터 입력: ");
-					  scanf_s("%d", &num);
-					  // scanf("%d", &num);
-					  push(s, num);
-					  break;
+				scanf_s("%d", &num);
+				// scanf("%d", &num);
+				push(s, num);
+				break;
 			case 2: printf("삭제 된 데이터: %3d \n", pop(s));
-					    break;
+				break;
 			case 3: printStack(s);
 			        break;
 			case 4: printf("프로그램 종료... \n");
-					    return 0;
+				return 0;
 			default: printf("잘못 선택 하셨습니다. \n");
 		}
 		system("pause");
