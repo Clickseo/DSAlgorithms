@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-// 노드: 데이터, 링크
+// 노드(DNode): 데이터(data), 링크(Llink, Rlink)
 class DNode {
 private:
 	int	data;
@@ -16,7 +16,7 @@ private:
 	friend class DLinkedList;
 };
 
-// 단순 연결 리스트
+// 이중 연결 리스트: DLinkedList -- head
 class DLinkedList {
 private:
 	DNode*	  	head;		// 첫 번째 노드
