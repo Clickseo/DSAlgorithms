@@ -4,7 +4,7 @@
 		- DLinkedList	: head
 '''
 
-# 노드: 데이터, 링크
+# 노드(DNode): 데이터(data), 링크(Llink, Rlink)
 class DNode:
     # def __init__(self, data, Llink:'SNode', Rlink:'SNode'):
     def __init__(self, data):
@@ -18,7 +18,7 @@ class DNode:
     def setLlink(self, Llink): self.__Llink = Llink  # setattr(DNode, '__Llink', 'Llink')
     def setRlink(self, Rlink): self.__Rlink = Rlink  # setattr(DNode, '__Rlink', 'Rlink')
 
-# 단순 연결 리스트
+# 이중 연결 리스트: DLinkedList -- head
 class DLinkedList:
     def __init__(self):          # 생성자
         self.__head = None       # 첫 번째 노드
