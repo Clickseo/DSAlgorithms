@@ -8,6 +8,7 @@
 using namespace std;
 inline void error(const char* message);
 
+// 배열 스택: arrayStack
 template <typename E>
 class arrayStack {
 private:
@@ -24,40 +25,48 @@ public:
 	void	printStack(void) const;
 };
 
+// 생성자: 빈 스택 생성
 template <typename E>
 arrayStack<E>::arrayStack() : top(-1) {}
 
+// 소멸자
 template <typename E>
 arrayStack<E>::~arrayStack() {}
 
+// PUSH : 스택에 데이터 삽입 
 template <typename E>
 void	arrayStack<E>::push(const E& e) {
 	if (isFull()) error("스택 포화 에러");	// throw "ERROR::STACK IS FULL";
 	stack[++top] = e;
 }
 
+// POP : 스택에서 데이터 삭제
 template <typename E>
 E	arrayStack<E>::pop(void) {
 	if (isEmpty()) error("스택 공백 에러");	// throw "ERROR::STACK IS EMPTY";
 	return stack[top--];
 }
 
+// PEEK : 스택 맨 위의 원소 확인
 template <typename E>
 E	arrayStack<E>::peek(void) const {
 	if (isEmpty()) error("스택 공백 에러");	// throw "ERROR::STACK IS EMPTY";
 	return stack[top];
 }
 
+// 스택의 공백 상태 여부 판단
 template <typename E>
 bool	arrayStack<E>::isEmpty(void) const {
 	return top == -1;
 }
 
+// 스택의 포화 상태 여부 판단
 template <typename E>
 bool	arrayStack<E>::isFull(void) const {
 	return top == stackMAXSIZE;
 }
 
+// 스택의 전체 원소 출력
 template <typename E>
 void	arrayStack<E>::printStack(void) const {
 	cout << "\n STACK [";
@@ -76,7 +85,7 @@ inline void error(const char* message) {
 int main(void)
 {
 	int	num, choice;
-	arrayStack<int>	s = arrayStack<int>();
+	arrayStack<int>	s = arrayStack<int>();		// 빈 스택 생성
 
 	while (true) {
 		system("cls");
