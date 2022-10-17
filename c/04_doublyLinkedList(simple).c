@@ -5,7 +5,7 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>	// exit
+#include <stdlib.h>	// exit, malloc, free
 #include <stdbool.h>	// bool, true, false
 
 // 노드: 데이터, 링크
