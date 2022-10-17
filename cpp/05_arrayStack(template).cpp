@@ -25,6 +25,14 @@ public:
 	void	printStack(void) const;
 };
 
+/*
+	배열 스택: arrayStack -- 메소드 정의
+		- 스택 성생 및 삭제: arrayStack, ~arrayStack
+		- 원소 삽입과 삭제 : push, pop
+		- 데이터 확인      : peek
+		- 스택 상태 판단   : isEmpty, isFull
+		- 전체 원소 출력   : printStack
+*/
 // 생성자: 빈 스택 생성
 template <typename E>
 arrayStack<E>::arrayStack() : top(-1) {}
