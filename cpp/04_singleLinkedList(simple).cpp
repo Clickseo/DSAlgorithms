@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-// 노드 클래스: 데이터, 링크
+// 노드(SNode): 데이터(data), 링크(link)
 class SNode {
 private:
 	int	data;
@@ -15,7 +15,7 @@ private:
     friend class SLinkedList;
 };
 
-// 단순 연결 리스트
+// 단순 연결 리스트: SLinkedList -- head
 class SLinkedList {
 private:
 	SNode*	  	head;
