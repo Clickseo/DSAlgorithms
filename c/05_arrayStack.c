@@ -9,13 +9,14 @@
 
 #define stackMAXSIZE 100
 
+// 배열 스택: arrayStack -- 구조체 설계
 typedef int element;
 typedef struct _arrayStack {
 	element	stack[stackMAXSIZE];
 	int	top;
 }arrayStack;
 
-// 배열 스택: arrayStack
+// 배열 스택: arrayStack -- 함수 원형
 arrayStack* 	stackCreate(void);
 void		stackDestroy(arrayStack*);
 void		push(arrayStack*, element);
@@ -61,6 +62,14 @@ int main(void)
 	return 0;
 }
 
+/*
+	배열 스택: arrayStack -- 함수 정의
+		- 스택 성생 및 삭제: stackCreate, stackDestroy
+		- 원소 삽입과 삭제 : push, pop
+		- 데이터 확인      : peek
+		- 스택 상태 판단   : isEmpty, isFull
+		- 전체 원소 출력   : printStack
+*/
 // 빈 스택 생성
 arrayStack* stackCreate(void) {
 	arrayStack* s = (arrayStack*)malloc(sizeof(arrayStack));
