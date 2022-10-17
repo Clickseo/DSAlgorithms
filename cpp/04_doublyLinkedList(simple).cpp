@@ -41,7 +41,7 @@ public:
 		- 리스트 성생 및 삭제: DLinkedList, ~DLinkedList
 		- 노드 탐색         : isEmpty, countDNode, frontDNode, rearDNode
 		- 노드 삽입 및 삭제 : makeDNode, addRear, removeFront
-		- 전체 원소 출력    : printDLinkedList
+		- 전체 원소 출력    : printDLinkedList, revPrintDLinkedList
 */
 
 // 생성자
