@@ -8,13 +8,13 @@
 #include <stdlib.h>	// exit, malloc, free
 #include <stdbool.h>	// bool, true, false
 
-// 노드: 데이터, 링크
+// 노드(DNode): 데이터(data), 링크(Llink, Rlink)
 typedef struct _SNode {
 	int		data;
 	struct  _SNode* link;
 }SNode;
 
-// 단순 연결 리스트
+// 이중 연결 리스트: DLinkedList -- head
 typedef struct _SLinkedList {
 	SNode* 		head;		// 첫 번째 노드
 	// SNode*	tail;		// 맨 마지막 노드
