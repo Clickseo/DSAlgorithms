@@ -37,7 +37,7 @@ public:
 };
 
 /*
-	이중 연결 리스트: DLinkedList -- 함수 정의
+	이중 연결 리스트: DLinkedList -- 메소드 정의
 		- 리스트 성생 및 삭제: DLinkedList, ~DLinkedList
 		- 노드 탐색         : isEmpty, countDNode, frontDNode, rearDNode
 		- 노드 삽입 및 삭제 : makeDNode, addRear, removeFront
