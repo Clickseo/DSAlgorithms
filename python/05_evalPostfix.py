@@ -22,7 +22,7 @@ def precedence(op) -> int :
 
 # 후위표기법 변환(중위 표기 -> 후위 표기)
 def InfixToPostfix(infix) :
-    s = LinkedStack()
+    s = LinkedStack()	# 빈 스택 생성
     
     # split을 위해 연산자 앞 뒤에 공백을 넣어준다.
     infix = infix.replace('(', ' ( ')
@@ -63,7 +63,7 @@ def InfixToPostfix(infix) :
 
 # 후위 표기법: 수식 계산
 def  evalPostfix(sList) -> int :
-    s = LinkedStack()
+    s = LinkedStack()	# 빈 스택 생성
     for st in sList :
         # 1) 피연산자 일 경우...
         if str.isdigit(st) :
