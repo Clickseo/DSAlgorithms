@@ -8,7 +8,7 @@
 // #pragma once
 #ifndef __ListStack_H__
 #define __ListStack_H__
-
+// 스택 구현: 단순 연결 리스트 -- stackNode, LinkedStack
 typedef int element;
 typedef struct _stackNode {
 	element			data;
@@ -21,6 +21,7 @@ typedef struct _LinkedStack {
 
 #endif
 
+// 스택 구현: 단순 연결 리스트 -- 함수 원형
 LinkedStack*	stackCreate(void);
 void		stackDestroy(LinkedStack* s);
 stackNode*	makeStackNode(int data);
