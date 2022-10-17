@@ -13,6 +13,7 @@
 
 #define	bufferMAXSIZE	1024
 
+// 후위 표기법: 수식 계산과 변환(중위표기-> 후위 표기)
 element	evalPostfix(char* exp);
 void	InfixToPostfix(char* postfix, char* infix);
 int	isOperator(int op);
@@ -35,12 +36,13 @@ int main(void)
 	return 0;
 }
 
+// 후위 표기법: 수식 계산
 element  evalPostfix(char* exp) {
 	int	op1, op2, res;
 	char	temp[1024], * p;
-	LinkedStack* s = stackCreate();
+	LinkedStack* s = stackCreate();		// 빈 스택 생성
 	while (*exp) {
-		// 피연산자 일 경우...
+		// 1) 피연산자 일 경우...
 		if (*exp >= '0' && *exp <= '9') {
 			p = temp;	// 한 자리 이상을 처리 하기 위해...
 			while (*exp >= '0' && *exp <= '9')
@@ -48,7 +50,8 @@ element  evalPostfix(char* exp) {
 			*p = '\0';
 			push(s, atoi(temp));
 		}
-		else if (isOperator(*exp)) {	// 연산자 일 경우...
+		// 2) 연산자일 경우...
+		else if (isOperator(*exp)) {
 			op2 = pop(s);
 			op1 = pop(s);
 			switch (*exp) {
@@ -75,9 +78,9 @@ element  evalPostfix(char* exp) {
 	return res;
 }
 
-// 중위 표기법을 후위표기법으로 변환
+// 후위표기법 변환(중위 표기 -> 후위 표기)
 void  InfixToPostfix(char* postfix, char* infix) {
-	LinkedStack* s = stackCreate();
+	LinkedStack* s = stackCreate();		// 빈 스택 생성
 	while (*infix) {
 		// 1) '(' 는 스택에 push
 		if (*infix == '(')
