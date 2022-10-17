@@ -21,7 +21,7 @@ typedef struct _SLinkedList {
 	// int		count;		// 노드의 총 개수
 }SLinkedList;
 
-// 단순 연결 리스트: 함수 정의
+// 단순 연결 리스트: 함수 원형
 _Bool	isEmpty(SLinkedList* sList);			// 빈 리스트 여부 판단
 int	countSNode(SLinkedList* sList);			// 탐색: 노드의 총 개수(count)
 SNode*	frontSNode(SLinkedList* sList);			// 탐색: 첫 번째 노드
