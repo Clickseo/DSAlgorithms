@@ -4,7 +4,7 @@
 		- SLinkedList	: head
 '''
 
-# 노드: 데이터, 링크
+# // 노드(SNode): 데이터(data), 링크(link)
 class SNode :
     # def __init__(self, data, link:'SNode'):
     def __init__(self, data):
@@ -15,7 +15,7 @@ class SNode :
     def setData(self, data):  self.__data = data
     def setLink(self, link):  self.__link = link
 
-# 단순 연결 리스트
+# 단순 연결 리스트: SLinkedList -- head
 class SLinkedList :
     def __init__(self): 		# 생성자
         self.__head = None		# 첫 번째 노드
