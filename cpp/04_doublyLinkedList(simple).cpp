@@ -26,7 +26,7 @@ public:
 	DLinkedList();					// 생성자
 	~DLinkedList();					// 소멸자: 전체 노드 삭제
 	bool	isEmpty() const;			// 빈 리스트 여부 판단
-	int		countDNode() const;		// 탐색: 노드의 총 개수(count)
+	int	countDNode() const;			// 탐색: 노드의 총 개수(count)
 	DNode*	frontDNode() const;			// 탐색: 첫 번째 노드
 	DNode*	rearDNode() const;			// 탐색: 맨 마지막 노드
 	DNode*	makeDNode(const int& e) const;		// 새로운 노드 생성
@@ -48,7 +48,7 @@ bool DLinkedList::isEmpty() const {
 // 탐색: 노드의 총 개수(count)
 int	DLinkedList::countDNode() const {
 	if (isEmpty()) return 0;
-	int		count = 0;
+	int	count = 0;
 	DNode* rNode = head;
 	while (rNode->Rlink)
 		rNode = rNode->Rlink;
