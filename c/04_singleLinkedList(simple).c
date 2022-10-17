@@ -5,7 +5,7 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>	// exit
+#include <stdlib.h>	// exit, malloc, free
 #include <stdbool.h>	// bool, true, false
 
 // 노드: 데이터, 링크
@@ -75,7 +75,7 @@ _Bool	isEmpty(SLinkedList* sList) {
 }
 
 // 탐색: 노드의 총 개수(count)
-int		countSNode(SLinkedList* sList) {
+int	countSNode(SLinkedList* sList) {
 	if (isEmpty(sList))
 		return 0;
 
