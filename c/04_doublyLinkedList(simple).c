@@ -22,7 +22,7 @@ typedef struct _DLinkedList {
 	// int		count;		// 노드의 총 개수
 }DLinkedList;
 
-// 단순 연결 리스트: 함수 정의
+// 단순 연결 리스트: 함수 원형
 _Bool	isEmpty(DLinkedList* dList);			// 빈 리스트 여부 판단
 int	countDNode(DLinkedList* dList);			// 탐색: 노드의 총 개수(count)
 DNode*	frontDNode(DLinkedList* dList);			// 탐색: 첫 번째 노드
