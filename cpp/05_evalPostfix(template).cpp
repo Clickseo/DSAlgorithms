@@ -98,6 +98,7 @@ using namespace std;
 
 #define	 bufferMAXSIZE	 1024
 
+// 후위 표기법: 수식 계산과 변환(중위표기-> 후위 표기)
 int 	evalPostfix(char* str);
 void	InfixToPostfix(char* postfix, char* infix);
 int	isOperator(int op);
@@ -120,6 +121,7 @@ int main(void)
 	return 0;
 }
 
+// 후위 표기법: 수식 계산
 int  evalPostfix(char* str) {
 	int	op1, op2, res;
 	char	temp[bufferMAXSIZE], *p;
@@ -160,7 +162,7 @@ int  evalPostfix(char* str) {
 	return res;
 }
 
-// 중위 표기법을 후위표기법으로 변환
+// 후위표기법 변환(중위 표기 -> 후위 표기)
 void  InfixToPostfix(char* postfix, char* infix) {
 	LinkedStack<int>	s;
 	while (*infix) {
