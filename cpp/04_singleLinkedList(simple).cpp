@@ -34,6 +34,14 @@ public:
 	void	printSLinkedList();			// 리스트의 전체 노드 출력
 };
 
+/*
+	단순 연결 리스트: SLinkedList -- 메소드 정의
+		- 리스트 성생 및 삭제: SLinkedList, ~SLinkedList
+		- 노드 탐색         : countSNode, frontSNode, rearSNode
+		- 노드 삽입 및 삭제 : addRear, removeFront
+		- 전체 원소 출력    : printSLinkedList
+*/
+
 // 생성자
 SLinkedList::SLinkedList()
 	: head(NULL) { }
