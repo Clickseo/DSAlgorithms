@@ -20,7 +20,7 @@ private:
 class DLinkedList {
 private:
 	DNode*	  	head;		// 첫 번째 노드
-	// SNode*	tail;		// 맨 마지막 노드
+	// DNode*	tail;		// 맨 마지막 노드
 	// int		count;		// 노드의 총 개수
 public:
 	DLinkedList();					// 생성자
@@ -32,9 +32,17 @@ public:
 	DNode*	makeDNode(const int& e) const;		// 새로운 노드 생성
 	void	addRear(const int& e);		    	// 삽입: 맨 마지막 노드
 	void	removeFront();				// 삭제: 첫 번째 노드
-	void	printSLinkedList();			// 리스트의 전체 노드 출력(순방향)
-	void	revPrintSLinkedList();			// 리스트의 전체 노드 출력(역방향)
+	void	printDLinkedList();			// 리스트의 전체 노드 출력(순방향)
+	void	revPrintDLinkedList();			// 리스트의 전체 노드 출력(역방향)
 };
+
+/*
+	이중 연결 리스트: DLinkedList -- 함수 정의
+		- 리스트 성생 및 삭제: DLinkedList, ~DLinkedList
+		- 노드 탐색         : isEmpty, countDNode, frontDNode, rearDNode
+		- 노드 삽입 및 삭제 : makeDNode, addRear, removeFront
+		- 전체 원소 출력    : printDLinkedList
+*/
 
 // 생성자
 DLinkedList::DLinkedList()
@@ -108,7 +116,7 @@ DLinkedList::~DLinkedList() {
 }
 
 // 리스트의 전체 노드 출력(순방향)
-void DLinkedList::printSLinkedList() {
+void DLinkedList::printDLinkedList() {
 	DNode* temp = head;
 	while (temp) {
 		cout.width(3);
@@ -119,7 +127,7 @@ void DLinkedList::printSLinkedList() {
 }
 
 // 리스트의 전체 노드 출력(역방향)
-void DLinkedList::revPrintSLinkedList() {
+void DLinkedList::revPrintDLinkedList() {
 	DNode* temp = rearDNode();
 	while (temp) {
 		cout.width(3);
@@ -148,8 +156,8 @@ int main(void)
 		return 0;       // dList.~DLinkedList();
 	}
 	printf("\n ### 입력된 데이터 ### \n\n");
-	dList.printSLinkedList();
-	dList.revPrintSLinkedList();
+	dList.printDLinkedList();
+	dList.revPrintDLinkedList();
 
 	// 소멸자: 전체 원소 삭제
 	// dList.~DLinkedList();
