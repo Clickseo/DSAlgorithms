@@ -9,7 +9,7 @@
 
 from LinkedStack import LinkedStack
 
-# 연산자 여부를 판별
+# 연산자 여부를 판별한다.
 def isOperator(op) -> bool :
     return op == '+' or op == '-' or op == '*' or op == '/'
 
@@ -20,7 +20,7 @@ def precedence(op) -> int :
 	elif op == '*' or op == '/' : return 2
 	else : return 3
 
-# 중위 표기법을 후위표기법으로 변환
+# 후위표기법 변환(중위 표기 -> 후위 표기)
 def InfixToPostfix(infix) :
     s = LinkedStack()
     
@@ -61,6 +61,7 @@ def InfixToPostfix(infix) :
         postfix.append(s.pop())
     return postfix
 
+# 후위 표기법: 수식 계산
 def  evalPostfix(sList) -> int :
     s = LinkedStack()
     for st in sList :
