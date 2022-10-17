@@ -69,6 +69,14 @@ int main(void)
 	return 0;
 }
 
+/*
+	단순 연결 리스트: SLinkedList -- 함수 정의
+		- 리스트 성생 및 삭제
+		- 노드 탐색         : isEmpty, countSNode, frontSNode, rearSNode
+		- 노드 삽입 및 삭제 : addRear, removeFront
+		- 전체 원소 출력    : printSLinkedList
+*/
+
 // 빈 리스트 여부 판단
 _Bool	isEmpty(SLinkedList* sList) {
 	return sList->head == NULL;
