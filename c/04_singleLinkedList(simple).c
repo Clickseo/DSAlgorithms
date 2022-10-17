@@ -8,7 +8,7 @@
 #include <stdlib.h>	// exit, malloc, free
 #include <stdbool.h>	// bool, true, false
 
-// 노드(SNode): 데이터(data), 링크(Llink, Rlink)
+// 노드(SNode): 데이터(data), 링크(link)
 typedef struct _SNode {
 	int		data;
 	struct  _SNode* link;
