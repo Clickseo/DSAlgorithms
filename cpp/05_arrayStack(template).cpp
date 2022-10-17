@@ -8,7 +8,7 @@
 using namespace std;
 inline void error(const char* message);
 
-// 배열 스택: arrayStack
+// 배열 스택: arrayStack -- 클래스 설계
 template <typename E>
 class arrayStack {
 private:
