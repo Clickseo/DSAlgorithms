@@ -15,6 +15,7 @@ typedef struct _arrayStack {
 	int	top;
 }arrayStack;
 
+// 배열 스택: 함수 원형
 arrayStack* 	stackCreate(void);
 void		stackDestroy(arrayStack*);
 void		push(arrayStack*, element);
