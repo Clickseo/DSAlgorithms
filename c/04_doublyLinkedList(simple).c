@@ -72,6 +72,14 @@ int main(void)
 	return 0;
 }
 
+/*
+	이중 연결 리스트: DLinkedList -- 함수 정의
+		- 리스트 성생 및 삭제: DLinkedList, ~DLinkedList
+		- 노드 탐색         : isEmpty, countDNode, frontDNode, rearDNode
+		- 노드 삽입 및 삭제 : makeDNode, addRear, removeFront
+		- 전체 원소 출력    : printDLinkedList, revPrintDLinkedList
+*/
+
 // 빈 리스트 여부 판단
 _Bool	isEmpty(DLinkedList* dList) {
 	return dList->head == NULL;
