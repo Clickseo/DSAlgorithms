@@ -8,21 +8,21 @@
 #include <stdlib.h>	// exit, malloc, free
 #include <stdbool.h>	// bool, true, false
 
-// 노드: 데이터, 링크
+// 노드(DNode): 데이터(data), 링크(Llink, Rlink)
 typedef struct _DNode {
 	int		data;
 	struct  _DNode* Llink;
 	struct  _DNode* Rlink;
 }DNode;
 
-// 단순 연결 리스트
+// 이중 연결 리스트: DLinkedList -- head
 typedef struct _DLinkedList {
 	DNode*		head;	  	// 첫 번째 노드
 	// SNode*	tail;	  	// 맨 마지막 노드
 	// int		count;		// 노드의 총 개수
 }DLinkedList;
 
-// 단순 연결 리스트: 함수 원형
+// 이중 연결 리스트: 함수 원형
 _Bool	isEmpty(DLinkedList* dList);			// 빈 리스트 여부 판단
 int	countDNode(DLinkedList* dList);			// 탐색: 노드의 총 개수(count)
 DNode*	frontDNode(DLinkedList* dList);			// 탐색: 첫 번째 노드
