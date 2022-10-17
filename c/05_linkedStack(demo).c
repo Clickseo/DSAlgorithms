@@ -11,7 +11,7 @@
 int main(void)
 {
 	int           num, choice;
-	LinkedStack*  s = stackCreate();
+	LinkedStack*  s = stackCreate();	// 빈 스택 생성
 
 	while (true) {
 		system("cls");
