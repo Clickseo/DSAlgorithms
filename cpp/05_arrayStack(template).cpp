@@ -71,7 +71,7 @@ bool	arrayStack<E>::isEmpty(void) const {
 // 스택의 포화 상태 여부 판단
 template <typename E>
 bool	arrayStack<E>::isFull(void) const {
-	return top == stackMAXSIZE;
+	return top == stackMAXSIZE - 1;
 }
 
 // 스택의 전체 원소 출력
