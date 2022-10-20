@@ -56,8 +56,10 @@ int	SLinkedList::countSNode() const {
 	if(isEmpty()) return 0;
 	int	count = 0;
 	SNode*	rNode = head;
-	while(rNode->link)
+	while(rNode->link) {
+		count++;
 		rNode = rNode->link;
+	}
 	return count;
 }
 
