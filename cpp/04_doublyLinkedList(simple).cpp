@@ -58,8 +58,10 @@ int	DLinkedList::countDNode() const {
 	if (isEmpty()) return 0;
 	int	count = 0;
 	DNode* rNode = head;
-	while (rNode->Rlink)
+	while (rNode->Rlink) {
+		count++;
 		rNode = rNode->Rlink;
+	}
 	return count;
 }
 
