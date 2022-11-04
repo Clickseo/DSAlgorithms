@@ -43,12 +43,12 @@ private:
 public:
 	LinkedStack();
 	~LinkedStack();
-	void		push(const E& e);
-	void		pop(void);
-	E		top(void) const;
-	bool		empty(void) const;
-	int		size(void) const;
-	void		printStack(void) const;
+	void	push(const E& e);
+	void	pop(void);
+	E	top(void) const;
+	bool	empty(void) const;
+	int	size(void) const;
+	void	printStack(void) const;
 };
 
 template <typename E>
