@@ -3,12 +3,12 @@
 		파일명: LinkedQueue.h
 		클래스: SNode
 		클래스: LinkedQueue
-			- 생성자.소멸자	  : LinkedQueue, ~LinkedQueue
-			- 데이터 삽입.삭제	 : push, pop			// enQueue, deQueue
-			- 데이터 확인	   : front, back
-			- 큐 크기		    : size
-			- 빈 스택 여부 판단	 : empty
-			- 스택의 전체 원소 출력	: printStack
+			- 생성자.소멸자        : LinkedQueue, ~LinkedQueue
+			- 데이터 삽입.삭제     : push, pop			// enQueue, deQueue
+			- 데이터 확인          : front, back
+			- 큐 크기              : size
+			- 빈 스택 여부 판단     : empty
+			- 스택의 전체 원소 출력 : printStack
 */
 
 #include <iostream>
