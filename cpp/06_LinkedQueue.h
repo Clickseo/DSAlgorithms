@@ -44,10 +44,10 @@ public:
 	~LinkedQueue();
 	void	push(const E& e);		// enQueue
 	void	pop(void);			// deQueue
-	E&		front(void) const;
-	E&		back(void) const;
+	E&	front(void) const;
+	E&	back(void) const;
 	bool	empty(void) const;
-	int		size(void) const;
+	int	size(void) const;
 	void	printQueue(void) const;
 };
 
@@ -102,7 +102,7 @@ bool	LinkedQueue<E>::empty(void) const {
 }
 
 template <typename E>
-int		LinkedQueue<E>::size(void) const {
+int	LinkedQueue<E>::size(void) const {
 	return __count;
 }
 
