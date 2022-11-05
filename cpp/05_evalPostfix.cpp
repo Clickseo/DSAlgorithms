@@ -12,14 +12,14 @@
 #include <stack>
 using namespace std;
 
-int 		evalPostfix(string& str);
+int	evalPostfix(string& str);
 string	InfixToPostfix(string& infix);
-int		  isOperator(int op);
-int		  precedence(int op);
+int	isOperator(int op);
+int	precedence(int op);
 
 int main(void)
 {
-	int		  res;
+	int	res;
 	string	infixStr, postfixStr;
 
 	cout << "수식 입력: ";
@@ -36,8 +36,8 @@ int main(void)
 
 int  evalPostfix(string& str) {	
 	stack<char>	s;
-	string		  temp;
-	int			    op1, op2, res = 0;
+	string		temp;
+	int		op1, op2, res = 0;
 	for (int i = 0; i < str.length(); i++) {
 		// 피연산자 일 경우...
 		if (str[i] >= '0' && str[i] <= '9') {
@@ -73,7 +73,7 @@ int  evalPostfix(string& str) {
 // 중위 표기법을 후위표기법으로 변환
 string  InfixToPostfix(string& infix) {
 	stack<char>	s;
-	string		  postfix;
+	string		postfix;
 	for (int i = 0; i < infix.length(); i++) {
 		// 1) '(' 는 스택에 push
 		if (infix[i] == '(')
