@@ -9,7 +9,7 @@ using namespace std;
 
 int main(void)
 {
-	int					      num, choice;
+	int			num, choice;
 	LinkedQueue<int>	q;
 
 	while (true) {
@@ -24,13 +24,13 @@ int main(void)
 
 		switch (choice) {
 			case 1: cout << "\n삽입 할 데이터 입력: ";
-					    cin >> num;		q.push(num);	break;
+				cin >> num;	q.push(num);	break;
 			case 2: cout << "삭제 된 데이터: " << q.front() << endl;
-					    q.pop();		break;
+				q.pop();	break;
 			case 3: q.printQueue();
-					    break;
+				break;
 			case 4: cout << "프로그램 종료..." << endl;
-					    return 0;
+				return 0;
 			default: cout << "잘못 선택 하셨습니다." << endl;
 		}
 		system("pause");
