@@ -24,7 +24,7 @@ int main(void)
 
 		switch (choice) {
 			case 1: cout << "\n삽입 할 데이터 입력: ";
-				cin >> num;	  s.push(num);	  break;
+				cin >> num;	s.push(num);	break;
 			case 2: cout << "삭제 된 데이터: " << s.top() << endl;
 				s.pop();	break;
 			case 3: s.printStack(); break;
