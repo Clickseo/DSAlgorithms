@@ -25,7 +25,7 @@ inline void error(const char* message) {
 template <typename E>
 class SNode {
 private:
-	E		      __data;
+	E		__data;
 	SNode<E>*	__link;
 	template <typename E> friend class LinkedStack;
 public:
@@ -40,16 +40,16 @@ template <typename E>
 class LinkedStack {
 private:
 	SNode<E>*	__top;
-	int		    __count;
+	int		__count;
 public:
 	LinkedStack();
 	~LinkedStack();
 	void    push(const E& e);
-	void		pop(void);
+	void	pop(void);
 	E&      top(void) const;
-	bool		empty(void) const;
+	bool	empty(void) const;
 	int     size(void) const;
-	void		printStack(void) const;
+	void	printStack(void) const;
 };
 
 template <typename E>
