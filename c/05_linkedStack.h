@@ -14,7 +14,7 @@
 // #pragma once
 #ifndef __LinkedStack_H__
 #define __LinkedStack_H__
-typedef	int		element;
+typedef	int	element;
 
 // 노드: SNode(data, link)
 typedef struct __SNode {
