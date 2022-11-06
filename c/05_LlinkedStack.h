@@ -16,24 +16,24 @@ typedef	int	element;
 
 // 노드: SNode(data, link)
 typedef struct __SNode {
-	element		      __data;
+	element		__data;
 	struct __SNode*	__link;
 }SNode;
 
 // 스택 생성: LinkedStack, stackNode
 typedef struct __LinkedStack {
 	SNode*	__top;
-	int	    __count;
+	int	__count;
 }LinkedStack;
 #endif
 
 // 스택 구현(C): 스택 생성 및 활용
 SNode*		makeSNode(element data);
 LinkedStack*	stackCreate(void);
-void		      stackDestroy(LinkedStack* s);
-void		      push(LinkedStack* s, element data);
-void		      pop(LinkedStack* s);
-element		    top(LinkedStack* s);
-_Bool		      stackEempty(LinkedStack* s);
-int		        stackSize(LinkedStack* s);
-void		      printStack(LinkedStack* s);
+void		stackDestroy(LinkedStack* s);
+void		push(LinkedStack* s, element data);
+void		pop(LinkedStack* s);
+element		top(LinkedStack* s);
+_Bool		stackEempty(LinkedStack* s);
+int		stackSize(LinkedStack* s);
+void		printStack(LinkedStack* s);
