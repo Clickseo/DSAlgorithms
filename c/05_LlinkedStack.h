@@ -12,7 +12,7 @@
 // #pragma once
 
 #include "LinkedSNode.h"	// SNode
-typedef		int		element;
+typedef	int	element;
 
 // 스택 생성: LinkedStack
 #ifndef __LinkedStack_H__
