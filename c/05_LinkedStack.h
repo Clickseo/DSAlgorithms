@@ -10,7 +10,6 @@
 */
 
 // #pragma once
-
 #include "LinkedSNode.h"	// SNode
 typedef	int	element;
 
