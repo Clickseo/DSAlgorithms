@@ -3,11 +3,11 @@
 		파일명: LinkedStack.h
 		클래스: SNode
 		클래스: LinkedStack
-			- 생성자.소멸자			    : LinkedStack, ~LinkedStack
-			- 데이터 삽입.삭제		   : push, pop, top
-			- 데이터 확인			     : top						// peek
-			- 빈 스택 여부 판단		  : empty
-			- 스택 크기				      : size
+			- 생성자.소멸자	  : LinkedStack, ~LinkedStack
+			- 데이터 삽입.삭제	 : push, pop, top
+			- 데이터 확인(peek)     : top
+			- 빈 스택 여부 판단     : empty
+			- 스택 크기             : size
 			- 스택의 전체 원소 출력	: printStack
 */
 
@@ -23,7 +23,7 @@ inline void error(const char* message) {
 template <typename E>
 class SNode {
 private:
-	E			    __data;
+	E		__data;
 	SNode<E>*	__link;
 	template <typename E> friend class LinkedStack;
 public:
@@ -39,16 +39,16 @@ template <typename E>
 class LinkedStack {
 private:
 	SNode<E>*	__top;
-	int			  __count;
+	int		__count;
 public:
 	LinkedStack();
 	~LinkedStack();
-	void		push(const E& e);
-	void		pop(void);
-	E&			top(void) const;
-	bool		empty(void) const;
-	int			size(void) const;
-	void		printStack(void) const;
+	void	push(const E& e);
+	void	pop(void);
+	E&	top(void) const;
+	bool	empty(void) const;
+	int	size(void) const;
+	void	printStack(void) const;
 };
 
 // 생성자: 빈 스택 생성
@@ -91,7 +91,7 @@ void	LinkedStack<E>::pop(void) {
 // top(peek) : 스택 맨 위의 원소 확인
 template <typename E>
 E&		LinkedStack<E>::top(void) const {
-	if (empty()) error("STACK IS EMPTY");			// throw "ERROR::STACK IS EMPTY";
+	if (empty()) error("STACK IS EMPTY");		// throw "ERROR::STACK IS EMPTY";
 	return  __top->__data;
 }
 
