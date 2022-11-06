@@ -4,13 +4,13 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		    // system
-#include <stdbool.h>		  // bool, true, false
+#include <stdlib.h>		// system
+#include <stdbool.h>		// bool, true, false
 #include "LinkedStack.h"	// ListStack, stackNode
 
 int main(void)
 {
-	int		        num, choice;
+	int		num, choice;
 	LinkedStack*	LS = stackCreate();
 
 	while (true) {
@@ -26,16 +26,16 @@ int main(void)
 
 		switch (choice) {
 			case 1: printf("\n삽입 할 데이터 입력: ");
-				      scanf_s("%d", &num);
-				      // scanf("%d", &num);
-				      push(LS, num);
-				      break;
+				scanf_s("%d", &num);
+				// scanf("%d", &num);
+				push(LS, num);
+				break;
 			case 2: printf("삭제 된 데이터: %3d \n", top(LS));
-				      pop(LS);	break;
+				pop(LS);	break;
 			case 3: printStack(LS);
-				      break;
+				break;
 			case 4: printf("프로그램 종료... \n");
-				      return 0;
+				return 0;
 			default: printf("잘못 선택 하셨습니다. \n");
 		}
 		system("pause");
