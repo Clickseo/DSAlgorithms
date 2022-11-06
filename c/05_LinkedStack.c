@@ -1,5 +1,5 @@
 /*
-	스택: 알고리즘 구현 -- 연결자료구조(단순연결리스트)
+	스택: 알고리즘 구현 -- 단순연결리스트
 	파일명: LinkedStack.c
 		- 스택 생성 및 삭제   : stackCreate, stackDestroy
 		- 원소 삽입.삭제.확인 : push, pop
