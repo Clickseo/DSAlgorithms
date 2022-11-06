@@ -4,8 +4,7 @@
 			- 노드 : SNode(data, link)
 */
 
-#pragma once
-
+// #pragma once
 typedef	int	element;
 
 // 노드: SNode(data, link)
