@@ -10,9 +10,9 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>			      // malloc, free
-#include "LinkedStack.h"	    // LinkedStack
-// #include "LinkedSNode.h"	  // SNode
+#include <stdlib.h>		// malloc, free
+#include "LinkedStack.h"	// LinkedStack
+// #include "LinkedSNode.h"	// SNode
 
 // stackCreate : 빈 스택 생성
 LinkedStack*	stackCreate(void) {
@@ -57,7 +57,7 @@ void	pop(LinkedStack* s) {
 
 // top(peek) : 스택 맨 위의 원소 확인
 element	top(LinkedStack* s) {
-	if (stackEempty(s))	return EOF;		// return NULL;
+	if (stackEempty(s))	return EOF;
 	return  s->__top->__data;
 }
 
