@@ -6,7 +6,7 @@
 			- 데이터 확인(peek)    : front, back
 			- 빈 스택 여부 판단    : queueEempty
 			- 큐의 크기            : queueSize
-			- 큐의 전체 원소 출력	: printStack
+			- 큐의 전체 원소 출력  : printStack
 */
 
 // #pragma once
