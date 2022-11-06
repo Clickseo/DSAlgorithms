@@ -2,17 +2,17 @@
 	스택: 알고리즘 구현 -- 연결자료구조(단순연결리스트)
 	파일명: LinkedStack.c
 		- 스택 생성 및 삭제   : stackCreate, stackDestroy
-		- 원소 삽입.삭제.확인	: push, pop
-		- 데이터 확인(peek)   : top
+		- 원소 삽입.삭제.확인 : push, pop
+		- 데이터 확인(peek)  : top
 		- 빈 스택 여부 판단   : stackEempty
 		- 스택 크기          : stackSize
 		- 전체 원소 출력     : printStack
 */
 
 #include <stdio.h>
-#include <stdlib.h>       // malloc, free
+#include <stdlib.h>       	// malloc, free
 #include "LinkedStack.h"	// LinkedStack, stackNode
-							            // element
+				// element
 
 // 새로운 노드(data, link) 생성
 SNode*	makeSNode(element num) {
@@ -79,7 +79,7 @@ _Bool	stackEempty(LinkedStack* s) {
 }
 
 // stackSize: 스택의 크기
-int		stackSize(LinkedStack* s) {
+int	stackSize(LinkedStack* s) {
 	return s->__count;
 }
 
