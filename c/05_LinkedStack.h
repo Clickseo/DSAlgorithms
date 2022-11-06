@@ -11,16 +11,15 @@
 
 // #pragma once
 
-#include "LinkedSNode.h"		  // SNode
-
-typedef		int			element;
+#include "LinkedSNode.h"	// SNode
+typedef	int	element;
 
 // 스택 생성: LinkedStack
 #ifndef __LinkedStack_H__
 #define __LinkedStack_H__
 typedef struct __LinkedStack {
-	SNode*		__top;
-	int			  __count;
+	SNode*	__top;
+	int	__count;
 }LinkedStack;
 #endif
 
