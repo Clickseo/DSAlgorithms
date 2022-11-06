@@ -10,9 +10,9 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>       // malloc, free
+#include <stdlib.h>		// malloc, free
 #include "LinkedStack.h"	// LinkedStack, stackNode
-				                  // element
+				// element
 
 // 새로운 노드(data, link) 생성
 SNode*	makeSNode(element num) {
@@ -93,5 +93,3 @@ void	printStack(LinkedStack* s) {
 	}
 	printf(" ]\n");
 }
-Footer
-© 2022 GitHub, Inc.
