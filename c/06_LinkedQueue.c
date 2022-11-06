@@ -1,16 +1,16 @@
 /*
 	큐: 알고리즘 구현 -- 연결자료구조(단순연결리스트)
 		파일명: LinkedQueue.c
-			- 큐의 생성.소멸		: queueCreate, queueDestroy
-			- 데이터 삽입.삭제		: enQueue, deQueue
-			- 데이터 확인(peek)		: front, back
-			- 빈 스택 여부 판단		: queueEempty
-			- 큐의 크기				: stackSize
-			- 큐의 전체 원소 출력	: printStack
+			- 큐의 생성.소멸      : queueCreate, queueDestroy
+			- 데이터 삽입.삭제    : enQueue, deQueue
+			- 데이터 확인(peek)  : front, back
+			- 빈 스택 여부 판단   : queueEempty
+			- 큐의 크기          : stackSize
+			- 큐의 전체 원소 출력 : printStack
 */
 
 #include <stdio.h>
-#include <stdlib.h>			// malloc, free
+#include <stdlib.h>		// malloc, free
 #include "LinkedQueue.h"	// LinkedQueue, SNode
 // #include "LinkedSNode.h"	// SNode
 
@@ -63,13 +63,13 @@ void	deQueue(LinkedQueue* LQ) {
 
 // front : 첫 번째 원소 확인
 element front(LinkedQueue* LQ) {
-	if (queueEempty(LQ))	return EOF;	// return NULL;	
+	if (queueEempty(LQ))	return EOF;
 	return  LQ->__front->__data;
 }
 
 // back : 맨 마지막 원소
 element back(LinkedQueue* LQ) {
-	if (queueEempty(LQ))	return EOF;	// return NULL;
+	if (queueEempty(LQ))	return EOF;
 	return  LQ->__rear->__data;
 }
 
@@ -79,7 +79,7 @@ _Bool queueEempty(LinkedQueue* LQ) {
 }
 
 // queueSize: 큐의 크기
-int		queueSize(LinkedQueue* LQ) {
+int	queueSize(LinkedQueue* LQ) {
 	return LQ->__count;
 
 }
