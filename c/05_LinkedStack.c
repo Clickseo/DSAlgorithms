@@ -1,32 +1,20 @@
 /*
-	스택: 알고리즘 구현 -- 단순연결리스트
-	파일명: LinkedStack.c
-		- 스택 생성 및 삭제   : stackCreate, stackDestroy
-		- 원소 삽입.삭제.확인 : push, pop
-		- 데이터 확인(peek)  : top
-		- 빈 스택 여부 판단   : stackEempty
-		- 스택 크기          : stackSize
-		- 전체 원소 출력     : printStack
+	스택: 알고리즘 구현(C) -- 단순연결리스트
+		파일명: LinkedStack.c
+			- 스택 생성 및 삭제   : stackCreate, stackDestroy
+			- 원소 삽입.삭제.확인 : push, pop
+			- 데이터 확인(peek)   : top
+			- 빈 스택 여부 판단   : stackEempty
+			- 스택 크기          : stackSize
+			- 전체 원소 출력     : printStack
 */
 
 #include <stdio.h>
 #include <stdlib.h>		// malloc, free
-#include "LinkedStack.h"	// LinkedStack, stackNode
-				// element
+#include "LinkedSNode.h"	// SNode
+#include "LinkedStack.h"	// LinkedStack
 
-// 새로운 노드(data, link) 생성
-SNode*	makeSNode(element num) {
-	SNode* newSNode = (SNode*)malloc(sizeof(SNode));
-	if (newSNode == NULL) {
-		printf("노드 생성 실패!!! \n");
-		exit(100);
-	}
-	newSNode->__data = num;
-	newSNode->__link = NULL;
-	return newSNode;
-}
-
-// 빈 스택 생성
+// stackCreate : 빈 스택 생성
 LinkedStack*	stackCreate(void) {
 	LinkedStack* s = (LinkedStack*)malloc(sizeof(LinkedStack));
 	if (s == NULL) {
@@ -38,7 +26,7 @@ LinkedStack*	stackCreate(void) {
 	return s;
 }
 
-// 스택 삭제 -- 모든 노드 삭제
+// stackDestroy : 스택 삭제 -- 모든 노드 삭제
 void	stackDestroy(LinkedStack* s) {
 	SNode* temp = s->__top;
 	while (temp) {
@@ -79,8 +67,9 @@ _Bool	stackEempty(LinkedStack* s) {
 }
 
 // stackSize: 스택의 크기
-int	stackSize(LinkedStack* s) {
+int		stackSize(LinkedStack* s) {
 	return s->__count;
+
 }
 
 // 스택의 전체 원소 출력
@@ -88,7 +77,7 @@ void	printStack(LinkedStack* s) {
 	SNode* temp = s->__top;
 	printf("\n STACK [");
 	while (temp) {
-		// printf("%3d", temp->data);
+		printf("%3d", temp->__data);
 		temp = temp->__link;
 	}
 	printf(" ]\n");
