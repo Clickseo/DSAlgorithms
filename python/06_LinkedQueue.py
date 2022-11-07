@@ -1,12 +1,12 @@
 '''
 	큐: 알고리즘 구현 -- 단순연결리스트
 		파일명: LinkedQueue.py
-			- 큐의 생성.소멸		: __init__, queueDestroy
-			- 데이터 삽입.삭제	: push, pop                 # enQueue, deQueue
-			- 데이터 확인(peek)	: front, back               # peek
-			- 빈 스택 여부 판단	: empty
-			- 큐의 크기			: size
-			- 큐의 전체 원소 출력	: printQueue
+			- 큐의 생성.소멸	: __init__, queueDestroy
+			- 데이터 삽입.삭제    : push, pop                 # enQueue, deQueue
+			- 데이터 확인(peek)	 : front, back               # peek
+			- 빈 스택 여부 판단   : empty
+			- 큐의 크기		  : size
+			- 큐의 전체 원소 출력 : printQueue
 '''
 
 class Node :
