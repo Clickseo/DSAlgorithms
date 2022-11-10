@@ -6,7 +6,7 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>			  // malloc, free
+#include <stdlib.h>		// malloc, free
 #include "LinkedNode.h"		// SNode, DNode
 
 // 새로운 노드(data, link) 생성
