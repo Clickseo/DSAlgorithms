@@ -8,20 +8,22 @@
 #include <stdlib.h>	// exit, malloc, free
 #include <stdbool.h>	// bool, true, false
 
+
 // 노드(SNode): 데이터(data), 링크(link)
 typedef struct _SNode {
-	int		data;
+	int				data;
 	struct  _SNode* link;
 }SNode;
 
 // 단순 연결 리스트: SLinkedList -- head
 typedef struct _SLinkedList {
-	SNode* 		head;		// 첫 번째 노드
-	// SNode*	tail;		// 맨 마지막 노드
-	// int		count;		// 노드의 총 개수
+	SNode* head;		// 첫 번째 노드
+	// SNode*	tail;	// 맨 마지막 노드
+	// int		count;	// 노드의 총 개수
 }SLinkedList;
 
 // 단순 연결 리스트: 함수 원형
+
 _Bool	isEmpty(SLinkedList* sList);			// 빈 리스트 여부 판단
 int	countSNode(SLinkedList* sList);			// 탐색: 노드의 총 개수(count)
 SNode*	frontSNode(SLinkedList* sList);			// 탐색: 첫 번째 노드
@@ -65,6 +67,7 @@ int main(void)
 	while (!isEmpty(sList))
 		removeFront(sList);
 	// printSLinkedList(sList);
+
 	free(sList);
 	return 0;
 }
@@ -106,10 +109,11 @@ SNode* rearSNode(SLinkedList* sList) {
 	if (isEmpty(sList))
 		return NULL;
 	// 맨 마지막 노드 탐색
+	// return tail;
 	SNode* rNode = sList->head;
 	while (rNode->link)
 		rNode = rNode->link;
-	return rNode;
+	return rNode;	
 }
 
 // 새로운 노드 생성
