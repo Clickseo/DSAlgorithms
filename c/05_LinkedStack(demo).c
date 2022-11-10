@@ -1,18 +1,18 @@
 /*
-	스택: 알고리즘 구현 -- 연결자료구조(단순연결리스트)
+	스택: 알고리즘 구현 -- 단순연결리스트
 		- main	: 데이터 삽입.삭제, 전체 원소 출력
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// system
-#include <stdbool.h>		// bool, true, false
-#include "LinkedStack.h"	// LinkedStack, SNode
-// #include "LinkedSNode.h"	// SNode
+#include <stdlib.h>			// system
+#include <stdbool.h>			// bool, true, false
+#include "LinkedStack.h"		// LinkedStack, SNode
+// #include "LinkedSNode.h"		// SNode
 
 int main(void)
 {
 	int		num, choice;
-	LinkedStack*	LS = stackCreate();
+	LinkedStack*	S = stackCreate();
 
 	while (true) {
 		system("cls");
@@ -29,11 +29,11 @@ int main(void)
 		case 1: printf("\n삽입 할 데이터 입력: ");
 			scanf_s("%d", &num);
 			// scanf("%d", &num);
-			push(LS, num);
+			push(S, num);
 			break;
 		case 2: printf("삭제 된 데이터: %3d \n", top(LS));
-				pop(LS);	break;
-		case 3: printStack(LS);
+				pop(S);	break;
+		case 3: printStack(S);
 			break;
 		case 4: printf("프로그램 종료... \n");
 			return 0;
@@ -41,6 +41,6 @@ int main(void)
 		}
 		system("pause");
 	}
-	stackDestroy(LS);
+	stackDestroy(S);
 	return 0;
 }
