@@ -24,11 +24,11 @@ typedef struct __LinkedQueue {
 
 // 큐 구현(C):: 큐 생성 및 활용
 LinkedQueue*	queueCreate(void);
-void		queueDestroy(LinkedQueue* LQ);
-void		enQueue(LinkedQueue* LQ, element data);
-void		deQueue(LinkedQueue* LQ);
-element		front(LinkedQueue* LQ);
-element		back(LinkedQueue* LQ);
-_Bool		queueEempty(LinkedQueue* LQ);
-int		queueSize(LinkedQueue* LQ);
-void		printQueue(LinkedQueue* LQ);
+void		queueDestroy(LinkedQueue* Q);
+void		enQueue(LinkedQueue* Q, element data);
+void		deQueue(LinkedQueue* Q);
+element		front(LinkedQueue* Q);
+element		back(LinkedQueue* Q);
+_Bool		queueEempty(LinkedQueue* Q);
+int		queueSize(LinkedQueue* Q);
+void		printQueue(LinkedQueue* Q);
