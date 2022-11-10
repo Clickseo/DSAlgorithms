@@ -16,65 +16,65 @@
 
 // stackCreate : 빈 스택 생성
 LinkedStack*	stackCreate(void) {
-	LinkedStack* s = (LinkedStack*)malloc(sizeof(LinkedStack));
-	if (s == NULL) {
+	LinkedStack* S = (LinkedStack*)malloc(sizeof(LinkedStack));
+	if (S == NULL) {
 		printf("스택 생성 실패!!! \n");
 		exit(100);
 	}
-	s->__top = NULL;
-	s->__count = 0;
-	return s;
+	S->__top = NULL;
+	S->__count = 0;
+	return S;
 }
 
 // stackDestroy : 스택 삭제 -- 모든 노드 삭제
-void	stackDestroy(LinkedStack* s) {
-	SNode* temp = s->__top;
+void	stackDestroy(LinkedStack* S) {
+	SNode* temp = S->__top;
 	while (temp) {
-		s->__top = temp->__link;
+		S->__top = temp->__link;
 		free(temp);
-		temp = s->__top;
+		temp = S->__top;
 	}
-	free(s);
+	free(S);
 	return;
 }
 
 // push : 스택의 데이터 삽입
-void	push(LinkedStack* s, element data) {
+void	push(LinkedStack* S, element data) {
 	SNode* newSNode = makeSNode(data);
-	newSNode->__link = s->__top;
-	s->__top = newSNode;
-	s->__count++;
+	newSNode->__link = S->__top;
+	S->__top = newSNode;
+	S->__count++;
 }
 
 // pop : 스택에서 데이터 삭제
-void	pop(LinkedStack* s) {
-	if (stackEempty(s))	return;
-	SNode* temp = s->__top;
-	s->__top = temp->__link;
+void	pop(LinkedStack* S) {
+	if (stackEempty(S))	return;
+	SNode* temp = S->__top;
+	S->__top = temp->__link;
 	free(temp);
-	s->__count--;
+	S->__count--;
 }
 
 // top(peek) : 스택 맨 위의 원소 확인
-element	top(LinkedStack* s) {
-	if (stackEempty(s))	return EOF;
-	return  s->__top->__data;
+element	top(LinkedStack* S) {
+	if (stackEempty(S))	return EOF;
+	return  S->__top->__data;
 }
 
 // stackEempty : 스택의 공백 상태
-_Bool	stackEempty(LinkedStack* s) {
-	return s->__top == NULL;
+_Bool	stackEempty(LinkedStack* S) {
+	return S->__top == NULL;
 }
 
 // stackSize: 스택의 크기
-int		stackSize(LinkedStack* s) {
-	return s->__count;
+int	stackSize(LinkedStack* S) {
+	return S->__count;
 
 }
 
-// 스택의 전체 원소 출력
-void	printStack(LinkedStack* s) {
-	SNode* temp = s->__top;
+// printStack : 스택의 전체 원소 출력
+void	printStack(LinkedStack* S) {
+	SNode* temp = S->__top;
 	printf("\n STACK [");
 	while (temp) {
 		printf("%3d", temp->__data);
