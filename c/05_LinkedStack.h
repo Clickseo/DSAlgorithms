@@ -1,12 +1,12 @@
 /*
 	스택: 알고리즘 구현(C) -- 단순 연결 리스트
 		파일명: LinkedStack.h
-			- 스택 생성.소멸	  : stackCreate, stackDestroy
-			- 데이터 삽입.삭제	 : push, pop
-			- 데이터 확인(peek)	   : top
-			- 빈 스택 여부 판단	 : stackEempty
-			- 스택 크기		    : stackSize
-			- 스택의 전체 원소 출력	: printStack
+			- 스택 생성.소멸        : stackCreate, stackDestroy
+			- 데이터 삽입.삭제      : push, pop
+			- 데이터 확인(peek)    : top
+			- 빈 스택 여부 판단     : stackEempty
+			- 스택 크기            : stackSize
+			- 스택의 전체 원소 출력 : printStack
 */
 
 // #pragma once
