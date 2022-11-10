@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>		// atoi
 #include "LinkedStack.h"	// LinkedStack, SNode
-// #include "LinkedSNode.h"	// SNode
+// #include "LinkedNode.h"	// SNode
 #include "Operators.h"		// isOperator,precedence
 
 #define	bufferMAXSIZE	1024
