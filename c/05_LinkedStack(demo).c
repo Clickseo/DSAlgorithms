@@ -7,7 +7,7 @@
 #include <stdlib.h>			// system
 #include <stdbool.h>			// bool, true, false
 #include "LinkedStack.h"		// LinkedStack, SNode
-// #include "LinkedSNode.h"		// SNode
+// #include "LinkedNode.h"		// SNode
 
 int main(void)
 {
