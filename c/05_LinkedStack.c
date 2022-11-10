@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>		// malloc, free
 #include "LinkedStack.h"	// LinkedStack, SNode
-// #include "LinkedSNode.h"	// SNode
+// #include "LinkedNode.h"	// SNode
 
 // stackCreate : 빈 스택 생성
 LinkedStack*	stackCreate(void) {
