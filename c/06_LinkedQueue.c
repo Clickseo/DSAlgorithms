@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>		// malloc, free
 #include "LinkedQueue.h"	// LinkedQueue, SNode
-// #include "LinkedSNode.h"	// SNode
+// #include "LinkedNode.h"	// SNode
 
 // queueCreate : 빈 큐 생성
 LinkedQueue* queueCreate(void) {
