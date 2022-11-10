@@ -12,7 +12,7 @@ typedef	int		element;
 #ifndef __SNode_H__
 #define __SNode_H__
 typedef struct __SNode {
-	element			    __data;
+	element		__data;
 	struct __SNode* __link;
 }SNode;
 #endif
@@ -21,13 +21,11 @@ typedef struct __SNode {
 #ifndef __DNode_H__
 #define __DNode_H__
 typedef struct __DNode {
-	element			    __data;
+	element		__data;
 	struct __DNode* __Llink;
 	struct __DNode* __Rlink;
 }DNode;
 #endif
 
-// 단순 연결 리스트 구현(C): SNode(data, link)
-// 이중 연결 리스트 구현(C): DNode(data, Llink, Rlink)
-SNode* makeSNode(element data);
-DNode* makeDNode(element data);
+SNode* makeSNode(element data);		// 단순 연결 리스트 구현(C): SNode(data, link)
+DNode* makeDNode(element data);		// 이중 연결 리스트 구현(C): DNode(data, Llink, Rlink)
