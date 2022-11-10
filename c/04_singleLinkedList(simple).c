@@ -11,8 +11,8 @@
 
 // 노드(SNode): 데이터(data), 링크(link)
 typedef struct _SNode {
-	int				data;
-	struct  _SNode* link;
+	int		data;
+	struct  _SNode*	link;
 }SNode;
 
 // 단순 연결 리스트: SLinkedList -- head
