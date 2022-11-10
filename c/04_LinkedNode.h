@@ -1,5 +1,5 @@
 /*
-	단순 연결 리스트 : 알고리즘 구현(C)
+	단순.이중 연결 리스트 : 알고리즘 구현(C)
 		파일명: LinkedNode.h
 			- 노드		: SNode(__data, __link)
 			- 노드		: DNode(__data, __Llink, __Rlink)
