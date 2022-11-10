@@ -10,8 +10,7 @@
 */
 
 // #pragma once
-#include "LinkedSNode.h"	// SNode
-#include "LinkedDNode.h"	// DNode
+#include "LinkedNode.h"		// SNode, DNode
 
 // 스택 생성: LinkedStack
 #ifndef __LinkedStack_H__
