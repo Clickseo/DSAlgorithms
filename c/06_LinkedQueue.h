@@ -10,7 +10,7 @@
 */
 
 // #pragma once
-#include "LinkedSNode.h"	// SNode
+#include "LinkedNode.h"		// SNode
 typedef	int	element;
 
 // 큐 생성: LinkedQueue
