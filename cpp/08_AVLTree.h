@@ -85,8 +85,6 @@ void    AVLTree::insert(const int& data) {
     else if (data > parent->__data) parent->__Rlink = new DNode(data);
 
     // 균형 맞추기
-    __root->__height = max(getHeight(__root->__Llink), getHeight(__root->__Rlink)) + 1;
-    balance(__root, data);
 }
 
 // 데이터 삭제
@@ -143,9 +141,6 @@ void    AVLTree::remove(const int& data) {
     delete root;
 
     // 균형 맞추기
-    if (__root != nullptr) {
-        __root->__height = max(getHeight(__root->__Llink), getHeight(__root->__Rlink)) + 1;
-        balance(__root, data);
     }
 }
 
@@ -173,40 +168,14 @@ DNode* AVLTree::transPlant(DNode*& root) {
 
 // 균형 맞추기: LL, LR, RR, RL 유형
 void AVLTree::balance(DNode*& root, int data) {
-    if (getHeight(__root->__Llink) >= getHeight(__root->__Rlink) + 2) {       // L 유형
-        if (data > root->__Llink->__data)
-            root->__Llink = leftRotate(root->__Llink);      // LR 유형
-        __root = rightRotate(root);                           // L 유형: LL, LR
-    }
-    else if (getHeight(__root->__Rlink) >= getHeight(__root->__Llink) + 2) {      // R 유형
-        if (data < root->__Rlink->__data)
-            root->__Rlink = rightRotate(root->__Rlink);     // RL 유형
-        __root = leftRotate(root);                            // R 유형: RR, RL
-    }
 }
 
 // 왼쪽(left) 회전
 DNode* AVLTree::leftRotate(DNode* root) {
-    DNode* RChild = root->__Rlink;
-    root->__Rlink = RChild->__Llink;
-    RChild->__Llink = root;
-
-    // 높이 재조정: root, RChild
-    __root->__height = max(getHeight(__root->__Llink), getHeight(__root->__Rlink)) + 1;
-    RChild->__height = max(getHeight(RChild->__Llink), getHeight(RChild->__Rlink)) + 1;    
-    return RChild;  // root --> RChild
 }
 
 // 오른쪽(right) 회전
 DNode* AVLTree::rightRotate(DNode* root) {
-    DNode* LChild = root->__Llink;
-    root->__Llink = LChild->__Rlink;
-    LChild->__Rlink = root;
-
-    // 높이 재조정: root, LChild
-    root->__height = max(root->__Llink->__height, root->__Rlink->__height) + 1;
-    LChild->__height = max(LChild->__Llink->__height, LChild->__Rlink->__height) + 1;    
-    return LChild;  // root --> LChild
 }
 
 // 깊이 우선 순회: 전위 순회
