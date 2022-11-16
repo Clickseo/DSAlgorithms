@@ -18,7 +18,7 @@ public:
 // 새로운 노드(data, link) 생성
 DNode::DNode(const int& data) :
     __data(data), __Llink(nullptr), __Rlink(nullptr) {}
-int     DNode::getData(void) const { return __data; }
+int DNode::getData(void) const { return __data; }
 
 // class AVLTree
 class AVLTree {
@@ -117,7 +117,7 @@ void    AVLTree::remove(const int& data) {
         if (parent == nullptr)  __root = child;
         else {
             if (parent->__Llink == root)	parent->__Llink = child;
-            else				parent->__Rlink = child;
+            else				            parent->__Rlink = child;
         }
     }
     // 3) 삭제할 노드가 자식 노드를 두 개 가진 경우
