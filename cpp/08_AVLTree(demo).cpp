@@ -10,7 +10,7 @@ void	Remove(AVLTree* avl);
 int main(void)
 {
     int			num;
-    AVLTree* avl = new AVLTree();
+    AVLTree*    avl = new AVLTree();
     while (true) {
         system("cls");
         cout << "\n ### 균형 이진 탐색 트리: AVL ### \n" << endl;
