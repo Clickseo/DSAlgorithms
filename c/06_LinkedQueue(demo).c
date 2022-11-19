@@ -4,10 +4,10 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>         	// system
-#include <stdbool.h>        	// bool, true, false
-#include "LinkedQueue.h"	// LinkedQueue, SNode
-// #include "LinkedNode.h" 	// SNode
+#include <stdlib.h>				// system
+#include <stdbool.h>			// bool, true, false
+#include "LinkedQueue.h"		// LinkedQueue, SNode
+// #include "LinkedNode.h"		// SNode
 
 int main(void)
 {
@@ -26,18 +26,18 @@ int main(void)
 		// scanf("%d", &num);
 
 		switch (num) {
-		  case 1: printf("\n 삽입 할 데이터 입력 : ");
-			scanf_s("%d", &data);		// scanf("%d", &data);
-			enQueue(Q, data);
-			break;
-		  case 2: printf("삭제 된 데이터 : %3d \n", front(LQ));
-			deQueue(Q);
-			break;
-		  case 3:printQueue(Q);
-			break;
-		  case 4: printf("프로그램 종료... \n");
-			return 0;
-		  default: printf("잘못 선택 하셨습니다. \n");
+			case 1: printf("\n 삽입 할 데이터 입력 : ");
+				scanf_s("%d", &data);		// scanf("%d", &data);
+				enQueue(Q, data);
+				break;
+			case 2: printf("삭제 된 데이터 : %3d \n", front(Q));
+				deQueue(Q);
+				break;
+			case 3:printQueue(Q);
+				break;
+			case 4: printf("프로그램 종료... \n");
+				return 0;
+			default: printf("잘못 선택 하셨습니다. \n");
 		}
 		system("pause");
 	}
