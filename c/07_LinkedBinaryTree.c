@@ -1,18 +1,18 @@
 /*
 	이진 트리: 알고리즘 구현
 		파일명: LinkedBinaryTree.c
-			- 이진 트리 생성					: makeLinkedBinaryTree
+			- 이진 트리 생성			: makeLinkedBinaryTree
 			- 깊이 우선 순회(전위.중위.후위)	: Preorder, Inorder, Postorder
-			- 너비 우선 순회					: Levelorder
+			- 너비 우선 순회			: Levelorder
 */
 
 #include <stdio.h>
-#include <stdlib.h>				// malloc
-#include "LinkedStack.h"		// LinkedStack
-#include "LinkedQueue.h"		// LinkedQueue
+#include <stdlib.h>		// malloc
+#include "LinkedStack.h"	// LinkedStack
+#include "LinkedQueue.h"	// LinkedQueue
 #include "LinkedBinaryTree.h"	// DNode
-// #include "LinkedNode.h"		// SNode, DNode
-#include "Operators.h"			// isOperator,precedence, isLegal
+// #include "LinkedNode.h"	// SNode, DNode
+#include "Operators.h"		// isOperator,precedence, isLegal
 
 // 이진 트리 생성
 DNode* makeLinkedBinaryTree(char* pStr) {
