@@ -29,9 +29,9 @@ int main(void)
         cin >> num;
         switch (num) {
             case 1: Insert<int>(bst);	break;
-            case 2: Remove(bst);	break;
-            case 3: Search(bst);	break;
-            case 4: bst.Inorder(bst.getRoot());             break;
+            case 2: Remove(bst);	    break;
+            case 3: Search(bst);	    break;
+            case 4: bst.Inorder(bst.getRoot());              break;
             case 5: cout << "프로그램 종료!!!\n" << endl;     return 0;
             default: cout << "메뉴를 잘못 선택하셨습니다." << endl;
         }
