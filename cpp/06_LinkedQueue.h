@@ -4,7 +4,7 @@
 		클래스: SNode
 		클래스: LinkedQueue
 			- 생성자.소멸자		: LinkedQueue, ~LinkedQueue
-			- 데이터 삽입.삭제	: push, pop					// enQueue, deQueue
+			- 데이터 삽입.삭제	: push, pop				// enQueue, deQueue
 			- 데이터 확인		: front, back				// peek
 			- 빈 큐 여부 판단	: empty
 			- 큐 크기		: size
