@@ -3,7 +3,7 @@
         파일명: AVLTree.cpp
         클래스: AVLNode
         클래스: AVLTree
-            - 생성자.소멸자			: AVLTree, ~AVLTree
+            - 생성자.소멸자		: AVLTree, ~AVLTree
             - 데이터 삽입.삭제.검색	: insert, remove, search
             - 균형 맞추기    		: balance, leftRotate, rightRotate
             - 깊이 우선 순회		: Preorder, Inorder, Postorder
