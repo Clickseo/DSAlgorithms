@@ -16,7 +16,7 @@
 
 // 이진 트리 생성
 DNode* makeLinkedBinaryTree(char* pStr) {
-	DNode*			temp;
+	DNode*		temp;
 	LinkedStack*	S = stackCreate();
 	while (*pStr) {
 		// 공백 제거
@@ -26,14 +26,14 @@ DNode* makeLinkedBinaryTree(char* pStr) {
 		temp = makeDNode(*pStr);
 		// 연산자일 경우: 스택에서 자식 노드를 구성할 주소를 pop
 		if (isOperator(*pStr)) {
-			temp->__Rlink = (DNode*)top(S);		pop(S);
-			temp->__Llink = (DNode*)top(S);		pop(S);
+			temp->__Rlink = (DNode*)top(S);	pop(S);
+			temp->__Llink = (DNode*)top(S);	pop(S);
 		}
 		push(S, (int)temp);
 		pStr++;
 	}
 	// 루트 노드
-	temp = (DNode*)top(S);		pop(S);
+	temp = (DNode*)top(S);	pop(S);
 
 	stackDestroy(S);
 	return  temp;
@@ -68,7 +68,7 @@ void  Postorder(DNode* root) {
 
 // 이진 트리 순회: 너비 우선 순회
 void  Levelorder(DNode* root) {
-	DNode*			temp;
+	DNode*		temp;
 	LinkedQueue*	Q = queueCreate();
 
 	enQueue(Q, (int)root);
