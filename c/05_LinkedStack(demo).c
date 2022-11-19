@@ -4,10 +4,10 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>			// system
-#include <stdbool.h>			// bool, true, false
-#include "LinkedStack.h"		// LinkedStack, SNode
-// #include "LinkedNode.h"		// SNode
+#include <stdlib.h>		// system
+#include <stdbool.h>		// bool, true, false
+#include "LinkedStack.h"	// LinkedStack, SNode
+// #include "LinkedNode.h"	// SNode
 
 int main(void)
 {
@@ -19,7 +19,7 @@ int main(void)
 		printf("\n ### 스택 구현: 단순연결리스트 ### \n\n");
 		printf("1) 데이터 삽입(push) \n");
 		printf("2) 데이터 삭제(pop) \n");
-		printf("3) 전체 원소 출력 \n");
+		printf("3) 전체 출력 \n");
 		printf("4) 프로그램 종료 \n\n");
 		printf("메뉴 선택: ");
 		scanf_s("%d", &choice);
@@ -31,8 +31,8 @@ int main(void)
 			// scanf("%d", &num);
 			push(S, num);
 			break;
-		case 2: printf("삭제 된 데이터: %3d \n", top(LS));
-				pop(S);	break;
+		case 2: printf("삭제 된 데이터: %3d \n", top(S));
+			pop(S);	break;
 		case 3: printStack(S);
 			break;
 		case 4: printf("프로그램 종료... \n");
