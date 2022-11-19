@@ -1,18 +1,18 @@
 /*
 	큐: 알고리즘 구현 -- 연결자료구조(단순연결리스트)
 		파일명: LinkedQueue.c
-			- 큐의 생성.소멸      : queueCreate, queueDestroy
-			- 데이터 삽입.삭제    : enQueue, deQueue
-			- 데이터 확인(peek)  : front, back
-			- 빈 스택 여부 판단   : queueEempty
-			- 큐의 크기          : queueSize
-			- 큐의 전체 원소 출력 : printStack
+			- 큐의 생성.소멸		: queueCreate, queueDestroy
+			- 데이터 삽입.삭제	: enQueue, deQueue
+			- 데이터 확인(peek)	: front, back
+			- 빈 스택 여부 판단	: queueEempty
+			- 큐의 크기		: queueSize
+			- 큐의 전체 원소 출력	: printQueue
 */
 
 #include <stdio.h>
 #include <stdlib.h>		// malloc, free
 #include "LinkedQueue.h"	// LinkedQueue, SNode
-// #include "LinkedNode.h"	// SNode
+// #include "LinkedNode.h"	// SNode, DNode
 
 // queueCreate : 빈 큐 생성
 LinkedQueue* queueCreate(void) {
@@ -38,7 +38,7 @@ void queueDestroy(LinkedQueue* Q) {
 	return;
 }
 
-// enQueue : 큐에서 데이터 삽입
+// enQueue : 큐에 데이터 삽입
 void enQueue(LinkedQueue* Q, element  data) {
 	SNode* newSNode = makeSNode(data);
 	if (Q->__front == NULL) {
@@ -61,19 +61,19 @@ void	deQueue(LinkedQueue* Q) {
 	free(temp);
 }
 
-// front : 첫 번째 원소 확인
+// front : 큐에서 첫 번째 원소 확인
 element front(LinkedQueue* Q) {
-	if (queueEempty(Q))	return EOF;
+	if (queueEempty(Q))	return EOF;	// return NULL;	
 	return  Q->__front->__data;
 }
 
-// back : 맨 마지막 원소
+// back : 큐에서 맨 마지막 원소 확인
 element back(LinkedQueue* Q) {
-	if (queueEempty(Q))	return EOF;
+	if (queueEempty(Q))	return EOF;	// return NULL;
 	return  Q->__rear->__data;
 }
 
-// queueEempty : 공백 상태 여부 판단
+// queueEempty : 큐의 공백 상태 여부 판단
 _Bool queueEempty(LinkedQueue* Q) {
 	return Q->__front == NULL;
 }
@@ -84,7 +84,7 @@ int	queueSize(LinkedQueue* Q) {
 
 }
 
-// printQueue : 스택의 전체 원소 출력
+// printQueue : 큐의 전체 원소 출력
 void printQueue(LinkedQueue* Q) {
 	SNode* temp = Q->__front;
 	printf("\n Queue [");
