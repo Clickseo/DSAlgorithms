@@ -1,6 +1,6 @@
 /*
 	이진 트리: 알고리즘 구현 -- 단순연결리스트
-			파일명: LinkedBinaryTree.h
+		파일명: LinkedBinaryTree.h
 */
 
 // #pragma once
@@ -8,8 +8,8 @@
 
 // 이진 트리 생성
 DNode*	makeLinkedBinaryTree(char* pStr);
-int		isOperator(int ch);
-int		isLegal(char* pStr);
+int	isOperator(int ch);
+int	isLegal(char* pStr);
 
 // 이진 트리 순회: 깊이 우선 순회(전위.중위.후위 순회)
 void	Preorder(DNode* root);
