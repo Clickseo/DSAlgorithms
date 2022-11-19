@@ -7,7 +7,7 @@
 			- 데이터 삽입.삭제	: push, pop					// enQueue, deQueue
 			- 데이터 확인		: front, back				// peek
 			- 빈 큐 여부 판단	: empty
-			- 큐 크기			: size
+			- 큐 크기		: size
 			- 큐의 전체 원소 출력	: printQueue
 */
 
