@@ -14,8 +14,8 @@ void	Search(AVLTree* avl);
 
 int main(void)
 {
-    int		    num;
-    AVLTree*  avl = new AVLTree();
+    int         num;
+    AVLTree*    avl = new AVLTree();
     while (true) {
         system("cls");
         cout << "\n ### 균형 이진 탐색 트리: AVL ### \n" << endl;
@@ -30,8 +30,8 @@ int main(void)
           case 1: Insert(avl);	break;
           case 2: Remove(avl);	break;
           case 3: Search(avl);	break;
-          case 4: avl->Inorder(avl->getRoot());		break;
-          case 5: cout << "프로그램 종료!!!\n" << endl;	return 0;
+          case 4: avl->Inorder(avl->getRoot());         break;
+          case 5: cout << "프로그램 종료!!!\n" << endl;   return 0;
           default: cout << "메뉴를 잘못 선택하셨습니다." << endl;
         }
         system("pause");
@@ -41,7 +41,7 @@ int main(void)
 
 // 데이터 입력
 void Insert(AVLTree* avl) {
-    int	num;
+    int	    num;
     while (true) {
         cout << "임의의 정수 입력(종료: 0): ";
         cin >> num;
@@ -52,7 +52,7 @@ void Insert(AVLTree* avl) {
 
 // 데이터 삭제
 void  Remove(AVLTree* avl) {
-    int	num;
+    int	    num;
     while (true) {
         cout << "\n삭제할 임의의 정수 값을 입력하세요(종료: 0): ";
         cin >> num;
