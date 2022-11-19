@@ -51,9 +51,15 @@ public:
 };
 
 // BSTree: 생성자(소멸자)와 메소드 정의
-template <typename E>   BSTree<E>::BSTree() : __root(nullptr) {}
-template <typename E>   BSTree<E>::~BSTree() {}
-template <typename E>   DNode<E>* BSTree<E>::getRoot(void) const { return __root; }
+template <typename E>
+BSTree<E>::BSTree() :
+    __root(nullptr) {}
+
+template <typename E>
+BSTree<E>::~BSTree() {}
+
+template <typename E>
+DNode<E>* BSTree<E>::getRoot(void) const { return __root; }
 
 // 데이터 검색
 template <typename E>
