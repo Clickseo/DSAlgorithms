@@ -5,7 +5,7 @@
 			- 데이터 삽입.삭제	: push, pop
 			- 데이터 확인(peek)	: top
 			- 빈 스택 여부 판단	: stackEempty
-			- 스택 크기			: stackSize
+			- 스택 크기		: stackSize
 			- 스택의 전체 원소 출력	: printStack
 */
 
