@@ -3,7 +3,7 @@
         파일명: BSTree.h
         클래스: DNode
         클래스: BSTree
-            - 생성자.소멸자		: BSTree, ~BSTree
+            - 생성자.소멸자			: BSTree, ~BSTree
             - 데이터 삽입.삭제.검색	: insert, remove, search
             - 깊이 우선 순회		: Preorder, Inorder, Postorder
 */
@@ -25,9 +25,9 @@ public:
     E getData(void) const;
 };
 
-// AVLNode: 생성자와 메소드
+// DNode: 생성자와 메소드 정의
 template <typename E>
-DNode<E>::DNode(const E& data) :
+DNode<E>::DNode(const E& data) : 
     __data(data), __Llink(nullptr), __Rlink(nullptr) {}
 
 template <typename E>
@@ -50,15 +50,10 @@ public:
     void    Postorder(DNode<E>* root) const;
 };
 
-// AVLTree: 생성자와 메소드
-template <typename E>
-BSTree<E>::BSTree() : __root(nullptr) {}
-
-template <typename E>
-BSTree<E>::~BSTree() {}
-
-template <typename E>
-DNode<E>* BSTree<E>::getRoot(void) const { return __root; }
+// BSTree: 생성자(소멸자)와 메소드 정의
+template <typename E>   BSTree<E>::BSTree() : __root(nullptr) {}
+template <typename E>   BSTree<E>::~BSTree() {}
+template <typename E>   DNode<E>* BSTree<E>::getRoot(void) const { return __root; }
 
 // 데이터 검색
 template <typename E>
