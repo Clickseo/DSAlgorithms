@@ -1,19 +1,22 @@
 /*
-	이진 트리 구현: 단순 연결 리스트
-			파일명: LinkedBinaryTree.c
+	이진 트리: 알고리즘 구현
+		파일명: LinkedBinaryTree.c
+			- 이진 트리 생성					: makeLinkedBinaryTree
+			- 깊이 우선 순회(전위.중위.후위)	: Preorder, Inorder, Postorder
+			- 너비 우선 순회					: Levelorder
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// malloc
-#include "LinkedStack.h"	// LinkedStack
-#include "LinkedQueue.h"	// LinkedQueue
+#include <stdlib.h>				// malloc
+#include "LinkedStack.h"		// LinkedStack
+#include "LinkedQueue.h"		// LinkedQueue
 #include "LinkedBinaryTree.h"	// DNode
-// #include "LinkedNode.h"	// SNode, DNode
-#include "Operators.h"		// isOperator,precedence, isLegal
+// #include "LinkedNode.h"		// SNode, DNode
+#include "Operators.h"			// isOperator,precedence, isLegal
 
 // 이진 트리 생성
 DNode* makeLinkedBinaryTree(char* pStr) {
-	DNode*		temp;
+	DNode*			temp;
 	LinkedStack*	S = stackCreate();
 	while (*pStr) {
 		// 공백 제거
@@ -30,7 +33,7 @@ DNode* makeLinkedBinaryTree(char* pStr) {
 		pStr++;
 	}
 	// 루트 노드
-	temp = (DNode*)top(S);	pop(S);
+	temp = (DNode*)top(S);		pop(S);
 
 	stackDestroy(S);
 	return  temp;
@@ -65,7 +68,7 @@ void  Postorder(DNode* root) {
 
 // 이진 트리 순회: 너비 우선 순회
 void  Levelorder(DNode* root) {
-	DNode*		temp;
+	DNode*			temp;
 	LinkedQueue*	Q = queueCreate();
 
 	enQueue(Q, (int)root);
