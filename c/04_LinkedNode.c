@@ -21,7 +21,7 @@ SNode* makeSNode(element num) {
 	return newSNode;
 }
 
-// 새로운 노드(DNode: data, link) 생성
+// 새로운 노드(DNode: data, Llink, Rlink) 생성
 DNode* makeDNode(element num) {
 	DNode* newDNode = (DNode*)malloc(sizeof(DNode));
 	if (newDNode == NULL) {
