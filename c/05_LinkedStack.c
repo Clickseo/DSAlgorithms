@@ -67,7 +67,7 @@ _Bool	stackEempty(LinkedStack* S) {
 }
 
 // stackSize: 스택의 크기
-int		stackSize(LinkedStack* S) {
+int	stackSize(LinkedStack* S) {
 	return S->__count;
 
 }
