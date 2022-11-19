@@ -26,9 +26,9 @@ int main(void)
 	root = makeLinkedBinaryTree(postfix);
 
 	// 이진 트리 깊이 우선 순회 : 전위.중위.후위 순회
-	printf("\nPreorder  : ");	Preorder(root);			// 전위 순회
-	printf("\nInorder   : ");	Inorder(root);			// 중위 순회
-	printf("\nPostorder : ");	Postorder(root);		// 후위 순회
+	printf("\nPreorder  : ");	Preorder(root);		// 전위 순회
+	printf("\nInorder   : ");	Inorder(root);		// 중위 순회
+	printf("\nPostorder : ");	Postorder(root);	// 후위 순회
 
 	// 이진 트리 너비 우선 순회
 	printf("\n Levelorder : ");	Levelorder(root);
