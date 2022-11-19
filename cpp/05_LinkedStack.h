@@ -3,11 +3,11 @@
 		파일명: LinkedStack.h
 		클래스: SNode
 		클래스: LinkedStack
-			- 생성자.소멸자			: LinkedStack, ~LinkedStack
-			- 데이터 삽입.삭제		: push, pop
-			- 데이터 확인(peek)		: top
-			- 빈 스택 여부 판단		: empty
-			- 스택 크기			: size
+			- 생성자.소멸자		: LinkedStack, ~LinkedStack
+			- 데이터 삽입.삭제	: push, pop
+			- 데이터 확인(peek)	: top
+			- 빈 스택 여부 판단	: empty
+			- 스택 크기		: size
 			- 스택의 전체 원소 출력	: printStack
 */
 
