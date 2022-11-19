@@ -13,7 +13,7 @@ typedef	int		element;
 #define __SNode_H__
 typedef struct __SNode {
 	element		__data;
-	struct __SNode* __link;
+	struct __SNode*	__link;
 }SNode;
 #endif
 
