@@ -3,11 +3,11 @@
 		파일명: LinkedQueue.h
 		클래스: SNode
 		클래스: LinkedQueue
-			- 생성자.소멸자			: LinkedQueue, ~LinkedQueue
-			- 데이터 삽입.삭제		: push, pop					// enQueue, deQueue
-			- 데이터 확인			: front, back				// peek
-			- 빈 큐 여부 판단		: empty
-			- 큐 크기				: size
+			- 생성자.소멸자		: LinkedQueue, ~LinkedQueue
+			- 데이터 삽입.삭제	: push, pop					// enQueue, deQueue
+			- 데이터 확인		: front, back				// peek
+			- 빈 큐 여부 판단	: empty
+			- 큐 크기			: size
 			- 큐의 전체 원소 출력	: printQueue
 */
 
@@ -26,7 +26,7 @@ class LinkedStack;
 template <typename E>
 class SNode {
 private:
-	E			__data;
+	E		__data;
 	SNode<E>*	__link;
 	template <typename E> friend class LinkedQueue;
 public:
@@ -47,16 +47,16 @@ template <typename E>
 class LinkedQueue {
 private:
 	SNode<E>*	__front, * __rear;
-	int			__count;
+	int		__count;
 public:
 	LinkedQueue();
 	~LinkedQueue();
 	void	push(const E& e);		// enQueue
-	void	pop(void);				// deQueue
-	E&		front(void) const;
-	E&		back(void) const;
+	void	pop(void);			// deQueue
+	E&	front(void) const;
+	E&	back(void) const;
 	bool	empty(void) const;
-	int		size(void) const;
+	int	size(void) const;
 	void	printQueue(void) const;
 };
 
@@ -119,7 +119,7 @@ bool	LinkedQueue<E>::empty(void) const {
 
 // size: 큐의 크기
 template <typename E>
-int		LinkedQueue<E>::size(void) const {
+int	LinkedQueue<E>::size(void) const {
 	return __count;
 }
 
