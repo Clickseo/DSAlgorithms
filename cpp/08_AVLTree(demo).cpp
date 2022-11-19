@@ -1,6 +1,7 @@
 /*
     균형 탐색 트리(AVL 트리): 알고리즘 구현
-        - main	: 삽입(Insert), 삭제(Remove), 검색(Search), 전체 출력
+        파일명: AVLTree(demo).cpp
+            - main	: 삽입(Insert), 삭제(Remove), 검색(Search), 전체 출력
 */
 
 #include <iostream>
