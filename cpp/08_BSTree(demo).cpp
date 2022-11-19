@@ -15,8 +15,8 @@ template <typename E>   void	Search(BSTree<E>& bst);
 
 int main(void)
 {
-    int		        num;
-    BSTree<int>	    bst;
+    int             num;
+    BSTree<int>     bst;
     while (true) {
         system("cls");
         cout << "\n ### 이진 탐색 트리: BST ### \n" << endl;
@@ -31,8 +31,8 @@ int main(void)
             case 1: Insert(bst);	break;
             case 2: Remove(bst);	break;
             case 3: Search(bst);	break;
-            case 4: bst.Inorder(bst.getRoot());		        break;
-            case 5: cout << "프로그램 종료!!!\n" << endl;	return 0;
+            case 4: bst.Inorder(bst.getRoot());		         break;
+            case 5: cout << "프로그램 종료!!!\n" << endl;	    return 0;
             default: cout << "메뉴를 잘못 선택하셨습니다." << endl;
         }
         system("pause");
