@@ -15,8 +15,8 @@ template <typename E>   void	Search(BSTree<E>& bst);
 
 int main(void)
 {
-    int		        num;
-    BSTree<int>	    bst;
+    int         num;
+    BSTree<int> bst;
     while (true) {
         system("cls");
         cout << "\n ### 이진 탐색 트리: BST ### \n" << endl;
