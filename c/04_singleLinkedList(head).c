@@ -2,7 +2,7 @@
 	단순 연결 리스트: 알고리즘 구현(C)
 		파일명: singleLinkedList.h
 			구조체: SLinkedList
-				- 스택 생성.소멸	: stackCreate, stackDestroy
+				- 스택 생성.소멸		: stackCreate, stackDestroy
 				- 데이터 삽입.삭제	: addRear, removeFront
 				- 데이터 확인(탐색)	: frontSNode, rearSNode
 				- 빈 리스트 여부 판단	: isEmpty
