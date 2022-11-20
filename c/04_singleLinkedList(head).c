@@ -2,16 +2,16 @@
 	단순 연결 리스트: 알고리즘 구현(C)
 		파일명: singleLinkedList(head).c
 			- 리스트 성생 및 삭제	: sListCreate, sListDestroy
-			- 노드 탐색				: isEmpty, countSNode, frontSNode, rearSNode
-			- 노드 삽입 및 삭제		: addRear, removeFront
+			- 노드 탐색		: isEmpty, countSNode, frontSNode, rearSNode
+			- 노드 삽입 및 삭제	: addRear, removeFront
 			- 전체 원소 출력		: printSLinkedList
 */
 
 #include <stdio.h>
-#include <stdlib.h>						// exit, malloc, free
-#include <stdbool.h>					// bool, true, false
+#include <stdlib.h>			// exit, malloc, free
+#include <stdbool.h>			// bool, true, false
 #include "singleLinkedList(head).h"	// SLinkedList, SNode, makeSNode
-// #include "LinkedNode.h"				// SNode, makeSNode
+// #include "LinkedNode.h"		// SNode, makeSNode
 
 // 빈 리스트 생성
 SLinkedList* sListCreate(void) {
