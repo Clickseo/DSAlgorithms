@@ -1,110 +1,35 @@
 /*
 	단순 연결 리스트: 알고리즘 구현(C)
-		파일명: singleLinkedList(head).c
-			- 리스트 성생 및 삭제	: sListCreate, sListDestroy
-			- 노드 탐색		: isEmpty, countSNode, frontSNode, rearSNode
-			- 노드 삽입 및 삭제	: addRear, removeFront
-			- 전체 원소 출력		: printSLinkedList
+		파일명: singleLinkedList.h
+			구조체: SLinkedList
+				- 스택 생성.소멸	: stackCreate, stackDestroy
+				- 데이터 삽입.삭제	: addRear, removeFront
+				- 데이터 확인(탐색)	: frontSNode, rearSNode
+				- 빈 리스트 여부 판단	: isEmpty
+				- 리스트의 총 개수	: countSNode
+				- 리스트의 전체 출력	: printSLinkedList
 */
 
-#include <stdio.h>
-#include <stdlib.h>			// exit, malloc, free
-#include <stdbool.h>			// bool, true, false
-#include "singleLinkedList(head).h"	// SLinkedList, SNode, makeSNode
-// #include "LinkedNode.h"		// SNode, makeSNode
+// #pragma once
+#include "LinkedNode.h"		// SNode, makeSNode
 
-// 빈 리스트 생성
-SLinkedList* sListCreate(void) {
-	SLinkedList* sList = (SLinkedList*)malloc(sizeof(SLinkedList));
-	if (sList == NULL) {
-		printf("메모리 할당 실패!!! \n");
-		exit(1);
-	}
-	sList->__head = NULL;
-	return sList;
-}
+// 구조체: SLinkedList
+#ifndef __singleLinkedList_H__
+#define __singleLinkedList_H__
+typedef struct __SLinkedList {
+	SNode*	__head;		// 첫 번째 노드
+	SNode*	__tail;		// 맨 마지막 노드
+	int	__count;	// 노드의 총 개수
+}SLinkedList;
+#endif
 
-SLinkedList* sListDestroy(SLinkedList* sList) {
-	//	while (!isEmpty(sList))
-	//		removeFront(sList);
-	SNode* tNode, * old;	
-	tNode = sList->__head;
-	while (tNode) {
-		old = tNode;
-		tNode = tNode->__link;
-		free(old);
-	}
-	return NULL;
-}
-
-// 탐색: 첫 번째 노드
-SNode* frontSNode(SLinkedList* sList) {
-	return sList->__head;
-}
-
-// 탐색: 맨 마지막 노드(tail)
-SNode* rearSNode(SLinkedList* sList) {
-	if (isEmpty(sList))
-		return NULL;
-
-	SNode* rNode = sList->__head;
-	while (rNode->__link)
-		rNode = rNode->__link;
-	return rNode;
-}
-
-// 노드 삽입: 맨 마지막 노드로...
-void addRear(SLinkedList* sList, SNode* nNode) {
-	if (isEmpty(sList)) {
-		sList->__head = nNode;
-	}
-	else {
-		SNode* rNode = rearSNode(sList);
-		rNode->__link = nNode;
-	}
-}
-
-// 노드 삭제: 첫 번째 노드를...
-void	removeFront(SLinkedList* sList) {
-	if (isEmpty(sList))
-		return;
-
-	SNode* old = sList->__head;
-	sList->__head = sList->__head->__link;	
-	free(old);
-}
-
-// 빈 리스트 여부 판단
-_Bool	isEmpty(SLinkedList* sList) {
-	return sList->__head == NULL;
-}
-
-// 탐색: 노드의 총 개수(count)
-int	countSNode(SLinkedList* sList) {
-	if (isEmpty(sList))
-		return 0;
-
-	int	count = 0;
-	SNode* rNode = sList->__head;
-	while (rNode->__link) {
-		count++;
-		rNode = rNode->__link;
-	}
-	return count;
-}
-
-// 리스트의 전체 노드 출력
-void	printSLinkedList(SLinkedList* sList) {
-	if (isEmpty(sList)) {
-		printf("입력된 데이터가 없습니다... \n");
-		return;
-	}
-
-	printf("\n ### 입력된 데이터 ### \n\n");
-	SNode* tNode = sList->__head;
-	while (tNode) {
-		printf("%3d ->>", tNode->__data);
-		tNode = tNode->__link;
-	}
-	printf(" NULL\n");
-}
+// 단순 연결 리스트 구현(C): 리스트 생성 및 활용
+SLinkedList* sListCreate(void);					// 빈 리스트 생성
+SLinkedList* sListDestroy(SLinkedList* sList);			// 리스트 삭제: 리스트의 전체 노드 삭제	
+SNode*	frontSNode(SLinkedList* sList);				// 탐색: 리스트의 첫 번째 노드(__head)
+SNode*	rearSNode(SLinkedList* sList);				// 탐색: 리스트의 맨 마지막 노드
+void	addRear(SLinkedList* sList, SNode* nNode);		// 삽입: 리스트의 맨 마지막 노드로...
+void	removeFront(SLinkedList* sList);			// 삭제: 리스트에서 첫 번째 노드를...
+_Bool	isEmpty(SLinkedList* sList);				// 빈 리스트 여부 판단
+int		countSNode(SLinkedList* sList);			// 탐색: 노드의 총 개수(__count)
+void	printSLinkedList(SLinkedList* sList);			// 리스트의 전체 노드 출력
