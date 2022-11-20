@@ -9,6 +9,7 @@
 #include <stdlib.h>		// malloc, free
 #include "LinkedNode.h"		// SNode, DNode
 
+// 단순 연결 리스트 구현(C)
 // 새로운 노드(data, link) 생성
 SNode* makeSNode(element num) {
 	SNode* newSNode = (SNode*)malloc(sizeof(SNode));
@@ -21,6 +22,7 @@ SNode* makeSNode(element num) {
 	return newSNode;
 }
 
+// 이중 연결 리스트 구현(C)
 // 새로운 노드(DNode: data, Llink, Rlink) 생성
 DNode* makeDNode(element num) {
 	DNode* newDNode = (DNode*)malloc(sizeof(DNode));
