@@ -3,7 +3,7 @@
         파일명: BSTree.h
         클래스: DNode
         클래스: BSTree
-            - 생성자.소멸자			: BSTree, ~BSTree
+            - 생성자.소멸자		: BSTree, ~BSTree
             - 데이터 삽입.삭제.검색	: insert, remove, search
             - 깊이 우선 순회		: Preorder, Inorder, Postorder
 */
