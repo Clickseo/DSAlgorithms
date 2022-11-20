@@ -28,7 +28,7 @@ SLinkedList*  sListCreate(void);
 SLinkedList*  sListDestroy(SLinkedList* sList);
 SNode*  frontSNode(SLinkedList* sList);
 SNode*  rearSNode(SLinkedList* sList);
-void    addRear(SLinkedList* sList, SNode* node);
+void    addRear(SLinkedList* sList, SNode* nNode);
 void    removeFront(SLinkedList* sList);
 _Bool   isEmpty(SLinkedList* sList);
 int     countSNode(SLinkedList* sList);
