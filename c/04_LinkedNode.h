@@ -8,15 +8,19 @@
 // #pragma once
 typedef	int		element;
 
+// 단순 연결 리스트 구현(C)
 // 노드: SNode(data, link)
 #ifndef __SNode_H__
 #define __SNode_H__
 typedef struct __SNode {
 	element		__data;
-	struct __SNode*	__link;
+	struct __SNode* __link;
 }SNode;
 #endif
 
+SNode* makeSNode(element data);	
+
+// 이중 연결 리스트 구현(C)
 // 노드: DNode(data, Llink, Rlink)
 #ifndef __DNode_H__
 #define __DNode_H__
@@ -26,6 +30,5 @@ typedef struct __DNode {
 	struct __DNode* __Rlink;
 }DNode;
 #endif
-
-SNode* makeSNode(element data);		// 단순 연결 리스트 구현(C): SNode(data, link)
-DNode* makeDNode(element data);		// 이중 연결 리스트 구현(C): DNode(data, Llink, Rlink)
+	
+DNode* makeDNode(element data);
