@@ -3,7 +3,7 @@
         파일명: BSTree.h
         클래스: DNode
         클래스: BSTree
-            - 생성자.소멸자		: BSTree, ~BSTree
+            - 생성자.소멸자			: BSTree, ~BSTree
             - 데이터 삽입.삭제.검색	: insert, remove, search
             - 깊이 우선 순회		: Preorder, Inorder, Postorder
 */
@@ -12,6 +12,9 @@
 #include <iostream>
 #include <algorithm>    // max
 using namespace std;
+
+template <typename E>
+class BSTree;
 
 // class DNode
 template <typename E>
@@ -116,17 +119,20 @@ void BSTree<E>::insert(DNode* root, const E& data) const {
 // 데이터 삭제
 template <typename E>
 void    BSTree<E>::remove(const E& data) {
-    if (__root == nullptr) {
-        return;
-    }
-
     // 삭제할 노드의 위치 탐색
     DNode<E>* parent = nullptr, * child = nullptr;
     DNode<E>* tNode = __root;
-    while (tNode->__data != data) {
+    while (tNode) {
         parent = tNode;
-        if (data < tNode->__data)   tNode = tNode->__Llink;
-        else                        tNode = tNode->__Rlink;
+        if (data == tNode->__data)    break;
+        else if (data < tNode->__data)  tNode = tNode->__Llink;
+        else                            tNode = tNode->__Rlink;
+    }
+
+    // 삭제할 데이터가 존재하지 않을 경우...
+    if (tNode == nullptr) {
+        cout << "키를 찾지 못했습니다." << endl;
+        return;
     }
 
     // 1) 삭제할 노드가 단말 노드인 경우
