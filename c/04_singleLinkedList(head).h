@@ -3,10 +3,10 @@
 		파일명: singleLinkedList(head).h
 			구조체: SLinkedList
 				- 스택 생성.소멸		: stackCreate, stackDestroy
-				- 데이터 삽입.삭제		: addRear, removeFront
-				- 데이터 확인(peek)		: frontSNode, rearSNode
+				- 데이터 삽입.삭제	: addRear, removeFront
+				- 데이터 확인(peek)	: frontSNode, rearSNode
 				- 빈 리스트 여부 판단	: isEmpty
-				- 리스트의 총 개수		: countSNode
+				- 리스트의 총 개수	: countSNode
 				- 리스트의 전체 출력	: printSLinkedList
 */
 
