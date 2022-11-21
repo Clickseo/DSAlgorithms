@@ -5,14 +5,14 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>					// exit, malloc, free
-#include <stdbool.h>				// bool, true, false
+#include <stdlib.h>			// exit, malloc, free
+#include <stdbool.h>			// bool, true, false
 #include "SLinkedList(head).h"		// SLinkedList, SNode, makeSNode
-// #include "LinkedNode.h"			// SNode, makeSNode
+// #include "LinkedNode.h"		// SNode, makeSNode
 
 int main(void)
 {
-	int				num;
+	int		num;
 	SLinkedList*	sList = sListCreate();
 	while (true) {
 		printf("임의의 정수 입력(종료: 0) : ");
