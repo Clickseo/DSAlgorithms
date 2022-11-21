@@ -5,14 +5,14 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>					// exit, malloc, free
-#include <stdbool.h>				// bool, true, false
+#include <stdlib.h>			// exit, malloc, free
+#include <stdbool.h>			// bool, true, false
 #include "DLinkedList(head).h"		// DLinkedList, DNode, makeDNode
-// #include "LinkedNode.h"			// DNode, makeDNode
+// #include "LinkedNode.h"		// DNode, makeDNode
 
 int main(void)
 {
-	int				num;
+	int		num;
 	DLinkedList*	dList = dListCreate();
 	while (true) {
 		printf("임의의 정수 입력(종료: 0) : ");
