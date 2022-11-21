@@ -2,7 +2,7 @@
 	이중 연결 리스트: 알고리즘 구현(C)
 		파일명: DLinkedList(head).c
 			- 리스트 성생 및 삭제	: dListCreate, dListDestroy
-			- 노드 탐색			: dListEmpty, countDNode, frontDNode, rearDNode
+			- 노드 탐색		: dListEmpty, countDNode, frontDNode, rearDNode
 			- 노드 삽입 및 삭제	: dListAddRear, dListRemoveFront
 			- 전체 원소 출력	: printDLinkedList
 */
@@ -82,7 +82,7 @@ _Bool	dListEmpty(DLinkedList* dList) {
 }
 
 // 탐색: 노드의 총 개수(count)
-int		countDNode(DLinkedList* dList) {
+int	countDNode(DLinkedList* dList) {
 	if (dListEmpty(dList))
 		return 0;
 
