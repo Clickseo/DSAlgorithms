@@ -2,16 +2,16 @@
 	이중 연결 리스트: 알고리즘 구현(C)
 		파일명: DLinkedList(head).c
 			- 리스트 성생 및 삭제	: dListCreate, dListDestroy
-			- 노드 탐색				: dListEmpty, countDNode, frontDNode, rearDNode
-			- 노드 삽입 및 삭제		: dListAddRear, dListRemoveFront
-			- 전체 원소 출력		: printDLinkedList
+			- 노드 탐색			: dListEmpty, countDNode, frontDNode, rearDNode
+			- 노드 삽입 및 삭제	: dListAddRear, dListRemoveFront
+			- 전체 원소 출력	: printDLinkedList
 */
 
 #include <stdio.h>
-#include <stdlib.h>				// exit, malloc, free
-#include <stdbool.h>			// bool, true, false
+#include <stdlib.h>		// exit, malloc, free
+#include <stdbool.h>		// bool, true, false
 #include "DLinkedList(head).h"	// DLinkedList, DNode, makeDNode
-// #include "LinkedNode.h"		// DNode, makeDNode
+// #include "LinkedNode.h"	// DNode, makeDNode
 
 // 빈 리스트 생성
 DLinkedList* dListCreate(void) {
