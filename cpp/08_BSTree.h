@@ -120,11 +120,11 @@ void BSTree<E>::insert(DNode* root, const E& data) const {
 template <typename E>
 void    BSTree<E>::remove(const E& data) {
     // 삭제할 노드의 위치 탐색
-    DNode<E>* parent = nullptr, * child = nullptr;
+    DNode<E>* parent = nullptr, *child = nullptr;
     DNode<E>* tNode = __root;
     while (tNode) {
         parent = tNode;
-        if (data == tNode->__data)    break;
+        if (data == tNode->__data)      break;
         else if (data < tNode->__data)  tNode = tNode->__Llink;
         else                            tNode = tNode->__Rlink;
     }
@@ -145,7 +145,7 @@ void    BSTree<E>::remove(const E& data) {
     }
     // 2) 삭제할 노드가 자식 노드를 한 개 가진 경우
     else if ((tNode->__Llink == nullptr) || (tNode->__Rlink == nullptr)) {
-        if (tNode->__Llink)  child = tNode->__Llink;
+        if (tNode->__Llink) child = tNode->__Llink;
         else                child = tNode->__Rlink;
         if (parent == nullptr)  __root = child;
         else {
