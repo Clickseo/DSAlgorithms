@@ -67,7 +67,7 @@ void  Remove(BSTree<E>& bst) {
 // 데이터 검색
 template <typename E>
 void  Search(BSTree<E>& bst) {
-    int		    num;
+    int         num;
     DNode<E>*   temp = nullptr;
     while (true) {
         cout << "\n찾을 임의의 정수 값을 입력하세요(종료: 0): ";
