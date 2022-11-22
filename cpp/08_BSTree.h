@@ -149,7 +149,7 @@ void    BSTree<E>::remove(const E& data) {
         else                child = tNode->__Rlink;
         if (parent == nullptr)  __root = child;
         else {
-            if (parent->__Llink == tNode)	parent->__Llink = child;
+            if (parent->__Llink == tNode)   parent->__Llink = child;
             else                            parent->__Rlink = child;
         }
     }
