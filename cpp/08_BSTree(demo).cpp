@@ -43,7 +43,7 @@ int main(void)
 // 데이터 입력
 template <typename E>
 void Insert(BSTree<E>& bst) {
-    int	num;
+    int     num;
     while (true) {
         cout << "임의의 정수 입력(종료: 0): ";
         cin >> num;
@@ -55,7 +55,7 @@ void Insert(BSTree<E>& bst) {
 // 데이터 삭제
 template <typename E>
 void  Remove(BSTree<E>& bst) {
-    int	num;
+    int     num;
     while (true) {
         cout << "\n삭제할 임의의 정수 값을 입력하세요(종료: 0): ";
         cin >> num;
