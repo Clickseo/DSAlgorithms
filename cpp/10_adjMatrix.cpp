@@ -13,6 +13,8 @@ public:
 	void	printAdjMatrix(void) const;
 };
 
+// 생성자
+// 소멸자
 
 // insertEdge : 간선 추가
 void  GraphType::insertEdge(int  row, int  col, int weight = 1) {
