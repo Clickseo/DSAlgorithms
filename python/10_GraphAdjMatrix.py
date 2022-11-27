@@ -4,8 +4,8 @@
 			- main	: 그래프 생성 및 간선 추가
 			클래스	: GraphType
 				- 그래프 생성	: __init__
-				- 간선 추가		: insertEdge
-				- 전체 출력		: printAdjMatrix
+				- 간선 추가	: insertEdge
+				- 전체 출력	: printAdjMatrix
 '''
 
 # GraphType class
