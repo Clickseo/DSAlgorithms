@@ -4,8 +4,8 @@
 			- main	: 그래프 생성 및 정점 추가
 			클래스	: GraphType
 				- 그래프 생성.소멸	: GraphType, ~GraphType
-				- 간선 추가			: insertEdge
-				- 전체 출력			: printAdjMatrix
+				- 간선 추가		: insertEdge
+				- 전체 출력		: printAdjMatrix
 */
 
 #include <iostream>
@@ -14,7 +14,7 @@ using namespace std;
 // GraphType class
 class GraphType {
 private:
-	int		__vertex;		// 정점의 개수
+	int	__vertex;	// 정점의 개수
 	int**	__adjMatrix;	// 인접 행렬
 public:
 	GraphType(int vertex);
