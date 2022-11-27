@@ -6,11 +6,11 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// malloc, calloc, free
+#include <stdlib.h>	// malloc, calloc, free
 
 // 그래프: GraphType
 typedef  struct  __GraphType {
-	int		__vertex;		// 정점의 개수
+	int	__vertex;	// 정점의 개수
 	int**	__adjMatrix;	// 인접 행렬
 } GraphType;
 
