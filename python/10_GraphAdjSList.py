@@ -5,8 +5,8 @@
 			클래스	: GNode
 			클래스	: GraphType
 				- 그래프 생성	: __init__
-				- 간선 추가		: insertEdge
-				- 전체 출력		: printAdjMatrix
+				- 간선 추가	: insertEdge
+				- 전체 출력	: printAdjMatrix
 '''
 
 # GNode class
