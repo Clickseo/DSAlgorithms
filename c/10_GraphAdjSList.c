@@ -6,12 +6,12 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// malloc, calloc, free
+#include <stdlib.h>	// malloc, calloc, free
 
 // 그래프(노드): GNode
 typedef struct __GNode {
-	int				__vertex;	// 정점
-	int				__weight;	// 가중치
+	int		__vertex;	// 정점
+	int		__weight;	// 가중치
 	struct __GNode*	__link;
 } GNode;
 
@@ -20,7 +20,7 @@ GNode* makeGNode(int vertex, int weight);
 
 // 그래프: GraphType
 typedef  struct  __GraphType {
-	int		__vertex;		// 정점의 개수
+	int	__vertex;	// 정점의 개수
 	GNode** __adjMatrix;	// 인접 리스트
 } GraphType;
 
