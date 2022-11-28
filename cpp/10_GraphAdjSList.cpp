@@ -5,8 +5,8 @@
 			클래스	: GNode
 			클래스	: GraphType
 				- 그래프 생성.소멸	: GraphType, ~GraphType
-				- 간선 추가			: insertEdge
-				- 전체 출력			: printAdjMatrix
+				- 간선 추가		: insertEdge
+				- 전체 출력		: printAdjMatrix
 */
 
 #include <iostream>
@@ -15,8 +15,8 @@ using namespace std;
 // GNode class
 class GNode {
 private:
-	int		__vertex;	// 정점
-	int		__weight;	// 가중치
+	int	__vertex;	// 정점
+	int	__weight;	// 가중치
 	GNode*	__link;
 	friend class GraphType;
 public:
@@ -30,7 +30,7 @@ GNode::GNode(int vertex = 0, int weight = 0)
 // GraphType class
 class GraphType {
 private:
-	int		__vertex;		// 정점의 개수
+	int	__vertex;		// 정점의 개수
 	GNode** __adjSList;		// 인접 리스트
 public:
 	GraphType(int vertex);
