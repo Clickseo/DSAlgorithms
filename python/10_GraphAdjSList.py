@@ -4,9 +4,9 @@
 			- __main__ : 그래프 생성 및 간선 추가
 			- 클래스 : GNode
 			- 클래스 : GraphType
-                        그래프 생성.소멸 : __init__, __del__
-                        그래프 간선 추가 : insertEdge
-                        그래프 전체 출력 : printAdjSList
+                        	그래프 생성.소멸 : __init__, __del__
+                        	그래프 간선 추가 : insertEdge
+                        	그래프 전체 출력 : printAdjSList
 '''
 
 # GNode class
