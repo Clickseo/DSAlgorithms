@@ -37,11 +37,11 @@ class LinkedBinaryTree :
         for st in postfix :
             temp = TreeNode(st)
             
-        # 연산자일 경우: 스택에서 자식 노드를 구성할 주소를 pop
-        if isOperator(st) :
+            # 연산자일 경우: 스택에서 자식 노드를 구성할 주소를 pop
+            if isOperator(st) :
                 temp.Rlink = s.pop()
                 temp.Llink = s.pop()
-        s.push(temp)
+            s.push(temp)
         self.__root = s.pop()    # 루트 노드
         
     # 깊이 우선 순회: 전위 순회
