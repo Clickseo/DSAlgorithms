@@ -1,12 +1,12 @@
 /*
 	그래프 표현(인접 리스트): 알고리즘 구현
-		파일명: GraphAdjSList.cpp
-			- main	: 그래프 생성 및 정점 추가
+		파일명: GraphAdjSListTraversal.cpp
+			- main	: 그래프 생성 및 간선 추가
 			클래스	: GNode
 			클래스	: GraphType
 				- 그래프 생성.소멸	: GraphType, ~GraphType
-				- 간선 추가		: insertEdge
-				- 전체 출력		: printAdjMatrix
+				- 간선 추가			: insertEdge
+				- 전체 출력			: printAdjMatrix
 */
 
 #include <iostream>
@@ -15,8 +15,8 @@ using namespace std;
 // GNode class
 class GNode {
 private:
-	int	__vertex;	// 정점
-	int	__weight;	// 가중치
+	int		__vertex;	// 정점
+	int		__weight;	// 가중치
 	GNode*	__link;
 	friend class GraphType;
 public:
@@ -30,33 +30,33 @@ GNode::GNode(int vertex = 0, int weight = 0)
 // GraphType class
 class GraphType {
 private:
-	int	__vertex;	// 정점의 개수
-	GNode**	__adjMatrix;	// 인접 리스트
+	int		__vertex;		// 정점의 개수
+	GNode** __adjSList;		// 인접 리스트
 public:
 	GraphType(int vertex);
 	~GraphType(void);
 	void	insertEdge(int vertex1, int vertex2, int weight);
-	void	printAdjMatrix(void) const;
+	void	printAdjSList(void) const;
 };
 
 // GraphType: 생성자(소멸자)와 메소드 정의
 GraphType::GraphType(int vertex) : __vertex(vertex) {
-	__adjMatrix = new GNode*[vertex + 1];
-	memset(__adjMatrix, 0, sizeof(GNode*) * (vertex + 1));
+	__adjSList = new GNode * [vertex + 1];
+	memset(__adjSList, 0, sizeof(GNode*) * (vertex + 1));
 }
 
 // graphDestroy : 그래프 삭제
 GraphType::~GraphType(void) {
 	GNode* old;
 	for (int i = 0; i < __vertex; i++) {
-		old = __adjMatrix[i];
+		old = __adjSList[i];
 		while (old) {
-			__adjMatrix[i] = old->__link;
+			__adjSList[i] = old->__link;
 			delete old;
+			old = __adjSList[i];
 		}
 	}
-	delete[] __adjMatrix;
-	__vertex = 0;
+	delete[] __adjSList;
 }
 
 // insertEdge : 간선 추가
@@ -67,10 +67,10 @@ void  GraphType::insertEdge(int  row, int  col, int weight) {
 	}
 
 	GNode* newGNode = new GNode(col, weight);
-	if (__adjMatrix[row] == nullptr)
-		__adjMatrix[row] = newGNode;
+	if (__adjSList[row] == nullptr)
+		__adjSList[row] = newGNode;
 	else {
-		GNode* rNode = __adjMatrix[row];
+		GNode* rNode = __adjSList[row];
 		while (rNode->__link)
 			rNode = rNode->__link;
 		rNode->__link = newGNode;
@@ -78,20 +78,20 @@ void  GraphType::insertEdge(int  row, int  col, int weight) {
 }
 
 // printAdjMatrix : 그래프 전체 출력
-void  GraphType::printAdjMatrix(void) const {
+void  GraphType::printAdjSList(void) const {
 	char	ch;
 	for (int i = 0; i < __vertex; i++) {
 		ch = i + 65;
-		cout << "\n\t정점 " << ch << "의 인접 리스트";
-		GNode* tNode = __adjMatrix[i];
+		cout << "\t정점 " << ch << "의 인접 리스트";
+		GNode* tNode = __adjSList[i];
 		while (tNode) {
 			cout.width(3);
 			ch = tNode->__vertex + 65;
 			cout << ch << " ->>";
 			tNode = tNode->__link;
 		}
+		cout << " NULL" << endl;
 	}
-	cout << " NULL" << endl;
 }
 
 int main(void)
@@ -112,7 +112,7 @@ int main(void)
 	G2.insertEdge(2, 0, 0);	// C(2) - A(0)
 
 	cout << "\n##### 그래프(G2): 인접 행렬 #####" << endl;
-	G2.printAdjMatrix();
+	G2.printAdjSList();
 
 	// G4 : 유향 그래프
 	GraphType	G4 = GraphType(3);
@@ -126,8 +126,7 @@ int main(void)
 	G4.insertEdge(1, 2, 0);	// B(1) - C(2)
 
 	cout << "\n##### 그래프(G4): 인접 행렬 #####" << endl;
-	G4.printAdjMatrix();
+	G4.printAdjSList();
 
 	return 0;
 }
-
