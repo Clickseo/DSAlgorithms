@@ -54,7 +54,7 @@ SLinkedList::~SLinkedList() {
 	SNode* tNode = __head;
 	while (tNode) {
 		__head = tNode->__link;
-		free(tNode);
+		delete tNode;
 		tNode = __head;
 	}
 }
