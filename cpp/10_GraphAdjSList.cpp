@@ -1,6 +1,6 @@
 /*
 	그래프 표현(인접 리스트): 알고리즘 구현
-		파일명: GraphAdjSListTraversal.cpp
+		파일명: GraphAdjSList.cpp
 			- main	: 그래프 생성 및 간선 추가
 			클래스	: GNode
 			클래스	: GraphType
@@ -111,7 +111,7 @@ int main(void)
 	G2.insertEdge(2, 1, 0);	// C(2) - B(1)
 	G2.insertEdge(2, 0, 0);	// C(2) - A(0)
 
-	cout << "\n##### 그래프(G2): 인접 행렬 #####" << endl;
+	cout << "\n##### 그래프(G2): 인접 리스트 #####" << endl;
 	G2.printAdjSList();
 
 	// G4 : 유향 그래프
@@ -125,7 +125,7 @@ int main(void)
 	G4.insertEdge(1, 0, 0);	// B(1) - A(0)
 	G4.insertEdge(1, 2, 0);	// B(1) - C(2)
 
-	cout << "\n##### 그래프(G4): 인접 행렬 #####" << endl;
+	cout << "\n##### 그래프(G4): 인접 리스트 #####" << endl;
 	G4.printAdjSList();
 
 	return 0;
