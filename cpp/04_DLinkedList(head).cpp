@@ -3,10 +3,10 @@
 		파일명: DLinkedList(head).cpp
 			- 클래스: DNode
 			- 클래스: DLinkedList
-				생성자와 소멸자			: DLinkedList, ~DLinkedList
-				노드 삽입.삭제			: addRear, removeFront
-				노드 탐색				: frontSNode, rearSNode
-				노드 확인				: isEmpty, countSNode
+				생성자와 소멸자		: DLinkedList, ~DLinkedList
+				노드 삽입.삭제		: addRear, removeFront
+				노드 탐색		: frontSNode, rearSNode
+				노드 확인		: isEmpty, countSNode
 				전체 원소(노드) 출력	: printSLinkedList
 */
 
