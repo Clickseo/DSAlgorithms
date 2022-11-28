@@ -49,7 +49,7 @@ int main(void)
 
 	printf("\n##### 그래프(G2): 인접 리스트 #####\n\n");
 	printAdjSList(G2);
-	graphDestroy(G2);
+	G2 = graphDestroy(G2);
 
 	// G4 : 유향 그래프
 	GraphType* G4 = graphCreate(3);
@@ -64,7 +64,7 @@ int main(void)
 
 	printf("\n##### 그래프(G4): 인접 리스트 #####\n\n");
 	printAdjSList(G4);
-	graphDestroy(G4);
+	G4 = graphDestroy(G4);
 
 	return 0;
 }
