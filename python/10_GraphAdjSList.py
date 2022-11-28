@@ -1,12 +1,12 @@
 '''
 	그래프 표현(인접 리스트): 알고리즘 구현
 		파일명: GraphAdjSList.py
-			- __main__	: 그래프 생성 및 간선 추가
-			- 클래스    : GNode
-			- 클래스    : GraphType
-                        그래프 생성.소멸      : __init__, __del__
-                        그래프 간선 추가		: insertEdge
-                        그래프 전체 출력		: printAdjSList
+			- __main__ : 그래프 생성 및 간선 추가
+			- 클래스 : GNode
+			- 클래스 : GraphType
+                        그래프 생성.소멸 : __init__, __del__
+                        그래프 간선 추가 : insertEdge
+                        그래프 전체 출력 : printAdjSList
 '''
 
 # GNode class
@@ -34,7 +34,7 @@ class GraphType :
     # insertEdge : 간선 추가
     def insertEdge(self, row:int, col:int, weight:int) :
         if row >= self.__vertex or col >= self.__vertex :
-		    # print('그래프에 없는 정점입니다!!!')
+            # print('그래프에 없는 정점입니다!!!')
             return
         if self.__adjSList[row] == None : 
             self.__adjSList[row] = GNode(col, weight)
