@@ -32,7 +32,7 @@ DNode::DNode(const int& data) :
 class DLinkedList {
 private:
 	DNode*		__head;		// 첫 번째 노드
-	// SNode*	__tail;		// 맨 마지막 노드
+	// DNode*	__tail;		// 맨 마지막 노드
 	// int		__count;	// 노드의 총 개수
 public:
 	DLinkedList();				// 생성자
