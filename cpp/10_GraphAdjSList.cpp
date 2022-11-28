@@ -2,11 +2,11 @@
 	그래프 표현(인접 리스트): 알고리즘 구현
 		파일명: GraphAdjSList.cpp
 			- main	: 그래프 생성 및 간선 추가
-			클래스	: GNode
-			클래스	: GraphType
-				- 그래프 생성.소멸	: GraphType, ~GraphType
-				- 간선 추가		: insertEdge
-				- 전체 출력		: printAdjMatrix
+			- 클래스	: GNode
+			- 클래스	: GraphType
+				그래프 생성.소멸	: GraphType, ~GraphType
+				간선 추가		: insertEdge
+				전체 출력		: printAdjMatrix
 */
 
 #include <iostream>
