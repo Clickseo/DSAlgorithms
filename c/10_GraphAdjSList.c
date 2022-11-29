@@ -76,7 +76,7 @@ int main(void)
 	return 0;
 }
 
-// 그래프 노드(C): 그래프 노드 생성
+// 그래프 노드 생성
 GNode* makeGNode(int vertex, int weight) {
 	GNode* newGNode = (GNode*)malloc(sizeof(GNode));
 	if (newGNode == NULL) {
@@ -89,7 +89,7 @@ GNode* makeGNode(int vertex, int weight) {
 	return newGNode;
 }
 
-// graphCreate : 그래프 생성
+// 그래프 생성
 GraphType* graphCreate(int vertex) {
 	GraphType* G = (GraphType*)malloc(sizeof(GraphType));
 	if (G == NULL) {
@@ -101,7 +101,7 @@ GraphType* graphCreate(int vertex) {
 	return G;
 }
 
-// graphDestroy : 그래프 삭제
+// 그래프 삭제
 GraphType* graphDestroy(GraphType* G) {
 	GNode* old;
 	for (int i = 0; i < G->__vertex; i++) {
@@ -117,7 +117,7 @@ GraphType* graphDestroy(GraphType* G) {
 	return NULL;
 }
 
-// insertEdge : 간선 추가
+// 그래프 간선 추가
 void  insertEdge(GraphType* G, int  row, int  col, int weight) {
 	if (row >= G->__vertex || col >= G->__vertex) {
 		// printf("그래프에 없는 정점입니다!!!\n");
@@ -135,7 +135,7 @@ void  insertEdge(GraphType* G, int  row, int  col, int weight) {
 	}
 }
 
-// printAdjMatrix : 그래프 전체 출력
+// 그래프 전체 출력
 void  printAdjSList(GraphType* G) {
 	if (G->__adjSList == NULL) {
 		printf("그래프의 정점이 %d 입니다.\n", G->__vertex);
