@@ -34,8 +34,8 @@ GraphType* graphCreate(int vertex);
 GraphType* graphDestroy(GraphType* G);
 void	insertEdge(GraphType* G, int vertex1, int vertex2, int weight);
 void	printAdjSList(GraphType* G);
-// void	DFSAdjSList(GraphType* G, int  vertex);		// 그래프 순회: 깊이 우선 순회(DFS)
-// void	BFSAdjSList(GraphType* G, int  vertex);		// 그래프 순회: 너비 우선 순회(BFS)
+// void	DFSAdjSList(GraphType* G, int vertex);		// 그래프 순회: 깊이 우선 순회(DFS)
+// void	BFSAdjSList(GraphType* G, int vertex);		// 그래프 순회: 너비 우선 순회(BFS)
 
 int main(void)
 {
