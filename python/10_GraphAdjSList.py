@@ -43,7 +43,10 @@ class GraphType :
             while rNode.link :
                 rNode = rNode.link
             rNode.link = GNode(col, weight)
-
+	
+    # def DFSAdjSList(self, vertex:int) :    # 그래프 순회: 깊이 우선 순회(DFS)
+    # def BFSAdjSList(self, vertex:int) :    # 그래프 순회: 너이 우선 순회(BFS)
+	
     # printAdjMatrix : 그래프 전체 출력
     def printAdjSList(self) :
         for i in range(self.__vertex) :
