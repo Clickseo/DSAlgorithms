@@ -103,16 +103,16 @@ int main(void)
 	GraphType	G2 = GraphType(3);
 
 	// 정점: A(0)
-	G2.insertEdge(0, 1, 0);	// A(0) - B(1)
-	G2.insertEdge(0, 2, 0);	// A(0) - C(2)
+	G2.insertEdge(0, 1, 0);		// A(0) - B(1)
+	G2.insertEdge(0, 2, 0);		// A(0) - C(2)
 
 	// 정점: B(1)
-	G2.insertEdge(1, 0, 0);	// B(1) - A(0)
-	G2.insertEdge(1, 2, 0);	// B(1) - C(2)
+	G2.insertEdge(1, 0, 0);		// B(1) - A(0)
+	G2.insertEdge(1, 2, 0);		// B(1) - C(2)
 
 	// 정점: C(2)
-	G2.insertEdge(2, 1, 0);	// C(2) - B(1)
-	G2.insertEdge(2, 0, 0);	// C(2) - A(0)
+	G2.insertEdge(2, 1, 0);		// C(2) - B(1)
+	G2.insertEdge(2, 0, 0);		// C(2) - A(0)
 
 	cout << "\n##### 그래프(G2): 인접 리스트 #####" << endl;
 	G2.printAdjSList();
@@ -121,12 +121,12 @@ int main(void)
 	GraphType	G4 = GraphType(3);
 
 	// 정점: A(0)
-	G4.insertEdge(0, 1, 0);	// A(0) - B(1)
-	G4.insertEdge(0, 2, 0);	// A(0) - C(2)
+	G4.insertEdge(0, 1, 0);		// A(0) - B(1)
+	G4.insertEdge(0, 2, 0);		// A(0) - C(2)
 
 	// 정점: B(1)
-	G4.insertEdge(1, 0, 0);	// B(1) - A(0)
-	G4.insertEdge(1, 2, 0);	// B(1) - C(2)
+	G4.insertEdge(1, 0, 0);		// B(1) - A(0)
+	G4.insertEdge(1, 2, 0);		// B(1) - C(2)
 
 	cout << "\n##### 그래프(G4): 인접 리스트 #####" << endl;
 	G4.printAdjSList();
