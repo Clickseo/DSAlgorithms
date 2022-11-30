@@ -7,6 +7,7 @@
 				그래프 생성.소멸 : GraphType, ~GraphType
 				그래프 간선 추가 : insertEdge
 				그래프 전체 출력 : printAdjMatrix
+				그래프 순회: DFSAdjSList, BFSAdjSList
 */
 
 #include <iostream>
