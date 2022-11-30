@@ -2,7 +2,10 @@
 	그래프 표현(인접 행렬): 알고리즘 구현
 		파일명: GraphAdjMatrix.c
 			- main	: 그래프 생성 및 정점 추가
-			- 그래프 생성 및 활용: graphCreate, graphDestroy, insertEdge, printAdjMatrix
+			- 구조체: GraphType
+			- 그래프 생성.소멸: graphCreate, graphDestroy
+			- 그래프 간선 추가: insertEdge
+			- 그래프 전체 출력: printAdjMatrix
 */
 
 #include <stdio.h>
@@ -59,7 +62,7 @@ int main(void)
 	return 0;
 }
 
-// graphCreate : 그래프 생성
+// 그래프 생성
 GraphType* graphCreate(int vertex) {
 	GraphType* G = (GraphType*)malloc(sizeof(GraphType));
 	if (G == NULL) {
@@ -75,7 +78,7 @@ GraphType* graphCreate(int vertex) {
 	return G;
 }
 
-// graphDestroy : 그래프 삭제
+// 그래프 삭제
 void	graphDestroy(GraphType* G) {
 	for (int i = 0; i < G->__vertex; i++)
 		free(G->__adjMatrix[i]);
@@ -83,7 +86,7 @@ void	graphDestroy(GraphType* G) {
 	G->__vertex = 0;
 }
 
-// insertEdge : 간선 추가
+// 그래프 간선 추가
 void  insertEdge(GraphType* G, int  row, int  col, int weight) {
 	if (row >= G->__vertex || col >= G->__vertex) {
 		// printf("그래프에 없는 정점입니다!!!\n");
@@ -92,7 +95,7 @@ void  insertEdge(GraphType* G, int  row, int  col, int weight) {
 	G->__adjMatrix[row][col] = weight;
 }
 
-// printAdjMatrix : 그래프 전체 출력
+// 그래프 전체 출력
 void  printAdjMatrix(GraphType* G) {
 	for (int i = 0; i < G->__vertex; i++) {
 		printf("\n\t");
