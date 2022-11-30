@@ -4,9 +4,10 @@
 			- __main__ : 그래프 생성 및 간선 추가
 			- 클래스 : GNode
 			- 클래스 : GraphType
-                        	그래프 생성.소멸 : __init__, __del__
+                        	그래프 생성.삭제 : __init__, __del__
                         	그래프 간선 추가 : insertEdge
                         	그래프 전체 출력 : printAdjSList
+				그래프 순회: DFSAdjSList, BFSAdjSList				
 '''
 
 # GNode class
@@ -18,10 +19,12 @@ class GNode :
 
 # GraphType class
 class GraphType :
+    # 생성자: 그래프 생성	
     def __init__(self, vertex: int) :
         self.__vertex = vertex                              # 정점의 개수  
         self.__adjSList = [ None for x in range(vertex) ]   # 인접 리스트
 
+    # 소멸자: 그래프 삭제
     def __del__(self):
         for i in range(len(self.__adjSList)) :
             temp = self.__adjSList[i]
@@ -31,7 +34,7 @@ class GraphType :
                 temp = self.__adjSList[i]
         del self
         
-    # insertEdge : 간선 추가
+    # 그래프 간선 추가
     def insertEdge(self, row:int, col:int, weight:int) :
         if row >= self.__vertex or col >= self.__vertex :
             # print('그래프에 없는 정점입니다!!!')
@@ -44,10 +47,7 @@ class GraphType :
                 rNode = rNode.link
             rNode.link = GNode(col, weight)
 	
-    # def DFSAdjSList(self, vertex:int) :    # 그래프 순회: 깊이 우선 순회(DFS)
-    # def BFSAdjSList(self, vertex:int) :    # 그래프 순회: 너이 우선 순회(BFS)
-	
-    # printAdjMatrix : 그래프 전체 출력
+    # 그래프 전체 출력
     def printAdjSList(self) :
         for i in range(self.__vertex) :
             print(f'\t정점 {chr(i+65)}의 인접 리스트: ', end='')
@@ -57,6 +57,9 @@ class GraphType :
                 tNode = tNode.link
             print(' NULL')
 
+    # def DFSAdjSList(self, vertex:int) :    # 그래프 순회: 깊이 우선 순회(DFS)
+    # def BFSAdjSList(self, vertex:int) :    # 그래프 순회: 너이 우선 순회(BFS)	
+	
 if __name__ == '__main__' :
     # G2 : 무향 그래프
     G2 = GraphType(3)
