@@ -24,7 +24,7 @@ public:
 	GNode(int vertex, int weight);
 };
 
-// 그래프 노드(C): 그래프 노드 생성
+// 그래프 노드 생성
 GNode::GNode(int vertex = 0, int weight = 0)
 	: __vertex(vertex), __weight(weight), __link(nullptr) {}
 
@@ -42,13 +42,13 @@ public:
 	// void	BFSAdjSList(int  vertex);	// 그래프 순회: 너비 우선 순회(BFS)
 };
 
-// GraphType: 생성자(소멸자)와 메소드 정의
+// 생성자: 그래프 생성
 GraphType::GraphType(int vertex) : __vertex(vertex) {
 	__adjSList = new GNode * [vertex + 1];
 	memset(__adjSList, 0, sizeof(GNode*) * (vertex + 1));
 }
 
-// graphDestroy : 그래프 삭제
+// 소멸자: 그래프 삭제
 GraphType::~GraphType(void) {
 	GNode* old;
 	for (int i = 0; i < __vertex; i++) {
@@ -62,7 +62,7 @@ GraphType::~GraphType(void) {
 	delete[] __adjSList;
 }
 
-// insertEdge : 간선 추가
+// 그래프 간선 추가
 void  GraphType::insertEdge(int  row, int  col, int weight) {
 	if (row >= __vertex || col >= __vertex) {
 		// cout << "그래프에 없는 정점입니다!!!" << endl;
@@ -80,7 +80,7 @@ void  GraphType::insertEdge(int  row, int  col, int weight) {
 	}
 }
 
-// printAdjMatrix : 그래프 전체 출력
+// 그래프 전체 출력
 void  GraphType::printAdjSList(void) const {
 	char	ch;
 	for (int i = 0; i < __vertex; i++) {
