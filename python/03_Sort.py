@@ -26,20 +26,6 @@ def bubbleSort(S) -> None:
                 S[j], S[j-1] = S[j-1], S[j]
         # print(S)
 
-'''
-# 버블 정렬: 오름차순 -- 알고리즘 개선 #01
-def bubbleSort(S) :
-    num = len(S)
-    for i in range(num) :
-        state = True
-        for j in range(num-1, 0, -1) :
-            if S[j] < S[j-1] :
-                S[j], S[j-1] = S[j-1], S[j]
-                state = False
-        if state : break
-        # print(S)
-'''
-
 # 삽입 정렬: 오름차순
 def insertionSort(S) -> None:
     for i in range(1, len(S)) :
