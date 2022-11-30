@@ -3,9 +3,9 @@
 		파일명: GraphAdjMatrix.cpp
 			- main	: 그래프 생성 및 정점 추가
 			클래스	: GraphType
-				- 그래프 생성.소멸	: GraphType, ~GraphType
-				- 간선 추가		: insertEdge
-				- 전체 출력		: printAdjMatrix
+				- 그래프 생성.삭제: GraphType, ~GraphType
+				- 그래프 간선 추가: insertEdge
+				- 그래프 전체 출력: printAdjMatrix
 */
 
 #include <iostream>
@@ -23,7 +23,7 @@ public:
 	void	printAdjMatrix(void) const;
 };
 
-// GraphType: 생성자(소멸자)와 메소드 정의
+// 생성자: 그래프 삭제
 GraphType::GraphType(int vertex) : __vertex(vertex) {
 	// 인접 행렬: 2차원 배열 동적 메모리 할당
 	__adjMatrix = new int*[vertex+1];
@@ -34,7 +34,7 @@ GraphType::GraphType(int vertex) : __vertex(vertex) {
 	__adjMatrix[vertex] = nullptr;
 }
 
-// graphDestroy : 그래프 삭제
+// 소멸자: 그래프 삭제
 GraphType::~GraphType(void) {
 	for (int i = 0; i < __vertex; i++)
 		delete[] __adjMatrix[i];
@@ -42,7 +42,7 @@ GraphType::~GraphType(void) {
 	__vertex = 0;
 }
 
-// insertEdge : 간선 추가
+// 그래프 간선 추가
 void  GraphType::insertEdge(int  row, int  col, int weight = 1) {
 	if (row >= __vertex || col >= __vertex) {
 		// cout << "그래프에 없는 정점입니다!!!" << endl;
@@ -51,7 +51,7 @@ void  GraphType::insertEdge(int  row, int  col, int weight = 1) {
 	__adjMatrix[row][col] = weight;
 }
 
-// printAdjMatrix : 그래프 전체 출력
+// 그래프 전체 출력
 void  GraphType::printAdjMatrix(void) const {
 	for (int i = 0; i < __vertex; i++) {
 		cout << "\n\t";
@@ -99,4 +99,3 @@ int main(void)
 
 	return 0;
 }
-
