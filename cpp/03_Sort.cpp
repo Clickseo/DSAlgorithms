@@ -97,25 +97,6 @@ void  bubbleSort(int* pArr, int num) {
 	}
 }
 
-/* 버블 정렬: 알고리즘 개선
-// 버블 정렬: 오름차순 -- 알고리즘 개선 #01
-void  bubbleSort(int* pArr, int num) {
-	_Bool	state;	// 상태 변수
-	for (int i = 0; i < num; i++) {
-		state = true;
-		for (int j = num - 1; j > 0; j--) {
-			if (*(pArr + j) < *(pArr + j - 1)) {
-				SWAP(pArr + j, pArr + j - 1);
-				state = false;
-			}
-		}
-		if (state == true)
-			break;
-		// PRINT(pArr, num);
-	}
-}
-*/
-
 // 삽입 정렬: 오름차순
 void  insertionSort(int* pArr, int num) {
 	int	i, j, temp;
