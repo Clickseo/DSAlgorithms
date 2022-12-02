@@ -1,8 +1,8 @@
 /*
 	단순 연결 리스트: 알고리즘 구현(C)
 		파일명: SLinkedList(head).h
-			구조체: SLinkedList
-			함  수:
+			구 조 체 : SLinkedList
+			함수 원형:
 				- 스택 생성.소멸	: sListCreate, sListDestroy
 				- 데이터 삽입.삭제	: sListAddRear, sLIstRemoveFront
 				- 데이터 확인(탐색)	: frontSNode, rearSNode
