@@ -3,8 +3,8 @@
 		파일명: DLinkedList(head).c
 		함수원형:
 			- 리스트 성생 및 삭제	: dListCreate, dListDestroy
-			- 노드 탐색		: dListEmpty, countDNode, frontDNode, rearDNode
-			- 노드 삽입 및 삭제	: dListAddRear, dListRemoveFront
+			- 노드 삽입.삭제	: dListAddRear, dListRemoveFront
+			- 노드 탐색		: dListEmpty, countDNode, frontDNode, rearDNode			
 			- 전체 원소 출력	: printDLinkedList
 */
 
@@ -25,7 +25,7 @@ DLinkedList* dListCreate(void) {
 	return dList;
 }
 
-// 리스트 삭제: 리스트의 전체 노드 삭제
+// 리스트 삭제: 전체 노드 삭제
 DLinkedList* dListDestroy(DLinkedList* dList) {
 	//	while (!dListEmpty(sList))
 	//		dListRemoveFront(sList);
@@ -63,12 +63,12 @@ void	dListRemoveFront(DLinkedList* dList) {
 	free(old);
 }
 
-// 탐색: 리스트의 첫 번째 노드(head)
+// 검색: 첫 번째 노드(head)
 DNode* frontDNode(DLinkedList* dList) {
 	return dList->__head;
 }
 
-// 탐색: 리스트의 맨 마지막 노드(tail)
+// 검색: 맨 마지막 노드(tail)
 DNode* rearDNode(DLinkedList* dList) {
 	if (dListEmpty(dList))
 		return NULL;
@@ -79,12 +79,7 @@ DNode* rearDNode(DLinkedList* dList) {
 	return rNode;
 }
 
-// 빈 리스트 여부 판단
-_Bool	dListEmpty(DLinkedList* dList) {
-	return dList->__head == NULL;
-}
-
-// 탐색: 노드의 총 개수(count)
+// 검색: 노드의 총 개수(count)
 int	countDNode(DLinkedList* dList) {
 	if (dListEmpty(dList))
 		return 0;
@@ -98,7 +93,12 @@ int	countDNode(DLinkedList* dList) {
 	return count;
 }
 
-// 리스트의 전체 노드 출력(순방향)
+// 빈 리스트 여부 판단
+_Bool	dListEmpty(DLinkedList* dList) {
+	return dList->__head == NULL;
+}
+
+// 리스트 전체 출력(순방향)
 void	printDLinkedList(DLinkedList* dList) {
 	if (dListEmpty(dList)) {
 		printf("입력된 데이터가 없습니다... \n");
@@ -114,7 +114,7 @@ void	printDLinkedList(DLinkedList* dList) {
 	printf(" NULL\n");
 }
 
-// 리스트의 전체 노드 출력(역방향)
+// 리스트 전체 출력(역방향)
 void	revPrintDLinkedList(DLinkedList* dList) {
 	if (dListEmpty(dList)) {
 		printf("입력된 데이터가 없습니다... \n");
