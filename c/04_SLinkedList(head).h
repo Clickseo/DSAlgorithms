@@ -5,8 +5,8 @@
 			함수원형:
 				- 스택 생성.소멸	: sListCreate, sListDestroy
 				- 데이터 삽입.삭제	: sListAddRear, sLIstRemoveFront
-				- 노드 검색		: frontSNode, rearSNode
-				- 리스트의 총 개수	: countSNode
+				- 노드 검색(head, tail) : frontSNode, rearSNode
+				- 노드 총 개수(count)	: countSNode
 				- 빈 리스트 여부 판단	: sListEmpty				
 				- 리스트의 전체 출력	: printSLinkedList
 */
