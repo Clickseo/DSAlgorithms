@@ -1,7 +1,7 @@
 /*
 	단순 연결 리스트: 알고리즘 구현
 		파일명: SLinkedList(head)(demo).c
-			- - main	: 데이터 삽입.삭제, 전체 출력
+			- main	: 데이터 삽입.삭제, 전체 출력
 */
 
 #include <stdio.h>
@@ -25,7 +25,9 @@ int main(void)
 		sListAddRear(sList, newSNode);		// 맨 마지막 노드로 삽입
 	}	
 	printSLinkedList(sList);
-
+	
+	// 리스트 삭제: 전체 노드 삭제
 	sList = sListDestroy(sList);
+	
 	return 0;
 }
