@@ -1,6 +1,7 @@
 /*
 	이중 연결 리스트: 알고리즘 구현(C)
 		파일명: DLinkedList(head).c
+		함수원형:
 			- 리스트 성생 및 삭제	: dListCreate, dListDestroy
 			- 노드 탐색		: dListEmpty, countDNode, frontDNode, rearDNode
 			- 노드 삽입 및 삭제	: dListAddRear, dListRemoveFront
@@ -28,6 +29,7 @@ DLinkedList* dListCreate(void) {
 DLinkedList* dListDestroy(DLinkedList* dList) {
 	//	while (!dListEmpty(sList))
 	//		dListRemoveFront(sList);
+	//	free(dList);
 	DNode* tNode, * old;
 	tNode = dList->__head;
 	while (tNode) {
@@ -35,23 +37,8 @@ DLinkedList* dListDestroy(DLinkedList* dList) {
 		tNode = tNode->__Llink;
 		free(old);
 	}
+	free(dList);
 	return NULL;
-}
-
-// 탐색: 리스트의 첫 번째 노드(__head)
-DNode* frontDNode(DLinkedList* dList) {
-	return dList->__head;
-}
-
-// 탐색: 리스트의 맨 마지막 노드
-DNode* rearDNode(DLinkedList* dList) {
-	if (dListEmpty(dList))
-		return NULL;
-
-	DNode* rNode = dList->__head;
-	while (rNode->__Rlink)
-		rNode = rNode->__Rlink;
-	return rNode;
 }
 
 // 삽입: 리스트의 맨 마지막 노드로...
@@ -74,6 +61,22 @@ void	dListRemoveFront(DLinkedList* dList) {
 	if (dList->__head != NULL)
 		dList->__head->__Llink = NULL;
 	free(old);
+}
+
+// 탐색: 리스트의 첫 번째 노드(head)
+DNode* frontDNode(DLinkedList* dList) {
+	return dList->__head;
+}
+
+// 탐색: 리스트의 맨 마지막 노드(tail)
+DNode* rearDNode(DLinkedList* dList) {
+	if (dListEmpty(dList))
+		return NULL;
+
+	DNode* rNode = dList->__head;
+	while (rNode->__Rlink)
+		rNode = rNode->__Rlink;
+	return rNode;
 }
 
 // 빈 리스트 여부 판단
