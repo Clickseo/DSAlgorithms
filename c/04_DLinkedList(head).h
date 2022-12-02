@@ -1,7 +1,8 @@
 /*
 	이중 연결 리스트: 알고리즘 구현(C)
 		파일명: DLinkedList(head).h
-			구조체: DLinkedList
+			구 조 체: DLinkedList
+			함수원형:			
 				- 스택 생성.소멸	: dListCreate, dListDestroy
 				- 데이터 삽입.삭제	: dListAddRear, dListRemoveFront
 				- 데이터 확인(탐색)	: frontDNode, rearDNode
