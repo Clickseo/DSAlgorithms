@@ -41,7 +41,7 @@ public:
 	SNode*	frontSNode() const;			// 탐색: 첫 번째 노드
 	SNode*	rearSNode() const;			// 탐색: 맨 마지막 노드
 	bool	isEmpty() const;			// 빈 리스트 여부 판단
-	int		countSNode() const;		// 탐색: 노드의 총 개수(count)
+	int	countSNode() const;			// 탐색: 노드의 총 개수(count)
 	void	printSLinkedList() const;		// 리스트의 전체 원소(노드) 출력
 };
 
