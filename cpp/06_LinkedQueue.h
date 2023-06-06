@@ -3,12 +3,12 @@
 		파일명: LinkedQueue.h
 		클래스: SNode
 		클래스: LinkedQueue
-			- 생성자.소멸자		: LinkedQueue, ~LinkedQueue
-			- 데이터 삽입.삭제	: push, pop				// enQueue, deQueue
-			- 데이터 확인		: front, back				// peek
-			- 빈 큐 여부 판단	: empty
-			- 큐 크기		: size
-			- 큐의 전체 원소 출력	: printQueue
+			- 생성자.소멸자: LinkedQueue, ~LinkedQueue
+			- 데이터 삽입.삭제: push, pop		// enQueue, deQueue
+			- 데이터 확인: front, back	// peek
+			- 빈 큐 여부 판단: empty
+			- 큐 크기: size
+			- 큐의 전체 원소 출력: printQueue
 */
 
 #include <iostream>
@@ -46,7 +46,8 @@ E   SNode<E>::getData(void) const { return __data; }
 template <typename E>
 class LinkedQueue {
 private:
-	SNode<E>*	__front, * __rear;
+	SNode<E>*	__front;
+	SNode<E>*	__rear;
 	int		__count;
 public:
 	LinkedQueue();
@@ -62,8 +63,8 @@ public:
 
 // LinkedStack: 생성자(소멸자)와 메소드 정의
 template <typename E>
-LinkedQueue<E>::LinkedQueue() :
-	__front(NULL), __rear(NULL) {}
+LinkedQueue<E>::LinkedQueue()
+	: __front(nullptr), __rear(nullptr), __count(0) {}
 
 template <typename E>
 LinkedQueue<E>::~LinkedQueue() {
@@ -75,17 +76,17 @@ LinkedQueue<E>::~LinkedQueue() {
 	}
 }
 
-// push(enQueue) : 큐에 데이터 삽입
+// push(enQueue): 큐에 데이터 삽입
 template <typename E>
 void	LinkedQueue<E>::push(const E& e) {
 	SNode<E>* newSNode = new SNode<int>(e);
 	// newSNode->__data = e;
 	if (__front)	__rear->__link = newSNode;
-	else        	__front = newSNode;
+	else			__front = newSNode;
 	__rear = newSNode;
 }
 
-// pop(deQueue) : 큐에서 데이터 삭제
+// pop(deQueue): 큐에서 데이터 삭제
 template <typename E>
 void	LinkedQueue<E>::pop(void) {
 	if (empty()) error("STACK IS EMPTY");		// throw "ERROR::STACK IS EMPTY";
@@ -93,28 +94,28 @@ void	LinkedQueue<E>::pop(void) {
 	E data = temp->__data;
 	__front = temp->__link;
 	if (!__front)
-		__rear = NULL;
+		__rear = nullptr;
 	free(temp);
 }
 
-// front(peek) : 큐에서 첫 번째 원소 확인
+// front(peek): 큐에서 첫 번째 원소 확인
 template <typename E>
 E& LinkedQueue<E>::front(void) const {
 	if (empty()) error("STACK IS EMPTY");	// throw "ERROR::STACK IS EMPTY";
 	return  __front->__data;
 }
 
-// back(peek) : 큐에서 맨 마지막 원소 확인
+// back(peek): 큐에서 맨 마지막 원소 확인
 template <typename E>
 E& LinkedQueue<E>::back(void) const {
 	if (empty()) error("STACK IS EMPTY");	// throw "ERROR::STACK IS EMPTY";
 	return  __rear->__data;
 }
 
-// empty : 큐의 공백 상태 여부 판단
+// empty: 큐의 공백 상태 여부 판단
 template <typename E>
 bool	LinkedQueue<E>::empty(void) const {
-	return __front == NULL;
+	return __front == nullptr;
 }
 
 // size: 큐의 크기
@@ -123,7 +124,7 @@ int	LinkedQueue<E>::size(void) const {
 	return __count;
 }
 
-// printQueue : 큐의 전체 원소 출력
+// printQueue: 큐의 전체 원소 출력
 template <typename E>
 void	LinkedQueue<E>::printQueue(void) const {
 	SNode<E>* temp = __front;
