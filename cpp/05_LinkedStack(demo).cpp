@@ -9,7 +9,7 @@ using namespace std;
 
 int main(void)
 {
-	int		num, choice;
+	int	num, choice;
 	LinkedStack<int>	S;	// 빈 스택 생성
 
 	while (true) {
@@ -24,16 +24,16 @@ int main(void)
 
 		switch (choice) {
 			case 1: cout << "\n삽입 할 데이터 입력: ";
-					cin >> num;
-					S.push(num);
-					break;
+				cin >> num;
+				S.push(num);
+				break;
 			case 2: cout << "삭제 된 데이터: " << S.top() << endl;
-					S.pop();
-					break;
+				S.pop();
+				break;
 			case 3: S.printStack();
-					break;
+				break;
 			case 4: cout << "프로그램 종료..." << endl;
-					return 0;
+				return 0;
 			default: cout << "잘못 선택 하셨습니다." << endl;
 		}
 		system("pause");
