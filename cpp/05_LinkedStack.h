@@ -111,7 +111,7 @@ bool	LinkedStack<E>::empty(void) const {	return __top == nullptr;	}
 template <typename E>
 int	LinkedStack<E>::size(void) const { return __count; }
 
-// 스택의 전체 데이터 항목 출력
+// printStack: 스택의 전체 데이터 항목 출력
 template <typename E>
 void	LinkedStack<E>::printStack(void) const {
 	SNode<E>* temp = __top;
