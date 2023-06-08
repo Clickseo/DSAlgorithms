@@ -4,7 +4,7 @@
 		클래스: SNode
 		클래스: LinkedQueue
 			- 생성자.소멸자: LinkedQueue, ~LinkedQueue
-			- 데이터 항목 삽입.삭제: push, pop		// enQueue, deQueue
+			- 데이터 항목 삽입.삭제: push, pop	// enQueue, deQueue
 			- 데이터 항목 확인(peek): front, back	// peek
 			- 빈 큐 여부 판단: empty
 			- 큐 크기(데이터 항목 개수): size
@@ -29,7 +29,7 @@ public:
 	SNode(const E& data);
 	E	getData(void) const;
 private:
-	E			    __data;
+	E		__data;
 	SNode<E>*	__link;
 	template <typename E> friend class LinkedQueue;
 };
@@ -48,17 +48,17 @@ class LinkedQueue {
 public:
 	LinkedQueue();
 	~LinkedQueue();
-	void	push(const E& e);		// enQueue
-	void	pop(void);				// deQueue
-	E&		front(void) const;
-	E&		back(void) const;
+	void	push(const E& e);	// enQueue
+	void	pop(void);		// deQueue
+	E&	front(void) const;
+	E&	back(void) const;
 	bool	empty(void) const;
-	int		size(void) const;
+	int	size(void) const;
 	void	printQueue(void) const;
 private:
 	SNode<E>*	__front;
 	SNode<E>*	__rear;
-	int			  __count;
+	int		__count;
 };
 
 // LinkedStack class: 생성자(소멸자)와 소멸자
@@ -82,7 +82,7 @@ void	LinkedQueue<E>::push(const E& e) {
 	SNode<E>* newSNode = new SNode<int>(e);
 	// newSNode->__data = e;
 	if (__front)	__rear->__link = newSNode;
-	else			    __front = newSNode;
+	else		__front = newSNode;
 	__rear = newSNode;
 }
 
@@ -120,7 +120,7 @@ bool	LinkedQueue<E>::empty(void) const {
 
 // size: 큐의 크기(항목의 개수)
 template <typename E>
-int		LinkedQueue<E>::size(void) const {
+int	LinkedQueue<E>::size(void) const {
 	return __count;
 }
 
