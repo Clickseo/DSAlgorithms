@@ -29,7 +29,7 @@ public:
 	SNode(const E& data);
 	E	getData(void) const;
 private:
-	E			    __data;
+	E		__data;
 	SNode<E>*	__link;
 	template <typename E> friend class LinkedStack;
 };
@@ -50,13 +50,13 @@ public:
 	~LinkedStack();
 	void	push(const E& e);
 	void	pop(void);
-	E&		top(void) const;
+	E&	top(void) const;
 	bool	empty(void) const;
-	int		size(void) const;
+	int	size(void) const;
 	void	printStack(void) const;
 private:
 	SNode<E>*	__top;
-	int			  __count;
+	int		__count;
 };
 
 // LinkedStack class: 생성자(소멸자)와 소멸자
@@ -99,7 +99,7 @@ void	LinkedStack<E>::pop(void) {
 // top(peek): 스택에서 맨 마지막에 삽입된 데이터 항목 확인
 template <typename E>
 E& LinkedStack<E>::top(void) const {
-	if (empty()) error("STACK IS EMPTY");			// throw "ERROR::STACK IS EMPTY";
+	if (empty()) error("STACK IS EMPTY");		// throw "ERROR::STACK IS EMPTY";
 	return  __top->__data;
 }
 
