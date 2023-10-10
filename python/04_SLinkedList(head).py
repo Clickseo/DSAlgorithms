@@ -1,6 +1,6 @@
 '''
 	단순 연결 리스트: 알고리즘 구현
-		- SNode 	    : 노드(data, link)
+		- SNode 	: 노드(data, link)
 		- SLinkedList	: head
 '''
 
