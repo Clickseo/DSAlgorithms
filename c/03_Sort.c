@@ -1,15 +1,15 @@
 /*
 	* 정렬: 알고리즘 구현
 		파일명: Sort.c
-			- 기초적인 정렬 알고리즘: 선택.버블.삽입.쉘 정렬
-			- 고급 정렬 알고리즘	: 퀵.병합 정렬
-			- 특수 정렬 알고리즘	: 계수.기수.버킷 정렬
+			- 기초적인 정렬 알고리즘: 선택.버블.삽입
+			- 고급 정렬 알고리즘: 쉘 정렬, 퀵.병합 정렬
+			- 특수 정렬 알고리즘: 계수.기수.버킷 정렬
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// srand, rand
+#include <stdlib.h>	// srand, rand
 #include <stdbool.h>	// bool, true, false
-#include <time.h>		// time
+#include <time.h>	// time
 
 #define arrMAXSIZE 15
 
