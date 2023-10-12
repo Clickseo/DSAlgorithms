@@ -38,7 +38,7 @@ public:
 	SNode*	rearSNode(void) const;			// 탐색: 맨 마지막 노드(tail)
 	void	addRear(const int& e);			// 삽입: 맨 마지막 노드(tail)
 	void	removeFront(void);			// 삭제: 첫 번째 노드(head)
-	void	printSLinkedList(void) const;		// 리스트의 전체 원소(노드) 출력
+	void	printSLinkedList(void) const;		// 출력: 리스트의 전체 원소(노드)
 private:
 	SNode* 		__head;		// 첫 번째 노드
 	// SNode*	__tail;		// 맨 마지막 노드
