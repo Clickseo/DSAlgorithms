@@ -129,8 +129,8 @@ void SLinkedList::printSLinkedList(void) const {
 int main(void)
 {
 	int		num;
-	SLinkedList	sList = SLinkedList();		// sList.SLinkedList();
-							// __head = nullptr;
+	SLinkedList	sList = SLinkedList();	// sList.SLinkedList();
+						// __head = nullptr;
 	while (true) {
 		cout << "임의의 정수 입력(종료: 0): ";
 		cin >> num;
