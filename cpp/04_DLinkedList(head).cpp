@@ -3,11 +3,11 @@
 		파일명: DLinkedList(head).cpp
 			- 클래스: DNode
 			- 클래스: DLinkedList
-				생성자와 소멸자			: DLinkedList, ~DLinkedList
-				노드 확인				: isEmpty, countSNode
-				노드 탐색				: frontSNode, rearSNode
-				노드 삽입.삭제			: addRear, removeFront
-				전체 원소(노드) 출력	: printSLinkedList
+				생성자와 소멸자: DLinkedList, ~DLinkedList
+				노드 확인: isEmpty, countSNode
+				노드 탐색: frontSNode, rearSNode
+				노드 삽입.삭제: addRear, removeFront
+				전체 원소(노드) 출력: printSLinkedList
 */
 
 #include <iostream>
@@ -18,7 +18,7 @@ class DNode {
 public:
 	DNode(const int& data);
 private:
-	int		__data;
+	int	__data;
 	DNode*	__Llink;
 	DNode*	__Rlink;
 	friend class DLinkedList;
@@ -31,14 +31,14 @@ DNode::DNode(const int& data) :
 // DLinkedList class
 class DLinkedList {
 public:
-	DLinkedList(void);							// 생성자
-	~DLinkedList(void);							// 소멸자: 전체 노드 삭제
-	bool	isEmpty(void) const;				// 빈 리스트 여부 판단
-	int		countDNode(void) const;				// 탐색: 노드의 총 개수(count)
-	DNode*	frontDNode(void) const;				// 탐색: 첫 번째 노드(head)
-	DNode*	rearDNode(void) const;				// 탐색: 맨 마지막 노드(tail)
-	void	addRear(const int& e);				// 삽입: 맨 마지막 노드(tail)
-	void	removeFront(void);					// 삭제: 첫 번째 노드(head)
+	DLinkedList(void);				// 생성자
+	~DLinkedList(void);				// 소멸자: 전체 노드 삭제
+	bool	isEmpty(void) const;			// 빈 리스트 여부 판단
+	int		countDNode(void) const;		// 탐색: 노드의 총 개수(count)
+	DNode*	frontDNode(void) const;			// 탐색: 첫 번째 노드(head)
+	DNode*	rearDNode(void) const;			// 탐색: 맨 마지막 노드(tail)
+	void	addRear(const int& e);			// 삽입: 맨 마지막 노드(tail)
+	void	removeFront(void);			// 삭제: 첫 번째 노드(head)
 	void	printSLinkedList(void) const;		// 리스트의 전체 원소(노드) 출력: 순방향
 	void	revPrintSLinkedList(void) const;	// 리스트의 전체 원소(노드) 출력: 역방향
 private:
@@ -69,11 +69,11 @@ bool DLinkedList::isEmpty(void) const {
 // 탐색: 노드의 총 개수(count)
 int	DLinkedList::countDNode(void) const {
 	// if (isEmpty()) return 0;
-	int		count = 0;
-	DNode* rNode = __head;
+	int	count = 0;
+	DNode*	rNode = __head;
 	while (rNode) {		// while (rNode != nullptr)
-		rNode = rNode->__Rlink;
 		count++;
+		rNode = rNode->__Rlink;
 	}
 	return count;
 }
@@ -151,8 +151,8 @@ void DLinkedList::revPrintSLinkedList(void) const {
 int main(void)
 {
 	int	num;
-	DLinkedList	dList = DLinkedList();		// dList.SLinkedList();
-											// __head = __tail = nullptr;
+	DLinkedList	dList = DLinkedList();	// dList.SLinkedList();
+						// __head = __tail = nullptr;
 	while (true) {
 		cout << "임의의 정수 입력(종료: 0): ";
 		cin >> num;
@@ -164,5 +164,5 @@ int main(void)
 	// 전체 원소 출력
 	dList.printSLinkedList();
 	dList.revPrintSLinkedList();
-	return 0;		// dList.~DLinkedList();
+	return 0;	// dList.~DLinkedList();
 }
