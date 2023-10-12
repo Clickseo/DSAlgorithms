@@ -3,11 +3,11 @@
 		파일명: SLinkedList(head).cpp
 			- 클래스: SNode
 			- 클래스: SLinkedList
-				생성자와 소멸자		: SLinkedList, ~SLinkedList
-				노드 확인		: isEmpty, countSNode
-				노드 탐색		: frontSNode, rearSNode
-				노드 삽입.삭제		: addRear, removeFront
-				전체 원소(노드) 출력	: printSLinkedList
+				생성자와 소멸자: SLinkedList, ~SLinkedList
+				노드 확인: isEmpty, countSNode
+				노드 탐색: frontSNode, rearSNode
+				노드 삽입.삭제: addRear, removeFront
+				전체 원소(노드) 출력: printSLinkedList
 */
 
 #include <iostream>
