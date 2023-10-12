@@ -34,13 +34,13 @@ public:
 	DLinkedList(void);				// 생성자
 	~DLinkedList(void);				// 소멸자: 전체 노드 삭제
 	bool	isEmpty(void) const;			// 빈 리스트 여부 판단
-	int		countDNode(void) const;		// 탐색: 노드의 총 개수(count)
+	int	countDNode(void) const;			// 탐색: 노드의 총 개수(count)
 	DNode*	frontDNode(void) const;			// 탐색: 첫 번째 노드(head)
 	DNode*	rearDNode(void) const;			// 탐색: 맨 마지막 노드(tail)
 	void	addRear(const int& e);			// 삽입: 맨 마지막 노드(tail)
 	void	removeFront(void);			// 삭제: 첫 번째 노드(head)
-	void	printSLinkedList(void) const;		// 리스트의 전체 원소(노드) 출력: 순방향
-	void	revPrintSLinkedList(void) const;	// 리스트의 전체 원소(노드) 출력: 역방향
+	void	printSLinkedList(void) const;		// 출력(순방향): 리스트의 전체 원소(노드) 출력
+	void	revPrintSLinkedList(void) const;	// 출력(역방향): 리스트의 전체 원소(노드) 출력
 private:
 	DNode*		__head;		// 첫 번째 노드
 	// DNode*	__tail;		// 맨 마지막 노드
@@ -158,7 +158,7 @@ int main(void)
 		cin >> num;
 		if (num == 0)
 			break;
-		dList.addRear(num);		// 맨 마지막 노드로 삽입
+		dList.addRear(num);	// 맨 마지막 노드로 삽입
 	}
 
 	// 전체 원소 출력
