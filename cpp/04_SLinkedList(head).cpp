@@ -3,10 +3,10 @@
 		파일명: SLinkedList(head).cpp
 			- 클래스: SNode
 			- 클래스: SLinkedList
-				생성자와 소멸자			: SLinkedList, ~SLinkedList
-				노드 확인				: isEmpty, countSNode
-				노드 탐색				: frontSNode, rearSNode
-				노드 삽입.삭제			: addRear, removeFront
+				생성자와 소멸자		: SLinkedList, ~SLinkedList
+				노드 확인		: isEmpty, countSNode
+				노드 탐색		: frontSNode, rearSNode
+				노드 삽입.삭제		: addRear, removeFront
 				전체 원소(노드) 출력	: printSLinkedList
 */
 
@@ -18,7 +18,7 @@ class SNode {
 public:
 	SNode(const int& data);
 private:
-	int		__data;
+	int	__data;
 	SNode*	__link;
 	friend class SLinkedList;
 };
@@ -30,17 +30,17 @@ SNode::SNode(const int& data) :
 // SLinkedList class
 class SLinkedList {
 public:
-	SLinkedList(void);							// 생성자
-	~SLinkedList(void);							// 소멸자: 전체 노드 삭제
-	bool	isEmpty(void) const;				// 빈 리스트 여부 판단
-	int		countSNode(void) const;				// 탐색: 노드의 총 개수(count)
-	SNode*	frontSNode(void) const;				// 탐색: 첫 번째 노드(head)
-	SNode*	rearSNode(void) const;				// 탐색: 맨 마지막 노드(tail)
-	void	addRear(const int& e);				// 삽입: 맨 마지막 노드(tail)
-	void	removeFront(void);					// 삭제: 첫 번째 노드(head)
+	SLinkedList(void);				// 생성자
+	~SLinkedList(void);				// 소멸자: 전체 노드 삭제
+	bool	isEmpty(void) const;			// 빈 리스트 여부 판단
+	int		countSNode(void) const;		// 탐색: 노드의 총 개수(count)
+	SNode*	frontSNode(void) const;			// 탐색: 첫 번째 노드(head)
+	SNode*	rearSNode(void) const;			// 탐색: 맨 마지막 노드(tail)
+	void	addRear(const int& e);			// 삽입: 맨 마지막 노드(tail)
+	void	removeFront(void);			// 삭제: 첫 번째 노드(head)
 	void	printSLinkedList(void) const;		// 리스트의 전체 원소(노드) 출력
 private:
-	SNode* __head;			// 첫 번째 노드
+	SNode* 		__head;		// 첫 번째 노드
 	// SNode*	__tail;		// 맨 마지막 노드
 	// int	  	__count;	// 노드의 총 개수
 };
@@ -128,9 +128,9 @@ void SLinkedList::printSLinkedList(void) const {
 
 int main(void)
 {
-	int			num;
-	SLinkedList	sList = SLinkedList();	// sList.SLinkedList();
-										// __head = nullptr;
+	int		num;
+	SLinkedList	sList = SLinkedList();		// sList.SLinkedList();
+							// __head = nullptr;
 	while (true) {
 		cout << "임의의 정수 입력(종료: 0): ";
 		cin >> num;
@@ -141,5 +141,5 @@ int main(void)
 
 	// 전체 원소 출력
 	sList.printSLinkedList();
-	return 0;		// sList.~SLinkedList();
+	return 0;	// sList.~SLinkedList();
 }
