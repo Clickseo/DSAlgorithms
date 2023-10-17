@@ -3,10 +3,10 @@
 		파일명: LinkedStack.h
 		클래스: SNode
 		클래스: LinkedStack
-			- 생성자.소멸자					: LinkedStack, ~LinkedStack
-			- 데이터 항목 삽입.삭제			: push, pop
-			- 데이터 항목 확인(peek)		: top
-			- 빈 스택 여부 판단				: empty
+			- 생성자.소멸자			: LinkedStack, ~LinkedStack
+			- 데이터 항목 삽입.삭제		: push, pop
+			- 데이터 항목 확인(peek)	: top
+			- 빈 스택 여부 판단		: empty
 			- 스택 크기(데이터 항목 개수)	: size
 			- 스택의 전체 데이터 항목 출력	: printStack
 */
@@ -29,7 +29,7 @@ public:
 	SNode(const E& data);
 	E	getData(void) const;
 private:
-	E			__data;
+	E		__data;
 	SNode<E>*	__link;
 	template <typename E> friend class LinkedStack;
 };
@@ -50,13 +50,13 @@ public:
 	~LinkedStack();
 	void	push(const E& e);
 	void	pop(void);
-	E&		top(void) const;
+	E&	top(void) const;
 	bool	empty(void) const;
-	int		size(void) const;
+	int	size(void) const;
 	void	printStack(void) const;
 private:
 	SNode<E>*	__top;
-	int			__count;
+	int		__count;
 };
 
 // LinkedStack class: 생성자(소멸자)와 소멸자
