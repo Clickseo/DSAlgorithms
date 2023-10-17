@@ -10,7 +10,7 @@ using namespace std;
 
 int main(void)
 {
-	int					num, choice;
+	int			num, choice;
 	LinkedStack<int>	S;	// 빈 스택 생성
 
 	while (true) {
