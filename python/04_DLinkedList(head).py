@@ -67,7 +67,7 @@ class DLinkedList:
         if self.isEmpty() : return
         old = self.__head
         self.__head = old.getRlink()
-        if not old.getRlink() :
+        if old.getRlink() :
             old.getRlink().setLlink(None)
         del old
 
