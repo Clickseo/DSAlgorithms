@@ -35,7 +35,7 @@ class DLinkedList:
         if self.isEmpty() : return 0
         count = 0
         rNode = self.__head
-        while rNode.getRlink():
+        while rNode:
             count +=1
             rNode = rNode.getRlink()
         return count
