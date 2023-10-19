@@ -14,12 +14,12 @@ using namespace std;
 
 int 	evalPostfix(string& str);
 string	InfixToPostfix(string& infix);
-int		isOperator(int op);
-int		precedence(int op);
+int	isOperator(int op);
+int	precedence(int op);
 
 int main(void)
 {
-	int		res;
+	int	res;
 	string	infixStr, postfixStr;
 
 	cout << "수식 입력: ";
@@ -37,7 +37,7 @@ int main(void)
 int  evalPostfix(string& str) {	
 	stack<char>	S;
 	string		temp;
-	int			op1, op2, res = 0;
+	int		op1, op2, res = 0;
 	for (int i = 0; i < str.length(); i++) {
 		// 피연산자 일 경우...
 		if (str[i] >= '0' && str[i] <= '9') {
@@ -84,7 +84,7 @@ string  InfixToPostfix(string& infix) {
 				postfix += S.top();	S.pop();
 				postfix += ' ';
 			}
-			S.pop();		// '(' 를 버린다.
+			S.pop();	// '(' 를 버린다.
 		}
 		// 3) 연산자인 경우...
 		else if (isOperator(infix[i])) {
