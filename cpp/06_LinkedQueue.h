@@ -84,6 +84,8 @@ void	LinkedQueue<E>::push(const E& e) {
 	if (__front)	__rear->__link = newSNode;
 	else		__front = newSNode;
 	__rear = newSNode;
+	__count++;
+
 }
 
 // pop(deQueue): 큐에서 맨 첫 번째로 삽입된 데이터 항목 삭제
@@ -96,6 +98,7 @@ void	LinkedQueue<E>::pop(void) {
 	if (!__front)
 		__rear = nullptr;
 	delete temp;
+	__count--;
 }
 
 // front(peek): 큐에서 맨 첫 번째로 삽입된 데이터 항목 확인
