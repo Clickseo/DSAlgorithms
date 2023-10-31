@@ -34,42 +34,6 @@ int main(void)
 	return 0;
 }
 
-int  evalPostfix(string& str) {	
-	stack<char>	S;
-	string		temp;
-	int		op1, op2, res = 0;
-	for (int i = 0; i < str.length(); i++) {
-		// 피연산자 일 경우...
-		if (str[i] >= '0' && str[i] <= '9') {
-			// 한 자리 이상을 처리 하기 위해...
-			temp.clear();
-			for (; str[i] >= '0' && str[i] <= '9'; i++)
-				temp += str[i];
-			S.push(stoi(temp));
-			i--;
-		}
-		else if (isOperator(str[i])) {	// 연산자 일 경우...
-			op2 = S.top();	S.pop();
-			op1 = S.top();	S.pop();
-			switch (str[i]) {
-				case '+': S.push(op1 + op2);	break;
-				case '-': S.push(op1 - op2);	break;
-				case '*': S.push(op1 * op2);	break;
-				case '/': S.push(op1 / op2);	break;
-			}
-		}
-		else if (str[i] == ' ')	 continue;
-		else {
-			cout << "잘못된 수식!!!" << endl;
-			exit(100);
-		}
-	}
-	// 스택에 남은 최종 결과 값
-	if (!S.empty())
-		res = S.top();
-	return res;
-}
-
 // 중위 표기법을 후위표기법으로 변환
 string  InfixToPostfix(string& infix) {
 	stack<char>	S;
@@ -116,6 +80,42 @@ string  InfixToPostfix(string& infix) {
 		postfix += ' ';
 	}
 	return postfix;
+}
+
+int  evalPostfix(string& str) {	
+	stack<char>	S;
+	string		temp;
+	int		op1, op2, res = 0;
+	for (int i = 0; i < str.length(); i++) {
+		// 피연산자 일 경우...
+		if (str[i] >= '0' && str[i] <= '9') {
+			// 한 자리 이상을 처리 하기 위해...
+			temp.clear();
+			for (; str[i] >= '0' && str[i] <= '9'; i++)
+				temp += str[i];
+			S.push(stoi(temp));
+			i--;
+		}
+		else if (isOperator(str[i])) {	// 연산자 일 경우...
+			op2 = S.top();	S.pop();
+			op1 = S.top();	S.pop();
+			switch (str[i]) {
+				case '+': S.push(op1 + op2);	break;
+				case '-': S.push(op1 - op2);	break;
+				case '*': S.push(op1 * op2);	break;
+				case '/': S.push(op1 / op2);	break;
+			}
+		}
+		else if (str[i] == ' ')	 continue;
+		else {
+			cout << "잘못된 수식!!!" << endl;
+			exit(100);
+		}
+	}
+	// 스택에 남은 최종 결과 값
+	if (!S.empty())
+		res = S.top();
+	return res;
 }
 
 // 연산자 여부를 판별한다.
