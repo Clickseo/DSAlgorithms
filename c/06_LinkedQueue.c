@@ -49,6 +49,7 @@ void enQueue(LinkedQueue* Q, element  data) {
 		Q->__rear->__link = newSNode;
 		Q->__rear = newSNode;
 	}
+	Q->__count++;
 }
 
 // deQueue : 큐에서 데이터 삭제
@@ -59,6 +60,7 @@ void	deQueue(LinkedQueue* Q) {
 	if (Q->__front == NULL)
 		Q->__rear = NULL;
 	free(temp);
+	Q->__count--;
 }
 
 // front : 큐에서 첫 번째 원소 확인
