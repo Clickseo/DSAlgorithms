@@ -1,22 +1,22 @@
 /*
 	이진 트리: 알고리즘 구현
 		파일명: LinkedBTree.c
-			- 이진 트리 생성					: makeLinkedBTree
+			- 이진 트리 생성			: makeLinkedBTree
 			- 깊이 우선 순회(전위.중위.후위)	: Preorder, Inorder, Postorder
-			- 너비 우선 순회					: Levelorder
+			- 너비 우선 순회			: Levelorder
 */
 
 #include <stdio.h>
-#include <stdlib.h>				// malloc
-#include "LinkedStack.h"		// LinkedStack
-#include "LinkedQueue.h"		// LinkedQueue
-#include "LinkedBTree.h"		// DNode
-// #include "LinkedNode.h"		// SNode, DNode
-#include "Operators.h"			// isOperator,precedence, isLegal
+#include <stdlib.h>		// malloc
+#include "LinkedStack.h"	// LinkedStack
+#include "LinkedQueue.h"	// LinkedQueue
+#include "LinkedBTree.h"	// DNode
+// #include "LinkedNode.h"	// SNode, DNode
+#include "Operators.h"		// isOperator,precedence, isLegal
 
 // 이진 트리 생성
 DNode* makeLinkedBTree(char* pStr) {
-	DNode*			temp;
+	DNode*		temp;
 	LinkedStack*	S = stackCreate();
 	while (*pStr) {
 		// 공백 제거
@@ -70,7 +70,7 @@ void  Postorder(DNode* root) {
 
 // 너비 우선 순회: 비재귀적 용법
 void  Levelorder(DNode* root) {
-	DNode*			temp;
+	DNode*		temp;
 	LinkedQueue*	Q = queueCreate();
 
 	enQueue(Q, (long long)root);
