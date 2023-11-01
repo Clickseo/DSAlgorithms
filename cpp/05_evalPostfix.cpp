@@ -23,7 +23,7 @@ int main(void)
 	string	infixStr, postfixStr;
 
 	cout << "수식 입력: ";
-	getline(cin, infixStr);		// cin.getline(infixStr, bufferMAXSIZE);
+	getline(cin, infixStr);
 
 	postfixStr = InfixToPostfix(infixStr);
 	cout << "\n후위표기법 변환: " << postfixStr << endl;
