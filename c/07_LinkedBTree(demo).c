@@ -5,8 +5,8 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>				// exit
-#include "LinkedBtree.h"		// DNode
+#include <stdlib.h>		// exit
+#include "LinkedBtree.h"	// DNode
 #define bufferMAXSIZE 1024
 
 int main(void) 
