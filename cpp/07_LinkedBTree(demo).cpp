@@ -33,12 +33,12 @@ template <typename E>
 class LinkedBTree {
 public:
 	LinkedBTree();
-	~LinkedBTree();
 	DNode<E>* makeLinkedBTree(const string str);
 	void	Preorder(DNode<E>* root) const;
 	void	Inorder(DNode<E>* root) const;
 	void	Postorder(DNode<E>* root) const;
 	void	Levelorder(DNode<E>* root) const;
+ 	~LinkedBTree();
 private:
 	DNode<E>* __root;
 };
