@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 #include "LinkedBtree.h"	// DNode Class
-							            // LinkedBTree Class
+				// LinkedBTree Class
 using namespace std;
 
 int main(void)
@@ -22,9 +22,9 @@ int main(void)
 	DNode<char>*		root = BT.makeLinkedBTree(postfix);
 
 	// 깊이 우선 순회: 전위.중위.후위 순회
-	cout << "\nPreorder  : ";	BT.Preorder(root);		// 전위 순회
-	cout << "\nInorder   : ";	BT.Inorder(root);		  // 중위 순회
-	cout << "\nPostorder : ";	BT.Postorder(root);		// 후위 순회
+	cout << "\nPreorder  : ";	BT.Preorder(root);	// 전위 순회
+	cout << "\nInorder   : ";	BT.Inorder(root);	// 중위 순회
+	cout << "\nPostorder : ";	BT.Postorder(root);	// 후위 순회
 
 	// 너비 우선 순회
 	cout << "\nLevelorder : ";	BT.Levelorder(root);
