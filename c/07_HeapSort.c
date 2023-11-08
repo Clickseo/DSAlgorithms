@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>    // srand, rand, malloc, calloc, free
+#include <stdlib.h>        // srand, rand, malloc, calloc, free
 #include <stdbool.h>    // bool, true, false
-#include <time.h>    // time
+#include <time.h>        // time
 
 #define arrMAXSIZE 10
 typedef int element;
