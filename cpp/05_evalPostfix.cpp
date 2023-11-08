@@ -34,7 +34,7 @@ int main(void)
 	return 0;
 }
 
-// 중위 표기법을 후위표기법으로 변환
+// 후위 표기법 변환(중위 표기법 -> 후위 표기법)
 string  InfixToPostfix(string& infix) {
 	stack<char>	S;
 	string		postfix;
@@ -82,6 +82,7 @@ string  InfixToPostfix(string& infix) {
 	return postfix;
 }
 
+// 후위 표기법: 수식 계산
 int  evalPostfix(string& str) {	
 	stack<char>	S;
 	string		temp;
