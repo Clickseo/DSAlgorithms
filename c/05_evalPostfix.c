@@ -79,7 +79,7 @@ element  evalPostfix(char* exp) {
 	return res;
 }
 
-// 후위표기법 변환(중위 표기 -> 후위 표기)
+// 후위 표기법 변환(중위 표기법 -> 후위 표기법)
 void  InfixToPostfix(char* postfix, char* infix) {
 	LinkedStack* S = stackCreate();
 	while (*infix) {
