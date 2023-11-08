@@ -18,7 +18,7 @@ def precedence(op: str) -> int :
 	elif op == '*' or op == '/' : return 2
 	else : return 3
 
-# 중위 표기법을 후위표기법으로 변환
+# 후위 표기법 변환(중위 표기법 -> 후위 표기법)
 def InfixToPostfix(infix:str) -> str :
     S = []
     # split을 위해 연산자 앞 뒤에 공백을 넣어준다.
@@ -61,6 +61,7 @@ def InfixToPostfix(infix:str) -> str :
         S.pop()
     return postfix
 
+# 후위 표기법: 수식 계산
 def  evalPostfix(postfix: str) -> int :
     S = []
     for st in postfix :
