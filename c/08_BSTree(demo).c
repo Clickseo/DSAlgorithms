@@ -5,9 +5,9 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>			// exit
+#include <stdlib.h>		// exit
 #include <stdbool.h>		// bool, true, false
-#include "BSTree.h"			// DNode
+#include "BSTree.h"		// DNode
 #define	 bufferMAXSIZE 1024
 
 DNode	*InsertBST(DNode *root);
@@ -17,7 +17,7 @@ void	printBSTAll(DNode* root);
 
 int main(void)
 {
-	int		num;
+	int	num;
 	DNode	*root = NULL;
 	while (true) {
 		system("cls");
@@ -32,12 +32,12 @@ int main(void)
 		// scanf("%d%*c", &num);
 
 		switch (num) {
-			case 1: root = InsertBST(root);	break;
+			case 1: root = InsertBST(root);		break;
 			case 2: SearchBST(root);		break;
 			case 3: DeleteBST(root);		break;
 			case 4: printBSTAll(root);		break;
 			case 5: printf("프로그램 종료!!!\n");
-					return 0;
+				return 0;
 			default: printf("메뉴를 잘못 선택하셨습니다. \n");
 		}
 		system("pause");
@@ -63,7 +63,7 @@ DNode	*InsertBST(DNode *root) {
 
 // 이진 검색 트리(BST): 데이터 검색
 void  SearchBST(DNode *root) {
-	int		num;
+	int	num;
 	DNode	*tNode = NULL;
 	while (true) {
 		printf("\n찾을 임의의 정수 값을 입력하세요(종료: 0): ");
@@ -82,7 +82,7 @@ void  SearchBST(DNode *root) {
 
 // 이진 검색 트리(BST): 데이터 삭제
 void  DeleteBST(DNode *root) {
-	int		num;
+	int	num;
 	DNode	*tNode = NULL;
 	while (true) {
 		printf("\n삭제할 임의의 정수 값을 입력하세요(종료: 0): ");
