@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>				// malloc
-#include "BSTree.h"				// DNode
+#include <stdlib.h>			// malloc
+#include "BSTree.h"			// DNode
 // #include "LinkedDNode.h"		// DNode
 
 // 이진 검색 트리(BST): 데이터검색 -- 재귀적 용법
@@ -9,7 +9,7 @@ DNode	*searchBST(DNode *root, element data) {
 		return root;
 
 	DNode	*pTemp = NULL;
-	if (data < root->__data)		pTemp = searchBST(root->__Llink, data);
+	if (data < root->__data)	pTemp = searchBST(root->__Llink, data);
 	else if (data > root->__data)	pTemp = searchBST(root->__Rlink, data);
 	return pTemp;
 }
