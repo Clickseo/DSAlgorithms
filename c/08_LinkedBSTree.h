@@ -9,8 +9,8 @@
 // 노드: DNode(data, Llink, Rlink)
 #include "LinkedNode.h"		// DNode
 
-// 이진 검색 트리(BST) 구현
-DNode	*insertBST(DNode *root, element data);
-DNode	*deleteBST(DNode *root, element data);
-DNode	*searchBST(DNode *root, element data);
-void	Preorder(DNode *root);
+// 이진 검색 트리(BST) 구현:
+DNode	*insertBST(DNode *root, element data);		// 데이터 삽입
+DNode	*deleteBST(DNode *root, element data);		// 데이터 삭제
+DNode	*searchBST(DNode *root, element data);		// 데이터 검색
+void	Preorder(DNode *root);				// 전체 원소 출력
