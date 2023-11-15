@@ -22,6 +22,7 @@ void  Preorder(DNode *root) {
 
 // 이진 검색 트리(BST): 데이터검색 -- 재귀적 용법
 DNode	*searchBST(DNode *root, element data) {
+	// 탐색 실패 또는 탐색 성공
 	if (root == NULL || data == root->__data)
 		return root;
 
