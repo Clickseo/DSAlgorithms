@@ -11,7 +11,7 @@
 #include "LinkedNode.h"		// DNode
 
 // 이진 검색 트리(BST) 구현
-DNode	*insertBST(DNode* root, element data);
-DNode	*deleteBST(DNode* root, element data);
-DNode	*searchBST(DNode* root, element data);
-void	Preorder(DNode* root);
+DNode	*insertBST(DNode *root, element data);
+DNode	*deleteBST(DNode *root, element data);
+DNode	*searchBST(DNode *root, element data);
+void	Preorder(DNode *root);
