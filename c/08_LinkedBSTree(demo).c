@@ -50,14 +50,14 @@ int main(void)
 }
 
 // 이진 검색 트리(BST): 전체 노드 출력(전위 순회)
-void printBSTAll(DNode* root) {
+void	printBSTAll(DNode *root) {
 	printf("\n이진 검색 트리: 전체 원소 출력\n");
 	Preorder(root);
 	printf("\n");
 }
 
 // 이진 검색 트리(BST): 데이터 검색
-void	SearchBST(DNode* root) {
+void	SearchBST(DNode *root) {
 	int	num;
 	DNode	*tNode = NULL;
 
@@ -78,7 +78,7 @@ void	SearchBST(DNode* root) {
 }
 
 // 이진 검색 트리(BST): 데이터 삽입
-DNode* InsertBST(DNode* root) {
+DNode	*InsertBST(DNode *root) {
 	int	num;
 
 	printf("\n이진 검색 트리: 데이터 입력\n");
@@ -96,7 +96,7 @@ DNode* InsertBST(DNode* root) {
 }
 
 // 이진 검색 트리(BST): 데이터 삭제
-DNode* DeleteBST(DNode *root) {
+DNode	*DeleteBST(DNode *root) {
 	int	num;
 	DNode	*tNode = NULL;
 
