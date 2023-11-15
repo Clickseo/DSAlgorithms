@@ -22,7 +22,7 @@ template <typename E>
 class DNode {
 public:
     DNode(const E &data);
-    E           	getData(void) const;
+    E           getData(void) const;
     DNode<E>	*getLlink(void) const;
     DNode<E>	*getRlink(void) const;
 private:
