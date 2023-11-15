@@ -34,18 +34,20 @@ DNode	*searchBST(DNode *root, element data) {
 
 // 이진 검색 트리(BST): 데이터 삽입 -- 재귀적 용법
 DNode	*insertBST(DNode *root, element data) {
-	DNode	*newNode = NULL;
 	// 탐색 실패: 새로운 노드 생성
-	if (root == NULL) {
-		newNode = makeDNode(data);
+	if(root == NULL) {
+		DNode	*newNode = makeDNode(data);
 		return newNode;
 	}
-	else if (data < root->__data)
-		root->__Llink = insertBST(root->__Llink, data);
-	else if (data > root->__data)
-		root->__Rlink = insertBST(root->__Rlink, data);
+	
 	// 중복된 데이터가 존재할 경우 데이터 삽입 불가능!!!
-	else printf("이미 같은 키가 있습니다!!! \n");
+	if(data == root->__data)
+		printf("이미 같은 키가 있습니다!!! \n");
+	else if(data < root->__data)
+		root->__Llink = insertBST(root->__Llink, data);
+	else if(data > root->__data)
+		root->__Rlink = insertBST(root->__Rlink, data);
+	
 	return root;
 }
 
