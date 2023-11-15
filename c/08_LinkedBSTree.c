@@ -55,7 +55,7 @@ DNode	*insertBST(DNode *root, element data) {
 DNode	*deleteBST(DNode *root, element data) {
 	// 삭제할 노드가 없는 경우
 	if (root == NULL) {
-		printf("\n 삭제할 키가 이진 트리에 없습니다!!");
+		printf("\n키를 찾지 못했습니다.");
 		return root;
 	}
 
