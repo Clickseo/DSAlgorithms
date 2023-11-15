@@ -106,7 +106,7 @@ void	LinkedBSTree<E>::Preorder(DNode<E>* root) const {
     }
 }
 
-// 이진 검색 트리(BST): 데이터검색 -- 재귀적 용법
+// 이진 검색 트리(BST): 데이터 검색 -- 재귀적 용법
 template <typename E>
 DNode<E>    *LinkedBSTree<E>::searchBST(DNode<E> *root, const E &data) const {
     if (root == nullptr || data == root->__data)
@@ -129,7 +129,7 @@ DNode<E>    *LinkedBSTree<E>::insertBST(DNode<E> *root, const E &data) const {
     }
 
     // 중복된 데이터가 존재할 경우 데이터 삽입 불가능!!!
-    if (root == nullptr)
+    if (data == root->__data))
         cout << "이미 같은 키가 있습니다!!!" << endl;
     else if (data < root->__data)   root->__Llink = insertBST(root->__Llink, data);
     else if (data > root->__data)   root->__Rlink = insertBST(root->__Rlink, data);
