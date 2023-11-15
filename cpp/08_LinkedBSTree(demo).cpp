@@ -21,8 +21,8 @@ template <typename E>   void	DeleteBST(LinkedBSTree<E> &bst);
 
 int main(void)
 {
-    int		                num;
-    LinkedBSTree<int>	    bst;
+    int                num;
+    LinkedBSTree<int>    bst;
 
     while (true) {
         system("cls");
