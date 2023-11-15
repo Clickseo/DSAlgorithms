@@ -3,8 +3,8 @@
         파일명: LinkedBSTree.h
         클래스: DNode
         클래스: BSTree
-            - 생성자.소멸자			: LinkedBSTree, ~LinkedBSTree
-            - 데이터 삽입.삭제.검색	: insertBST, deleteBST, searchBST
+            - 생성자.소멸자:            LinkedBSTree, ~LinkedBSTree
+            - 데이터 삽입.삭제.검색:    insertBST, deleteBST, searchBST
             - 깊이 우선 순회: 전위 순회(재귀적 용법): Preorder
 */
 
