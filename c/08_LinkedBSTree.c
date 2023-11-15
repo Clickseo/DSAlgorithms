@@ -12,7 +12,7 @@
 // #include "LinkedDNode.h"	// DNode
 
 // 깊이 우선 순회: 전위 순회(재귀적 용법)
-void  Preorder(DNode *root) {
+void	Preorder(DNode *root) {
 	if (root) {
 		printf("%3d", root->__data);
 		Preorder(root->__Llink);
@@ -61,7 +61,7 @@ DNode	*deleteBST(DNode *root, element data) {
 
 	DNode	*pParent = NULL;	// 삭제할 노드의 부모 노드
 	DNode	*tNode = root;		// 삭제할 노드
-	DNode	*pChild;			// 삭제할 노드의 자식 노드
+	DNode	*pChild;		// 삭제할 노드의 자식 노드
 
 	// 삭제할 노드의 위치 탐색
 	while (tNode -> __data != data) {
@@ -75,7 +75,7 @@ DNode	*deleteBST(DNode *root, element data) {
 		if (pParent == NULL)	root = NULL;
 		else if (pParent != NULL) {
 			if (pParent->__Llink == tNode)	pParent->__Llink = NULL;
-			else							pParent->__Rlink = NULL;
+			else				pParent->__Rlink = NULL;
 		}
 	}
 
@@ -83,7 +83,7 @@ DNode	*deleteBST(DNode *root, element data) {
 	else if ((tNode->__Llink == NULL) || (tNode->__Rlink == NULL)) {
 		// pChild : (후계자) 삭제할 노드의 자식 노드
 		if (tNode->__Llink != NULL)	pChild = tNode->__Llink;
-		else						pChild = tNode->__Rlink;
+		else				pChild = tNode->__Rlink;
 
 		if (pParent == NULL)	root = pChild;
 		else {
