@@ -6,7 +6,7 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>				// malloc
+#include <stdlib.h>			// malloc
 #include <stdbool.h>			// bool, true, false
 #include "LinkedBSTree.h"		// DNode
 // #include "LinkedDNode.h"		// DNode
@@ -17,7 +17,7 @@ DNode	*searchBST(DNode *root, element data) {
 		return root;
 
 	DNode	*tNode = NULL;
-	if (data < root->__data)		tNode = searchBST(root->__Llink, data);
+	if (data < root->__data)	tNode = searchBST(root->__Llink, data);
 	else if (data > root->__data)	tNode = searchBST(root->__Rlink, data);
 	return tNode;
 }
@@ -49,7 +49,7 @@ DNode* deleteBST(DNode* root, element data) {
 
 	DNode	*pParent = NULL;	// 삭제할 노드의 부모 노드
 	DNode	*tNode = root;		// 삭제할 노드
-	DNode	*pChild;			// 삭제할 노드의 자식 노드
+	DNode	*pChild;		// 삭제할 노드의 자식 노드
 
 	// 삭제할 노드의 위치 탐색
 	while (tNode -> __data != data) {
@@ -63,7 +63,7 @@ DNode* deleteBST(DNode* root, element data) {
 		if (pParent == NULL)	root = NULL;
 		else if (pParent != NULL) {
 			if (pParent->__Llink == tNode)	pParent->__Llink = NULL;
-			else							pParent->__Rlink = NULL;
+			else				pParent->__Rlink = NULL;
 		}
 	}
 
@@ -71,7 +71,7 @@ DNode* deleteBST(DNode* root, element data) {
 	else if ((tNode->__Llink == NULL) || (tNode->__Rlink == NULL)) {
 		// pChild : (후계자) 삭제할 노드의 자식 노드
 		if (tNode->__Llink != NULL)	pChild = tNode->__Llink;
-		else						pChild = tNode->__Rlink;
+		else				pChild = tNode->__Rlink;
 
 		if (pParent == NULL)	root = pChild;
 		else {
