@@ -151,7 +151,7 @@ DNode<E>* LinkedBSTree<E>::deleteBST(DNode<E>* root, const E& data) const {
     DNode<E>    *pChild;		// 삭제할 노드의 자식 노드
 
     // 삭제할 노드의 위치 탐색
-    while (tNode->__data != data) {
+    while (data != tNode->__data) {
         pParent = tNode;
         if (data < tNode->__data) tNode = tNode->__Llink;
         else tNode = tNode->__Rlink;
