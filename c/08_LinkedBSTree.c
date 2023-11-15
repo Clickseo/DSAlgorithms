@@ -6,13 +6,13 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>				// malloc
-#include <stdbool.h>			// bool, true, false
-#include "LinkedBSTree.h"		// DNode
-// #include "LinkedDNode.h"		// DNode
+#include <stdlib.h>		// malloc
+#include <stdbool.h>		// bool, true, false
+#include "LinkedBSTree.h"	// DNode
+// #include "LinkedDNode.h"	// DNode
 
 // 깊이 우선 순회: 전위 순회(재귀적 용법)
-void  Preorder(DNode* root) {
+void  Preorder(DNode *root) {
 	if (root) {
 		printf("%3d", root->__data);
 		Preorder(root->__Llink);
@@ -21,12 +21,12 @@ void  Preorder(DNode* root) {
 }
 
 // 이진 검색 트리(BST): 데이터검색 -- 재귀적 용법
-DNode* searchBST(DNode* root, element data) {
+DNode	*searchBST(DNode *root, element data) {
 	if (root == NULL || data == root->__data)
 		return root;
 
-	DNode* tNode = NULL;
-	if (data < root->__data)		tNode = searchBST(root->__Llink, data);
+	DNode	*tNode = NULL;
+	if (data < root->__data)	tNode = searchBST(root->__Llink, data);
 	else if (data > root->__data)	tNode = searchBST(root->__Rlink, data);
 	return tNode;
 }
@@ -49,7 +49,7 @@ DNode	*insertBST(DNode *root, element data) {
 }
 
 // 이진 검색 트리(BST): 데이터 삭제 -- 비재귀적 용법
-DNode* deleteBST(DNode* root, element data) {
+DNode	*deleteBST(DNode *root, element data) {
 	// 삭제할 노드가 없는 경우
 	if (root == NULL) {
 		printf("\n 삭제할 키가 이진 트리에 없습니다!!");
