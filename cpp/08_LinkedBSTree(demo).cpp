@@ -21,7 +21,7 @@ template <typename E>   void	DeleteBST(LinkedBSTree<E> &bst);
 
 int main(void)
 {
-    int                    num;
+    int                  num;
     LinkedBSTree<int>    bst;
 
     while (true) {
@@ -60,7 +60,7 @@ void    printBSTAll(LinkedBSTree<E> &bst) {
 // 이진 검색 트리(BST): 데이터 검색
 template <typename E>
 void	SearchBST(LinkedBSTree<E> &bst) {
-    int        num;
+    int          num;
     DNode<E>    *tNode = nullptr;
 
     cout << "\n이진 검색 트리: 데이터 검색" << endl;
