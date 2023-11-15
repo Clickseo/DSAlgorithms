@@ -15,7 +15,7 @@
 using namespace std;
 
 template <typename E>
-class BSTree;
+class LinkedBSTree;
 
 // class DNode
 template <typename E>
