@@ -6,7 +6,7 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// malloc
+#include <stdlib.h>			// malloc
 #include <stdbool.h>			// bool, true, false
 #include "LinkedBSTree.h"		// DNode
 // #include "LinkedDNode.h"		// DNode
