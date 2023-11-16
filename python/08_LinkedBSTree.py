@@ -52,7 +52,7 @@ class LinkedBSTree:
         # 데이터 검색: 재귀적 용법
         def _searchBST(root, data) -> DNode:
             if root == None : return None
-            elif data == root.data : return tNode
+            elif data == root.data : return root
             elif data < root.data :
                 return _searchBST(root.Llink, data)
             else :
