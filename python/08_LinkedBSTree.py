@@ -51,12 +51,9 @@ class LinkedBSTree:
     def SearchBST(self) -> None:
         # 데이터 검색: 재귀적 용법
         def _searchBST(root, data) -> DNode:
-            if root == None : return None
-            elif data == root.data : return root
-            elif data < root.data :
-                return _searchBST(root.Llink, data)
-            else :
-                return _searchBST(root.Rlink, data)
+            if root == None or data == root.data : return root
+            elif data < root.data : return _searchBST(root.Llink, data)
+            elif data > root.data : return _searchBST(root.Rlink, data)
 			
         if not self.__root :
             print("\n데이터가 존재하지 않습니다.")
