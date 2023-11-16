@@ -104,7 +104,7 @@ class LinkedBSTree:
 
             # 1) 삭제할 노드가 단말 노드인 경우
             if tNode.Llink == None and tNode.Rlink == None :
-                if pParent :    # pParent != None
+                if pParent :
                     if pParent.Llink == tNode : pParent.Llink = None
                     else :                      pParent.Rlink = None
                 else : root = None  # pParent == None
@@ -115,7 +115,7 @@ class LinkedBSTree:
                 if tNode.Llink : pChild = tNode.Llink
                 else :           pChild = tNode.Rlink
                 
-                if pParent :    # pParent != None
+                if pParent :
                     if pParent.Llink == tNode : pParent.Llink = pChild
                     else :                      pParent.Rlink = pChild
                 else : root = pChild    # pParent == None
