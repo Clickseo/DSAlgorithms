@@ -3,10 +3,10 @@
 		파일명: LinkedBSTree.py
 			- 클래스: DNode
 			- 클래스: LinkedBSTree
-					데이터 삽입: InsertBST
-					데이터 삭제: DeleteBST
-					데이터 검색: SearchBST
-					전체 원소 출력: printBSTAll
+					데이터 삽입: InsertBST(_insertBST)
+					데이터 삭제: DeleteBST(_deleteBST)
+					데이터 검색: SearchBST(_searchBST)
+					전체 원소 출력: printBSTAll(Preorder)
 '''
 
 # DNode: data, Llink, Rlink
@@ -72,10 +72,8 @@ class LinkedBSTree:
         # 데이터 삽입 -- 재귀적 용법
         def _insertBST(root, data) -> DNode:
             if root == None : root = DNode(data)
-            elif data < root.data :
-                root.Llink = _insertBST(root.Llink, data)
-            else:
-               root.Rlink = _insertBST(root.Rlink, data)
+            elif data < root.data : root.Llink = _insertBST(root.Llink, data)
+            else:                   root.Rlink = _insertBST(root.Rlink, data)
             return root
         
         print("\n이진 검색 트리: 데이터 삽입")
