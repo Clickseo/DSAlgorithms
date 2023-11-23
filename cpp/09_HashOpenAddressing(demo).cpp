@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(void) {
-    HashOpenAddressing<int>   h(3);
+    HashOpenAddressing<int>   h(13);
 
     while (true) {
         system("cls");
