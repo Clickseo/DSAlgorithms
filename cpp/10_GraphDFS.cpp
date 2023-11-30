@@ -115,9 +115,9 @@ int main(void)
 	G9.insertEdge(5, 6, 0);	// F(5) - G(6)
 
 	// 정점: G(6)
-	G9.insertEdge(6, 5, 0);	// G(6) - F(5)
-	G9.insertEdge(6, 4, 0);	// G(6) - E(4)
 	G9.insertEdge(6, 3, 0);	// G(6) - D(3)
+	G9.insertEdge(6, 4, 0);	// G(6) - E(4)
+	G9.insertEdge(6, 5, 0);	// G(6) - F(5)
 
 	cout << "\n##### 그래프(G9): 인접 리스트 #####\n" << endl;
 	G9.printAdjSList();
