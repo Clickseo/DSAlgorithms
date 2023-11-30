@@ -7,20 +7,20 @@
 			- 함  수: 그래프 노드 생성	: makeGNode
 					그래프 생성.소멸	: graphCreate, graphDestroy
 					그래프 간선 추가	: insertEdge
-					그래프 순회			: DFSAdjSList, BFSAdjSList
+					그래프 순회		: DFSAdjSList, BFSAdjSList
 					그래프 전체 출력	: printAdjSList
 */
 
 #include <stdio.h>
-#include <stdlib.h>			// malloc, calloc, free
+#include <stdlib.h>		// malloc, calloc, free
 #include <stdbool.h>		// bool, true, false
 #include "LinkedStack.h"	// LinkedStack
 #include "LinkedQueue.h"	// LinkedQueue
 
 // 그래프(노드): GNode
 typedef struct __GNode {
-	int				__vertex;	// 정점
-	int				__weight;	// 가중치
+	int		__vertex;	// 정점
+	int		__weight;	// 가중치
 	struct __GNode	*__link;
 } GNode;
 
@@ -29,7 +29,7 @@ GNode	*makeGNode(int vertex, int weight);
 
 // 그래프: GraphType
 typedef  struct  __GraphType {
-	int		__vertex;		// 정점의 개수
+	int	__vertex;	// 정점의 개수
 	GNode	**__adjSList;	// 인접 리스트
 } GraphType;
 
@@ -154,11 +154,11 @@ void  DFSAdjSList(GraphType *G, int  vertex) {
 	int	*pVisited = (int*)calloc(G->__vertex, sizeof(int));
 
 	LinkedStack	*S = stackCreate();
-	push(S, vertex);				// Start Vertex
-	pVisited[vertex] = true;		// 정점 방문
+	push(S, vertex);		// Start Vertex
+	pVisited[vertex] = true;	// 정점 방문
 	printf(" %3c", vertex + 65);
 
-	int		v = vertex;
+	int	v = vertex;
 	GNode	*w;
 	while (!stackEmpty(S)) {
 		w = G->__adjSList[v];
@@ -186,11 +186,11 @@ void	BFSAdjSList(GraphType *G, int  vertex) {
 	int* pVisited = (int*)calloc(G->__vertex, sizeof(int));
 
 	LinkedQueue	*Q = queueCreate();
-	enQueue(Q, vertex);				// Start Vertex
-	pVisited[vertex] = true;		// 정점 방문
+	enQueue(Q, vertex);		// Start Vertex
+	pVisited[vertex] = true;	// 정점 방문
 	printf(" %3c", vertex + 65);	// 정점 방문
 
-	int		v = vertex;
+	int	v = vertex;
 	GNode	*w;
 	while (!queueEempty(Q)) {
 		v = front(Q);	deQueue(Q);
