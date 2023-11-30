@@ -33,7 +33,7 @@ GNode::GNode(int vertex = 0, int weight = 0)
 // GraphType class
 class GraphType {
 private:
-	int    __vertex;		    // 정점의 개수
+	int    __vertex;		// 정점의 개수
 	GNode  **__adjSList;		// 인접 리스트
 public:
 	GraphType(int vertex);
@@ -89,13 +89,13 @@ void  GraphType::DFSAdjSList(int  vertex) {
 	memset(pVisited, 0, sizeof(int) * __vertex);
 
 	stack<int>	S;
-	S.push(vertex);					// Start Vertex
-	pVisited[vertex] = true;		// 정점 방문
+	S.push(vertex);			// Start Vertex
+	pVisited[vertex] = true;	// 정점 방문
 	char	ch = vertex + 65;
 	cout.width(3);	cout << ch;
 
-	int		v = vertex;
-	GNode* w;
+	int	v = vertex;
+	GNode	*w;
 	while (!S.empty()) {
 		w = __adjSList[v];
 		while (w) {		// 인접한 정점이 있는 동안...
@@ -124,8 +124,8 @@ void	GraphType::BFSAdjSList(int  vertex) {
 	memset(pVisited, 0, sizeof(int) * __vertex);
 
 	queue<int>	Q;
-	Q.push(vertex);					    // Start Vertex
-	pVisited[vertex] = true;		// 정점 방문
+	Q.push(vertex);			// Start Vertex
+	pVisited[vertex] = true;	// 정점 방문
 	char	ch = vertex + 65;
 	cout.width(3);	cout << ch;
 
