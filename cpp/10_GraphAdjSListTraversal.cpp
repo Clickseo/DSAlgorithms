@@ -18,9 +18,9 @@ using namespace std;
 // GNode class
 class GNode {
 private:
-	int		__vertex;	// 정점
-	int		__weight;	// 가중치
-	GNode* __link;
+	int	__vertex;	// 정점
+	int	__weight;	// 가중치
+	GNode	*__link;
 	friend class GraphType;
 public:
 	GNode(int vertex, int weight);
@@ -33,8 +33,8 @@ GNode::GNode(int vertex = 0, int weight = 0)
 // GraphType class
 class GraphType {
 private:
-	int		__vertex;		// 정점의 개수
-	GNode** __adjSList;		// 인접 리스트
+	int	__vertex;	// 정점의 개수
+	GNode	**__adjSList;	// 인접 리스트
 public:
 	GraphType(int vertex);
 	~GraphType(void);
