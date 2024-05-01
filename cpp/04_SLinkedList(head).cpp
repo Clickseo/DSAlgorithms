@@ -40,8 +40,8 @@ public:
 	void	removeFront(void);		// 삭제: 첫 번째 노드(head)
 	void	printSLinkedList(void) const;	// 출력: 리스트의 전체 원소(노드)
 private:
-	SNode		*__head;		// 첫 번째 노드
-	// SNode	*__tail;		// 맨 마지막 노드
+	SNode		*__head;	// 첫 번째 노드
+	// SNode	*__tail;	// 맨 마지막 노드
 	// int	  	__count;	// 노드의 총 개수
 };
 
