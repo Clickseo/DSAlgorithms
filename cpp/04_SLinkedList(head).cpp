@@ -30,15 +30,15 @@ SNode::SNode(const int& data) :
 // SLinkedList class
 class SLinkedList {
 public:
-	SLinkedList(void);				// 생성자
-	~SLinkedList(void);				// 소멸자: 전체 노드 삭제
-	bool	isEmpty(void) const;			// 빈 리스트 여부 판단
-	int		countSNode(void) const;		// 탐색: 노드의 총 개수(count)
-	SNode*	frontSNode(void) const;			// 탐색: 첫 번째 노드(head)
-	SNode*	rearSNode(void) const;			// 탐색: 맨 마지막 노드(tail)
-	void	addRear(const int& e);			// 삽입: 맨 마지막 노드(tail)
-	void	removeFront(void);			// 삭제: 첫 번째 노드(head)
-	void	printSLinkedList(void) const;		// 출력: 리스트의 전체 원소(노드)
+	SLinkedList(void);			// 생성자
+	~SLinkedList(void);			// 소멸자: 전체 노드 삭제
+	bool	isEmpty(void) const;		// 빈 리스트 여부 판단
+	int	countSNode(void) const;		// 탐색: 노드의 총 개수(count)
+	SNode*	frontSNode(void) const;		// 탐색: 첫 번째 노드(head)
+	SNode*	rearSNode(void) const;		// 탐색: 맨 마지막 노드(tail)
+	void	addRear(const int& e);		// 삽입: 맨 마지막 노드(tail)
+	void	removeFront(void);		// 삭제: 첫 번째 노드(head)
+	void	printSLinkedList(void) const;	// 출력: 리스트의 전체 원소(노드)
 private:
 	SNode* 		__head;		// 첫 번째 노드
 	// SNode*	__tail;		// 맨 마지막 노드
