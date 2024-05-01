@@ -19,13 +19,13 @@ public:
 	DNode(const int& data);
 private:
 	int	__data;
-	DNode*	__Llink;
-	DNode*	__Rlink;
+	DNode	*__Llink;
+	DNode	*__Rlink;
 	friend class DLinkedList;
 };
 
 // DNode: 생성자
-DNode::DNode(const int& data) :
+DNode::DNode(const int &data) :
 	__data(data), __Llink(nullptr), __Rlink(nullptr) {}
 
 // DLinkedList class
@@ -35,15 +35,15 @@ public:
 	~DLinkedList(void);				// 소멸자: 전체 노드 삭제
 	bool	isEmpty(void) const;			// 빈 리스트 여부 판단
 	int	countDNode(void) const;			// 탐색: 노드의 총 개수(count)
-	DNode*	frontDNode(void) const;			// 탐색: 첫 번째 노드(head)
-	DNode*	rearDNode(void) const;			// 탐색: 맨 마지막 노드(tail)
+	DNode	*frontDNode(void) const;		// 탐색: 첫 번째 노드(head)
+	DNode	*rearDNode(void) const;			// 탐색: 맨 마지막 노드(tail)
 	void	addRear(const int& e);			// 삽입: 맨 마지막 노드(tail)
 	void	removeFront(void);			// 삭제: 첫 번째 노드(head)
 	void	printSLinkedList(void) const;		// 출력(순방향): 리스트의 전체 원소(노드)
 	void	revPrintSLinkedList(void) const;	// 출력(역방향): 리스트의 전체 원소(노드)
 private:
-	DNode*		__head;		// 첫 번째 노드
-	// DNode*	__tail;		// 맨 마지막 노드
+	DNode		*__head;	// 첫 번째 노드
+	// DNode	*__tail;	// 맨 마지막 노드
 	// int		__count;	// 노드의 총 개수
 };
 
@@ -79,13 +79,13 @@ int	DLinkedList::countDNode(void) const {
 }
 
 // 탐색: 첫 번째 노드(head)
-DNode* DLinkedList::frontDNode(void) const {
+DNode	*DLinkedList::frontDNode(void) const {
 	// if (isEmpty()) return nullptr;
 	return __head;
 }
 
 // 탐색: 맨 마지막 노드(tail)
-DNode* DLinkedList::rearDNode(void) const {
+DNode	*DLinkedList::rearDNode(void) const {
 	// if (isEmpty()) return nullptr;
 	DNode* rNode = __head;
 	while (rNode->__Rlink)
@@ -95,7 +95,7 @@ DNode* DLinkedList::rearDNode(void) const {
 
 // 삽입: 맨 마지막 노드(tail)
 void DLinkedList::addRear(const int& e) {
-	DNode* nNode = new DNode(e);
+	DNode	*nNode = new DNode(e);
 	if (isEmpty()) __head = nNode;
 	else {
 		DNode* rNode = rearDNode();
@@ -107,7 +107,7 @@ void DLinkedList::addRear(const int& e) {
 // 삭제: 첫 번째 노드(head)
 void DLinkedList::removeFront(void) {
 	if (isEmpty()) return;
-	DNode* old = __head;
+	DNode	*old = __head;
 	__head = old->__Rlink;
 	if (__head != nullptr)
 		old->__Llink = nullptr;
@@ -150,7 +150,7 @@ void DLinkedList::revPrintSLinkedList(void) const {
 
 int main(void)
 {
-	int	num;
+	int		num;
 	DLinkedList	dList = DLinkedList();	// dList.SLinkedList();
 						// __head = __tail = nullptr;
 	while (true) {
