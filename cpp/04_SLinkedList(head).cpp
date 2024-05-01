@@ -16,15 +16,15 @@ using namespace std;
 // SNode class
 class SNode {
 public:
-	SNode(const int& data);
+	SNode(const int &data);
 private:
 	int	__data;
-	SNode*	__link;
+	SNode	*__link;
 	friend class SLinkedList;
 };
 
 // SNode: 생성자
-SNode::SNode(const int& data) :
+SNode::SNode(const int &data) :
 	__data(data), __link(nullptr) {}
 
 // SLinkedList class
@@ -36,12 +36,12 @@ public:
 	int	countSNode(void) const;		// 탐색: 노드의 총 개수(count)
 	SNode*	frontSNode(void) const;		// 탐색: 첫 번째 노드(head)
 	SNode*	rearSNode(void) const;		// 탐색: 맨 마지막 노드(tail)
-	void	addRear(const int& e);		// 삽입: 맨 마지막 노드(tail)
+	void	addRear(const int &e);		// 삽입: 맨 마지막 노드(tail)
 	void	removeFront(void);		// 삭제: 첫 번째 노드(head)
 	void	printSLinkedList(void) const;	// 출력: 리스트의 전체 원소(노드)
 private:
-	SNode* 		__head;		// 첫 번째 노드
-	// SNode*	__tail;		// 맨 마지막 노드
+	SNode		*__head;		// 첫 번째 노드
+	// SNode	*__tail;		// 맨 마지막 노드
 	// int	  	__count;	// 노드의 총 개수
 };
 
@@ -77,13 +77,13 @@ int	SLinkedList::countSNode(void) const {
 }
 
 // 탐색: 첫 번째 노드(head)
-SNode* SLinkedList::frontSNode(void) const {
+SNode	*SLinkedList::frontSNode(void) const {
 	// if (isEmpty()) return nullptr;
 	return __head;
 }
 
 // 탐색: 맨 마지막 노드(tail)
-SNode* SLinkedList::rearSNode(void) const {
+SNode	*SLinkedList::rearSNode(void) const {
 	// if (isEmpty()) return nullptr;
 	SNode* rNode = __head;
 	while (rNode->__link)
@@ -92,7 +92,7 @@ SNode* SLinkedList::rearSNode(void) const {
 }
 
 // 삽입: 맨 마지막 노드(tail)
-void SLinkedList::addRear(const int& e) {
+void SLinkedList::addRear(const int &e) {
 	SNode* nNode = new SNode(e);
 	if (isEmpty()) __head = nNode;
 	else {
