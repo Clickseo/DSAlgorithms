@@ -30,7 +30,7 @@ public:
 	E	getData(void) const;
 private:
 	E		__data;
-	SNode<E>* __link;
+	SNode<E>*	__link;
 	template <typename E> friend class LinkedQueue;
 };
 
@@ -50,14 +50,14 @@ public:
 	~LinkedQueue();
 	void	push(const E& e);	// enQueue
 	void	pop(void);		// deQueue
-	E& front(void) const;
-	E& back(void) const;
+	E& 	front(void) const;
+	E& 	back(void) const;
 	bool	empty(void) const;
 	int	size(void) const;
 	void	printQueue(void) const;
 private:
-	SNode<E>* __front;
-	SNode<E>* __rear;
+	SNode<E>*	__front;
+	SNode<E>*	__rear;
 	int		__count;
 };
 
