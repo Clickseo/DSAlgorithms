@@ -24,16 +24,16 @@ int main(void)
 
 		switch (choice) {
 			case 1: cout << "\n삽입 할 데이터 입력: ";
-					cin >> num;
-					Q.push(num);
-					break;
+				cin >> num;
+				Q.push(num);
+				break;
 			case 2: cout << "삭제 된 데이터: " << Q.front() << endl;
-					Q.pop();
-					break;
+				Q.pop();
+				break;
 			case 3: Q.printQueue();
-					break;
+				break;
 			case 4: cout << "프로그램 종료..." << endl;
-					return 0;
+				return 0;
 			default: cout << "잘못 선택 하셨습니다." << endl;
 		}
 		system("pause");
