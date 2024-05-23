@@ -79,7 +79,7 @@ LinkedBTree<E>::~LinkedBTree() {
 template <typename E>
 DNode<E>* LinkedBTree<E>::makeLinkedBTree(const string str) {
 	stack<DNode<E>*>	S;
-	DNode<E>		*tNode;
+	DNode<E>*		tNode;
 	for (int i = 0; i < str.length(); i++) {
 		// 공백 제거
 		while (str[i] == ' ')
