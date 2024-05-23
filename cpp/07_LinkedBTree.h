@@ -1,5 +1,5 @@
 /*
-	이진 트리(BT): 알고리즘 구현(C++) -- 이중연결리스트
+	이진 트리(Binary Tree): 알고리즘 구현(C++) -- 이중연결리스트
 		파일명: LinkedBTree.h
 		클래스: DNode
 		클래스: BTree
