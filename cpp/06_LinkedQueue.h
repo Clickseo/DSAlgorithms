@@ -82,7 +82,7 @@ void	LinkedQueue<E>::push(const E& e) {
 	SNode<E>* newSNode = new SNode<int>(e);
 	// newSNode->__data = e;
 	if (__front)	__rear->__link = newSNode;
-	else			__front = newSNode;
+	else		__front = newSNode;
 	__rear = newSNode;
 	__count++;
 }
