@@ -129,7 +129,7 @@ DNode<E>    *LinkedBSTree<E>::insertBST(DNode<E> *root, const E &data) const {
     }
 
     // 중복된 데이터가 존재할 경우 데이터 삽입 불가능!!!
-    if (data == root->__data))
+    if (data == root->__data)
         cout << "이미 같은 키가 있습니다!!!" << endl;
     else if (data < root->__data)   root->__Llink = insertBST(root->__Llink, data);
     else if (data > root->__data)   root->__Rlink = insertBST(root->__Rlink, data);
