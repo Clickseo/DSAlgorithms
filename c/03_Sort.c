@@ -3,7 +3,7 @@
 		파일명: Sort.c
 			- 기초적인 정렬 알고리즘: 선택.버블.삽입 정렬
 			- 고급 정렬 알고리즘	: 쉘.퀵.병합 정렬
-			- 특수 정렬 알고리즘	: 계수.기수.버킷 정렬
+			- 특수 정렬 알고리즘	: 계수 정렬
 */
 
 #include <stdio.h>
@@ -22,7 +22,7 @@ void	intervalSort(int* pArr, int num, int start, int interval);
 void	quickSort(int* pArr, int* pFirst, int* pLast);			// 퀵 정렬
 void	mergeSort(int* pArr, int* pFirst, int* pLast);			// 병합 정렬
 
-// 3) 특수 정렬 알고리즘: 계수.기수.버킷 정렬
+// 3) 특수 정렬 알고리즘: 계수 정렬
 void  contingSort(int* pArr, int num);
 
 // 배열 원소 교환 전체 출력
