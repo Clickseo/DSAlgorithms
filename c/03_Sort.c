@@ -1,9 +1,9 @@
 /*
 	* 정렬: 알고리즘 구현
 		파일명: Sort.c
-			- 기초적인 정렬 알고리즘: 선택.버블.삽입
-			- 고급 정렬 알고리즘: 쉘 정렬, 퀵.병합 정렬
-			- 특수 정렬 알고리즘: 계수.기수.버킷 정렬
+			- 기초적인 정렬 알고리즘: 선택.버블.삽입 정렬
+			- 고급 정렬 알고리즘	: 쉘.퀵.병합 정렬
+			- 특수 정렬 알고리즘	: 계수.기수.버킷 정렬
 */
 
 #include <stdio.h>
@@ -11,33 +11,39 @@
 #include <stdbool.h>	// bool, true, false
 #include <time.h>	// time
 
-#define arrMAXSIZE 15
-
 // 1) 기초적인 정렬 알고리즘
 void	selectionSort(int* pArr, int num);	// 선택 정렬
 void	bubbleSort(int* pArr, int num);		// 버블 정렬
 void	insertionSort(int* pArr, int num);	// 삽입 정렬
 
 // 2) 고급 정렬 알고리즘
-void	shellSort(int* pArr, int num);		// 쉘 정렬
+void	shellSort(int* pArr, int num);						// 쉘 정렬
 void	intervalSort(int* pArr, int num, int start, int interval);
-void	quickSort(int* pArr, int* pFirst, int* pLast);	// 퀵 정렬
-void	mergeSort(int* pArr, int* pFirst, int* pLast);	// 병합 정렬
+void	quickSort(int* pArr, int* pFirst, int* pLast);				// 퀵 정렬
+void	mergeSort(int* pArr, int* pFirst, int* pLast);				// 병합 정렬
 
 // 3) 특수 정렬 알고리즘: 계수.기수.버킷 정렬
-void	contingSort(int* pArr, int num);
+void  contingSort(int* pArr, int num);
 
+// 배열 원소 교환 전체 출력
 void	SWAP(int* pa, int* pb);
 void	PRINT(int* pArr, int num);
 
+// 배열 원소의 최대 크기
+#define arrMAXSIZE 10
+
 int main(void)
 {
-	int	arr[arrMAXSIZE] = { 0 };
+	// int* pArr = (int*)realloc(NULL, arrMAXSIZE * (int)sizeof(int));
+	// int* pArr = (int*)malloc(arrMAXSIZE * (int)sizeof(int));
+	// int* pArr = (int*)calloc(arrMAXSIZE, (int)sizeof(int));
+	int		arr[arrMAXSIZE] = { 0 };
 
 	// 임의의 난수 생성: 0 ~ 99사이의 정수
 	srand((unsigned int)time(NULL));
-	for (int i = 0; i < arrMAXSIZE; i++)
+	for (int i = 0; i < arrMAXSIZE; ++i)
 		*(arr + i) = rand() % 100;
+		// arr[i] = rand() % 100;
 
 	printf("정렬 전: ");
 	PRINT(arr, arrMAXSIZE);
@@ -63,19 +69,19 @@ void  SWAP(int* pa, int* pb) {
 	*pb = temp;
 }
 
-void  PRINT(int* pArr, int  num) {
-	for (int i = 0; i < num; i++)
+void  PRINT(int* pArr, int num) {
+	for (int i = 0; i < num; ++i)
 		printf("%3d", *(pArr + i));
 	printf("\n");
 }
 
 // 선택 정렬: 오름차순
-void   selectionSort(int* pArr, int  num) {
+void   selectionSort(int* pArr, int num) {
 	int* pSm;
-	for (int i = 0; i < num; i++) {
+	for (int i = 0; i < num; ++i) {
 		// 가장 작은 값을 가진 원소의 위치(주소) 탐색
 		pSm = pArr + i;
-		for (int j = i; j < num; j++)
+		for (int j = i; j < num; ++j)
 			if (*pSm > *(pArr + j))
 				pSm = pArr + j;
 		// 가장 작은 값을 선택: 현재 값과 교환
@@ -86,8 +92,8 @@ void   selectionSort(int* pArr, int  num) {
 
 // 버블 정렬: 오름차순
 void  bubbleSort(int* pArr, int num) {
-	for (int i = 0; i < num; i++) {
-		for (int j = num - 1; j > 0; j--)
+	for (int i=0; i<num; ++i) {
+		for (int j = num - 1; j>0; --j)
 			if (*(pArr + j) < *(pArr + j - 1))
 				SWAP(pArr + j, pArr + j - 1);
 		// PRINT(pArr, num);
@@ -98,9 +104,9 @@ void  bubbleSort(int* pArr, int num) {
 // 버블 정렬: 오름차순 -- 알고리즘 개선 #01
 void  bubbleSort(int* pArr, int num) {
 	_Bool	state;	// 상태 변수
-	for (int i = 0; i < num; i++) {
+	for (int i = 0; i < num; ++i) {
 		state = true;
-		for (int j = num - 1; j > 0; j--) {
+		for (int j = num - 1; j > 0; --j) {
 			if (*(pArr + j) < *(pArr + j - 1)) {
 				SWAP(pArr + j, pArr + j - 1);
 				state = false;
@@ -116,10 +122,10 @@ void  bubbleSort(int* pArr, int num) {
 // 삽입 정렬: 오름차순
 void  insertionSort(int* pArr, int num) {
 	int	i, j, temp;
-	for (i = 1; i < num; i++) {
+	for (i = 1; i < num; ++i) {
 		temp = *(pArr + i);
 		// temp 가 들어갈 공간 확보
-		for (j = i - 1; j >= 0 && *(pArr + j) > temp; j--)
+		for (j = i - 1; j >= 0 && *(pArr + j) > temp; --j)
 			*(pArr + j + 1) = *(pArr + j);
 		*(pArr + j + 1) = temp;
 		// PRINT(pArr, num);
@@ -131,7 +137,7 @@ void  shellSort(int* pArr, int num) {
 	int	interval = num;
 	while (interval >= 1) {
 		interval /= 2;
-		for (int i = 0; i < interval; i++)
+		for (int i = 0; i < interval; ++i)
 			intervalSort(pArr, num, i, interval);
 		// printf("interval: %d, ", interval);
 		// PRINT(pArr, num);
@@ -158,7 +164,7 @@ void  quickSort(int* pArr, int* pFirst, int* pLast) {
 
 	// 분할: 기준 값의 왼쪽(작은 값)과 오른쪽(큰 값) 부분 집합
 	int* pi = pFirst - 1;
-	for (int* pj = pFirst; pj < pLast; pj++)
+	for (int* pj = pFirst; pj < pLast; ++pj)
 		if (*pj <= *pLast)		// 기준 값(pivot): 마지막 원소
 			SWAP(++pi, pj);
 	SWAP(pi + 1, pLast);		// 기준 값을 가운데로 위치 시킨다.
@@ -210,9 +216,11 @@ void  mergeSort(int* pArr, int* pFirst, int* pLast) {
 
 // 계수 정렬: 오름차순
 void	contingSort(int* pArr, int num) {
-	int* countArr, * sortArr;
+	int	*countArr, *sortArr;
+
+	// 원본 데이터에서 최대값
 	int	maxNum = 0;
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < num; ++i)
 		if (maxNum < pArr[i])
 			maxNum = pArr[i];
 
@@ -223,8 +231,8 @@ void	contingSort(int* pArr, int num) {
 		printf("동적 메모리 공간 할당 실패!!!");
 		exit(100);
 	}
-	for (int i = 0; i < num; i++)		countArr[pArr[i]]++;
-	for (int i = 1; i <= maxNum; i++)	countArr[i] += countArr[i - 1];
+	for (int i = 0; i < num; ++i)		countArr[pArr[i]]++;
+	for (int i = 1; i <= maxNum; ++i)	countArr[i] += countArr[i - 1];
 
 	// sortArr : countArr의 값을 첨자로 하여 원본 데이터를 정렬된 데이터로 구성한다.
 	sortArr = (int*)calloc(num, sizeof(int));
@@ -232,14 +240,14 @@ void	contingSort(int* pArr, int num) {
 		printf("동적 메모리 공간 할당 실패!!!");
 		exit(100);
 	}
-	for (int i = num - 1; i >= 0; i--) {
+	for (int i = num - 1; i >= 0; --i) {
 		sortArr[countArr[pArr[i]] - 1] = pArr[i];
 		countArr[pArr[i]]--;
 		// PRINT(sort, num);
 	}
 
 	// 정렬된 데이터(sortArr)로 원본 데이터(pArr)를 재구성한다.
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < num; ++i)
 		pArr[i] = sortArr[i];
 
 	free(countArr);
