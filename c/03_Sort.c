@@ -25,7 +25,7 @@ void	mergeSort(int* pArr, int* pFirst, int* pLast);			// 병합 정렬
 // 3) 특수 정렬 알고리즘: 계수 정렬
 void  contingSort(int* pArr, int num);
 
-// 배열 원소 교환 전체 출력
+// 배열의 원소 교환 및 전체 데이터 출력
 void	SWAP(int* pa, int* pb);
 void	PRINT(int* pArr, int num);
 
