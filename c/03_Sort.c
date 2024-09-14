@@ -225,7 +225,7 @@ void	contingSort(int* pArr, int num) {
 			maxNum = pArr[i];
 
 	// countArr : 원본 데이터에서 각 항목들의 발생 횟수를 저장한다.
-	//				단, 원본 데이터의 값 자체가 countArr의 첨자가 된다.
+	//		단, 원본 데이터의 값 자체가 countArr의 첨자가 된다.
 	countArr = (int*)calloc(maxNum + 1, sizeof(int));
 	if (countArr == NULL) {
 		printf("동적 메모리 공간 할당 실패!!!");
