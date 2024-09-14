@@ -142,7 +142,7 @@ def countingSort(sList: list) -> None:
 
 if __name__ == '__main__':
     sList = []
-    while len(sList)<15:
+    while len(sList)<10:
         num = random.randint(0, 99)
         sList.append(num)
     
