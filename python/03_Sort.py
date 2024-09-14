@@ -77,15 +77,15 @@ def  quickSort(sList: list, first:int, last:int) -> None:
         return
     
     # 분할: 기준 값의 왼쪽(작은 값)과 오른쪽(큰 값) 부분 집합
-    pivot, i = sList[last], first           # pivoit: 기준 값(S[last])
+    pivot, i = sList[last], first		# pivoit: 기준 값(S[last])
     for j in range(first, last):
-        if(sList[j] <= pivot):              # 기준 값(pivot): 마지막 원소
+        if(sList[j] <= pivot):			# 기준 값(pivot): 마지막 원소
             sList[i], sList[j] = sList[j], sList[i]
             i += 1
     sList[i], sList[last] = sList[last], sList[i]       # 기준 값을 가운데로
     # print(sList)
-    quickSort(sList, first, i - 1)	        # 왼쪽 부분 정렬
-    quickSort(sList, i + 1, last)    	    # 오른쪽 부분 정렬
+    quickSort(sList, first, i - 1)		# 왼쪽 부분 정렬
+    quickSort(sList, i + 1, last)		# 오른쪽 부분 정렬
 
 # 병합 정렬: 오름차순
 def  mergeSort(sList: list, first:int, last:int) -> None:
@@ -95,11 +95,11 @@ def  mergeSort(sList: list, first:int, last:int) -> None:
 
     # 중간 원소의 위치(주소) 계산: pFirst와 pLast 범위에서...
     mid = (first + last) // 2
-    mergeSort(sList, first, mid)        # 왼쪽 부분집합 정렬
-    mergeSort(sList, mid + 1, last)     # 오른쪽 부분집합 정렬
+    mergeSort(sList, first, mid)		# 왼쪽 부분집합 정렬
+    mergeSort(sList, mid + 1, last)		# 오른쪽 부분집합 정렬
 
     # 병합(merge): 정렬된 두 부분집합 병합
-    i, j, t = first, mid + 1, 0         # 시작 위치: 왼쪽 부분집합, 오른쪽 부분집합
+    i, j, t = first, mid + 1, 0			# 시작 위치: 왼쪽 부분집합, 오른쪽 부분집합
     temp = [0 for _ in range(last - first + 1)]
     while i <= mid and j <= last:
         if sList[i] <= sList[j]:
