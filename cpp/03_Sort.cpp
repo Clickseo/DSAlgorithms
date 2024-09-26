@@ -156,7 +156,7 @@ void mergeSort(vector<int>& vArr, int first, int last) {
         return;
 
     // 중간 원소의 위치 계산: first와 last 범위에서...
-    int     mid = first + (last - first) / 2;
+    int     mid = (first + last) / 2;
     mergeSort(vArr, first, mid);                // 왼쪽 부분집합 정렬
     mergeSort(vArr, mid + 1, last);             // 오른쪽 부분집합 정렬
 
