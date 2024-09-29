@@ -5,12 +5,12 @@
 */
 #include <iostream>
 #include "SLinkedList(head).h"		// SLinkedList, SNode
-// #include "LinkedNode.h"			// SNode
+// #include "LinkedNode.h"		// SNode
 using namespace std;
 
 int main(void)
 {
-	int			num;
+	int		num;
 	SLinkedList	sList = SLinkedList();
 	// head_ = nullptr;
 	while (true) {
