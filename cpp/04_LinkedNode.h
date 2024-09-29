@@ -6,7 +6,6 @@
 */
 
 // 단순 연결 리스트: SNode(data, link)
-// 노드: SNode(data, link)
 // #pragma once
 #ifndef __SNode_H__
 #define __SNode_H__
@@ -24,7 +23,6 @@ private:
 #endif
 
 // 이중 연결 리스트: DNode(data, Llink, Rlink)
-// 노드: DNode(data, Llink, Rlink)
 #ifndef __DNode_H__
 #define __DNode_H__
 
