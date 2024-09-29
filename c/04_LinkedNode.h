@@ -1,32 +1,37 @@
 /*
 	단순.이중 연결 리스트 : 알고리즘 구현(c)
 		파일명: LinkedNode.h
-			- 구조체 : SNode / 단순 연결 리스트(노드): SNode(data, link)
+			- 구조체 : SNode / 단순 연결 리스트(노드)	: SNode(data, link)
 			- 구조체: DNode / 이중 연결 리스트(노드)	: DNode(data, Llink, Rlink)
 */
 
-// #pragma once
-typedef	int	element;
+#include <stdio.h>
+#include <stdlib.h>			// malloc, free
+#include "LinkedNode.h"		// SNode, DNode
 
 // 단순 연결 리스트: SNode(data, link)
-#ifndef __SNode_H__
-#define __SNode_H__
-typedef struct _SNode {
-	element		data;
-	struct _SNode*	link;
-}SNode;
-#endif
-
-SNode* makeSNode(element data);
+// 새로운 노드(SNode: data, link) 생성
+SNode* makeSNode(element num) {
+	SNode* newNode = (SNode*)malloc(sizeof(SNode));
+	if (newNode == NULL) {
+		printf("노드 생성 실패!!! \n");
+		exit(1);
+	}
+	newNode->data = num;
+	newNode->link = NULL;
+	return newNode;
+}
 
 // 이중 연결 리스트: DNode(data, Llink, Rlink)
-#ifndef __DNode_H__
-#define __DNode_H__
-typedef struct _DNode {
-	element		data;
-	struct _DNode*	Llink;
-	struct _DNode*	Rlink;
-}DNode;
-#endif
-
-DNode* makeDNode(element data);
+// 새로운 노드(DNode: data, Llink, Rlink) 생성
+DNode* makeDNode(element num) {
+	DNode* newNode = (DNode*)malloc(sizeof(DNode));
+	if (newNode == NULL) {
+		printf("노드 생성 실패!!! \n");
+		exit(1);
+	}
+	newNode->data = num;
+	newNode->Llink = NULL;
+	newNode->Rlink = NULL;
+	return newNode;
+}
