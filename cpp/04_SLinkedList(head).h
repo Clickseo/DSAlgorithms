@@ -1,7 +1,6 @@
 /*
 	단순 연결 리스트: 알고리즘 구현(cpp)
 		파일명: SLinkedList(head).h
-			- 클래스: SNode
 			- 클래스: SLinkedList
 				- 스택 생성.소멸	: SLinkedList, ~SLinkedList
 				- 데이터 삽입.삭제	: addRear, removeFront
