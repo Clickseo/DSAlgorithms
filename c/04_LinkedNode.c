@@ -6,7 +6,7 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>			// malloc, free
+#include <stdlib.h>		// malloc, free
 #include "LinkedNode.h"		// SNode, DNode
 
 // 단순 연결 리스트 구현(C)
