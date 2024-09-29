@@ -3,16 +3,16 @@
 		파일명: SLinkedList(head).cpp
 			- 클래스: SNode
 			- 클래스: SLinkedList
-				생성자와 소멸자			: SLinkedList, ~SLinkedList
-				노드 확인				: isEmpty, countSNode
-				노드 탐색				: frontSNode, rearSNode
-				노드 삽입.삭제			: addRear, removeFront
-				전체 원소(노드) 출력	: printSLinkedList
+				생성자와 소멸자		: SLinkedList, ~SLinkedList
+				노드 확인		: isEmpty, countNode
+				노드 탐색		: frontNode, rearNode
+				노드 삽입.삭제		: addRear, removeFront
+				전체 원소(노드) 출력	: printLinkedList
 */
 
 #include <iostream>
-#include "SLinkedList(head).h"		// SLinkedList, SNode, makeSNode
-// #include "LinkedNode.h"			// SNode, makeSNode
+#include "SLinkedList(head).h"		// SLinkedList, SNode
+// #include "LinkedNode.h"		// SNode
 using namespace std;
 
 // LinkedStack: 생성자와 소멸자
@@ -21,7 +21,7 @@ SLinkedList::SLinkedList(void)
 
 SLinkedList::~SLinkedList(void) {
 	// while (!isEmpty())
-	//		removeFront();
+	//	removeFront();
 	SNode* tNode = head_;
 	while (tNode) {
 		head_ = tNode->link_;
@@ -40,7 +40,7 @@ int	SLinkedList::countNode(void) const {
 	// if (isEmpty()) return 0;
 	int	count = 0;
 	SNode* rNode = head_;
-	while (rNode) {			// while (rNode != nullptr)
+	while (rNode) {		// while (rNode != nullptr)
 		count++;
 		rNode = rNode->link_;
 	}
@@ -86,7 +86,6 @@ void SLinkedList::printLinkedList(void) const {
 		cout << "\n입력된 데이터가 없습니다..." << endl;
 		return;
 	}
-
 	cout << "\n\t### 입력된 데이터 ###" << endl;
 	SNode* temp = head_;
 	while (temp) {
