@@ -22,18 +22,17 @@ class SNode:
 
 # 단순 연결 리스트: SLinkedList(head)
 class SLinkedList:
-    def __init__(self): 		# 생성자
-        self.__head = None		# 첫 번째 노드
-	    # self.__tail = None	# 맨 마지막 노드
-        # self.__count = 0		# 노드의 총 개수
+    def __init__(self): 	# 생성자
+        self.__head = None	# 첫 번째 노드
+	# self.__tail = None	# 맨 마지막 노드
+        # self.__count = 0	# 노드의 총 개수
 
    # 소멸자: 전체 노드 삭제
     def __del__(self):
         # while not self.isEmpty():
         #     self.removeFront()
         if self.isEmpty():
-            return
-        
+            return        
         while not self.isEmpty():
             old = self.__head
             self.__head = old.getLink()
@@ -46,8 +45,7 @@ class SLinkedList:
     # 탐색: 노드의 총 개수(count)
     def countNode(self) -> int:
         if self.isEmpty():
-            return 0
-        
+            return 0        
         count = 0
         rNode = self.__head
         while rNode:
@@ -82,8 +80,7 @@ class SLinkedList:
     # 삭제: 첫 번째 노드
     def removeFront(self) -> None:
         if self.isEmpty():
-            return
-        
+            return        
         old = self.__head
         self.__head = old.getLink()
         del old
@@ -92,8 +89,7 @@ class SLinkedList:
     def printLinkedList(self) -> None:
         if self.isEmpty():
             print('입력된 데이터가 없습니다!!!')
-            return
-        
+            return        
         print('\n### 입력된 데이터 ###')
         temp = self.__head
         while temp :
