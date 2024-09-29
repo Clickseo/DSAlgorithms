@@ -16,7 +16,7 @@ class SNode {
 public:
 	SNode(const int& data);
 private:
-	int		data_;
+	int	data_;
 	SNode*	link_;
 	friend class SLinkedList;
 };
@@ -33,7 +33,7 @@ class DNode {
 public:
 	DNode(const int& data);
 private:
-	int		data_;
+	int	data_;
 	DNode*	Llink_;
 	DNode*	Rlink_;
 	friend class DLinkedList;
