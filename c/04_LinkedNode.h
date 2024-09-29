@@ -1,7 +1,7 @@
 /*
 	단순.이중 연결 리스트 : 알고리즘 구현(c)
 		파일명: LinkedNode.h
-			- 구조체 : SNode / 단순 연결 리스트(노드)	: SNode(data, link)
+			- 구조체 : SNode / 단순 연결 리스트(노드): SNode(data, link)
 			- 구조체: DNode / 이중 연결 리스트(노드)	: DNode(data, Llink, Rlink)
 */
 
