@@ -1,11 +1,11 @@
 /*
 	단순.이중 연결 리스트 : 알고리즘 구현(cpp)
 		파일명: LinkedNode.h
-			- 단순 연결 리스트(노드)	: SNode(data, link)
-			- 이중 연결 리스트(노드)	: DNode(data, Llink, Rlink)
+			- 클래스: SNode / 단순 연결 리스트(노드)	: SNode(data, link)
+			- 클래스: DNode / 이중 연결 리스트(노드)	: DNode(data, Llink, Rlink)
 */
 
-// 단순 연결 리스트 구현(CPP)
+// 단순 연결 리스트: SNode(data, link)
 // 노드: SNode(data, link)
 // #pragma once
 #ifndef __SNode_H__
@@ -16,14 +16,14 @@ class SNode {
 public:
 	SNode(const int& data);
 private:
-	int	data_;
+	int		data_;
 	SNode*	link_;
 	friend class SLinkedList;
 };
 
 #endif
 
-// 이중 연결 리스트 구현(CPP)
+// 이중 연결 리스트: DNode(data, Llink, Rlink)
 // 노드: DNode(data, Llink, Rlink)
 #ifndef __DNode_H__
 #define __DNode_H__
@@ -33,7 +33,7 @@ class DNode {
 public:
 	DNode(const int& data);
 private:
-	int	data_;
+	int		data_;
 	DNode*	Llink_;
 	DNode*	Rlink_;
 	friend class DLinkedList;
