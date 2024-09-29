@@ -1,7 +1,6 @@
 /*
 	단순 연결 리스트: 알고리즘 구현(cpp)
 		파일명: SLinkedList(head).cpp
-			- 클래스: SNode
 			- 클래스: SLinkedList
 				생성자와 소멸자		: SLinkedList, ~SLinkedList
 				노드 확인		: isEmpty, countNode
