@@ -6,14 +6,14 @@
 */
 
 // #pragma once
-typedef	int		element;
+typedef	int	element;
 
 // 단순 연결 리스트 구현(C)
 // 노드: SNode(data, link)
 #ifndef __SNode_H__
 #define __SNode_H__
 typedef struct _SNode {
-	element			data;
+	element		data;
 	struct _SNode*	link;
 }SNode;
 #endif
@@ -25,7 +25,7 @@ SNode* makeSNode(element data);
 #ifndef __DNode_H__
 #define __DNode_H__
 typedef struct _DNode {
-	element			data;
+	element		data;
 	struct _DNode*	Llink;
 	struct _DNode*	Rlink;
 }DNode;
