@@ -83,7 +83,7 @@ void DLinkedList::removeFront(void) {
 	DNode* old = head_;
 	head_ = old->Rlink_;
 	if (head_)	// if (head_ != nullptr)
-		old->Llink_ = nullptr;
+		head_->Llink_ = nullptr;
 	delete old;
 }
 
