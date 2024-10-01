@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>		// exit, malloc, free
 #include <stdbool.h>		// bool, true, false
-#include "SLinkedList(head).h"	// SLinkedList, SNode, makeSNode
+#include "SLinkedList(head).h"	// SLinkedList >> head
 // #include "LinkedNode.h"	// SNode, makeSNode
 
 // 빈 리스트 생성
