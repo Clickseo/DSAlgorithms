@@ -6,13 +6,13 @@
 
 #include <iostream>
 #include "DLinkedList(head).h"		// DLinkedList >> head
-#include "DLinkedList.h"			// DLinkedList >> head, count, tail
-// #include "LinkedNode.h"			// DNode
+#include "DLinkedList.h"		// DLinkedList >> head, count, tail
+// #include "LinkedNode.h"		// DNode
 using namespace std;
 
 int main(void)
 {
-	int			num;
+	int		num;
 	DLinkedList	dList = DLinkedList();	// head_ = nullptr;
 
 	while (true) {
