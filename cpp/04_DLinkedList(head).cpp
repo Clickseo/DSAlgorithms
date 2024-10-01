@@ -21,7 +21,8 @@ DLinkedList::DLinkedList(void)
 
 // 소멸자: 전체 노드 삭제
 DLinkedList::~DLinkedList(void) {
-	// while (!isEmpty()) removeFront();
+	// while (!isEmpty())
+	//	removeFront();
 	DNode* tNode = head_;
 	while (tNode) {
 		head_ = tNode->Rlink_;
