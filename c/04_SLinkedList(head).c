@@ -28,7 +28,7 @@ SLinkedList* sListCreate(void) {
 SLinkedList* sListDestroy(SLinkedList* sList) {
 	//	while (!sListEmpty(sList))
 	//		sListRemoveFront(sList);
-	SNode	*tNode, *old;	
+	SNode	*tNode, *old;
 	tNode = sList->head;
 	while (tNode) {
 		old = tNode;
@@ -48,7 +48,6 @@ SNode* frontSNode(SLinkedList* sList) {
 SNode* rearSNode(SLinkedList* sList) {
 	if (sListEmpty(sList))
 		return NULL;
-
 	SNode* rNode = sList->head;
 	while (rNode->link)
 		rNode = rNode->link;
@@ -70,7 +69,6 @@ void sListAddRear(SLinkedList* sList, SNode* newNode) {
 void	sListRemoveFront(SLinkedList* sList) {
 	if (sListEmpty(sList))
 		return;
-
 	SNode* old = sList->head;
 	sList->head = old->link;
 	free(old);
@@ -84,8 +82,7 @@ _Bool	sListEmpty(SLinkedList* sList) {
 // 탐색: 노드의 총 개수(count)
 int	countSNode(SLinkedList* sList) {
 	if (sListEmpty(sList))
-		return 0;
-
+		return 0;	
 	int	count = 0;
 	SNode* rNode = sList->head;
 	while (rNode->link) {
@@ -100,8 +97,7 @@ void	printSLinkedList(SLinkedList* sList) {
 	if (sListEmpty(sList)) {
 		printf("입력된 데이터가 없습니다... \n");
 		return;
-	}
-
+	}	
 	printf("\n ### 입력된 데이터 ### \n\n");
 	SNode* tNode = sList->head;
 	while (tNode) {
