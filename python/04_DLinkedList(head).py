@@ -92,30 +92,30 @@ class DLinkedList:
 
         del old
 
-    # 출력(순방향): 리스트의 전체 원소(노드) 출력
+    # 출력: 리스트 전체 노드의 데이터(순방향)
     def printLinkedList(self) -> None:
         if self.isEmpty():
             print('입력된 데이터가 없습니다...')
             return
         
         print(f'\n### 입력된 데이터(순방향): {self.countNode()} ###')
-        temp = self.__head
-        while temp:
-            print(f'{temp.getData()} ->>', end=' ')
-            temp = temp.getRlink()
+        tNode = self.__head
+        while tNode:
+            print(f'{tNode.getData()} ->>', end=' ')
+            tNode = tNode.getRlink()
         print(' None')
         
-    # 출력(역방향): 리스트의 전체 원소(노드) 출력
+    # 출력: 리스트 전체 노드의 데이터(역방향)
     def printRevLinkedList(self) -> None:
         if self.isEmpty():
             print('입력된 데이터가 없습니다...')
             return
         
         print(f'\n### 입력된 데이터(역방향): {self.countNode()} ###')
-        temp = self.rearNode()
-        while temp :
-            print(f'{temp.getData()} ->>', end=' ')
-            temp = temp.getLlink()
+        rNode = self.rearNode()
+        while rNode:
+            print(f'{rNode.getData()} ->>', end=' ')
+            rNode = rNode.getLlink()
         print(' None')
 
 if __name__ == '__main__':
