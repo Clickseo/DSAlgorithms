@@ -87,7 +87,7 @@ void DLinkedList::removeFront(void) {
 	delete old;
 }
 
-// 출력(순방향): 리스트의 전체 원소(노드) 출력
+// 출력: 리스트 전체 노드의 데이터(순방향)
 void DLinkedList::printLinkedList(void) const {
 	if (isEmpty()) {
 		cout << "\n입력된 데이터가 없습니다..." << endl;
@@ -95,16 +95,16 @@ void DLinkedList::printLinkedList(void) const {
 	}
 
 	cout << "\n\t### 입력된 데이터: 순방향 ###" << endl;
-	DNode* temp = head_;
-	while (temp) {
+	DNode* tNode = head_;
+	while (tNode) {
 		cout.width(3);
-		cout << temp->data_ << " ->>";
-		temp = temp->Rlink_;
+		cout << tNode->data_ << " ->>";
+		tNode = tNode->Rlink_;
 	}
 	cout << " NULL" << endl;
 }
 
-// 출력(역방향): 리스트의 전체 원소(노드) 출력
+// 출력: 리스트 전체 노드의 데이터(역방향)
 void DLinkedList::printRevLinkedList(void) const {
 	if (isEmpty()) {
 		cout << "\n입력된 데이터가 없습니다..." << endl;
@@ -112,11 +112,11 @@ void DLinkedList::printRevLinkedList(void) const {
 	}
 
 	cout << "\n\t### 입력된 데이터: 역방향 ###" << endl;
-	DNode* temp = rearNode();
-	while (temp) {
+	DNode* rNode = rearNode();
+	while (rNode) {
 		cout.width(3);
-		cout << temp->data_ << " ->>";
-		temp = temp->Llink_;
+		cout << rNode->data_ << " ->>";
+		rNode = rNode->Llink_;
 	}
 	cout << " NULL" << endl;
 }
