@@ -3,16 +3,16 @@
 		파일명: DLinkedList(head).cpp
 			- 클래스: DNode
 			- 클래스: DLinkedList
-				생성자와 소멸자			: DLinkedList, ~DLinkedList
-				노드 확인				: isEmpty, countNode
-				노드 탐색				: frontNode, rearNode
-				노드 삽입.삭제			: addRear, removeFront
+				생성자와 소멸자		: DLinkedList, ~DLinkedList
+				노드 확인		: isEmpty, countNode
+				노드 탐색		: frontNode, rearNode
+				노드 삽입.삭제		: addRear, removeFront
 				전체 원소(노드) 출력	: printLinkedList
 */
 
 #include <iostream>
 #include "DLinkedList(head).h"		// DLinkedList >> head
-// #include "LinkedNode.h"			// DNode
+// #include "LinkedNode.h"		// DNode
 using namespace std;
 
 // 생성자: head_, tail_, count_
@@ -38,8 +38,8 @@ bool DLinkedList::isEmpty(void) const {
 // 탐색: 노드의 총 개수(count)
 int	DLinkedList::countNode(void) const {
 	// if (isEmpty()) return 0;
-	int		count = 0;
-	DNode* rNode = head_;
+	int	count = 0;
+	DNode*	rNode = head_;
 	while (rNode) {		// while (rNode != nullptr)
 		count++;
 		rNode = rNode->Rlink_;
