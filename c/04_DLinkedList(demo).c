@@ -29,7 +29,7 @@ int main(void)
 
 	// 전체 원소 출력
 	printDLinkedList(dList);		// 순방향 출력
-	revPrintDLinkedList(dList);		// 역방향 출력
+	printRevDLinkedList(dList);		// 역방향 출력
 
 	// dList = dListDestroy(dList);
 	return 0;
