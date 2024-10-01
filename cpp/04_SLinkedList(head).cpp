@@ -79,18 +79,19 @@ void SLinkedList::removeFront(void) {
 	delete old;
 }
 
-// 출력: 리스트의 전체 원소(노드)
+// 출력: 리스트의 전체 노드의 데이터
 void SLinkedList::printLinkedList(void) const {
 	if (isEmpty()) {
 		cout << "\n입력된 데이터가 없습니다..." << endl;
 		return;
 	}
+
 	cout << "\n\t### 입력된 데이터 ###" << endl;
-	SNode* temp = head_;
-	while (temp) {
+	SNode* tNode = head_;
+	while (tNode) {
 		cout.width(3);
-		cout << temp->data_ << " ->>";
-		temp = temp->link_;
+		cout << tNode->data_ << " ->>";
+		tNode = tNode->link_;
 	}
 	cout << " NULL" << endl;
 }
