@@ -12,7 +12,7 @@ using namespace std;
 int main(void)
 {
 	int		num;
-	SLinkedList	sList = SLinkedList();	// head_ = nullptr;
+	SLinkedList	sList = SLinkedList();		// head_ = nullptr;
 
 	while (true) {
 		cout << "임의의 정수 입력(종료: 0): ";
