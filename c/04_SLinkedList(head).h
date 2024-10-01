@@ -28,7 +28,7 @@ SLinkedList*	sListCreate(void);				// 빈 리스트 생성
 SLinkedList*	sListDestroy(SLinkedList* sList);		// 리스트 삭제: 리스트의 전체 노드 삭제	
 void	sListAddRear(SLinkedList* sList, SNode* newNode);	// 삽입: 리스트의 맨 마지막 노드로...
 void	sListRemoveFront(SLinkedList* sList);			// 삭제: 리스트에서 첫 번째 노드를...
-SNode*	frontSNode(SLinkedList* sList);				// 탐색: 리스트의 첫 번째 노드(__head)
+SNode*	frontSNode(SLinkedList* sList);				// 탐색: 리스트의 첫 번째 노드(head)
 SNode*	rearSNode(SLinkedList* sList);				// 탐색: 리스트의 맨 마지막 노드
 _Bool	sListEmpty(SLinkedList* sList);				// 빈 리스트 여부 판단
 int	countSNode(SLinkedList* sList);				// 탐색: 노드의 총 개수(count)
