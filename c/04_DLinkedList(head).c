@@ -27,8 +27,9 @@ DLinkedList* dListCreate(void) {
 
 // 리스트 삭제: 리스트의 전체 노드 삭제
 DLinkedList* dListDestroy(DLinkedList* dList) {
-	// while (!dListEmpty(sList))
-	//	dListRemoveFront(sList);
+	// while (!dListEmpty(dList))
+	//	dListRemoveFront(dList);
+	// free(dList);
 	DNode	*tNode, *old;
 	tNode = dList->head;
 	while (tNode) {
