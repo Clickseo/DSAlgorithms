@@ -26,8 +26,9 @@ SLinkedList* sListCreate(void) {
 
 // 리스트 삭제: 리스트의 전체 노드 삭제
 SLinkedList* sListDestroy(SLinkedList* sList) {
-	//	while (!sListEmpty(sList))
-	//		sListRemoveFront(sList);
+	// while (!sListEmpty(sList))
+	//	sListRemoveFront(sList);
+	// free(dList);
 	SNode	*tNode, *old;
 	tNode = sList->head;
 	while (tNode) {
