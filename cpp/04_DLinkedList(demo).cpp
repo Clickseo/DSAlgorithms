@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include "DLinkedList(head).h"		// DLinkedList >> head
-#include "DLinkedList.h"		// DLinkedList >> head, count, tail
+// #include "DLinkedList.h"		// DLinkedList >> head, count, tail
 // #include "LinkedNode.h"		// DNode
 using namespace std;
 
