@@ -36,7 +36,7 @@ bool DLinkedList::isEmpty(void) const {
 	return head_ == nullptr;
 }
 
-// 탐색: 노드의 총 개수(count)
+// 탐색: 노드의 총 개수
 int	DLinkedList::countNode(void) const {
 	// if (isEmpty()) return 0;
 	int	count = 0;
@@ -76,10 +76,12 @@ void DLinkedList::addRear(const int& e) {
 
 // 삭제: 첫 번째 노드(head)
 void DLinkedList::removeFront(void) {
-	if (isEmpty()) return;
+	if (isEmpty())
+		return;
+	
 	DNode* old = head_;
 	head_ = old->Rlink_;
-	if (head_ != nullptr)
+	if (head_)	// if (head_ != nullptr)
 		old->Llink_ = nullptr;
 	delete old;
 }
