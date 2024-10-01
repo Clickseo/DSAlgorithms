@@ -2,17 +2,17 @@
 	이중 연결 리스트: 알고리즘 구현(C)
 		파일명: DLinkedList(head).c
 			- 리스트 성생 및 삭제	: dListCreate, dListDestroy
-			- 노드 탐색				: dListEmpty, countDNode, frontDNode, rearDNode
-			- 노드 삽입 및 삭제		: dListAddRear, dListRemoveFront
-			- 전체 원소 출력		: printDLinkedList
+			- 노드 탐색		: dListEmpty, countDNode, frontDNode, rearDNode
+			- 노드 삽입 및 삭제	: dListAddRear, dListRemoveFront
+			- 전체 원소 출력	: printDLinkedList
 */
 
 #include <stdio.h>
-#include <stdlib.h>					// exit, malloc, free
-#include <stdbool.h>				// bool, true, false
+#include <stdlib.h>			// exit, malloc, free
+#include <stdbool.h>			// bool, true, false
 #include "DLinkedList(head).h"		// DLinkedList >> head
-// #include "DLinkedList.h"			// DLinkedList >> head, tail, count
-// #include "LinkedNode.h"			// DNode, makeDNode
+// #include "DLinkedList.h"		// DLinkedList >> head, tail, count
+// #include "LinkedNode.h"		// DNode, makeDNode
 
 // 빈 리스트 생성
 DLinkedList* dListCreate(void) {
@@ -27,8 +27,8 @@ DLinkedList* dListCreate(void) {
 
 // 리스트 삭제: 리스트의 전체 노드 삭제
 DLinkedList* dListDestroy(DLinkedList* dList) {
-	//	while (!dListEmpty(sList))
-	//		dListRemoveFront(sList);
+	// while (!dListEmpty(sList))
+	//	dListRemoveFront(sList);
 	DNode	*tNode, *old;
 	tNode = dList->head;
 	while (tNode) {
@@ -46,7 +46,7 @@ _Bool	dListEmpty(DLinkedList* dList) {
 }
 
 // 탐색: 노드의 총 개수
-int		countDNode(DLinkedList* dList) {
+int	countDNode(DLinkedList* dList) {
 	if (dListEmpty(dList))
 		return 0;
 
