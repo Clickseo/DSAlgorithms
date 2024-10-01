@@ -25,9 +25,9 @@ int main(void)
 	}
 
 	// 전체 원소 출력
-	dList.printLinkedList();			// 순방향 출력
-	dList.printRevLinkedList();			// 역방향 출력
+	dList.printLinkedList();	// 순방향 출력
+	dList.printRevLinkedList();	// 역방향 출력
 
-	// sList.~SLinkedList();
+	// dList.~DLinkedList();
 	return 0;
 }
