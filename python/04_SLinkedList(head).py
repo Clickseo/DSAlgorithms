@@ -30,10 +30,7 @@ class SLinkedList:
    # 소멸자: 전체 노드 삭제
     def __del__(self):
         # while not self.isEmpty():
-        #     self.removeFront()
-        if self.isEmpty():
-            return
-        
+        #     self.removeFront()       
         while not self.isEmpty():
             old = self.__head
             self.__head = old.getLink()
