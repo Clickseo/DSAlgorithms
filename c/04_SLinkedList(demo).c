@@ -15,6 +15,7 @@ int main(void)
 {
 	int		num;
 	SLinkedList*	sList = sListCreate();
+	
 	while (true) {
 		printf("임의의 정수 입력(종료: 0) : ");
 		scanf_s("%d", &num);
@@ -24,7 +25,9 @@ int main(void)
 		SNode* newNode = makeSNode(num);	// 새로운 노드 생성
 		sListAddRear(sList, newNode);		// 맨 마지막 노드로 삽입
 	}
+	
 	printSLinkedList(sList);
 	sList = sListDestroy(sList);
+	
 	return 0;
 }
