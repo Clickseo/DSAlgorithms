@@ -4,16 +4,15 @@
 			- main	: 데이터 삽입.삭제, 전체 출력
 */
 #include <iostream>
-#include "SLinkedList.h"			// SLinkedList >> head, count, tail
+#include "SLinkedList.h"		// SLinkedList >> head, count, tail
 // #include "SLinkedList(head).h"	// SLinkedList >> head
-// #include "LinkedNode.h"			// SNode
+// #include "LinkedNode.h"		// SNode
 using namespace std;
 
 int main(void)
 {
-	int			num;
-	SLinkedList	sList = SLinkedList();	// sList.SLinkedList();
-										// head_ = nullptr;
+	int		num;
+	SLinkedList	sList = SLinkedList();	// head_ = nullptr;
 
 	while (true) {
 		cout << "임의의 정수 입력(종료: 0): ";
@@ -26,5 +25,5 @@ int main(void)
 
 	// 전체 원소 출력
 	sList.printLinkedList();
-	return 0;		// sList.~SLinkedList();
+	return 0;	// sList.~SLinkedList();
 }
