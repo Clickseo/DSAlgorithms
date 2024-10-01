@@ -115,7 +115,7 @@ void	printDLinkedList(DLinkedList* dList) {
 }
 
 // 리스트의 전체 노드 출력(역방향)
-void	revPrintDLinkedList(DLinkedList* dList) {
+void	printRevDLinkedList(DLinkedList* dList) {
 	if (dListEmpty(dList)) {
 		printf("입력된 데이터가 없습니다... \n");
 		return;
