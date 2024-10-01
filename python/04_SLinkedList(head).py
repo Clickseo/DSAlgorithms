@@ -32,7 +32,7 @@ class SLinkedList:
         # while not self.isEmpty():
         #     self.removeFront()
         if self.isEmpty():
-            return        
+            return
         while not self.isEmpty():
             old = self.__head
             self.__head = old.getLink()
@@ -45,7 +45,7 @@ class SLinkedList:
     # 탐색: 노드의 총 개수(count)
     def countNode(self) -> int:
         if self.isEmpty():
-            return 0        
+		return 0
         count = 0
         rNode = self.__head
         while rNode:
@@ -62,7 +62,7 @@ class SLinkedList:
     # 탐색: 맨 마지막 노드
     def rearNode(self) -> SNode:
         # if self.isEmpty():
-        #     return None        
+        #     return None
         rNode = self.__head
         while rNode.getLink():
             rNode = rNode.getLink()
@@ -80,7 +80,7 @@ class SLinkedList:
     # 삭제: 첫 번째 노드
     def removeFront(self) -> None:
         if self.isEmpty():
-            return        
+		return
         old = self.__head
         self.__head = old.getLink()
         del old
@@ -89,10 +89,10 @@ class SLinkedList:
     def printLinkedList(self) -> None:
         if self.isEmpty():
             print('입력된 데이터가 없습니다!!!')
-            return        
+            return
         print('\n### 입력된 데이터 ###')
         temp = self.__head
-        while temp :
+        while temp:
             print(f'{temp.getData()} ->>', end=' ')
             temp = temp.getLink()
         print(' NULL')
@@ -106,5 +106,7 @@ if __name__ == '__main__':
         s.addRear(num)    # 맨 마지막 노드로 삽입
 
     # 전체 원소 출력
+    s.printLinkedList()
+    # del s     # s.__del__()
     s.printLinkedList()
     # del s     # s.__del__()
