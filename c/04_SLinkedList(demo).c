@@ -14,7 +14,7 @@
 int main(void)
 {
 	int		num;
-	SLinkedList*	sList = sListCreate();
+	SLinkedList*	sList = sListCreate();		// head = NULL;
 	
 	while (true) {
 		printf("임의의 정수 입력(종료: 0) : ");
