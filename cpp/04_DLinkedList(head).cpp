@@ -65,12 +65,13 @@ DNode* DLinkedList::rearNode(void) const {
 
 // 삽입: 맨 마지막 노드
 void DLinkedList::addRear(const int& e) {
-	DNode* nNode = new DNode(e);
-	if (isEmpty()) head_ = nNode;
+	DNode* newNode = new DNode(e);
+	if (isEmpty())
+		head_ = newNode;
 	else {
 		DNode* rNode = rearNode();
-		rNode->Rlink_ = nNode;
-		nNode->Llink_ = rNode;
+		rNode->Rlink_ = newNode;
+		newNode->Llink_ = rNode;
 	}
 }
 
