@@ -16,14 +16,16 @@
 // 구조체: SLinkedList
 #ifndef __SLinkedList_H__
 #define __SLinkedList_H__
+
 typedef struct _SLinkedList {
 	SNode*		head;	// 첫 번째 노드
 	// SNode*	tail;	// 맨 마지막 노드
 	// int		count;	// 노드의 총 개수
 }SLinkedList;
+
 #endif
 
-// 단순 연결 리스트 구현(C): 리스트 생성 및 활용
+// 단순 연결 리스트 구현(C): 리스트 생성 및 조작 함수
 SLinkedList*	sListCreate(void);				// 빈 리스트 생성
 SLinkedList*	sListDestroy(SLinkedList* sList);		// 리스트 삭제: 리스트의 전체 노드 삭제	
 void	sListAddRear(SLinkedList* sList, SNode* newNode);	// 삽입: 리스트의 맨 마지막 노드로...
