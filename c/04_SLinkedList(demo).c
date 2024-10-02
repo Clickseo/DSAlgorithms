@@ -22,12 +22,14 @@ int main(void)
 		// scanf("%d", &num);
 		if (num == 0)
 			break;
+		
 		SNode* newNode = makeSNode(num);	// 새로운 노드 생성
 		sListAddRear(sList, newNode);		// 맨 마지막 노드로 삽입
 	}
-	
+
+	// 전체 원소 출력
 	printSLinkedList(sList);
-	sList = sListDestroy(sList);
 	
+	// sList = sListDestroy(sList);	
 	return 0;
 }
