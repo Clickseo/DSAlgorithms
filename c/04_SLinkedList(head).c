@@ -33,7 +33,7 @@ SLinkedList* sListDestroy(SLinkedList* sList) {
 	tNode = sList->head;
 	while (tNode) {
 		old = tNode;
-		tNode = tNode->link;
+		sList->head = tNode->link;
 		free(old);
 	}
 	free(sList);
