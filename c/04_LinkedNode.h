@@ -12,6 +12,7 @@ typedef	int	element;
 #ifndef __SNode_H__
 #define __SNode_H__
 
+// SNode(data, link)
 typedef struct _SNode {
 	element		data;
 	struct _SNode*	link;
@@ -25,6 +26,7 @@ SNode* makeSNode(element data);
 #ifndef __DNode_H__
 #define __DNode_H__
 
+// DNode(data, Llink, Rlink)
 typedef struct _DNode {
 	element		data;
 	struct _DNode*	Llink;
