@@ -52,7 +52,7 @@ int	countSNode(SLinkedList* sList) {
 	
 	int	count = 0;
 	SNode* rNode = sList->head;
-	while (rNode->link) {
+	while (rNode) {
 		count++;
 		rNode = rNode->link;
 	}
