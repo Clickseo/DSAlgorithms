@@ -109,5 +109,5 @@ void	printSLinkedList(SLinkedList* sList) {
 		printf("%3d ->>", tNode->data);
 		tNode = tNode->link;
 	}
-	printf(" NULL\n");
+	printf(" NULL\n\");
 }
