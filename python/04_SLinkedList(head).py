@@ -22,10 +22,10 @@ class SNode:
 
 # 단순 연결 리스트: SLinkedList(head)
 class SLinkedList:
-    def __init__(self): 		# 생성자
-        self.__head = None		# 첫 번째 노드
-	    # self.__tail = None	# 맨 마지막 노드
-        # self.__count = 0		# 노드의 총 개수
+    def __init__(self): 	# 생성자
+        self.__head = None	# 첫 번째 노드
+        # self.__tail = None	# 맨 마지막 노드
+        # self.__count = 0	# 노드의 총 개수
 
    # 소멸자: 전체 노드 삭제
     def __del__(self):
