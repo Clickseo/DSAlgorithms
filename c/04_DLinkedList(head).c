@@ -53,7 +53,7 @@ int	countDNode(DLinkedList* dList) {
 
 	int	count = 0;
 	DNode* rNode = dList->head;
-	while (rNode->Rlink) {
+	while (rNode) {
 		count++;
 		rNode = rNode->Rlink;
 	}
