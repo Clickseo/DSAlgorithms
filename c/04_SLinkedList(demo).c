@@ -1,6 +1,6 @@
 /*
 	단순 연결 리스트: 알고리즘 구현(C)
-		파일명: SLinkedList(head)(demo).c
+		파일명: SLinkedList(demo).c
 			- main	: 데이터 삽입.삭제, 전체 출력
 */
 
