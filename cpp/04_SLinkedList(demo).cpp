@@ -4,9 +4,9 @@
 			- main	: 데이터 삽입.삭제, 전체 출력
 */
 #include <iostream>
-#include "SLinkedList.h"		// SLinkedList >> head, count, tail
-// #include "SLinkedList(head).h"	// SLinkedList >> head
-// #include "LinkedNode.h"		// SNode
+#include "SLinkedList(head).h"	// SLinkedList >> head
+// #include "SLinkedList.h"	// SLinkedList >> head, count, tail
+// #include "LinkedNode.h"	// SNode
 using namespace std;
 
 int main(void)
