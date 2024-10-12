@@ -26,7 +26,7 @@ typedef struct _ArrayStack {
 #endif
 
 // ArrayStack: 스택 생성 및 조작 함수
-ArrayStack	*stackCreate(void);						// 빈 스택 생성
+ArrayStack	*stackCreate(void);				// 빈 스택 생성
 void		stackDestroy(ArrayStack *Stack);		// 스택 삭제
 _Bool		stackEmpty(ArrayStack *Stack);			// 빈 스택 여부(top)
 _Bool		stackFull(ArrayStack *Stack);			// 스택의 포화 상태 여부(top)
