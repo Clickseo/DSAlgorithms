@@ -15,7 +15,7 @@ int main(void)
 	int	num, choice;
 
 	// 빈 스택 생성: stack[StackMAXSIZE], top = -1
-	ArrayStack	*tStack = stackCreate();
+	ArrayStack	*s = stackCreate();
 
 	while (true) {
 		system("cls");
@@ -39,10 +39,10 @@ int main(void)
 					push(tStack, num);
 				}
 				break;
-			case 2: printf("삭제 된 데이터: %3d \n", top(tStack));
-				pop(tStack);
+			case 2: printf("삭제 된 데이터: %3d \n", top(s));
+				pop(s);
 				break;
-			case 3: printStack(tStack);
+			case 3: printStack(s);
 				break;
 			case 4: printf("프로그램 종료... \n");
 				exit(0);	// return 0;
@@ -52,6 +52,6 @@ int main(void)
 		// _getch();
 		system("pause");
 	}
-	// stackDestroy(tStack);
+	// stackDestroy(s);
 	return 0;
 }
