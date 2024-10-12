@@ -6,13 +6,13 @@
 
 #include <stdio.h>
 #include <stdbool.h>		// bool, true, false
-#include <stdlib.h>			// system, exit
-#include <conio.h>			// _getch, _getche
+#include <stdlib.h>		// system, exit
+#include <conio.h>		// _getch, _getche
 #include "ArrayStack.h"		// ArrayStack
 
 int main(void)
 {
-	int			num, choice;
+	int	num, choice;
 
 	// 빈 스택 생성: stack[StackMAXSIZE], top = -1
 	ArrayStack	*tStack = stackCreate();
@@ -40,19 +40,18 @@ int main(void)
 				}
 				break;
 			case 2: printf("삭제 된 데이터: %3d \n", top(tStack));
-					pop(tStack);
-					break;
+				pop(tStack);
+				break;
 			case 3: printStack(tStack);
-					break;
+				break;
 			case 4: printf("프로그램 종료... \n");
-					exit(0);	// return 0;
+				exit(0);	// return 0;
 			default: printf("잘못 선택 하셨습니다!!!\n");
 		}
 		// print("계속하려면 아무 키나 누르십시오...");
 		// _getch();
 		system("pause");
 	}
-
 	// stackDestroy(tStack);
 	return 0;
 }
