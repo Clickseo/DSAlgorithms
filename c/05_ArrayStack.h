@@ -10,8 +10,8 @@
 */
 
 // #pragma once
-#define			StackMAXSIZE 1024
-typedef	int		element;
+#define		StackMAXSIZE 1024
+typedef	int	element;
 
 // 단순 연결 리스트: ArrayStack
 #ifndef __ArrayStack_H__
