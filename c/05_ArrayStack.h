@@ -13,7 +13,7 @@
 #define		StackMAXSIZE 1024
 typedef	int	element;
 
-// 단순 연결 리스트: ArrayStack
+// 스택(순차 자료구조): ArrayStack
 #ifndef __ArrayStack_H__
 #define __ArrayStack_H__
 
