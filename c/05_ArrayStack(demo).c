@@ -25,15 +25,15 @@ int main(void)
 		printf("3) 데이터 전체 출력 \n");
 		printf("4) 프로그램 종료 \n\n");
 		printf("메뉴 선택: ");
-		scanf_s("%d", &choice);		// scanf("%d", &choice);		
-		while (getchar() != '\n');
+		scanf_s("%d%*c", &choice);		// scanf("%d", &choice);		
+		// while (getchar() != '\n');
 
 		switch (choice) {
 			case 1: 
 				while (true) {
 					printf("데이터 입력(종료: 0): ");
-					scanf_s("%d", &num);	// scanf("%d", &num);
-					while (getchar() != '\n');
+					scanf_s("%d%*c", &num);	// scanf("%d", &num);
+					// while (getchar() != '\n');
 					if (num == 0)
 						break;
 					push(s, num);
