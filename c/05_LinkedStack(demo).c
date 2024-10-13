@@ -5,14 +5,14 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>				// system
-#include <stdbool.h>			// bool, true, false
-#include "LinkedStack.h"		// LinkedStack, SNode
-// #include "LinkedNode.h"		// SNode
+#include <stdlib.h>		// system
+#include <stdbool.h>		// bool, true, false
+#include "LinkedStack.h"	// LinkedStack, SNode
+// #include "LinkedNode.h"	// SNode
 
 int main(void)
 {
-	int			num, choice;
+	int		num, choice;
 	LinkedStack	*s = stackCreate();
 
 	while (true) {
@@ -23,7 +23,7 @@ int main(void)
 		printf("3) 데이터 전체 출력 \n");
 		printf("4) 프로그램 종료 \n\n");
 		printf("메뉴 선택: ");
-		scanf_s("%d", &choice);			// scanf("%d", &choice);		
+		scanf_s("%d", &choice);		// scanf("%d", &choice);		
 		while (getchar() != '\n');
 
 		switch (choice) {
