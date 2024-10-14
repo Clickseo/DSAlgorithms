@@ -29,7 +29,7 @@ LinkedStack	*stackCreate(void);				// 빈 스택 생성
 void		stackDestroy(LinkedStack *Stack);		// 스택 삭제
 _Bool		stackEmpty(LinkedStack *Stack);			// 빈 스택 여부(top)
 int		stackSize(LinkedStack *Stack);			// 스택의 원소 개수(top)
-void		push(LinkedStack *Stack, element data);		// 데이터 삽입(top)
-void		pop(LinkedStack *Stack);			// 데이터 삭제(top)
-element		top(LinkedStack *Stack);			// 데이터 확인(peek)(top)
+void		push(LinkedStack *Stack, element data);		// 데이터 삽입
+void		pop(LinkedStack *Stack);			// 데이터 삭제
+element		top(LinkedStack *Stack);			// 데이터 확인(peek)
 void		printStack(LinkedStack* Stack);			// 스택의 전체 데이터 출력
