@@ -35,10 +35,10 @@ int main(void)
 				}
 				break;
 			case 2: cout << "삭제 된 데이터: " << s.top() << endl;
-					s.pop();
-					break;
+				s.pop();
+				break;
 			case 3: s.printStack();
-					break;
+				break;
 			case 4: cout << "프로그램 종료!!!" << endl;
 					exit(0);	// return 0;
 			default: cout << "잘못 선택 하셨습니다!!!" << endl;
