@@ -5,13 +5,13 @@
 */
 
 #include <iostream>
-// #include <conio.h>				// _getch, _getche
+// #include <conio.h>		// _getch, _getche
 #include "05_ArrayStack.cpp"
 using namespace std;
 
 int main(void)
 {
-	int					num, choice;
+	int			num, choice;
 	ArrayStack<int>		s = ArrayStack<int>();
 
 	while (true) {
