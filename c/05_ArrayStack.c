@@ -49,7 +49,7 @@ int	stackSize(ArrayStack *Stack) {
 	return Stack->top + 1;
 }
 
-// 데이터 삽입: 스택에 데이터 추가(top)
+// 데이터 삽입
 void	push(ArrayStack *Stack, element data) {
 	// if (stackFull(Stack))	return;
 	if (Stack->top + 1 == StackMAXSIZE)
@@ -58,7 +58,7 @@ void	push(ArrayStack *Stack, element data) {
 	Stack->stack[++Stack->top] = data;
 }
 
-// 데이터 삭제: 스택에서 데이터 제거(top)
+// 데이터 삭제
 void	pop(ArrayStack *Stack) {
 	// if (stackEmpty(Stack))	return;
 	if (Stack->top == -1)
@@ -67,7 +67,7 @@ void	pop(ArrayStack *Stack) {
 	--Stack->top;
 }
 
-// 데이터 확인(peek): 맨 위에 있는 데이터 확인(top)
+// 데이터 확인(peek)
 element	top(ArrayStack *Stack) {
 	// if (stackEmpty(Stack))	return -1;
 	if (Stack->top == -1)
@@ -76,7 +76,7 @@ element	top(ArrayStack *Stack) {
 	return Stack->stack[Stack->top];
 }
 
-// 데이터 출력: 스택의 전체 데이터 출력
+// 스택의 전체 데이터 출력
 void	printStack(ArrayStack *Stack) {
 	// if (stackEmpty(Stack)) {
 	if (Stack->top == -1) {
