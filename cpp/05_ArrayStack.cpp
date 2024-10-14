@@ -6,7 +6,7 @@
 
 #include <iostream>
 // #include <conio.h>		// _getch, _getche
-#include "05_ArrayStack.cpp"
+#include "ArrayStack.cpp"
 using namespace std;
 
 int main(void)
