@@ -1,9 +1,9 @@
 '''
 	스택: 알고리즘 구현(Python) -- 단순연결리스트
 		파일명: LinkedStack.py
-			- 스택 생성.소멸	: __init__, __del__
-			- 스택 상태			: empty
-			- 스택 크기			: size
+			- 스택 생성.소멸		: __init__, __del__
+			- 스택 상태		: empty
+			- 스택 크기		: size
 			- 데이터 삽입.삭제	: push, pop
 			- 데이터 확인(peek)	: top
 			- 전체 데이터 출력	: printStack
@@ -43,8 +43,8 @@ class LinkedStack:
     def printStack(self) -> None:
 
 if __name__ == '__main__':
-    import os		# system
-    import sys  	# exit
+    import os			# system
+    import sys  		# exit
 
     # "SNode" is not defined
     # tNode = SNode(10, None)
