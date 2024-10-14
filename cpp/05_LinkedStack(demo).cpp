@@ -5,13 +5,13 @@
 */
 
 #include <iostream>
-// #include <conio.h>				// _getch, _getche
+// #include <conio.h>			// _getch, _getche
 #include "05_LinkedStack.cpp"
 using namespace std;
 
 int main(void)
 {
-	int					num, choice;
+	int			num, choice;
 	LinkedStack<int>	s = LinkedStack<int>();
 
 	while (true) {
@@ -25,23 +25,23 @@ int main(void)
 		cin >> choice;
 
 		switch (choice) {
-		case 1:
-			while (true) {
-				cout << "데이터 입력(종료: 0): ";
-				cin >> num;
-				if (num == 0)
-					break;
-				s.push(num);
-			}
-			break;
-		case 2: cout << "삭제 된 데이터: " << s.top() << endl;
+			case 1:
+				while (true) {
+					cout << "데이터 입력(종료: 0): ";
+					cin >> num;
+					if (num == 0)
+						break;
+					s.push(num);
+				}
+				break;
+			case 2: cout << "삭제 된 데이터: " << s.top() << endl;
 				s.pop();
 				break;
-		case 3: s.printStack();
+			case 3: s.printStack();
 				break;
-		case 4: cout << "프로그램 종료!!!" << endl;
+			case 4: cout << "프로그램 종료!!!" << endl;
 				exit(0);	// return 0;
-		default: cout << "잘못 선택 하셨습니다!!!" << endl;
+			default: cout << "잘못 선택 하셨습니다!!!" << endl;
 		}
 		// print("계속하려면 아무 키나 누르십시오...");
 		// _getch();
