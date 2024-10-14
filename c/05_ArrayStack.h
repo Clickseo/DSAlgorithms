@@ -31,7 +31,7 @@ void		stackDestroy(ArrayStack *Stack);		// 스택 삭제
 _Bool		stackEmpty(ArrayStack *Stack);			// 빈 스택 여부(top)
 _Bool		stackFull(ArrayStack *Stack);			// 스택의 포화 상태 여부(top)
 int		stackSize(ArrayStack *Stack);			// 스택의 원소 개수(top)
-void		push(ArrayStack *Stack, element data);		// 데이터 삽입(top)
-void		pop(ArrayStack *Stack);				// 데이터 삭제(top)
-element		top(ArrayStack *Stack);				// 데이터 확인(peek)(top)
+void		push(ArrayStack *Stack, element data);		// 데이터 삽입
+void		pop(ArrayStack *Stack);				// 데이터 삭제
+element		top(ArrayStack *Stack);				// 데이터 확인(peek)
 void		printStack(ArrayStack *Stack);			// 스택의 전체 데이터 출력
