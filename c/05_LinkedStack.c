@@ -49,7 +49,7 @@ int		stackSize(LinkedStack *Stack) {
 
 }
 
-// 데이터 삽입: 스택에 데이터 추가(top)
+// 데이터 삽입
 void	push(LinkedStack *Stack, element data) {
 	SNode	*newNode = makeSNode(data);
 	newNode->link = Stack->top;
@@ -58,7 +58,7 @@ void	push(LinkedStack *Stack, element data) {
 	++Stack->count;
 }
 
-// 데이터 삭제: 스택에서 데이터 제거(top)
+// 데이터 삭제
 void	pop(LinkedStack *Stack) {
 	// if (stackEmpty(Stack))
 	if (Stack->top == NULL)
@@ -71,7 +71,7 @@ void	pop(LinkedStack *Stack) {
 	--Stack->count;
 }
 
-// 데이터 확인(peek): 맨 위에 있는 데이터 확인(top)
+// 데이터 확인(peek)
 element	top(LinkedStack *Stack) {
 	// if (stackEmpty(Stack))
 	if (Stack->top == NULL)
@@ -80,7 +80,7 @@ element	top(LinkedStack *Stack) {
 	return  Stack->top->data;
 }
 
-// 데이터 출력: 스택의 전체 데이터 출력
+// 스택의 전체 데이터 출력
 void	printStack(LinkedStack *Stack) {
 	// if (stackEmpty(Stack)) {
 	if (Stack->top == NULL) {
