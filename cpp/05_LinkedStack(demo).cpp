@@ -6,7 +6,7 @@
 
 #include <iostream>
 // #include <conio.h>			// _getch, _getche
-#include "05_LinkedStack.cpp"
+#include "LinkedStack.cpp"
 using namespace std;
 
 int main(void)
