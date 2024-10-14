@@ -1,9 +1,9 @@
 /*
 	스택: 알고리즘 구현(CPP) -- 순차 자료구조
 		파일명: ArrayStack.cpp
-			- 스택 생성.소멸	: ArrayStack, ~ArrayStack
-			- 스택 상태			: empty, full
-			- 스택 크기			: size
+			- 스택 생성.소멸		: ArrayStack, ~ArrayStack
+			- 스택 상태		: empty, full
+			- 스택 크기		: size
 			- 데이터 삽입.삭제	: push, pop
 			- 데이터 확인(peek)	: top
 			- 전체 데이터 출력	: printStack
@@ -17,16 +17,16 @@ template <typename T>
 class ArrayStack {
 public:
 	ArrayStack(int size = 10);		// 빈 스택 생성
-	~ArrayStack(void);				// 스택 삭제
-	bool	empty(void) const;				// 빈 스택 여부(top)
-	bool	full(void) const;				// 스택의 포화 상태 여부(top)
-	int		size(void) const;				// 스택의 원소 개수(top)
+	~ArrayStack(void);			// 스택 삭제
+	bool	empty(void) const;			// 빈 스택 여부(top)
+	bool	full(void) const;			// 스택의 포화 상태 여부(top)
+	int	size(void) const;			// 스택의 원소 개수(top)
 	void	push(const T& data);			// 데이터 삽입(top)
-	void	pop(void);						// 데이터 삭제(top)
-	T		top(void) const;				// 데이터 확인(peek)
+	void	pop(void);				// 데이터 삭제(top)
+	T	top(void) const;			// 데이터 확인(peek)
 	void	printStack(void) const;		// 스택의 전체 데이터 출력
 private:
-	T* stack_;
+	T	*stack_;
 	int	maxSize_;
 	int	top_;
 };
