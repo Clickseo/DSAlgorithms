@@ -1,9 +1,9 @@
 /*
 	스택: 알고리즘 구현(CPP) -- 단순연결리스트
 		파일명: LinkedStack.cpp
-			- 스택 생성.소멸	: LinkedStack, ~LinkedStack
-			- 스택 상태			: empty
-			- 스택 크기			: size
+			- 스택 생성.소멸		: LinkedStack, ~LinkedStack
+			- 스택 상태		: empty
+			- 스택 크기		: size
 			- 데이터 삽입.삭제	: push, pop
 			- 데이터 확인(peek)	: top
 			- 전체 데이터 출력	: printStack
@@ -23,7 +23,7 @@ public:
 	T	getData(void) const;
 
 private:
-	T			data_;
+	T		data_;
 	SNode<T>	*link_;
 	template <typename T> friend class LinkedStack;
 };	
@@ -42,15 +42,15 @@ T   SNode<T>::getData(void) const {
 template <typename T>
 class LinkedStack {
 public:
-	LinkedStack();						// 빈 스택 생성
-	~LinkedStack();						// 스택 삭제	
-	bool	empty(void) const;				// 빈 스택 여부(top)
-	int		size(void) const;				// 스택의 원소 개수(top)
-	void	push(const T &data);			// 데이터 삽입(top)
-	void	pop(void);						// 데이터 삭제(top)
-	T		top(void) const;				// 데이터 확인(peek)
+	LinkedStack();				// 빈 스택 생성
+	~LinkedStack();				// 스택 삭제	
+	bool	empty(void) const;		// 빈 스택 여부(top)
+	int	size(void) const;		// 스택의 원소 개수(top)
+	void	push(const T &data);		// 데이터 삽입(top)
+	void	pop(void);			// 데이터 삭제(top)
+	T	top(void) const;		// 데이터 확인(peek)
 	void	printStack(void) const;		// 스택의 전체 데이터 출력
 private:
 	SNode<T>	*top_;
-	int			count_;
+	int		count_;
 };
