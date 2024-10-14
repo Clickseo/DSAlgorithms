@@ -2,14 +2,14 @@
 	스택: 알고리즘 구현(Python) -- 순차 자료구조
 		파일명: ArrayStack.py
 			- 스택 생성.소멸	: __init__, __del__
-			- 스택 상태			: empty
-			- 스택 크기			: size
+			- 스택 상태		: empty
+			- 스택 크기		: size
 			- 데이터 삽입.삭제	: push, pop
 			- 데이터 확인(peek)	: top
 			- 전체 데이터 출력	: printStack
 '''
 
-class ArrayStack: 
+class ArrayStack:
     # 빈 스택 생성
     def __init__(self):
         self.__stack = []
