@@ -2,14 +2,14 @@
 	스택: 알고리즘 구현(Python) -- 순차 자료구조
 		파일명: ArrayStack.py
 			- 스택 생성.소멸	: __init__, __del__
-			- 스택 상태		: empty
-			- 스택 크기		: size
+			- 스택 상태			: empty
+			- 스택 크기			: size
 			- 데이터 삽입.삭제	: push, pop
 			- 데이터 확인(peek)	: top
 			- 전체 데이터 출력	: printStack
 '''
 
-class ArrayStack:
+class ArrayStack: 
     # 빈 스택 생성
     def __init__(self):
         self.__stack = []
@@ -18,31 +18,31 @@ class ArrayStack:
     def __del__(self):
         self.__stack.clear()
 
-    # 스택의 공백 상태 여부 판단
+    # 빈 스택 여부 확인
     def empty(self) -> bool:
         if not self.__stack:
             return True
-        return False             
+        return False
 
     # 스택의 원소 개수
     def size(self) -> int:
         return len(self.__stack)
                 
-    # 데이터 삽입: 스택에 데이터 추가
+    # 데이터 삽입: 스택에 새로운 데이터 추가
     def push(self, num) -> None:
         self.__stack.append(num)
         
-    # 데이터 삭제: 스택에서 데이터 제거
+    # 데이터 삭제: 스택에서 맨 위의 데이터 삭제
     def pop(self) -> None:
         self.__stack.pop()
 
-    # 데이터 확인: 맨 위에 있는 데이터
+    # 스택에서 맨 위의 데이터 반환(peek)
     def top(self):
         if not self.__stack:
             return None
         return self.__stack[-1]        
 
-    # 스택의 전체 원소 출력
+    # 스택의 전체 데이터 출력
     def printStack(self) -> None:
         if not self.__stack:
             print('입력된 데이터가 없습니다!!!')
