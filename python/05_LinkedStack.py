@@ -24,19 +24,19 @@ class LinkedStack:
     # 스택 삭제: 모든 노드 삭제
     def __del__(self):
 
-    # 빈 스택 여부(top)
+    # 빈 스택 여부 확인
     def empty(self) -> bool:
     
-    # 스택의 원소 개수(top)
+    # 스택의 원소 개수
     def size(self) -> int:
     
-    # 데이터 삽입
+    # 데이터 삽입: 스택에 새로운 데이터 추가
     def push(self, data) -> None:
 
-    # 데이터 삭제
+    # 데이터 삭제: 스택에서 맨 위의 데이터 삭제
     def pop(self) -> None:
 
-    # 데이터 확인(peek)
+    # 스택에서 맨 위의 데이터 반환(peek)
     def top(self):
     
     # 스택의 전체 데이터 출력
