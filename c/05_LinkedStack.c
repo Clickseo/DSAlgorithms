@@ -2,15 +2,15 @@
 	스택: 알고리즘 구현(C) -- 단순연결리스트
 		파일명: LinkedStack.c
 			- 스택 생성.소멸	: stackCreate, stackDestroy
-			- 스택 상태		: stackEmpty
-			- 스택 크기		: stackSize
+			- 스택 상태			: stackEmpty
+			- 스택 크기			: stackSize
 			- 데이터 삽입.삭제	: push, pop
 			- 데이터 확인(peek)	: top
 			- 전체 데이터 출력	: printStack
 */
 
 #include <stdio.h>
-#include <stdlib.h>			// malloc, free
+#include <stdlib.h>				// malloc, free
 #include "LinkedStack.h"		// LinkedStack, SNode
 // #include "LinkedNode.h"		// SNode
 
@@ -38,27 +38,28 @@ void	stackDestroy(LinkedStack *Stack) {
 	return;
 }
 
-// 빈 스택 여부(top)
+// 빈 스택 여부 확인
 _Bool	stackEmpty(LinkedStack *Stack) {
 	return Stack->top == NULL;
 }
 
-// 스택의 원소 개수(top)
+// 스택의 원소 개수
 int		stackSize(LinkedStack *Stack) {
 	return Stack->count;
 
 }
 
-// 데이터 삽입
+// 데이터 삽입: 스택에 새로운 데이터 추가
 void	push(LinkedStack *Stack, element data) {
 	SNode	*newNode = makeSNode(data);
-	newNode->link = Stack->top;
 
+	newNode->link = Stack->top;
 	Stack->top = newNode;
+
 	++Stack->count;
 }
 
-// 데이터 삭제
+// 데이터 삭제: 스택에서 맨 위의 데이터 삭제
 void	pop(LinkedStack *Stack) {
 	// if (stackEmpty(Stack))
 	if (Stack->top == NULL)
@@ -71,7 +72,7 @@ void	pop(LinkedStack *Stack) {
 	--Stack->count;
 }
 
-// 데이터 확인(peek)
+// 스택에서 맨 위의 데이터 반환(peek)
 element	top(LinkedStack *Stack) {
 	// if (stackEmpty(Stack))
 	if (Stack->top == NULL)
