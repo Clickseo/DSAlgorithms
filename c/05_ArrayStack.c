@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>		// bool, true, false
-#include <stdlib.h>			// malloc, free
+#include <stdlib.h>		// malloc, free
 #include "ArrayStack.h"		// ArrayStack
 
 // 빈 스택 생성
@@ -45,7 +45,7 @@ _Bool	stackFull(ArrayStack *Stack) {
 }
 
 // 스택의 원소 개수
-int		stackSize(ArrayStack *Stack) {
+int	stackSize(ArrayStack *Stack) {
 	return Stack->top + 1;
 }
 
