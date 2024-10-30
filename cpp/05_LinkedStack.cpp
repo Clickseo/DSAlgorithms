@@ -21,17 +21,17 @@ using namespace std;
 template <typename T>
 class LinkedStack {
 public:
-	LinkedStack();						// 빈 스택 생성
-	~LinkedStack();						// 스택 삭제: 모든 노드 삭제	
-	bool	empty(void) const;			// 빈 스택 여부
-	int		size(void) const;			// 스택의 원소 개수
+	LinkedStack();				// 빈 스택 생성
+	~LinkedStack();				// 스택 삭제: 모든 노드 삭제	
+	bool	empty(void) const;		// 빈 스택 여부
+	int	size(void) const;		// 스택의 원소 개수
 	void	push(const T &data);		// 데이터 삽입
-	void	pop(void);					// 데이터 삭제
-	T		top(void) const;			// 맨 위의 데이터 반환
+	void	pop(void);			// 데이터 삭제
+	T	top(void) const;		// 맨 위의 데이터 반환
 	void	printStack(void) const;		// 스택의 전체 데이터 출력
 private:
-	SNode<T>	*top_;		// 맨 위의 노드
-	int			count_;		// 스택의 원소 개수
+	SNode<T>	*top_;			// 맨 위의 노드
+	int		count_;			// 스택의 원소 개수
 };
 
 
