@@ -6,13 +6,12 @@
 
 #include <iostream>
 #include "06_LinkedQueue.cpp"		// LinkedQueue
-#include "06_LinkedQueue.cpp"		// LinkedQueue
-// #include <conio.h>				// _getch, _getche
+// #include <conio.h>			// _getch, _getche
 using namespace std;
 
 int main(void)
 {
-	int					num, choice;
+	int			num, choice;
 	LinkedQueue<int>	q = LinkedQueue<int>();
 
 	while (true) {
@@ -36,12 +35,12 @@ int main(void)
 				}
 				break;
 			case 2: cout << "삭제 된 데이터: " << q.front() << endl;
-					q.pop();
-					break;
+				q.pop();
+				break;
 			case 3: q.printQueue();
-					break;
+				break;
 			case 4: cout << "프로그램 종료!!!" << endl;
-					exit(0);	// return 0;
+				exit(0);	// return 0;
 			default: cout << "잘못 선택 하셨습니다!!!" << endl;
 		}
 		// print("계속하려면 아무 키나 누르십시오...");
