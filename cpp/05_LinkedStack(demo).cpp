@@ -6,12 +6,12 @@
 
 #include <iostream>
 #include "05_LinkedStack.cpp"
-// #include <conio.h>				// _getch, _getche
+// #include <conio.h>		// _getch, _getche
 using namespace std;
 
 int main(void)
 {
-	int					num, choice;
+	int			num, choice;
 	LinkedStack<int>	s = LinkedStack<int>();
 
 	while (true) {
@@ -35,12 +35,12 @@ int main(void)
 			}
 			break;
 		case 2: cout << "삭제 된 데이터: " << s.top() << endl;
-				s.pop();
-				break;
+			s.pop();
+			break;
 		case 3: s.printStack();
-				break;
+			break;
 		case 4: cout << "프로그램 종료!!!" << endl;
-				exit(0);	// return 0;
+			exit(0);	// return 0;
 		default: cout << "잘못 선택 하셨습니다!!!" << endl;
 		}
 		// print("계속하려면 아무 키나 누르십시오...");
