@@ -1,5 +1,5 @@
 /*
-	큐: 알고리즘 구현(CPP) -- 단순연결리스트
+	큐: 알고리즘 구현(C++) -- 단순연결리스트
 		파일명: LinkedQueue.cpp
 			- 스택 생성.소멸	: LinkedQueue, ~LinkedQueue
 			- 스택 상태		: empty
@@ -18,7 +18,6 @@ using namespace std;
 #define __LinkedQueue_Template_H__
 
 // 클래스 설계: LinkedQueue
-// LinkedQueue class: 큐 생성 및 조작 함수
 template <typename T>
 class LinkedQueue {
 public:
