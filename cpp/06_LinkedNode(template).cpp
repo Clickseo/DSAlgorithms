@@ -20,7 +20,7 @@ public:
 	SNode(const T &data);
 	T	getData(void) const;
 private:
-	T			data_;
+	T		data_;
 	SNode<T>	*link_;
 	template <typename T> friend class LinkedStack;
 	template <typename T> friend class LinkedQueue;
@@ -50,7 +50,7 @@ public:
 	DNode(const T& data);
 	T	getData(void) const;
 private:
-	T			data_;
+	T		data_;
 	DNode<T>	*Llink_;
 	DNode<T>	*Rlink_;
 };
