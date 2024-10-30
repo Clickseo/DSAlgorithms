@@ -12,8 +12,7 @@
 template <typename T>	class LinkedStack;
 template <typename T>	class LinkedQueue;
 
-// 클래스 설계: SNode class
-// 노드: SNode(data, Llink, Rlink)
+// 클래스 설계: SNode(data, Llink, Rlink)
 template <typename T>
 class SNode {
 public:
@@ -39,11 +38,11 @@ T   SNode<T>::getData(void) const {
 #endif
 
 
+// #pragma once
 #ifndef __DNode_Template_H__
 #define __DNode_Template_H__
 
-// 클래스 설계: DNode class
-// 노드: DNode(data, Llink, Rlink)
+// 클래스 설계: DNode(data, Llink, Rlink)
 template <typename T>
 class DNode {
 public:
