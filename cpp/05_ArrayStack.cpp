@@ -1,9 +1,9 @@
 /*
-	스택: 알고리즘 구현(CPP) -- 순차 자료구조
+	스택: 알고리즘 구현(C++) -- 순차 자료구조
 		파일명: ArrayStack.cpp
 			- 스택 생성.소멸	: ArrayStack, ~ArrayStack
-			- 스택 상태		: empty, full
-			- 스택 크기		: size
+			- 스택 상태			: empty, full
+			- 스택 크기			: size
 			- 데이터 삽입.삭제	: push, pop
 			- 데이터 확인(peek)	: top
 			- 전체 데이터 출력	: printStack
@@ -12,23 +12,27 @@
 #include <iostream>
 using namespace std;
 
-// ArrayStack class
+// #pragma once
+#ifndef __ArrayStack_H__
+#define __ArrayStack_H__
+
+// 클래스 설계: ArrayStack
 template <typename T>
 class ArrayStack {
 public:
-	ArrayStack(int size = 10);		// 빈 스택 생성
-	~ArrayStack(void);			// 스택 삭제
-	bool	empty(void) const;		// 빈 스택 여부 확인
-	bool	full(void) const;		// 스택의 포화 상태 여부 확인
-	int	size(void) const;		// 스택의 원소 개수
-	void	push(const T& data);		// 데이터 삽입
-	void	pop(void);			// 데이터 삭제
-	T	top(void) const;		// 스택에서 맨 위의 데이터 확인(peek)
-	void	printStack(void) const;		// 스택의 전체 데이터 출력
+	ArrayStack(int size = 10);				// 빈 스택 생성
+	~ArrayStack(void);						// 스택 삭제
+	bool	empty(void) const;				// 빈 스택 여부
+	bool	full(void) const;				// 포화 상태 여부
+	int		size(void) const;				// 원소 개수
+	void	push(const T& data);			// 데이터 삽입
+	void	pop(void);						// 데이터 삭제
+	T		top(void) const;				// 맨 위의 데이터 반환
+	void	printStack(void) const;			// 전체 데이터 출력
 private:
-	int	top_;
-	int	maxSize_;
-	T	*stack_;
+	int		top_;
+	int		maxSize_;
+	T		*stack_;
 };
 
 // 빈 스택 생성
@@ -44,21 +48,21 @@ ArrayStack<T>::~ArrayStack(void) {
 	delete[] stack_;
 }
 
-// 빈 스택 여부 확인
+// 빈 스택 여부
 template <typename T>
 bool	ArrayStack<T>::empty(void) const {
 	return top_ == -1;
 }
 
-// 스택의 포화 상태 여부 확인
+// 포화 상태 여부
 template <typename T>
 bool	ArrayStack<T>::full(void) const {
 	return top_ == maxSize_ - 1;
 }
 
-// 스택의 원소 개수
+// 원소 개수
 template <typename T>
-int	ArrayStack<T>::size(void) const {
+int		ArrayStack<T>::size(void) const {
 	return top_ + 1;
 }
 
@@ -80,7 +84,7 @@ void	ArrayStack<T>::pop(void) {
 	--top_;
 }
 
-// 스택에서 맨 위의 데이터 반환(peek)
+// 맨 위의 데이터 반환
 template <typename T>
 T	ArrayStack<T>::top(void) const {
 	if (empty()) {
@@ -89,7 +93,7 @@ T	ArrayStack<T>::top(void) const {
 	return stack_[top_];
 }
 
-// 스택의 전체 데이터 출력
+// 전체 데이터 출력
 template <typename T>
 void	ArrayStack<T>::printStack(void) const {
 	if (empty()) {
@@ -105,3 +109,5 @@ void	ArrayStack<T>::printStack(void) const {
 	}
 	cout << " ]" << endl;
 }
+
+#endif
