@@ -30,11 +30,6 @@ template <typename T>
 SNode<T>::SNode(const T &data) :
 	data_(data), link_(nullptr) {}
 
-template <typename T>
-T   SNode<T>::getData(void) const {
-	return data_;
-}
-
 #endif
 
 // #pragma once
@@ -46,7 +41,6 @@ template <typename T>
 class DNode {
 public:
 	DNode(const T &data);
-	T	getData(void) const;
 private:
 	T		data_;
 	DNode<T>	*Llink_;
@@ -57,10 +51,5 @@ private:
 template <typename T>
 DNode<T>::DNode(const T &data) :
 	data_(data), Llink_(nullptr), Rlink_(nullptr) {}
-
-template <typename T>
-T   DNode<T>::getData(void) const {
-	return data_;
-}
 
 #endif
