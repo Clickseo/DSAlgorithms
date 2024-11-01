@@ -5,7 +5,7 @@
 */
 
 #include <iostream>
-#include "LinkedStack.cpp"
+#include "LinkedStack.cpp"	// LinkedStack, SNode<T>
 // #include <conio.h>		// _getch, _getche
 using namespace std;
 
