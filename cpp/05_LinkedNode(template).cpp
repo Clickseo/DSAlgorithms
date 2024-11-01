@@ -37,7 +37,6 @@ T   SNode<T>::getData(void) const {
 
 #endif
 
-
 // #pragma once
 #ifndef __DNode_Template_H__
 #define __DNode_Template_H__
