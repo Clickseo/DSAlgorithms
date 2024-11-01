@@ -1,9 +1,9 @@
 /*
 	큐: 알고리즘 구현(C++) -- 순차 자료구조
 		파일명: ArrayQueue.cpp
-			- 스택 생성.소멸	: ArrayQueue, ~ArrayQueue
-			- 스택 상태			: empty, full
-			- 스택 크기			: size
+			- 스택 생성.소멸		: ArrayQueue, ~ArrayQueue
+			- 스택 상태		: empty, full
+			- 스택 크기		: size
 			- 데이터 삽입.삭제	: push, pop
 			- 데이터 확인(peek)	: front, back
 			- 전체 데이터 출력	: printQueue
@@ -20,21 +20,21 @@ using namespace std;
 template <typename T>
 class ArrayQueue {
 public:
-	ArrayQueue(int size = 10);				// 빈 큐 생성
-	~ArrayQueue(void);						// 큐 삭제
-	bool	empty(void) const;				// 빈 큐 여부
-	bool	full(void) const;				// 포화 상태 여부
-	int		size(void) const;				// 원소 개수
-	void	push(const T &data);			// 데이터 삽입
-	void	pop(void);						// 데이터 삭제
-	T		front(void) const;				// 첫번째 노드의 데이터 반환
-	T		back(void) const;				// 마지막 노드의 데이터 반환
-	void	printQueue(void) const;			// 전체 데이터 출력
+	ArrayQueue(int size = 10);		// 빈 큐 생성
+	~ArrayQueue(void);			// 큐 삭제
+	bool	empty(void) const;		// 빈 큐 여부
+	bool	full(void) const;		// 포화 상태 여부
+	int	size(void) const;		// 원소 개수
+	void	push(const T &data);		// 데이터 삽입
+	void	pop(void);			// 데이터 삭제
+	T	front(void) const;		// 첫번째 노드의 데이터 반환
+	T	back(void) const;		// 마지막 노드의 데이터 반환
+	void	printQueue(void) const;		// 전체 데이터 출력
 private:
-	int		front_;
-	int		rear_;
-	int		maxSize_;
-	T		*queue_;
+	int	front_;
+	int	rear_;
+	int	maxSize_;
+	T	*queue_;
 };
 
 // 빈 큐 생성
@@ -64,7 +64,7 @@ bool	ArrayQueue<T>::full(void) const {
 
 // 원소 개수
 template <typename T>
-int		ArrayQueue<T>::size(void) const {
+int	ArrayQueue<T>::size(void) const {
 	return rear_ - front_ + 1;
 }
 
