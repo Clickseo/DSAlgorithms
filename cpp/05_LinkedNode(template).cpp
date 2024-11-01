@@ -1,8 +1,8 @@
 /*
 	단순.이중 연결 리스트 : 알고리즘 구현(cpp)
 		파일명: LinkedNode(template).cpp
-			- 클래스: SNode<T> / 단순 연결 리스트(노드)	: SNode(data, link)
-			- 클래스: DNode<T> / 이중 연결 리스트(노드)	: DNode(data, Llink, Rlink)
+			- 클래스: SNode<T> / 단순 연결 리스트(노드): SNode(data, link)
+			- 클래스: DNode<T> / 이중 연결 리스트(노드): DNode(data, Llink, Rlink)
 */
 
 // #pragma once
@@ -19,7 +19,7 @@ public:
 	SNode(const T &data);
 	T	getData(void) const;
 private:
-	T			data_;
+	T		data_;
 	SNode<T>	*link_;
 	template <typename T> friend class LinkedStack;
 	template <typename T> friend class LinkedQueue;
@@ -46,17 +46,17 @@ T   SNode<T>::getData(void) const {
 template <typename T>
 class DNode {
 public:
-	DNode(const T& data);
+	DNode(const T &data);
 	T	getData(void) const;
 private:
-	T			data_;
+	T		data_;
 	DNode<T>	*Llink_;
 	DNode<T>	*Rlink_;
 };
 
 // DNode class: 노드 생성 및 조작 함수
 template <typename T>
-DNode<T>::DNode(const T& data) :
+DNode<T>::DNode(const T &data) :
 	data_(data), Llink_(nullptr), Rlink_(nullptr) {}
 
 template <typename T>
