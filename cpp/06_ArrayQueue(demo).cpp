@@ -5,13 +5,13 @@
 */
 
 #include <iostream>
-#include "06_ArrayQueue.cpp"
-// #include <conio.h>				// _getch, _getche
+#include "ArrayQueue.cpp"	// ArrayQueue
+// #include <conio.h>		// _getch, _getche
 using namespace std;
 
 int main(void)
 {
-	int					num, choice;
+	int			num, choice;
 	ArrayQueue<int>		q = ArrayQueue<int>();
 
 	while (true) {
