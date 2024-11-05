@@ -30,7 +30,7 @@ public:
 	void		Postorder(DNode<T> *root) const;
 	void		Levelorder(DNode<T> *root) const;
 	DNode<T>	*makeLinkedBTree(const string str);
-	int			isOperator(int op);
+	int		isOperator(int op);
 private:
 	DNode<T>	*root_;
 };
