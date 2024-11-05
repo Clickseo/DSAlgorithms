@@ -30,7 +30,7 @@ class LinkedBTree:
         q = [ self.__root ]
         while q:
             tNode = q.pop(0)
-            if tNode.Llink:	    q.append(tNode.Llink)
+            if tNode.Llink:	q.append(tNode.Llink)
             elif tNode.Rlink:	q.append(tNode.Rlink)
             del tNode
 
@@ -51,10 +51,10 @@ if __name__ == '__main__':
     BTree.makeLinkedBTree(postfix)
     # root = bTree.makeLinkedBTree(postfix)
 
-	# 깊이 우선 순회: 전위.중위.후위 순회
+    # 깊이 우선 순회: 전위.중위.후위 순회
     print('Preorder  : ', end=' ');     BTree.Preorder();    print('')
     print('Inorder   : ', end=' ');     BTree.Inorder();     print('')
     print('Postorder : ', end=' ');     BTree.Postorder();   print('')
 
-	# 너비 우선 순회
+    # 너비 우선 순회
     print('Levelorder: ', end=' ');    BTree.Levelorder();  print('')
