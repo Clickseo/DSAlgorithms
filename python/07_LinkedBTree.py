@@ -24,16 +24,6 @@ class LinkedBTree:
     def __init__(self):
         self.__root = None
 
-    # 이진 트리 삭제: 모든 노드 삭제
-    def __del__(self):
-        if self.__root: return
-        q = [ self.__root ]
-        while q:
-            tNode = q.pop(0)
-            if tNode.Llink:	q.append(tNode.Llink)
-            elif tNode.Rlink:	q.append(tNode.Rlink)
-            del tNode
-
     # 이진 트리(수식 트리) 생성: 스택 구조 활용
     def makeLinkedBTree(self, postfix) -> DNode:  
         
@@ -44,6 +34,7 @@ class LinkedBTree:
 
     # 너비 우선 순회
     def Levelorder(self) -> None
+    def __del__(self):	
               
 if __name__ == '__main__':     
     postfix = input('트리를 구성할 후위 수식: ')
