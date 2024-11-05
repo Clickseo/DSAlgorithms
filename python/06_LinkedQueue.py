@@ -24,27 +24,35 @@ class LinkedQueue:
 
     # 스택 삭제: 모든 노드 삭제
     def __del__(self):
+        pass
 
     # 빈 큐 여부 확인
     def empty(self) -> bool:
+        pass
 
     # 큐의 원소 개수
-    def size(self) -> int:      
+    def size(self) -> int:
+        pass
         
     # 데이터 삽입: 큐의 맨 마지막에 새로운 데이터 추가
     def push(self, data) -> None:
+        pass
 
     # 데이터 삭제: 큐의 첫 번째 데이터 삭제
     def pop(self):
+        pass
 
     # 큐에서 첫번째 데이터 반환(peek)
     def front(self):
+        pass
     
     # 큐에서 맨 마지막 데이터 반환(peek)
     def back(self):
+        pass
     
     # 큐의 전체 데이터 출력
     def printQueue(self):
+        pass
 
 if __name__ == '__main__':
     import os		# system
