@@ -5,7 +5,7 @@
 		클래스: BTree<T>
 			- 생성자.소멸자: LinkedBTree, ~LinkedBTree
 			- 깊이 우선 순회: Preorder, Inorder, Postorder
-			- 넞비 우선 순회: Levelorder
+			- 비비 우선 순회: Levelorder
 */
 
 #include <iostream>
