@@ -20,41 +20,16 @@ class LinkedBTree:
     def __init__(self):
         self.__root = None
 
-    # 깊이 우선 순회: 전위 순회
+    # 깊이 우선 순회: 전위.중위.후위 순회
     def Preorder(self) -> None:
-        def _Preorder(tNode):
-            if tNode:
-                print(tNode.data, end=' ')
-                _Preorder(tNode.Llink)
-                _Preorder(tNode.Rlink)        
-        _Preorder(self.__root)
-
-    # 깊이 우선 순회: 중위 순회
     def Inorder(self) -> None:
-        def _Inorder(tNode):
-            if tNode:                
-                _Inorder(tNode.Llink)
-                print(tNode.data, end=' ')
-                _Inorder(tNode.Rlink)
-        _Inorder(self.__root)
-
-    # 깊이 우선 순회: 후위 순회
     def Postorder(self) -> None:
-        def _Postorder(tNode):
-            if tNode: 
-                _Postorder(tNode.Llink)
-                _Postorder(tNode.Rlink)
-                print(tNode.data, end=' ')
-        _Postorder(self.__root)
 
     # 너비 우선 순회
-    def Levelorder(self) -> None:
-        pass
-	    
+    def Levelorder(self) -> None:	    
     def __del__(self):
-        pass
 
-    # 이진 트리(수식 트리) 생성: 스택 구조 활용
+    # 이진 트리(수식 트리) 생성: 스택 구조
     def makeLinkedBTree(self, postfix) -> None:
         # 연산자 여부 판단
         def isOperator(op) -> bool:
