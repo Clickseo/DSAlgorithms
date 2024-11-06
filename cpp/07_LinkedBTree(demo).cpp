@@ -18,7 +18,7 @@ int main(void)
 
 	// 이진 트리 생성
 	LinkedBTree<char>	BTree;
-	DNode<char>			*root = BTree.makeLinkedBTree(postfix);
+	DNode<char>		*root = BTree.makeLinkedBTree(postfix);
 
 	// 깊이 우선 순회: 전위.중위.후위 순회
 	cout << "\nPreorder  : ";	BTree.Preorder(root);		// 전위 순회
