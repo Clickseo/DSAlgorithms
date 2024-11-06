@@ -11,7 +11,6 @@
 
 template <typename T>	class LinkedStack;
 template <typename T>	class LinkedQueue;
-template <typename T>	class LinkedBTree;
 
 // 클래스 설계: SNode
 template <typename T>
@@ -36,6 +35,8 @@ SNode<T>::SNode(const T &data) :
 // #pragma once
 #ifndef __DNode_Template_H__
 #define __DNode_Template_H__
+
+template <typename T>	class LinkedBTree;
 
 // 클래스 설계: DNode
 template <typename T>
