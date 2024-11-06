@@ -12,7 +12,7 @@
 template <typename T>	class LinkedStack;
 template <typename T>	class LinkedQueue;
 
-// 클래스 설계: SNode
+// 클래스 설계: SNode<T>
 template <typename T>
 class SNode {
 public:
@@ -38,7 +38,7 @@ SNode<T>::SNode(const T &data) :
 
 template <typename T>	class LinkedBTree;
 
-// 클래스 설계: DNode
+// 클래스 설계: DNode<T>
 template <typename T>
 class DNode {
 public:
