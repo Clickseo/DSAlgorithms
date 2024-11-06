@@ -5,7 +5,7 @@
 */
 
 #include <iostream>
-#include "ArrayQueue.cpp"	// ArrayQueue
+#include "ArrayQueue.cpp"	// ArrayQueue<T>
 // #include <conio.h>		// _getch, _getche
 using namespace std;
 
