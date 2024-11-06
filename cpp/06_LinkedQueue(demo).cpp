@@ -5,7 +5,7 @@
 */
 
 #include <iostream>
-#include "LinkedQueue.cpp"		// LinkedQueue, SNode<T>
+#include "LinkedQueue.cpp"		// LinkedQueue<T>, SNode<T>
 // #include <conio.h>			// _getch, _getche
 using namespace std;
 
