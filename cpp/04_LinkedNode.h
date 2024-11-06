@@ -13,10 +13,10 @@
 // SNode class
 class SNode {
 public:
-	SNode(const int& data);
+	SNode(const int &data);
 private:
 	int	data_;
-	SNode*	link_;
+	SNode	*link_;
 	friend class SLinkedList;
 };
 
@@ -29,11 +29,11 @@ private:
 // DNode class
 class DNode {
 public:
-	DNode(const int& data);
+	DNode(const int &data);
 private:
 	int	data_;
-	DNode*	Llink_;
-	DNode*	Rlink_;
+	DNode	*Llink_;
+	DNode	*Rlink_;
 	friend class DLinkedList;
 };
 
