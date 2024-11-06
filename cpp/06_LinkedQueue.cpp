@@ -17,7 +17,7 @@ using namespace std;
 #ifndef __LinkedQueue_Template_H__
 #define __LinkedQueue_Template_H__
 
-// 클래스 설계: LinkedQueue
+// 클래스 설계: LinkedQueue<T>
 template <typename T>
 class LinkedQueue {
 public:
