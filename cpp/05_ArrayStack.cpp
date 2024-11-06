@@ -16,7 +16,7 @@ using namespace std;
 #ifndef __ArrayStack_H__
 #define __ArrayStack_H__
 
-// 클래스 설계: ArrayStack
+// 클래스 설계: ArrayStack<T>
 template <typename T>
 class ArrayStack {
 public:
