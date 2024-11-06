@@ -16,7 +16,7 @@ using namespace std;
 #ifndef __ArrayQueue_H__
 #define __ArrayQueue_H__
 
-// 클래스 설계: ArrayQueue
+// 클래스 설계: ArrayQueue<T>
 template <typename T>
 class ArrayQueue {
 public:
