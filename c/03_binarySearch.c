@@ -11,8 +11,8 @@
 #if 1
 
 // 이진 검색: 재귀적 용법
-int	binarySearch(int* pArr, int  first, int  last, int  key);
-void	PRINT(int* pArr, int num);
+int	binarySearch(int *pArr, int  first, int  last, int  key);
+void	PRINT(int *pArr, int num);
 
 int main(void)
 {
@@ -29,14 +29,13 @@ int main(void)
 
 		int	index = binarySearch(arr, 0, arrMAXSIZE - 1, key);
 		if (index == EOF)	printf("없다고!!! \n");
-		else
-			printf("검색 데이터: %d 번째 위치 %d \n", arr[index], index + 1);
+		else			printf("검색 데이터: %d 번째 위치 %d \n", arr[index], index + 1);
 	}
 	return 0;
 }
 
 // 이진 검색: 재귀적용법
-int	binarySearch(int* pArr, int  first, int  last, int  key) {
+int	binarySearch(int *pArr, int  first, int  last, int  key) {
 	// 재귀함수의 탈출 조건
 	if (first > last)
 		return  EOF;
@@ -50,7 +49,7 @@ int	binarySearch(int* pArr, int  first, int  last, int  key) {
 	return index;
 }
 
-void	PRINT(int* pArr, int num) {
+void	PRINT(int *pArr, int num) {
 	for (int i = 0; i < num; i++)
 		printf("%3d", *(pArr + i));
 	printf("\n");
@@ -60,8 +59,8 @@ void	PRINT(int* pArr, int num) {
 #elif 0
 
 // 이진 검색 -- 비재귀적 용법
-int*	binarySearch(int* pArr, int* pFirst, int* pLast, int key);
-void	PRINT(int* pArr, int num);
+int*	binarySearch(int *pArr, int *pFirst, int *pLast, int key);
+void	PRINT(int *pArr, int num);
 
 int main(void)
 {
@@ -76,16 +75,15 @@ int main(void)
 		if (key == 0)
 			break;
 
-		int* pIndex = binarySearch(arr, arr, arr + arrMAXSIZE - 1, key);
+		int	*pIndex = binarySearch(arr, arr, arr + arrMAXSIZE - 1, key);
 		if (pIndex == NULL)	printf("없다고!!! \n");
-		else
-			printf("검색 데이터: %d 번째 위치 %lld \n", *pIndex, pIndex - arr + 1);
+		else			printf("검색 데이터: %d 번째 위치 %lld \n", *pIndex, pIndex - arr + 1);
 	}
 	return 0;
 }
 
 // 이진 검색: 비재귀적용법
-int* binarySearch(int* pArr, int* pFirst, int* pLast, int key) {
+int* binarySearch(int *pArr, int *pFirst, int *pLast, int key) {
 	while (pFirst <= pLast) {
 		// 검색 범위의 중간 원소의 위치(주소) 값 계산
 		int* pMid = pFirst + (pLast - pFirst) / 2;
@@ -97,7 +95,7 @@ int* binarySearch(int* pArr, int* pFirst, int* pLast, int key) {
 	return NULL;
 }
 
-void	PRINT(int* pArr, int num) {
+void	PRINT(int *pArr, int num) {
 	for (int i = 0; i < num; i++)
 		printf("%3d", *(pArr + i));
 	printf("\n");
