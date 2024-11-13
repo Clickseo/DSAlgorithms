@@ -4,10 +4,10 @@
         	- __main__: 데이터 삽입.삭제, 전체 원소 출력
 			- 클래스: DNode
 			- 클래스: LinkedBSTree
-					데이터 삽입: InsertBST(_insertBST)
-					데이터 삭제: DeleteBST(_deleteBST)
-					데이터 검색: SearchBST(_searchBST)
-					전체 원소 출력: printBSTAll(Preorder)
+				데이터 삽입: InsertBST(_insertBST)
+				데이터 삭제: DeleteBST(_deleteBST)
+				데이터 검색: SearchBST(_searchBST)
+				전체 원소 출력: printBSTAll(Preorder)
 '''
 
 # 클래스 설계: LinkedBSTree
@@ -98,7 +98,7 @@ class LinkedBSTree:
 
 if __name__ == '__main__':
     import os	# system
-    import sys  	# exit
+    import sys  # exit
 
     bst = LinkedBSTree()
     while True:
