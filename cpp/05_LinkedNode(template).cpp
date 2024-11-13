@@ -18,7 +18,7 @@ class SNode {
 public:
 	SNode(const T &data);
 private:
-	T			data_;
+	T		data_;
 	SNode<T>	*link_;
 	template <typename T> friend class LinkedStack;
 	template <typename T> friend class LinkedQueue;
@@ -44,7 +44,7 @@ class DNode {
 public:
 	DNode(const T &data);
 private:
-	T			data_;
+	T		data_;
 	DNode<T>	*Llink_;
 	DNode<T>	*Rlink_;
 	template <typename T> friend class LinkedBTree;
