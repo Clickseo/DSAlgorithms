@@ -24,10 +24,10 @@ class LinkedBSTree {
 public:
     LinkedBSTree();
     ~LinkedBSTree();
-    void	    insertBST(void);
-    void	    deleteBST(void);
-    void	    searchBST(void);
-    void        printBSTAll(void);
+    void    insertBST(void);
+    void    deleteBST(void);
+    void    searchBST(void);
+    void    printBSTAll(void);
     DNode<T>    *_insertBST(DNode<T> *root, const T &data) const;
     DNode<T>    *_deleteBST(DNode<T> *root, const T &data) const;
     DNode<T>    *_searchBST(DNode<T> *root, const T& data) const;
