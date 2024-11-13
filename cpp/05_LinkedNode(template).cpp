@@ -12,14 +12,13 @@
 template <typename T>	class LinkedStack;
 template <typename T>	class LinkedQueue;
 
-// 클래스 설계: SNode<T>
+// 클래스 설계: SNode
 template <typename T>
 class SNode {
 public:
 	SNode(const T &data);
-	T	getData(void) const;
 private:
-	T		data_;
+	T			data_;
 	SNode<T>	*link_;
 	template <typename T> friend class LinkedStack;
 	template <typename T> friend class LinkedQueue;
@@ -37,17 +36,19 @@ SNode<T>::SNode(const T &data) :
 #define __DNode_Template_H__
 
 template <typename T>	class LinkedBTree;
+template <typename T>	class LinkedBSTree;
 
-// 클래스 설계: DNode<T>
+// 클래스 설계: DNode
 template <typename T>
 class DNode {
 public:
 	DNode(const T &data);
 private:
-	T		data_;
+	T			data_;
 	DNode<T>	*Llink_;
 	DNode<T>	*Rlink_;
 	template <typename T> friend class LinkedBTree;
+	template <typename T> friend class LinkedBSTree;
 };
 
 // DNode class: 노드 생성 및 조작 함수
