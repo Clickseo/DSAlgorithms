@@ -11,7 +11,7 @@
 #pragma once
 #include <iostream>
 #include <queue>
-#include "LinkedNode(template).cpp"		// SNode<T>
+#include "LinkedNode(template).cpp"		// DNode<T>
 using namespace std;
 
 // #pragma once
