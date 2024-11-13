@@ -9,7 +9,7 @@
 */
 
 #include <iostream>
-#include "08_LinkedBSTree.cpp"  // LinkedBTree<T>, DNode<T>
+#include "LinkedBSTree.cpp"  // LinkedBTree<T>, DNode<T>
 using namespace std;
 
 int main(void)
@@ -31,8 +31,8 @@ int main(void)
         switch (num) {
             case 1: bst.insertBST();	    break;
             case 2: bst.deleteBST();	    break;
-            case 3: bst.searchBST();	    break;
-            case 4: bst.printBSTAll();   break;
+            case 3: bst.searchBST();        break;
+            case 4: bst.printBSTAll();    break;
             case 5: cout << "프로그램 종료!!!\n" << endl;
                     return 0;
             default: cout << "메뉴를 잘못 선택하셨습니다." << endl;
