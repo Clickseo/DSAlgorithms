@@ -46,8 +46,10 @@ LinkedBSTree<T>::~LinkedBSTree() {
     if (root_ == nullptr)
         return;
 
-    DNode<T>            *tNode = nullptr;
     queue<DNode<T>*>	q;
+    DNode<T>            *tNode = nullptr;
+
+    // 너비 우선 순회
     q.push(root_);
     while (!q.empty()) {
         tNode = q.front();
@@ -70,6 +72,7 @@ void    LinkedBSTree<T>::printBSTAll(void) {
     queue<DNode<T>*>	q;
     DNode<T>            *tNode = nullptr;
 
+    // 너비 우선 순회
     q.push(root_);
     while (!q.empty()) {
         tNode = q.front();		q.pop();
