@@ -14,8 +14,8 @@ using namespace std;
 
 int main(void)
 {
-    int		                num;
-    LinkedBSTree<int>	    bst;
+    int                    num;
+    LinkedBSTree<int>    bst;
 
     while (true) {
         system("cls");
