@@ -31,7 +31,7 @@ class LinkedBSTree:
             elif tNode.Rlink:   q.append(tNode.Rlink)
             del tNode
 			
-    # 전체 노드 출력
+    # 전체 노드 출력: 너비 우선 순회
     def printBSTAll(self) -> None:
         if not self.__root:
             print("\n데이터가 존재하지 않습니다.")
@@ -44,10 +44,10 @@ class LinkedBSTree:
             tNode = q.pop(0)
             print(f'{tNode.data}', end= ' ')
             if tNode.Llink:	q.append(tNode.Llink)
-            if tNode.Rlink: q.append(tNode.Rlink)
+            if tNode.Rlink:	q.append(tNode.Rlink)
         print()
 
-    # 데이터 검색
+    # 데이터 검색: 재귀적.비재귀적 용법
     def searchBST(self) -> None:
         # 데이터 검색: 재귀적 용법,  비재귀적 용법
         def _searchBST(root, data) -> self.DNode:
@@ -66,7 +66,7 @@ class LinkedBSTree:
             if tNode:   print(f'{tNode.data} 키를 찾았습니다!!!')
             else:       print('키를 찾지 못했습니다.')
 
-    # 데이터 삽입
+    # 데이터 삽입: 재귀적.비재귀적 용법
     def insertBST(self) -> None:
         # 데이터 삽입: 재귀적 용법, 비재귀적 용법
         def _insertBST(root, data) -> self.DNode:
@@ -79,7 +79,7 @@ class LinkedBSTree:
                 break
             self.__root = _insertBST(self.__root, num)
 
-    # 데이터 삭제
+    # 데이터 삭제: 재귀적.비재귀적 용법
     def deleteBST(self) -> None:
         # 데이터 삭제: 비재귀적 용법
         def _deleteBST(root, data) -> self.DNode:
