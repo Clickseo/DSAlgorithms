@@ -50,14 +50,6 @@ LinkedBSTree<T>::~LinkedBSTree() {
     DNode<T>            *tNode = nullptr;
 
     // 너비 우선 순회
-    q.push(root_);
-    while (!q.empty()) {
-        tNode = q.front();
-        q.pop();
-        if (tNode->Llink_) q.push(tNode->Llink_);
-        if (tNode->Rlink_) q.push(tNode->Rlink_);
-        delete tNode;
-    }
 }
 
 // 전체 출력
@@ -73,15 +65,6 @@ void    LinkedBSTree<T>::printBSTAll(void) {
     DNode<T>            *tNode = nullptr;
 
     // 너비 우선 순회
-    q.push(root_);
-    while (!q.empty()) {
-        tNode = q.front();		q.pop();
-        cout.width(3);
-        cout << tNode->data_;
-        if (tNode->Llink_)	q.push(tNode->Llink_);
-        if (tNode->Rlink_)	q.push(tNode->Rlink_);
-    }
-    cout << endl;
 }
 
 // 데이터 검색: 입출력
