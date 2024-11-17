@@ -20,6 +20,12 @@ class LinkedBTree:
     def __init__(self):
         self.__root = None
 
+    # 소멸자: 너비 우선 순회
+    def __del__(self):
+	    
+    # 너비 우선 순회: 비재귀적 용법
+    def Levelorder(self) -> None:
+	    
     # 이진 트리(수식 트리) 생성: 스택 구조
     def makeLinkedBTree(self, postfix) -> None:
         # 연산자 여부 판단
@@ -62,12 +68,6 @@ class LinkedBTree:
                 _Postorder(tNode.Rlink)
                 print(tNode.data, end=' ')
         _Postorder(self.__root)
-
-    # 너비 우선 순회: 비재귀적 용법
-    def Levelorder(self) -> None:
-
-    # 소멸자: 너비 우선 순회
-    def __del__(self):
 
 if __name__ == '__main__':     
     postfix = input('트리를 구성할 후위 수식: ')
