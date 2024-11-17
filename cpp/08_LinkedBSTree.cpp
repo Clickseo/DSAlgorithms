@@ -40,7 +40,7 @@ template <typename T>
 LinkedBSTree<T>::LinkedBSTree() :
     root_(nullptr) {}
 
-// 이진 검색 트리 삭제: 모든 노드 삭제
+// 이진 검색 트리 삭제: 너비 우선 순회
 template <typename T>
 LinkedBSTree<T>::~LinkedBSTree() {
     if (root_ == nullptr)
@@ -52,7 +52,7 @@ LinkedBSTree<T>::~LinkedBSTree() {
     // 너비 우선 순회
 }
 
-// 전체 출력
+// 전체 출력: 너비 우선 순회
 template <typename T>
 void    LinkedBSTree<T>::printBSTAll(void) {
     if (root_ == nullptr) {
