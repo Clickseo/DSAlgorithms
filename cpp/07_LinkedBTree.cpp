@@ -44,10 +44,25 @@ LinkedBTree<T>::LinkedBTree()
 // 이진 트리 삭제: 너비 우선 순회
 template <typename T>
 LinkedBTree<T>::~LinkedBTree() {
+    if (root_ == nullptr)
+        return;
+
+    queue<DNode<T>*>	q;
+    DNode<T>		*tNode = nullptr;
+
+    // 너비 우선 순회: 노드 삭제
 }
+
 // 너비 우선 순회: 비재귀적 용법
 template <typename T>
 void LinkedBTree<T>::Levelorder(DNode<T>* root) const {
+    if (root_ == nullptr)
+        return;
+
+    queue<DNode<T>*>	q;
+    DNode<T>		*tNode = nullptr;
+
+    // 너비 우선 순회: 노드 방문
 }
 
 // 연산자 여부 판단
@@ -56,9 +71,11 @@ int  LinkedBTree<T>::isOperator(int op) {
 	return op == '+' || op == '-' || op == '*' || op == '/';
 }
 
-// 이진 트리(수식 트리) 생성: 스택 구조
+// 이진 트리(수식 트리) 생성: 스택 활용
 template <typename T>
 DNode<T>* LinkedBTree<T>::makeLinkedBTree(const string str) {
+    stack<DNode<T>*>	s;
+    DNode<T>		*tNode = nullptr;	
 }
 
 // 깊이 우선 순회: 전위 순회(재귀.비재귀적 용법)
