@@ -89,4 +89,4 @@ if __name__ == '__main__' :
     G9.DFSAdjSList(0)
 
     print('\n##### 그래프(G9): 너비 우선 탐색(BFS) #####\n')
-    G9.DFSAdjSList(0)
+    G9.BFSAdjSList(0)
