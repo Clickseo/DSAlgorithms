@@ -9,49 +9,14 @@ class HashOpenAddressing:
         return (num + i) % len(self.__table)        # 선형 조사
         # return (num + i*i) % len(self.__table)    # 이차 조사
 
-    # 데이터 삽입
     def insert(self, num):
-        if self.__count < len(self.__table):
-            for i in range(len(self.__table)):
-                slot = self.__Hash(i, num)
-                if self.__table[slot] == None or self.__table[slot] == self.__DELETED:
-                    self.__table[slot] = num
-                    self.__count += 1
-                    return num
-        return None
-        # if self.__count == len(self.__table):
-
-    # 데이터 삭제
     def delete(self, num):
-        for i in range(len(self.__table)):
-            slot = self.__Hash(i, num)
-            if self.__table[slot] == None:
-                return None
-            elif self.__table[slot] == num:
-                self.__table[slot] = self.__DELETED
-                self.__count -= 1
-                return num
-        return None
-
-    # 데이터 검색
-    # NOT_FOUND = -12345  # constant
     def search(self, num):
-        for i in range(len(self.__table)):
-            slot = self.__Hash(i, num)
-            if self.__table[slot] == None:                
-                return None
-                # return HashOpenAddressed.NOT_FOUND
-            if self.__table[slot] == num:
-                return self.__table[slot]
-                # return slot    # Found at self.__table[slot]
-        return None
-        # return self.__NOT_FOUND
     
     # 전체 원소 출력
     def output(self):
         print(f'count({self.__count}): {self.__table}')
 
-# from HashOpenAddressing import *
 if __name__ == '__main__':       
     h = HashOpenAddressing(13)
 
