@@ -2,11 +2,11 @@
 	해시 테이블: 알고리즘 구현(Python) -- 개방형 주소 방식
 		파일명: HashOpenAddressing.py
         	- __main__: 데이터 삽입.삭제.검색, 전체 출력
-			- 클래스: HashOpenAddressing
-					데이터 삽입: insert
-					데이터 삭제: delete
-					데이터 검색: search
-					전체 출력: output
+		- 클래스: HashOpenAddressing
+			데이터 삽입: insert
+			데이터 삭제: delete
+			데이터 검색: search
+			전체 출력: output
 '''
 
 # 클래스 설계: HashOpenAddressing
