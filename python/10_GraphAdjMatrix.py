@@ -1,7 +1,7 @@
 '''
 	그래프 표현(인접 행렬): 알고리즘 구현
 		파일명: GraphAdjMatrix.py
-			- main: 그래프 생성 및 간선 추가
+			- __main__: 그래프 생성 및 간선 추가
 			클래스: GraphType
 				- 그래프 생성: __init__
 				- 간선 추가: insertEdge
