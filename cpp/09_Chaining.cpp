@@ -28,7 +28,9 @@ public:
     void    print(void);
 private:
     vector<SNode<T> *>     table_;
-    int Hash_(int num) {                // 해시 함수
+
+    // 해시 함수
+    int Hash_(int num) {
         return num % table_.size();
     }
 };
