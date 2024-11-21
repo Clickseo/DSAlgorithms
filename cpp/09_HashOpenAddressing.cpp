@@ -32,7 +32,7 @@ private:
     // 해시 함수
     int Hash_(int i, int num) {
         return (num + i) % table_.size();           // 선형 조사
-        // return (num + i*i) % __table.size();     // 이차 조사
+        // return (num + i*i) % table_.size();     // 이차 조사
     }
 };
 
