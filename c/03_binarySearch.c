@@ -53,7 +53,6 @@ void	PRINT(int *pArr, int num) {
 	for (int i = 0; i < num; i++)
 		printf("%3d", *(pArr + i));
 	printf("\n");
-	return;
 }
 
 #elif 0
@@ -83,7 +82,7 @@ int main(void)
 }
 
 // 이진 검색: 비재귀적용법
-int* binarySearch(int *pArr, int *pFirst, int *pLast, int key) {
+int	*binarySearch(int *pArr, int *pFirst, int *pLast, int key) {
 	while (pFirst <= pLast) {
 		// 검색 범위의 중간 원소의 위치(주소) 값 계산
 		int* pMid = pFirst + (pLast - pFirst) / 2;
@@ -99,7 +98,6 @@ void	PRINT(int *pArr, int num) {
 	for (int i = 0; i < num; i++)
 		printf("%3d", *(pArr + i));
 	printf("\n");
-	return;
 }
 
 #endif
