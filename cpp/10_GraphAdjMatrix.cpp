@@ -19,8 +19,8 @@ public:
 	void	insertEdge(int row, int col, int weight);
 	void	printAdjMatrix(void) const;
 private:
-	int		vertex_;	// 정점의 개수
-	int		**adjMatrix_;	// 인접 행렬
+	int	vertex_;	// 정점의 개수
+	int	**adjMatrix_;	// 인접 행렬
 };
 
 // 생성자
