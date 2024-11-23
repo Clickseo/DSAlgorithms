@@ -25,7 +25,7 @@ private:
 
 // 생성자: 2차원 배열의 동적 메모리 할당
 GraphType::GraphType(int vertex): vertex_(vertex) {
-	adjMatrix_ = new int*[vertex+1];		// 포인터 배열
+	adjMatrix_ = new int * [vertex + 1];		// 포인터 배열
 	for (int i = 0; i < vertex; ++i) {
 		adjMatrix_[i] = new int[vertex];	// 1차원 배열
 		memset(adjMatrix_[i], 0, sizeof(int) * vertex);
