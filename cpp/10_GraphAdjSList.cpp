@@ -17,8 +17,8 @@ class GNode {
 public:
 	GNode(int vertex, int weight);
 private:
-	int		vertex_;	// 정점
-	int		weight_;	// 가중치
+	int	vertex_;	// 정점
+	int	weight_;	// 가중치
 	GNode	*link_;
 	friend class GraphType;
 };
@@ -35,7 +35,7 @@ public:
 	void	insertEdge(int vertex1, int vertex2, int weight);
 	void	printAdjSList(void) const;
 private:
-	int		vertex_;		// 정점 개수
+	int	vertex_;	// 정점 개수
 	GNode	**adjSList_;	// 인접 리스트
 };
 
