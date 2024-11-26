@@ -35,12 +35,12 @@ public:
 	void	insertEdge(int vertex1, int vertex2, int weight);
 	void	printAdjSList(void) const;
 private:
-	int	vertex_;	// 정점 개수
+	int	numVertex_;	// 정점 개수
 	GNode	**adjSList_;	// 인접 리스트
 };
 
 // 빈 그래프 생성
-GraphType::GraphType(int vertex): vertex_(vertex) {
+GraphType::GraphType(int vertex): numVertex_(vertex) {
 	adjSList_ = new GNode * [vertex + 1];
 	memset(adjSList_, 0, sizeof(GNode*) * (vertex + 1));
 }
