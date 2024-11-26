@@ -21,15 +21,6 @@ class GraphType:
     def __init__(self, vertex: int):
         self.__vertex = vertex                              # 정점의 개수  
         self.__adjSList = [ None for x in range(vertex) ]   # 인접 리스트
-
-    # 그래프 삭제: 전체 노드 삭제
-    def __del__(self):
-        for i in range(len(self.__adjSList)):
-            tNode = self.__adjSList[i]
-            while tNode:
-                self.__adjSList[i] = tNode.link
-                del tNode
-                tNode = self.__adjSList[i]
         
     # 간선 추가
     def insertEdge(self, row:int, col:int, weight:int) -> None:
@@ -54,6 +45,15 @@ class GraphType:
                 tNode = tNode.link
             print(' NULL')
 
+    # 그래프 삭제: 전체 노드 삭제
+    def __del__(self):
+        for i in range(len(self.__adjSList)):
+            tNode = self.__adjSList[i]
+            while tNode:
+                self.__adjSList[i] = tNode.link
+                del tNode
+                tNode = self.__adjSList[i]
+		    
     # 그래프 순회: 깊이 우선 탐색(DFS)
     def DFSAdjSList(self, vertex:int) -> None:
         pass
