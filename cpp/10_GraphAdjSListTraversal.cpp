@@ -20,8 +20,8 @@ class GNode {
 public:
 	GNode(int vertex, int weight);
 private:
-	int		vertex_;	// 정점
-	int		weight_;	// 가중치
+	int	vertex_;	// 정점
+	int	weight_;	// 가중치
 	GNode	*link_;
 	friend class GraphType;
 };
@@ -40,13 +40,13 @@ public:
 	void	DFSAdjSList(int vertex) const;
 	void	BFSAdjSList(int vertex) const;
 private:
-	int		numVertex_;		// 정점 개수
+	int	numVertex_;	// 정점 개수
 	GNode	**adjSList_;	// 인접 리스트
 };
 
 // 빈 그래프 생성
 GraphType::GraphType(int vertex) : numVertex_(vertex) {
-	adjSList_ = new GNode * [vertex + 1];
+	adjSList_ = new GNode*[vertex + 1];
 	memset(adjSList_, 0, sizeof(GNode*) * (vertex + 1));
 }
 
@@ -58,12 +58,12 @@ void  GraphType::insertEdge(int row, int col, int weight) {
 	}
 
 	// 새로운 노드 생성과 간선 추가
-	GNode* newGNode = new GNode(col, weight);
+	GNode	*newGNode = new GNode(col, weight);
 	if (adjSList_[row] == nullptr) {
 		adjSList_[row] = newGNode;
 	}
 	else {
-		GNode* rNode = adjSList_[row];
+		GNode	*rNode = adjSList_[row];
 		while (rNode->link_)
 			rNode = rNode->link_;
 		rNode->link_ = newGNode;
@@ -73,7 +73,7 @@ void  GraphType::insertEdge(int row, int col, int weight) {
 // 그래프 전체 출력
 void  GraphType::printAdjSList(void) const {
 	char	ch;
-	GNode* tNode = nullptr;
+	GNode	*tNode = nullptr;
 	for (int i = 0; i < numVertex_; ++i) {
 		ch = i + 65;
 		cout << "\t정점 " << ch << "의 인접 리스트";
@@ -90,7 +90,7 @@ void  GraphType::printAdjSList(void) const {
 
 // 그래프 삭제: 모든 노드 삭제
 GraphType::~GraphType(void) {
-	GNode* tNode = nullptr;
+	GNode	*tNode = nullptr;
 	for (int i = 0; i < numVertex_; ++i) {
 		tNode = adjSList_[i];
 		while (tNode) {
