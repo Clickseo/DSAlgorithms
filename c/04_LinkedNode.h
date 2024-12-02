@@ -15,12 +15,12 @@ typedef	int	element;
 // SNode(data, link)
 typedef struct _SNode {
 	element		data;
-	struct _SNode*	link;
+	struct _SNode	*link;
 } SNode;
 
 #endif
 
-SNode* makeSNode(element data);
+SNode *makeSNode(element data);
 
 // 이중 연결 리스트: DNode(data, Llink, Rlink)
 #ifndef __DNode_H__
@@ -29,10 +29,10 @@ SNode* makeSNode(element data);
 // DNode(data, Llink, Rlink)
 typedef struct _DNode {
 	element		data;
-	struct _DNode*	Llink;
-	struct _DNode*	Rlink;
+	struct _DNode	*Llink;
+	struct _DNode	*Rlink;
 } DNode;
 
 #endif
 
-DNode* makeDNode(element data);
+DNode *makeDNode(element data);
