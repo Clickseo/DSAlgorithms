@@ -11,8 +11,8 @@
 
 // 단순 연결 리스트: SNode(data, link)
 // 새로운 노드(SNode: data, link) 생성
-SNode* makeSNode(element num) {
-	SNode* newNode = (SNode*)malloc(sizeof(SNode));
+SNode *makeSNode(element num) {
+	SNode *newNode = (SNode*)malloc(sizeof(SNode));
 	if (newNode == NULL) {
 		printf("노드 생성 실패!!! \n");
 		exit(1);
@@ -24,8 +24,8 @@ SNode* makeSNode(element num) {
 
 // 이중 연결 리스트: DNode(data, Llink, Rlink)
 // 새로운 노드(DNode: data, Llink, Rlink) 생성
-DNode* makeDNode(element num) {
-	DNode* newNode = (DNode*)malloc(sizeof(DNode));
+DNode *makeDNode(element num) {
+	DNode *newNode = (DNode *)malloc(sizeof(DNode));
 	if (newNode == NULL) {
 		printf("노드 생성 실패!!! \n");
 		exit(1);
