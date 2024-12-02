@@ -53,9 +53,9 @@ int	countDNode(DLinkedList *dList) {
 	}
 
 	int	count = 0;
-	DNode* rNode = dList->head;
+	DNode	*rNode = dList->head;
 	while (rNode) {
-		count++;
+		++count;
 		rNode = rNode->Rlink;
 	}
 	return count;
