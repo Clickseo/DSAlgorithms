@@ -11,6 +11,7 @@
 
 template <typename T>	class LinkedStack;
 template <typename T>	class LinkedQueue;
+template <typename T>	class Chaining;
 
 // 클래스 설계: SNode
 template <typename T>
@@ -22,6 +23,7 @@ private:
 	SNode<T>	*link_;
 	template <typename T> friend class LinkedStack;
 	template <typename T> friend class LinkedQueue;
+	template <typename T> friend class Chaining;
 };
 
 // SNode class: 노드 생성 및 조작 함수
