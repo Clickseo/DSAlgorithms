@@ -1,7 +1,7 @@
 /*
 	스택: 알고리즘 구현(C++) -- 단순연결리스트
 		파일명: LinkedStack.cpp
-			- 스택 생성.소멸		: LinkedStack, ~LinkedStack
+			- 스택 생성.소멸	: LinkedStack, ~LinkedStack
 			- 스택 상태		: empty
 			- 스택 크기		: size
 			- 데이터 삽입.삭제	: push, pop
