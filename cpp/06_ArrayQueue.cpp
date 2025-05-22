@@ -1,7 +1,7 @@
 /*
 	큐: 알고리즘 구현(C++) -- 순차 자료구조
 		파일명: ArrayQueue.cpp
-			- 스택 생성.소멸		: ArrayQueue, ~ArrayQueue
+			- 스택 생성.소멸	: ArrayQueue, ~ArrayQueue
 			- 스택 상태		: empty, full
 			- 스택 크기		: size
 			- 데이터 삽입.삭제	: push, pop
