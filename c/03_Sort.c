@@ -7,9 +7,9 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>	// srand, rand
+#include <stdlib.h>		// srand, rand
 #include <stdbool.h>	// bool, true, false
-#include <time.h>	// time
+#include <time.h>		// time
 
 // 1) 기초적인 정렬 알고리즘
 void	selectionSort(int *pArr, int num);	// 선택 정렬
@@ -17,10 +17,10 @@ void	bubbleSort(int *pArr, int num);		// 버블 정렬
 void	insertionSort(int *pArr, int num);	// 삽입 정렬
 
 // 2) 고급 정렬 알고리즘
-void	shellSort(int *pArr, int num);					// 쉘 정렬
+void	shellSort(int *pArr, int num);								// 쉘 정렬
 void	intervalSort(int *pArr, int num, int start, int interval);
-void	quickSort(int *pArr, int *pFirst, int *pLast);			// 퀵 정렬
-void	mergeSort(int *pArr, int *pFirst, int *pLast);			// 병합 정렬
+void	quickSort(int *pArr, int *pFirst, int *pLast);				// 퀵 정렬
+void	mergeSort(int *pArr, int *pFirst, int *pLast);				// 병합 정렬
 
 // 3) 특수 정렬 알고리즘: 계수 정렬
 void  contingSort(int *pArr, int num);
@@ -215,9 +215,9 @@ void	contingSort(int *pArr, int num) {
 		if (maxNum < pArr[i])
 			maxNum = pArr[i];
 
-	// countArr : 원본 데이터에서 각 항목들의 발생 횟수를 저장한다.
-	//		단, 원본 데이터의 값 자체가 countArr의 첨자가 된다.
-	int*	countArr = (int*)calloc(maxNum + 1, sizeof(int));
+	// countArr: 원본 데이터에서 각 항목들의 발생 횟수를 저장한다.
+	//		     단, 원본 데이터의 값 자체가 countArr의 첨자가 된다.
+	int	*countArr = (int*)calloc(maxNum + 1, sizeof(int));
 	if (countArr == NULL) {
 		printf("동적 메모리 공간 할당 실패!!!");
 		exit(100);
@@ -225,7 +225,7 @@ void	contingSort(int *pArr, int num) {
 	for (int i = 0; i < num; ++i)		countArr[pArr[i]]++;
 	for (int i = 1; i <= maxNum; ++i)	countArr[i] += countArr[i - 1];
 
-	// sortArr : countArr의 값을 첨자로 하여 원본 데이터를 정렬된 데이터로 구성한다.
+	// sortArr: countArr의 값을 첨자로 하여 원본 데이터를 정렬된 데이터로 구성한다.
 	int	*sortArr = (int *)calloc(num, sizeof(int));
 	if (sortArr == NULL) {
 		printf("동적 메모리 공간 할당 실패!!!");
