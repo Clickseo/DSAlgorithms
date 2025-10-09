@@ -5,11 +5,11 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// exit, malloc, free
-#include <stdbool.h>		// bool, true, false
+#include <stdlib.h>				// exit, malloc, free
+#include <stdbool.h>			// bool, true, false
 #include "SLinkedList(head).h" 	// SLinkedList >> head	
-// #include "SLinkedList.h"	// SLinkedList >> head, tail, count
-// #include "LinkedNode.h"	// SNode, makeSNode
+// #include "SLinkedList.h"		// SLinkedList >> head, tail, count
+// #include "LinkedNode.h"		// SNode, makeSNode
 
 int main(void)
 {
