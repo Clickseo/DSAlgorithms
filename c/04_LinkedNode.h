@@ -14,7 +14,7 @@ typedef	int	element;
 
 // SNode(data, link)
 typedef struct _SNode {
-	element		data;
+	element			data;
 	struct _SNode	*link;
 } SNode;
 
@@ -28,7 +28,7 @@ SNode *makeSNode(element data);
 
 // DNode(data, Llink, Rlink)
 typedef struct _DNode {
-	element		data;
+	element			data;
 	struct _DNode	*Llink;
 	struct _DNode	*Rlink;
 } DNode;
