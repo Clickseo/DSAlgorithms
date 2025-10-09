@@ -58,7 +58,7 @@ void	PRINT(int *pArr, int num) {
 #elif 0
 
 // 이진 검색 -- 비재귀적 용법
-int*	binarySearch(int *pArr, int *pFirst, int *pLast, int key);
+int		*binarySearch(int *pArr, int *pFirst, int *pLast, int key);
 void	PRINT(int *pArr, int num);
 
 int main(void)
