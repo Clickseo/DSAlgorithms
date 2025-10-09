@@ -2,9 +2,9 @@
 	단순 연결 리스트: 알고리즘 구현(C)
 		파일명: SLinkedList(head).c
 			- 리스트 성생 및 삭제	: sListCreate, sListDestroy
-			- 노드 탐색		: sListEmpty, countSNode, frontSNode, rearSNode
-			- 노드 삽입 및 삭제	: sListAddRear, sListRemoveFront
-			- 전체 원소 출력	: printSLinkedList
+			- 노드 탐색				: sListEmpty, countSNode, frontSNode, rearSNode
+			- 노드 삽입 및 삭제		: sListAddRear, sListRemoveFront
+			- 전체 원소 출력		: printSLinkedList
 */
 
 #include <stdio.h>
