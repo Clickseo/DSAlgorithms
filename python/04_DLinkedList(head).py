@@ -3,11 +3,11 @@
 		파일명: DLinkedList(head).py
 			- 클래스: DNode
 			- 클래스: DLinkedList
-				생성자와 소멸자         : __init__, __del__
-				노드 확인               : isEmpty, countNode
-				노드 탐색               : frontNode, rearNode
-				노드 삽입.삭제          : addRear, removeFront
-				전체 원소(노드) 출력    : printLinkedList
+				생성자와 소멸자			: __init__, __del__
+				노드 확인				: isEmpty, countNode
+				노드 탐색				: frontNode, rearNode
+				노드 삽입.삭제			: addRear, removeFront
+				전체 원소(노드) 출력		: printLinkedList
 '''
 
 # 노드(DNode): 데이터(data), 링크(Llink, Rlink)
@@ -133,4 +133,5 @@ if __name__ == '__main__':
     dList.printLinkedList()         # 순방향 출력
     dList.printRevLinkedList()      # 역방향 출력
 
-    # del dList     # dList.__del__()
+    # del dList
+	# dList.__del__()
