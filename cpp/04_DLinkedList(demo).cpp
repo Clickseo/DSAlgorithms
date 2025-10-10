@@ -6,8 +6,8 @@
 
 #include <iostream>
 #include "DLinkedList(head).h"		// DLinkedList >> head
-// #include "DLinkedList.h"		// DLinkedList >> head, count, tail
-// #include "LinkedNode.h"		// DNode
+// #include "DLinkedList.h"			// DLinkedList >> head, count, tail
+// #include "LinkedNode.h"			// DNode
 using namespace std;
 
 int main(void)
@@ -27,7 +27,6 @@ int main(void)
 	// 전체 원소 출력
 	dList.printLinkedList();	// 순방향 출력
 	dList.printRevLinkedList();	// 역방향 출력
-
-	// dList.~DLinkedList();
-	return 0;
+	
+	return 0;	// dList.~DLinkedList();
 }
