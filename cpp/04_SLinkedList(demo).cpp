@@ -5,8 +5,8 @@
 */
 #include <iostream>
 #include "SLinkedList(head).h"	// SLinkedList >> head
-// #include "SLinkedList.h"	// SLinkedList >> head, count, tail
-// #include "LinkedNode.h"	// SNode
+// #include "SLinkedList.h"		// SLinkedList >> head, count, tail
+// #include "LinkedNode.h"		// SNode
 using namespace std;
 
 int main(void)
