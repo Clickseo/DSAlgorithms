@@ -15,21 +15,21 @@
 using namespace std;
 
 // 1) 기초적인 정렬 알고리즘
-void selectionSort(vector<int>& vArr);
-void bubbleSort(vector<int>& vArr);
-void insertionSort(vector<int>& vArr);
+void selectionSort(vector<int> &vArr);
+void bubbleSort(vector<int> &vArr);
+void insertionSort(vector<int> &vArr);
 
 // 2) 고급 정렬 알고리즘
-void shellSort(vector<int>& vArr);
-void intervalSort(vector<int>& vArr, int start, int interval);
-void quickSort(vector<int>& vArr, int first, int last);
-void mergeSort(vector<int>& vArr, int first, int last);
+void shellSort(vector<int> &vArr);
+void intervalSort(vector<int> &vArr, int start, int interval);
+void quickSort(vector<int> &vArr, int first, int last);
+void mergeSort(vector<int> &vArr, int first, int last);
 
 // 3) 특수 정렬 알고리즘: 계수 정렬
-void countingSort(vector<int>& vArr);
+void countingSort(vector<int> &vArr);
 
 // 동적 배열(vector)의 전체 데이터 출력
-void PRINT(const vector<int>& vArr);
+void PRINT(const vector<int> &vArr);
 
 // 동적 배열 원소의 크기
 #define arrMAXSIZE 10
@@ -62,7 +62,7 @@ int main(void) {
     return 0;
 }
 
-void PRINT(const vector<int>& vArr) {
+void PRINT(const vector<int> &vArr) {
     for (int num : vArr) {
         cout.width(3);
         cout << num;
@@ -71,7 +71,7 @@ void PRINT(const vector<int>& vArr) {
 }
 
 // 선택 정렬: 오름차순
-void selectionSort(vector<int>& vArr) {
+void selectionSort(vector<int> &vArr) {
     int     num = (int)vArr.size();
     for (int i = 0; i < num; ++i) {
         // 가장 작은 값을 가진 원소의 위치 탐색
@@ -86,7 +86,7 @@ void selectionSort(vector<int>& vArr) {
 }
 
 // 버블 정렬: 오름차순
-void bubbleSort(vector<int>& vArr) {
+void bubbleSort(vector<int> &vArr) {
     int     num = (int)vArr.size();
     for (int i = 0; i < num - 1; ++i) {
         for (int j = 0; j < num - 1 - i; ++j)
@@ -97,7 +97,7 @@ void bubbleSort(vector<int>& vArr) {
 }
 
 // 삽입 정렬: 오름차순
-void insertionSort(vector<int>& vArr) {
+void insertionSort(vector<int> &vArr) {
     int     num = (int)vArr.size();
     int	    i, j, temp;
     for (i = 1; i < num; ++i) {
@@ -111,14 +111,14 @@ void insertionSort(vector<int>& vArr) {
 }
 
 // 쉘 정렬: 오름차순
-void shellSort(vector<int>& vArr) {
+void shellSort(vector<int> &vArr) {
     int     num = (int)vArr.size();
     for (int interval = num / 2; interval > 0; interval /= 2)
         intervalSort(vArr, 0, interval);
 }
 
 // 쉘 정렬에 쓰이는 삽입 정렬: interval 간격만큼 삽입 정렬
-void intervalSort(vector<int>& vArr, int start, int interval) {
+void intervalSort(vector<int> &vArr, int start, int interval) {
     int     num = (int)vArr.size();
     int	    i, j, temp;
     for (i = start + interval; i < num; i += interval) {
@@ -131,7 +131,7 @@ void intervalSort(vector<int>& vArr, int start, int interval) {
 }
 
 // 퀵 정렬: 오름차순
-void quickSort(vector<int>& vArr, int first, int last) {
+void quickSort(vector<int> &vArr, int first, int last) {
     // 재귀 함수 탈출 조건
     if (first >= last)
         return;
@@ -150,7 +150,7 @@ void quickSort(vector<int>& vArr, int first, int last) {
 }
 
 // 병합 정렬: 오름차순
-void mergeSort(vector<int>& vArr, int first, int last) {
+void mergeSort(vector<int> &vArr, int first, int last) {
     // 재귀 함수 탈출 조건
     if (first >= last)
         return;
@@ -177,7 +177,7 @@ void mergeSort(vector<int>& vArr, int first, int last) {
 }
 
 // 계수 정렬: 오름차순
-void countingSort(vector<int>& vArr) {
+void countingSort(vector<int> &vArr) {
     int     num = (int)vArr.size();
     if (num == 0)
         return;
@@ -188,7 +188,7 @@ void countingSort(vector<int>& vArr) {
     // countArr : 원본 데이터에서 각 항목들의 발생 횟수를 저장한다.
     //				단, 원본 데이터의 값 자체가 countArr의 첨자가 된다.
     vector<int>     countArr(maxNum + 1, 0);
-    for (int num : vArr)
+    for (int num: vArr)
         countArr[num]++;
 
     int     index = 0;
