@@ -3,15 +3,15 @@
 		파일명: SLinkedList(head).cpp
 			- 클래스: SLinkedList
 				생성자와 소멸자		: SLinkedList, ~SLinkedList
-				노드 확인		: isEmpty, countNode
-				노드 탐색		: frontNode, rearNode
+				노드 확인			: isEmpty, countNode
+				노드 탐색			: frontNode, rearNode
 				노드 삽입.삭제		: addRear, removeFront
 				전체 원소(노드) 출력	: printLinkedList
 */
 
 #include <iostream>
 #include "SLinkedList(head).h"		// SLinkedList, SNode
-// #include "LinkedNode.h"		// SNode
+// #include "LinkedNode.h"			// SNode
 using namespace std;
 
 // LinkedStack: 생성자와 소멸자
