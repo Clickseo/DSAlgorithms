@@ -1,8 +1,8 @@
 /*
 	단순.이중 연결 리스트 : 알고리즘 구현(cpp)
 		파일명: LinkedNode.h
-			- 클래스: SNode / 단순 연결 리스트(노드)	: SNode(data, link)
-			- 클래스: DNode / 이중 연결 리스트(노드)	: DNode(data, Llink, Rlink)
+			- 클래스: SNode(data, link) -- 단순 연결 리스트(노드)
+			- 클래스: DNode(data, Llink, Rlink) -- 이중 연결 리스트(노드)
 */
 
 #include <iostream>
