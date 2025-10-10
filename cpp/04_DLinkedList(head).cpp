@@ -4,15 +4,15 @@
 			- 클래스: DNode
 			- 클래스: DLinkedList
 				생성자와 소멸자		: DLinkedList, ~DLinkedList
-				노드 확인		: isEmpty, countNode
-				노드 탐색		: frontNode, rearNode
+				노드 확인			: isEmpty, countNode
+				노드 탐색			: frontNode, rearNode
 				노드 삽입.삭제		: addRear, removeFront
 				전체 원소(노드) 출력	: printLinkedList
 */
 
 #include <iostream>
 #include "DLinkedList(head).h"		// DLinkedList >> head
-// #include "LinkedNode.h"		// DNode
+// #include "LinkedNode.h"			// DNode
 using namespace std;
 
 // 생성자: head_, tail_, count_
@@ -23,7 +23,7 @@ DLinkedList::DLinkedList(void)
 DLinkedList::~DLinkedList(void) {
 	// while (!isEmpty())
 	//	removeFront();
-	DNode* tNode = head_;
+	DNode	*tNode = head_;
 	while (tNode) {
 		head_ = tNode->Rlink_;
 		delete tNode;
@@ -49,13 +49,13 @@ int	DLinkedList::countNode(void) const {
 }
 
 // 탐색: 첫 번째 노드(head)
-DNode* DLinkedList::frontNode(void) const {
+DNode	*DLinkedList::frontNode(void) const {
 	// if (isEmpty()) return nullptr;
 	return head_;
 }
 
 // 탐색: 맨 마지막 노드
-DNode* DLinkedList::rearNode(void) const {
+DNode	*DLinkedList::rearNode(void) const {
 	// if (isEmpty()) return nullptr;
 	DNode* rNode = head_;
 	while (rNode->Rlink_)
@@ -65,7 +65,7 @@ DNode* DLinkedList::rearNode(void) const {
 
 // 삽입: 맨 마지막 노드
 void DLinkedList::addRear(const int& e) {
-	DNode* newNode = new DNode(e);
+	DNode	*newNode = new DNode(e);
 	if (isEmpty())
 		head_ = newNode;
 	else {
@@ -80,7 +80,7 @@ void DLinkedList::removeFront(void) {
 	if (isEmpty())
 		return;
 	
-	DNode* old = head_;
+	DNode	*old = head_;
 	head_ = old->Rlink_;
 	if (head_)	// if (head_ != nullptr)
 		head_->Llink_ = nullptr;
@@ -95,7 +95,7 @@ void DLinkedList::printLinkedList(void) const {
 	}
 
 	cout << "\n\t### 입력된 데이터: 순방향 ###" << endl;
-	DNode* tNode = head_;
+	DNode	*tNode = head_;
 	while (tNode) {
 		cout.width(3);
 		cout << tNode->data_ << " ->>";
