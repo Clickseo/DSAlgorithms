@@ -3,11 +3,11 @@
 		파일명: SLinkedList(head).py
 			- 클래스: SNode
 			- 클래스: SLinkedList
-				생성자와 소멸자         : __init__, __del__
-				노드 확인               : isEmpty, countNode
-				노드 탐색               : frontNode, rearNode
-				노드 삽입.삭제          : addRear, removeFront
-				전체 원소(노드) 출력    : printLinkedList
+				생성자와 소멸자			: __init__, __del__
+				노드 확인				: isEmpty, countNode
+				노드 탐색				: frontNode, rearNode
+				노드 삽입.삭제			: addRear, removeFront
+				전체 원소(노드) 출력		: printLinkedList
 '''
 
 # 노드(SNode): 데이터(data), 링크(link)
@@ -22,10 +22,10 @@ class SNode:
 
 # 단순 연결 리스트: SLinkedList(head)
 class SLinkedList:
-    def __init__(self): 	# 생성자
-        self.__head = None	# 첫 번째 노드
+    def __init__(self):			# 생성자
+        self.__head = None		# 첫 번째 노드
         # self.__tail = None	# 맨 마지막 노드
-        # self.__count = 0	# 노드의 총 개수
+        # self.__count = 0		# 노드의 총 개수
 
    # 소멸자: 전체 노드 삭제
     def __del__(self):
