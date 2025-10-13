@@ -1,26 +1,28 @@
 /*
-	단순 연결 리스트: 알고리즘 구현(cpp)
+	단순 연결 리스트: 알고리즘 구현(C++)
 		파일명: SLinkedList(head).cpp
 			- 클래스: SLinkedList
-				생성자와 소멸자		: SLinkedList, ~SLinkedList
-				노드 확인			: isEmpty, countNode
-				노드 탐색			: frontNode, rearNode
-				노드 삽입.삭제		: addRear, removeFront
+				생성자와 소멸자			: SLinkedList, ~SLinkedList
+				노드 확인				: isEmpty, countNode
+				노드 탐색				: frontNode, rearNode
+				노드 삽입.삭제			: addRear, removeFront
 				전체 원소(노드) 출력	: printLinkedList
 */
 
 #include <iostream>
-#include "SLinkedList(head).h"		// SLinkedList, SNode
+#include "SLinkedList(head).h"		// SLinkedList >> head
+// #include "SLinkedList(tail).h"	// SLinkedList >> head, count, tail
 // #include "LinkedNode.h"			// SNode
 using namespace std;
 
-// LinkedStack: 생성자와 소멸자
+// 생성자: 빈 리스트 생성(head)
 SLinkedList::SLinkedList(void)
 	: head_(nullptr) { }
 
+// 소멸자: 전체 노드 삭제
 SLinkedList::~SLinkedList(void) {
 	// while (!isEmpty())
-	//	removeFront();
+	//		removeFront();
 	SNode* tNode = head_;
 	while (tNode) {
 		head_ = tNode->link_;
@@ -29,18 +31,18 @@ SLinkedList::~SLinkedList(void) {
 	}
 }
 
-// 빈 리스트 여부 판단
+// 빈 리스트 여부 판단(head)
 bool SLinkedList::isEmpty(void) const {
 	return head_ == nullptr;
 }
 
-// 탐색: 노드의 총 개수(count)
+// 탐색: 노드의 총 개수
 int	SLinkedList::countNode(void) const {
 	// if (isEmpty()) return 0;
 	int	count = 0;
 	SNode* rNode = head_;
-	while (rNode) {		// while (rNode != nullptr)
-		count++;
+	while (rNode) {			// while (rNode != nullptr)
+		++count;
 		rNode = rNode->link_;
 	}
 	return count;
@@ -52,19 +54,23 @@ SNode* SLinkedList::frontNode(void) const {
 	return head_;
 }
 
-// 탐색: 맨 마지막 노드(tail)
+// 탐색: 맨 마지막 노드
 SNode* SLinkedList::rearNode(void) const {
-	// if (isEmpty()) return nullptr;
-	SNode* rNode = head_;
+	if (isEmpty())
+		return nullptr;
+
+	SNode	*rNode = head_;
 	while (rNode->link_)
 		rNode = rNode->link_;
 	return rNode;
 }
 
-// 삽입: 맨 마지막 노드(tail)
+// 삽입: 맨 마지막 노드
 void SLinkedList::addRear(const int& e) {
 	SNode* newNode = new SNode(e);
-	if (isEmpty()) head_ = newNode;
+	if (isEmpty()) {
+		head_ = newNode;
+	}
 	else {
 		SNode* rNode = rearNode();
 		rNode->link_ = newNode;
@@ -79,7 +85,7 @@ void SLinkedList::removeFront(void) {
 	delete old;
 }
 
-// 출력: 리스트의 전체 노드의 데이터
+// 출력: 리스트 전체 노드의 데이터
 void SLinkedList::printLinkedList(void) const {
 	if (isEmpty()) {
 		cout << "\n입력된 데이터가 없습니다..." << endl;
@@ -93,5 +99,5 @@ void SLinkedList::printLinkedList(void) const {
 		cout << tNode->data_ << " ->>";
 		tNode = tNode->link_;
 	}
-	cout << " NULL" << endl;
+	cout << " NULL\n" << endl;
 }
