@@ -11,7 +11,7 @@ using namespace std;
 
 int main(void)
 {
-	int			num, choice;
+	int					num, choice;
 	LinkedQueue<int>	q = LinkedQueue<int>();
 
 	while (true) {
