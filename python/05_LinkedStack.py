@@ -41,7 +41,7 @@ class LinkedStack:
     def pop(self) -> None:
         pass
 
-    # 스택에서 맨 위의 데이터 반환(peek)
+    # 스택에서 맨 위의 데이터 반환
     def top(self):
         pass
     
