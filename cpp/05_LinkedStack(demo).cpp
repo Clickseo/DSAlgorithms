@@ -5,14 +5,14 @@
 */
 
 #include <iostream>
-#include "LinkedStack.cpp"			// LinkedStack<T>, SNode<T>
+#include "LinkedStack.cpp"					// LinkedStack<T>, SNode<T>
 // #include "LinkedNode(template).cpp"		// SNode<T>
-// #include <conio.h>				// _getch, _getche
+// #include <conio.h>						// _getch, _getche
 using namespace std;
 
 int main(void)
 {
-	int			num, choice;
+	int					num, choice;
 	LinkedStack<int>	s = LinkedStack<int>();
 
 	while (true) {
