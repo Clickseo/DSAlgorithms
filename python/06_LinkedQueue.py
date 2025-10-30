@@ -2,8 +2,8 @@
 	큐: 알고리즘 구현(Python) -- 단순연결리스트
 		파일명: LinkedStack.py
 			- 큐 생성.소멸	    : __init__, __del__
-			- 큐 상태	    : empty
-			- 큐 크기	    : size
+			- 큐 상태	    	: empty
+			- 큐 크기	   		: size
 			- 데이터 삽입.삭제  : push, pop
 			- 데이터 확인(peek) : front, back
 			- 전체 데이터 출력  : printQueue
