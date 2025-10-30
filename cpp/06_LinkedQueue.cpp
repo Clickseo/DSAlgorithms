@@ -21,14 +21,14 @@ using namespace std;
 template <typename T>
 class LinkedQueue {
 public:
-	LinkedQueue();				// 빈 큐 생성
-	~LinkedQueue();				// 큐 삭제
-	bool	empty(void) const;		// 빈 큐 여부
-	int	size(void) const;		// 큐의 원소 개수
+	LinkedQueue();						// 빈 큐 생성
+	~LinkedQueue();						// 큐 삭제
+	bool	empty(void) const;			// 빈 큐 여부
+	int		size(void) const;			// 큐의 원소 개수
 	void	push(const T &data);		// 데이터 삽입
-	void	pop(void);			// 데이터 삭제
-	T	front(void) const;		// 첫번째 노드의 데이터 반환
-	T	back(void) const;		// 마지막 노드의 데이터 반환
+	void	pop(void);					// 데이터 삭제
+	T		front(void) const;			// 첫번째 노드의 데이터 반환
+	T		back(void) const;			// 마지막 노드의 데이터 반환
 	void	printQueue(void) const;		// 전체 데이터 출력
 private:
 	SNode<T>	*front_;
