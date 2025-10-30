@@ -39,7 +39,7 @@ class LinkedQueue:
         pass
 
     # 데이터 삭제: 큐의 첫 번째 데이터 삭제
-    def pop(self):
+    def pop(self) -> None:
         pass
 
     # 큐에서 첫번째 데이터 반환(peek)
