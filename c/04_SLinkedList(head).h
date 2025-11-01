@@ -33,5 +33,5 @@ void	sListRemoveFront(SLinkedList *sList);				// 삭제: 리스트에서 첫 번
 SNode	*frontSNode(SLinkedList *sList);					// 탐색: 리스트의 첫 번째 노드(head)
 SNode	*rearSNode(SLinkedList *sList);						// 탐색: 리스트의 맨 마지막 노드
 _Bool	sListEmpty(SLinkedList *sList);						// 빈 리스트 여부 판단
-int	countSNode(SLinkedList *sList);							// 탐색: 노드의 총 개수(count)
+int		countSNode(SLinkedList *sList);						// 탐색: 노드의 총 개수(count)
 void	printSLinkedList(SLinkedList *sList);				// 리스트의 전체 노드 출력
