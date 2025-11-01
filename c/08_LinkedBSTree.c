@@ -67,7 +67,7 @@ DNode	*deleteBST(DNode *root, element data) {
 	while (data != tNode->data) {
 		pParent = tNode;
 		if (data < tNode ->data) tNode = tNode ->Llink;
-		else tNode = tNode ->Rlink;
+		else tNode = tNode->Rlink;
 	}
 
 	// 1) 삭제할 노드가 단말 노드인 경우
