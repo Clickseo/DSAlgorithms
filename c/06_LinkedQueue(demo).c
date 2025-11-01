@@ -11,8 +11,8 @@
 
 int main(void)
 {
-	int		num, data;
-	LinkedQueue*	Q = queueCreate();
+	int			num, data;
+	LinkedQueue	*Queue = queueCreate();
 
 	while (true) {
 		system("cls");
@@ -28,12 +28,12 @@ int main(void)
 		switch (num) {
 			case 1: printf("\n 삽입 할 데이터 입력 : ");
 				scanf_s("%d", &data);		// scanf("%d", &data);
-				enQueue(Q, data);
+				enQueue(Queue, data);
 				break;
-			case 2: printf("삭제 된 데이터 : %3d \n", front(Q));
-				deQueue(Q);
+			case 2: printf("삭제 된 데이터 : %3d \n", front(Queue));
+				deQueue(Queue);
 				break;
-			case 3:printQueue(Q);
+			case 3:printQueue(Queue);
 				break;
 			case 4: printf("프로그램 종료... \n");
 				return 0;
@@ -41,6 +41,6 @@ int main(void)
 		}
 		system("pause");
 	}
-	queueDestroy(Q);
+	queueDestroy(Queue);
 	return 0;
 }
