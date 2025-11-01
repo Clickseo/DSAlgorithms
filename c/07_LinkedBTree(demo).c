@@ -5,13 +5,13 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// exit
+#include <stdlib.h>			// exit
 #include "LinkedBtree.h"	// DNode
 #define bufferMAXSIZE 1024
 
 int main(void) 
 {
-	DNode*	root;
+	DNode	*root;
 	char	postfix[bufferMAXSIZE];
 
 	printf("트리를 구성할 후위 수식: ");
