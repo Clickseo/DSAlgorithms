@@ -14,7 +14,7 @@ int  precedence(int op) {
 }
 
 // 수식 구성 평가
-int  isLegal(char* pStr) {
+int  isLegal(char *pStr) {
 	int	count = 0;
 	for (; *pStr; pStr++) {
 		while (*pStr == ' ')	pStr++;		// 공백 제거
