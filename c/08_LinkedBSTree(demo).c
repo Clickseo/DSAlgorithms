@@ -9,19 +9,19 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// exit
+#include <stdlib.h>			// exit
 #include <stdbool.h>		// bool, true, false
 #include "LinkedBSTree.h"	// DNode
 #define	 bufferMAXSIZE 1024
 
-void	printBSTAll(DNode* root);	// 전체 원소 출력
-void	SearchBST(DNode* root);		// 데이터 검색
-DNode	*InsertBST(DNode* root);	// 데이터 삽입
-DNode	*DeleteBST(DNode* root);	// 데이터 삭제
+void	printBSTAll(DNode *root);	// 전체 원소 출력
+void	SearchBST(DNode *root);		// 데이터 검색
+DNode	*InsertBST(DNode *root);	// 데이터 삽입
+DNode	*DeleteBST(DNode *root);	// 데이터 삭제
 
 int main(void)
 {
-	int	num;
+	int		num;
 	DNode	*root = NULL;
 	while (true) {
 		system("cls");
@@ -38,8 +38,8 @@ int main(void)
 		switch (num) {
 			case 1: root = InsertBST(root);		break;
 			case 2: root = DeleteBST(root);		break;
-			case 3: SearchBST(root);		break;
-			case 4: printBSTAll(root);		break;
+			case 3: SearchBST(root);			break;
+			case 4: printBSTAll(root);			break;
 			case 5: printf("프로그램 종료!!!\n");
 				return 0;
 			default: printf("메뉴를 잘못 선택하셨습니다. \n");
@@ -58,7 +58,7 @@ void	printBSTAll(DNode *root) {
 
 // 이진 검색 트리(BST): 데이터 검색
 void	SearchBST(DNode *root) {
-	int	num;
+	int		num;
 	DNode	*tNode = NULL;
 
 	printf("\n이진 검색 트리: 데이터 검색\n");
@@ -79,7 +79,7 @@ void	SearchBST(DNode *root) {
 
 // 이진 검색 트리(BST): 데이터 삽입
 DNode	*InsertBST(DNode *root) {
-	int	num;
+	int		num;
 
 	printf("\n이진 검색 트리: 데이터 입력\n");
 	while (true) {
@@ -97,7 +97,7 @@ DNode	*InsertBST(DNode *root) {
 
 // 이진 검색 트리(BST): 데이터 삭제
 DNode	*DeleteBST(DNode *root) {
-	int	num;
+	int		num;
 	DNode	*tNode = NULL;
 
 	printf("\n이진 검색 트리: 데이터 삭제\n");
