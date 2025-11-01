@@ -12,8 +12,8 @@
 
 int main(void)
 {
-	int		num, choice;
-	LinkedStack	*s = stackCreate();
+	int			num, choice;
+	LinkedStack	*Stack = stackCreate();
 
 	while (true) {
 		system("cls");
@@ -34,13 +34,13 @@ int main(void)
 					// while (getchar() != '\n');
 					if (num == 0)
 						break;
-					push(s, num);
+					push(Stack, num);
 				}
 				break;
-			case 2: printf("삭제 된 데이터: %3d \n", top(s));
-				pop(s);
+			case 2: printf("삭제 된 데이터: %3d \n", top(Stack));
+				pop(Stack);
 				break;
-			case 3: printStack(s);
+			case 3: printStack(Stack);
 				break;
 			case 4: printf("프로그램 종료!!!\n");
 				exit(0);	// return 0;
@@ -50,6 +50,6 @@ int main(void)
 		// _getch();
 		system("pause");
 	}
-	// stackDestroy(tStack);
+	// stackDestroy(Stack);
 	return 0;
 }
