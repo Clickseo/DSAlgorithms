@@ -11,12 +11,12 @@
 
 #include <stdio.h>
 #include <stdbool.h>		// bool, true, false
-#include <stdlib.h>		// malloc, free
+#include <stdlib.h>			// malloc, free
 #include "ArrayStack.h"		// ArrayStack
 
 // 빈 스택 생성
 ArrayStack	*stackCreate(void) {
-	ArrayStack	* Stack = (ArrayStack *)malloc(sizeof(ArrayStack));
+	ArrayStack	*Stack = (ArrayStack*)malloc(sizeof(ArrayStack));
 	if (Stack == NULL) {
 		printf("스택 생성 실패!!! \n");
 		return NULL;
