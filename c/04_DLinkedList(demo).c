@@ -5,11 +5,11 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>			// exit, malloc, free
-#include <stdbool.h>			// bool, true, false
+#include <stdlib.h>					// exit, malloc, free
+#include <stdbool.h>				// bool, true, false
 #include "DLinkedList(head).h"		// DLinkedList >> head	
 // #include "DLinkedList(tail).h"	// DLinkedList >> head, tail, count
-// #include "LinkedNode.h"		// DNode, makeDNode
+// #include "LinkedNode.h"			// DNode, makeDNode
 
 int main(void)
 {
