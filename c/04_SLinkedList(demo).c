@@ -13,7 +13,7 @@
 
 int main(void)
 {
-	int		num;
+	int			num;
 	SLinkedList	*sList = sListCreate();		// head = NULL;
 
 	while (true) {
