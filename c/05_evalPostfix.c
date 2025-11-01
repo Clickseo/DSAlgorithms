@@ -8,7 +8,7 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>		// atoi
+#include <stdlib.h>			// atoi
 #include "LinkedStack.h"	// LinkedStack, SNode
 // #include "LinkedNode.h"	// SNode
 #include "Operators.h"		// isOperator,precedence
@@ -16,13 +16,13 @@
 #define	bufferMAXSIZE	1024
 
 // 후위 표기법: 수식 계산과 변환(중위표기-> 후위 표기)
-element	evalPostfix(char* exp);
-void	InfixToPostfix(char* postfix, char* infix);
+element	evalPostfix(char *exp);
+void	InfixToPostfix(char *postfix, char *infix);
 
 
 int main(void)
 {
-	int	res;
+	int		res;
 	char	infixStr[bufferMAXSIZE], postfixStr[bufferMAXSIZE];
 
 	printf("수식 입력: ");
@@ -38,10 +38,10 @@ int main(void)
 }
 
 // 후위 표기법: 수식 계산
-element  evalPostfix(char* exp) {
-	int	op1, op2, res;
+element  evalPostfix(char *exp) {
+	int		op1, op2, res;
 	char	temp[bufferMAXSIZE], *p;
-	LinkedStack* S = stackCreate();		// 빈 스택 생성
+	LinkedStack	*s = stackCreate();		// 빈 스택 생성
 	while (*exp) {
 		// 1) 피연산자 일 경우...
 		if (*exp >= '0' && *exp <= '9') {
@@ -49,17 +49,17 @@ element  evalPostfix(char* exp) {
 			while (*exp >= '0' && *exp <= '9')
 				*p++ = *exp++;
 			*p = '\0';
-			push(S, atoi(temp));
+			push(s, atoi(temp));
 		}
 		// 2) 연산자일 경우...
 		else if (isOperator(*exp)) {
-			op2 = top(S);	pop(S);
-			op1 = top(S);	pop(S);
+			op2 = top(s);	pop(s);
+			op1 = top(s);	pop(s);
 			switch (*exp) {
-			case '+': push(S, op1 + op2);	break;
-			case '-': push(S, op1 - op2);	break;
-			case '*': push(S, op1 * op2);	break;
-			case '/': push(S, op1 / op2);	break;
+			case '+': push(s, op1 + op2);	break;
+			case '-': push(s, op1 - op2);	break;
+			case '*': push(s, op1 * op2);	break;
+			case '/': push(s, op1 / op2);	break;
 			}
 			exp++;
 		}
@@ -72,16 +72,16 @@ element  evalPostfix(char* exp) {
 	}
 
 	// 스택에 남은 최종 결과 값
-	if (!stackEempty(S))
-		res = top(S);	pop(S);
+	if (!stackEempty(s))
+		res = top(s);	pop(s);
 
-	stackDestroy(S);
+	stackDestroy(s);
 	return res;
 }
 
 // 후위 표기법 변환(중위 표기법 -> 후위 표기법)
-void  InfixToPostfix(char* postfix, char* infix) {
-	LinkedStack* S = stackCreate();
+void  InfixToPostfix(char *postfix, char *infix) {
+	LinkedStack	*s = stackCreate();
 	while (*infix) {
 		// 1) '(' 는 스택에 push
 		if (*infix == '(')
@@ -97,13 +97,13 @@ void  InfixToPostfix(char* postfix, char* infix) {
 		}
 		// 3) 연산자이면...
 		else if (isOperator(*infix)) {
-			while (!stackEempty(S) &&
-				precedence(top(S)) >= precedence(*infix))
+			while (!stackEempty(s) &&
+				precedence(top(s)) >= precedence(*infix))
 			{	// 자신보다 높은 우선순위의 연산자는 스택에서 pop
-				*postfix++ = top(S);	pop(S);
+				*postfix++ = top(s);	pop(s);
 				*postfix++ = ' ';
 			}
-			push(S, *infix++);	// 자신을 push
+			push(s, *infix++);	// 자신을 push
 		}
 		// 4) 피연산자인 경우...
 		else if (*infix >= '0' && *infix <= '9') {
@@ -120,19 +120,19 @@ void  InfixToPostfix(char* postfix, char* infix) {
 	}
 
 	// 스택에 남은 연산자를 모두 pop 한다.
-	while (!stackEempty(S)) {
-		*postfix++ = top(S);	pop(S);
+	while (!stackEempty(s)) {
+		*postfix++ = top(s);	pop(s);
 		*postfix++ = ' ';
 	}
 	postfix--;
 	*postfix = '\0';
 
-	stackDestroy(S);
+	stackDestroy(s);
 	return;
 }
 
 /* 
-	#include "Operators.h"
+#include "Operators.h"
 
 // 연산자 여부를 판단
 int  isOperator(int  op) {
