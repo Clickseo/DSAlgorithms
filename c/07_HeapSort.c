@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>        // srand, rand, malloc, calloc, free
+#include <stdlib.h>     // srand, rand, malloc, calloc, free
 #include <stdbool.h>    // bool, true, false
 #include <time.h>        // time
 
@@ -29,7 +29,7 @@ int main(void)
 }
 
 // 힙 정렬
-void HeapSort(element* pArr, const int num) {
+void HeapSort(element *pArr, const int num) {
     buildHeap(pArr, num);
     for (int i = num - 1; i >= 0; i--) {
         // A[i] = deleteMax();
@@ -42,13 +42,13 @@ void HeapSort(element* pArr, const int num) {
 }
 
 // buildHeap: 최대 힙 구성
-void buildHeap(element* pArr, const int num) {
+void buildHeap(element *pArr, const int num) {
     for (int i = num / 2; i >= 0; i--)
         percolateDown(pArr, i, num);
     // printf("buildHeap: ");           PRINT(pArr, arrMAXSIZE);
 }
 
-void percolateDown(element* pArr, const int root, const int end) {
+void percolateDown(element *pArr, const int root, const int end) {
     int		child = 2 * root + 1;	 // 왼쪽 자식
     int		right = 2 * root + 2;	 // 오른쪽 자식
     if (child <= end) {
@@ -62,7 +62,7 @@ void percolateDown(element* pArr, const int root, const int end) {
     }
 }
 
-void SWAP(element* pa, element* pb) {
+void SWAP(element *pa, element *pb) {
     element     temp;
     temp = *pa;
     *pa = *pb;
@@ -70,7 +70,7 @@ void SWAP(element* pa, element* pb) {
     return;
 }
 
-void PRINT(element* pArr, const int num) {
+void PRINT(element *pArr, const int num) {
     for (int i = 0; i < num; i++)
         printf("%3d", *(pArr + i));
     printf("\n");
