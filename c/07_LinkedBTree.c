@@ -27,10 +27,10 @@ DNode* makeLinkedBTree(char *pStr) {
 
 		// 연산자일 경우: 스택에서 자식 노드를 구성할 주소를 pop
 		if (isOperator(*pStr)) {
-			temp->__Rlink = (DNode*)top(S);		pop(S);
-			temp->__Llink = (DNode*)top(S);		pop(S);
+			temp->Rlink = (DNode*)top(Stack;		pop(Stack);
+			temp->Llink = (DNode*)top(Stack);		pop(Stack);
 		}
-		push(S, (long long)temp);
+		push(Stack, (long long)temp);
 		pStr++;
 	}
 	// 루트 노드
@@ -45,26 +45,26 @@ DNode* makeLinkedBTree(char *pStr) {
 void  Preorder(DNode *root) {
 	if (root) {
 		printf("%3c", root->__data);
-		Preorder(root->__Llink);
-		Preorder(root->__Rlink);
+		Preorder(root->Llink);
+		Preorder(root->Rlink);
 	}
 }
 
 // 깊이 우선 순회: 중위 순회(재귀적 용법)
 void  Inorder(DNode *root) {
 	if (root) {
-		Inorder(root->__Llink);
-		printf("%3c", root->__data);
-		Inorder(root->__Rlink);
+		Inorder(root->Llink);
+		printf("%3c", root->data);
+		Inorder(root->Rlink);
 	}
 }
 
 // 깊이 우선 순회: 후위 순회(재귀적 용법)
 void  Postorder(DNode *root) {
 	if (root) {
-		Postorder(root->__Llink);
-		Postorder(root->__Rlink);
-		printf("%3c", root->__data);
+		Postorder(root->Llink);
+		Postorder(root->Rlink);
+		printf("%3c", root->data);
 	}
 }
 
