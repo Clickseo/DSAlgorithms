@@ -41,7 +41,7 @@ int main(void)
 element  evalPostfix(char *exp) {
 	int		op1, op2, res;
 	char	temp[bufferMAXSIZE], *p;
-	LinkedStack	*s = stackCreate();		// 빈 스택 생성
+	LinkedStack	*Stack = stackCreate();		// 빈 스택 생성
 	while (*exp) {
 		// 1) 피연산자 일 경우...
 		if (*exp >= '0' && *exp <= '9') {
@@ -49,58 +49,60 @@ element  evalPostfix(char *exp) {
 			while (*exp >= '0' && *exp <= '9')
 				*p++ = *exp++;
 			*p = '\0';
-			push(s, atoi(temp));
+			push(Stack, atoi(temp));
 		}
 		// 2) 연산자일 경우...
 		else if (isOperator(*exp)) {
-			op2 = top(s);	pop(s);
-			op1 = top(s);	pop(s);
+			op2 = top(Stack);	pop(Stack);
+			op1 = top(Stack);	pop(Stack);
 			switch (*exp) {
-			case '+': push(s, op1 + op2);	break;
-			case '-': push(s, op1 - op2);	break;
-			case '*': push(s, op1 * op2);	break;
-			case '/': push(s, op1 / op2);	break;
+				case '+': push(s, op1 + op2);	break;
+				case '-': push(s, op1 - op2);	break;
+				case '*': push(s, op1 * op2);	break;
+				case '/': push(s, op1 / op2);	break;
 			}
 			exp++;
 		}
 		else if (*exp == ' ')	exp++;
 		else {
 			printf("잘못된 수식!!! \n");
-			stackDestroy(S);
+			stackDestroy(Stack);
 			return 0;
 		}
 	}
 
 	// 스택에 남은 최종 결과 값
-	if (!stackEempty(s))
-		res = top(s);	pop(s);
+	if (!stackEempty(Stack)) {
+		res = top(Stack);
+		pop(Stack);
+	}
 
-	stackDestroy(s);
+	stackDestroy(Stack);
 	return res;
 }
 
 // 후위 표기법 변환(중위 표기법 -> 후위 표기법)
 void  InfixToPostfix(char *postfix, char *infix) {
-	LinkedStack	*s = stackCreate();
+	LinkedStack	*Stack = stackCreate();
 	while (*infix) {
 		// 1) '(' 는 스택에 push
 		if (*infix == '(')
-			push(S, *infix++);
+			push(Stack, *infix++);
 		// 2) ')'를 만나면 '('가 나올 때까지 pop 한후에 '('는 버린다.
 		else if (*infix == ')') {
-			while (top(S) != '(') {
-				*postfix++ = top(S);	pop(S);
+			while (top(Stack) != '(') {
+				*postfix++ = top(Stack);	pop(Stack);
 				*postfix++ = ' ';
 			}
-			pop(S);		// '(' 를 버린다.
+			pop(Stack);		// '(' 를 버린다.
 			infix++;
 		}
 		// 3) 연산자이면...
 		else if (isOperator(*infix)) {
-			while (!stackEempty(s) &&
-				precedence(top(s)) >= precedence(*infix))
+			while (!stackEempty(Stack) &&
+				precedence(top(Stack)) >= precedence(*infix))
 			{	// 자신보다 높은 우선순위의 연산자는 스택에서 pop
-				*postfix++ = top(s);	pop(s);
+				*postfix++ = top(Stack);	pop(Stack);
 				*postfix++ = ' ';
 			}
 			push(s, *infix++);	// 자신을 push
@@ -114,20 +116,20 @@ void  InfixToPostfix(char *postfix, char *infix) {
 		else if (*infix == ' ')	infix++;
 		else {
 			printf("잘못된 수식!!! \n");
-			stackDestroy(S);
+			stackDestroy(Stack);
 			return;
 		}
 	}
 
 	// 스택에 남은 연산자를 모두 pop 한다.
-	while (!stackEempty(s)) {
-		*postfix++ = top(s);	pop(s);
+	while (!stackEempty(Stack)) {
+		*postfix++ = top(Stack);	pop(Stack);
 		*postfix++ = ' ';
 	}
 	postfix--;
 	*postfix = '\0';
 
-	stackDestroy(s);
+	stackDestroy(Stack);
 	return;
 }
 
