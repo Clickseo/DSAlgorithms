@@ -31,7 +31,7 @@ public:
 	void		Postorder(DNode<T> *root) const;
 	void		Levelorder(DNode<T> *root) const;
 	DNode<T>	*makeLinkedBTree(const string str);
-	int		isOperator(int op);
+	int			isOperator(int op);
 private:
 	DNode<T>	*root_;
 };
@@ -41,16 +41,48 @@ template <typename T>
 LinkedBTree<T>::LinkedBTree()
 	: root_(nullptr) { }
 
-// 이진 트리 삭제: 너비 우선 순회
+// 이진 트리(수식 트리) 생성: 스택 활용
 template <typename T>
-LinkedBTree<T>::~LinkedBTree() {
-    if (root_ == nullptr)
-        return;
+DNode<T>* LinkedBTree<T>::makeLinkedBTree(const string str) {
+    stack<DNode<T>*>	s;
+    DNode<T>			*tNode = nullptr;	
+}
 
-    queue<DNode<T>*>	q;
-    DNode<T>		*tNode = nullptr;
+// 연산자 여부 판단
+template <typename T>
+int  LinkedBTree<T>::isOperator(int op) {
+	return op == '+' || op == '-' || op == '*' || op == '/';
+}
 
-    // 너비 우선 순회: 노드 삭제
+
+// 깊이 우선 순회: 전위 순회(재귀적 용법)
+template <typename T>
+void	LinkedBTree<T>::Preorder(DNode<T> *root) const {
+	if (root) {
+		cout.width(3);	 cout << root->data_;
+		Preorder(root->Llink_);
+		Preorder(root->Rlink_);
+	}
+}
+
+// 깊이 우선 순회: 중위 순회(재귀적 용법)
+template <typename T>
+void	LinkedBTree<T>::Inorder(DNode<T> *root) const {
+	if (root) {
+		Inorder(root->Llink_);
+		cout.width(3);	 cout << root->data_;
+		Inorder(root->Rlink_);
+	}
+}
+
+// 깊이 우선 순회: 후위 순회(재귀적 용법)
+template <typename T>
+void	LinkedBTree<T>::Postorder(DNode<T> *root) const {
+	if (root) {
+		Postorder(root->Llink_);
+		Postorder(root->Rlink_);
+		cout.width(3);	 cout << root->data_;
+	}
 }
 
 // 너비 우선 순회: 비재귀적 용법
@@ -60,37 +92,21 @@ void LinkedBTree<T>::Levelorder(DNode<T>* root) const {
         return;
 
     queue<DNode<T>*>	q;
-    DNode<T>		*tNode = nullptr;
+    DNode<T>			*tNode = nullptr;
 
-    // 너비 우선 순회: 노드 방문
+    // 너비 우선 순회: 전체 노드 방문
 }
 
-// 연산자 여부 판단
+// 소멸자: 이진 트리 삭제 -- 너비 우선 순회
 template <typename T>
-int  LinkedBTree<T>::isOperator(int op) {
-	return op == '+' || op == '-' || op == '*' || op == '/';
-}
+LinkedBTree<T>::~LinkedBTree() {
+    if (root_ == nullptr)
+        return;
 
-// 이진 트리(수식 트리) 생성: 스택 활용
-template <typename T>
-DNode<T>* LinkedBTree<T>::makeLinkedBTree(const string str) {
-    stack<DNode<T>*>	s;
-    DNode<T>		*tNode = nullptr;	
-}
+    queue<DNode<T>*>	q;
+    DNode<T>			*tNode = nullptr;
 
-// 깊이 우선 순회: 전위 순회(재귀.비재귀적 용법)
-template <typename T>
-void	LinkedBTree<T>::Preorder(DNode<T> *root) const {
-}
-
-// 깊이 우선 순회: 중위 순회(재귀.비재귀적 용법)
-template <typename T>
-void	LinkedBTree<T>::Inorder(DNode<T> *root) const {
-}
-
-// 깊이 우선 순회: 후위 순회(재귀.비재귀적 용법)
-template <typename T>
-void	LinkedBTree<T>::Postorder(DNode<T> *root) const {
+    // 너비 우선 순회: 전체 노드 삭제
 }
 
 #endif
