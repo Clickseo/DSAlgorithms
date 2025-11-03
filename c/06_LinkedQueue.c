@@ -16,79 +16,79 @@
 
 // queueCreate : 빈 큐 생성
 LinkedQueue	*queueCreate(void) {
-	LinkedQueue* Q = (LinkedQueue*)malloc(sizeof(LinkedQueue));
-	if (Q == NULL) {
+	LinkedQueue	*Queue = (LinkedQueue*)malloc(sizeof(LinkedQueue));
+	if (Queue == NULL) {
 		printf("스택 생성 실패!!! \n");
 		return NULL;
 	}
-	Q->front = NULL;
-	Q->rear = NULL;
-	return Q;
+	Queue->front = NULL;
+	Queue->rear = NULL;
+	return Queue;
 }
 
 // queueDestroy : 큐 삭제 -- 모든 노드 삭제
-void queueDestroy(LinkedQueue *Q) {
-	SNode	*tNode = Q->front;
+void queueDestroy(LinkedQueue *Queue) {
+	SNode	*tNode = Queue->front;
 	while (tNode) {
-		Q->front = tNode->link;
+		Queue->front = tNode->link;
 		free(tNode);
-		tNode = Q->front;
+		tNode = Queue->front;
 	}
-	free(Q);
+	free(Queue);
 	return;
 }
 
 // enQueue : 큐에 데이터 삽입
-void enQueue(LinkedQueue *Q, element data) {
+void enQueue(LinkedQueue *Queue, element data) {
 	SNode* newSNode = makeSNode(data);
-	if (Q->front == NULL) {
-		Q->front = newSNode;
-		Q->rear = newSNode;
+	if (Queue->front == NULL) {
+		Queue->front = newSNode;
+		Queue->rear = newSNode;
 	}
 	else {
-		Q->rear->link = newSNode;
-		Q->rear = newSNode;
+		Queue->rear->link = newSNode;
+		Queue->rear = newSNode;
 	}
-	Q->count++;
+	Queue->count++;
 }
 
 // deQueue : 큐에서 데이터 삭제
-void	deQueue(LinkedQueue *Q) {
-	if (queueEempty(Q))	return;
-	SNode	*tNode = Q->front;
-	Q->front = tNode->link;
-	if (Q->front == NULL)
-		Q->rear = NULL;
+void	deQueue(LinkedQueue *Queue) {
+	if (queueEempty(Queue))	return;
+	SNode	*tNode = Queue->front;
+	Queue->front = tNode->link;
+	if (Queue->front == NULL)
+		Queue->rear = NULL;
 	free(tNode);
-	Q->count--;
+	Queue->count--;
 }
 
 // front : 큐에서 첫 번째 원소 확인
-element front(LinkedQueue *Q) {
-	if (queueEempty(Q))	return EOF;	// return NULL;	
-	return  Q->front->data;
+element front(LinkedQueue *Queue) {
+	if (queueEempty(Queue))	return EOF;	// return NULL;	
+	return  Queue->front->data;
 }
 
 // back : 큐에서 맨 마지막 원소 확인
-element back(LinkedQueue* Q) {
-	if (queueEempty(Q))	return EOF;	// return NULL;
-	return  Q->rear->data;
+element back(LinkedQueue *Queue) {
+	if (queueEempty(Queue))	return EOF;	// return NULL;
+	return  Queue->rear->data;
 }
 
 // queueEempty : 큐의 공백 상태 여부 판단
-_Bool queueEempty(LinkedQueue *Q) {
-	return Q->front == NULL;
+_Bool queueEempty(LinkedQueue *Queue) {
+	return Queue->front == NULL;
 }
 
 // queueSize: 큐의 크기
-int		queueSize(LinkedQueue *Q) {
-	return Q->count;
+int		queueSize(LinkedQueue *Queue) {
+	return Queue->count;
 
 }
 
 // printQueue : 큐의 전체 원소 출력
-void printQueue(LinkedQueue *Q) {
-	SNode	*tNode = Q->front;
+void printQueue(LinkedQueue * Queue) {
+	SNode	*tNode = Queue->front;
 	printf("\n Queue [");
 	while (tNode) {
 		printf("%3d", tNode->data);
