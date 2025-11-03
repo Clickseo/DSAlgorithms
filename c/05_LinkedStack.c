@@ -44,7 +44,7 @@ _Bool	stackEmpty(LinkedStack *Stack) {
 }
 
 // 스택의 원소 개수
-int	stackSize(LinkedStack *Stack) {
+int		stackSize(LinkedStack *Stack) {
 	return Stack->count;
 
 }
