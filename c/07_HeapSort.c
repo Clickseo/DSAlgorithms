@@ -31,7 +31,7 @@ int main(void)
 // 힙 정렬
 void HeapSort(element *pArr, const int num) {
     buildHeap(pArr, num);
-    for (int i = num - 1; i >= 0; i--) {
+    for (int i = num - 1; i >= 0; --i) {
         // A[i] = deleteMax();
         // i번째 위치에 제일 큰 값을 저장
         SWAP(pArr, pArr + i);
@@ -43,7 +43,7 @@ void HeapSort(element *pArr, const int num) {
 
 // buildHeap: 최대 힙 구성
 void buildHeap(element *pArr, const int num) {
-    for (int i = num / 2; i >= 0; i--)
+    for (int i = num / 2; i >= 0; --i)
         percolateDown(pArr, i, num);
     // printf("buildHeap: ");           PRINT(pArr, arrMAXSIZE);
 }
@@ -71,7 +71,7 @@ void SWAP(element *pa, element *pb) {
 }
 
 void PRINT(element *pArr, const int num) {
-    for (int i = 0; i < num; i++)
+    for (int i = 0; i < num; ++i)
         printf("%3d", *(pArr + i));
     printf("\n");
     return;
