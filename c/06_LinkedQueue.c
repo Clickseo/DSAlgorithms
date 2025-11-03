@@ -81,7 +81,7 @@ _Bool queueEempty(LinkedQueue *Q) {
 }
 
 // queueSize: 큐의 크기
-int		queueSize(LinkedQueue* Q) {
+int		queueSize(LinkedQueue *Q) {
 	return Q->count;
 
 }
