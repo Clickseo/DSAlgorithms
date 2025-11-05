@@ -1,6 +1,6 @@
 #include <iostream>
-#include <random>		// C++ 11에서 추가
-using namespace std;		// C++11 이전: C 스타일 난수 생성(srand와 rand 함수)
+#include <random>       // C++ 11에서 추가
+using namespace std;    // C++11 이전: C 스타일 난수 생성(srand와 rand 함수)
 
 #define arrMAXSIZE 15
 
