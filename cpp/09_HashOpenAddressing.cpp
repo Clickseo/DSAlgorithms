@@ -1,5 +1,5 @@
 /*
-    해시 테이블(개방형 주소 방식): 알고리즘 구현(C++) -- 이중연결리스트
+    해시 테이블(개방형 주소 방식): 알고리즘 구현(C++) -- 순차자료구조
         파일명: HashOpenAddressing.cpp
         클래스: HashOpenAddressing
             - 생성자.소멸자        : HashOpenAddressing
@@ -31,8 +31,8 @@ private:
 
     // 해시 함수
     int Hash_(int i, int num) {
-        return (num + i) % table_.size();           // 선형 조사
-        // return (num + i*i) % table_.size();     // 이차 조사
+        return (num + i) % table_.size();        // 선형 조사
+        // return (num + i*i) % table_.size();    // 이차 조사
     }
 };
 
