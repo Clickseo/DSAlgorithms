@@ -1,125 +1,93 @@
-/*
-	이중 연결 리스트: 알고리즘 구현(C++)
-		파일명: DLinkedList(head).cpp
-			- 클래스: DNode
-			- 클래스: DLinkedList
-				생성자와 소멸자			: DLinkedList, ~DLinkedList
-				노드 확인				: isEmpty, countNode
-				노드 탐색				: frontNode, rearNode
-				노드 삽입.삭제			: addRear, removeFront
-				전체 원소(노드) 출력	: printLinkedList
-*/
-
 #include <iostream>
-#include "DLinkedList(head).h"		// DLinkedList >> head
-// #include "DLinkedList(tail).h"	// DLinkedList >> head, tail, count
-// #include "LinkedNode.h"			// DNode
+#include "SLinkedList(head).h"	// SLinkedList >> head
+// #include "SLinkedList(tail).h"	// SLinkedList >> head, count, tail
+// #include "LinkedNode.h"		// SNode
 using namespace std;
 
 // 생성자: 빈 리스트 생성(head)
-DLinkedList::DLinkedList(void)
-	: head_(nullptr) { }
+SLinkedList::SLinkedList(void)
+	: head_(nullptr) {
+}
 
 // 소멸자: 전체 노드 삭제
-DLinkedList::~DLinkedList(void) {
+SLinkedList::~SLinkedList(void) {
 	// while (!isEmpty())
-	//		removeFront();
-	DNode	*tNode = head_;
+	//	removeFront();
+	SNode* tNode = head_;
 	while (tNode) {
-		head_ = tNode->Rlink_;
+		head_ = tNode->link_;
 		delete tNode;
 		tNode = head_;
 	}
 }
 
 // 빈 리스트 여부 판단(head)
-bool DLinkedList::isEmpty(void) const {
+bool SLinkedList::isEmpty(void) const {
 	return head_ == nullptr;
 }
 
 // 탐색: 노드의 총 개수
-int	DLinkedList::countNode(void) const {
-	int		count = 0;
-	DNode	*rNode = head_;
+int	SLinkedList::countNode(void) const {
+	int	count = 0;
+	SNode* rNode = head_;
 	while (rNode) {
 		++count;
-		rNode = rNode->Rlink_;
+		rNode = rNode->link_;
 	}
 	return count;
 }
 
-// 탐색: 첫 번째 노드(head)
-DNode	*DLinkedList::frontNode(void) const {
+// 탐색: 첫 번째 노드(head_)
+SNode* SLinkedList::frontNode(void) const {
 	return head_;
 }
 
 // 탐색: 맨 마지막 노드
-DNode	*DLinkedList::rearNode(void) const {
+SNode* SLinkedList::rearNode(void) const {
 	if (isEmpty())
 		return nullptr;
 
-	DNode	*rNode = head_;
-	while (rNode->Rlink_)
-		rNode = rNode->Rlink_;
+	SNode* rNode = head_;
+	while (rNode->link_)
+		rNode = rNode->link_;
 	return rNode;
 }
 
 // 삽입: 맨 마지막 노드
-void DLinkedList::addRear(const int &e) {
-	DNode	*newNode = new DNode(e);
+void SLinkedList::addRear(const int& e) {
+	SNode* newNode = new SNode(e);
 	if (isEmpty()) {
 		head_ = newNode;
 	}
 	else {
-		DNode	*rNode = rearNode();
-		rNode->Rlink_ = newNode;
-		newNode->Llink_ = rNode;
+		SNode* rNode = rearNode();
+		rNode->link_ = newNode;
 	}
 }
 
 // 삭제: 첫 번째 노드(head)
-void DLinkedList::removeFront(void) {
+void SLinkedList::removeFront(void) {
 	if (isEmpty())
 		return;
 
-	DNode* old = head_;
-	head_ = old->Rlink_;
-	if (head_)
-		head_->Llink_ = nullptr;
-
+	SNode* old = head_;
+	head_ = old->link_;
 	delete old;
 }
 
-// 출력: 리스트 전체 노드의 데이터(순방향)
-void DLinkedList::printLinkedList(void) const {
+// 출력: 리스트의 전체 노드의 데이터
+void SLinkedList::printLinkedList(void) const {
 	if (isEmpty()) {
-		cout << "\n입력된 데이터가 없습니다..." << endl;
+		cout << "\n입력된 데이터가 없습니다!!!" << endl;
 		return;
 	}
 
-	cout << "\n\t### 입력된 데이터: 순방향 ###" << endl;
-	DNode* tNode = head_;
+	cout << "\n\t### 입력된 데이터 ###" << endl;
+	SNode* tNode = head_;
 	while (tNode) {
 		cout.width(3);
 		cout << tNode->data_ << " ->>";
-		tNode = tNode->Rlink_;
-	}
-	cout << " NULL\n" << endl;
-}
-
-// 출력: 리스트 전체 노드의 데이터(역방향)
-void DLinkedList::printRevLinkedList(void) const {
-	if (isEmpty()) {
-		cout << "\n입력된 데이터가 없습니다..." << endl;
-		return;
-	}
-
-	cout << "\n\t### 입력된 데이터: 역방향 ###" << endl;
-	DNode	*rNode = rearNode();
-	while (rNode) {
-		cout.width(3);
-		cout << rNode->data_ << " ->>";
-		rNode = rNode->Llink_;
+		tNode = tNode->link_;
 	}
 	cout << " NULL\n" << endl;
 }
