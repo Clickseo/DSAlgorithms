@@ -11,7 +11,7 @@
 #if 1
 
 // 이진 검색: 재귀적 용법
-int	binarySearch(int *pArr, int  first, int  last, int  key);
+int		binarySearch(int *pArr, int  first, int  last, int  key);
 void	PRINT(int *pArr, int num);
 
 int main(void)
@@ -29,7 +29,7 @@ int main(void)
 
 		int	index = binarySearch(arr, 0, arrMAXSIZE - 1, key);
 		if (index == EOF)	printf("없다고!!! \n");
-		else			printf("검색 데이터: %d 번째 위치 %d \n", arr[index], index + 1);
+		else				printf("검색 데이터: %d 번째 위치 %d \n", arr[index], index + 1);
 	}
 	return 0;
 }
