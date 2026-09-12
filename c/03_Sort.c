@@ -19,6 +19,7 @@ void	insertionSort(int *pArr, int num);	// 삽입 정렬
 // 2) 고급 정렬 알고리즘
 void	shellSort(int *pArr, int num);								// 쉘 정렬
 void	intervalSort(int *pArr, int num, int start, int interval);
+
 void	quickSort(int *pArr, int *pFirst, int *pLast);				// 퀵 정렬
 void	mergeSort(int *pArr, int *pFirst, int *pLast);				// 병합 정렬
 
@@ -35,8 +36,8 @@ void	PRINT(int *pArr, int num);
 int main(void)
 {
 	// int	*pArr = (int*)realloc(NULL, arrMAXSIZE * (int)sizeof(int));
-	// int	*pArr = (int*)malloc(arrMAXSIZE * (int)sizeof(int));
 	// int	*pArr = (int*)calloc(arrMAXSIZE, (int)sizeof(int));
+	// int	*pArr = (int*)malloc(arrMAXSIZE * (int)sizeof(int));
 	int	arr[arrMAXSIZE] = { 0 };
 
 	// 임의의 난수 생성: 0 ~ 99사이의 정수
@@ -49,11 +50,12 @@ int main(void)
 	printf("정렬 전: ");
 	PRINT(arr, arrMAXSIZE);
 
+	// 함수 호출: 정렬 알고리즘
 	selectionSort(arr, arrMAXSIZE);
 	// bubbleSort(arr, arrMAXSIZE);
 	// insertionSort(arr, arrMAXSIZE);
 	// shellSort(arr, arrMAXSIZE);
-	// quickSort(arr, arr, arr+arrMAXSIZE-1);
+	// quickSort(arr, arr, arr + arrMAXSIZE - 1);
 	// mergeSort(arr, arr, arr + arrMAXSIZE - 1);
 	// contingSort(arr, arrMAXSIZE);
 
@@ -81,12 +83,13 @@ void  PRINT(int *pArr, int num) {
 void   selectionSort(int *pArr, int num) {
 	int *pSm;
 	for (int i = 0; i < num; ++i) {
-		// 가장 작은 값을 가진 원소의 위치(주소) 탐색
+		// 가장 작은 값을 가진 원소의 위치(주소) 검색
 		pSm = pArr + i;
-		for (int j = i; j < num; ++j)
+		for (int j = i; j < num; ++j) {
 			if (*pSm > *(pArr + j))
 				pSm = pArr + j;
-		// 가장 작은 값을 선택: 현재 값과 교환
+		}		
+		// 검색된 가장 작은 값을 정렬되지 않은 영역의 가장 첫 번째 원소와 교환한다.
 		SWAP(pSm, pArr + i);
 		// PRINT(pArr, num);
 	}
@@ -106,15 +109,18 @@ void  bubbleSort(int *pArr, int num) {
 /* 버블 정렬: 알고리즘 개선
 // 버블 정렬: 오름차순 -- 알고리즘 개선 #01
 void  bubbleSort(int *pArr, int num) {
-	_Bool	state;	// 상태 변수
+	// _Bool	state;	// 상태 변수
+	bool		state;	// 상태 변수
 	for (int i = 0; i < num; ++i) {
 		state = true;
 		for (int j = num - 1; j > 0; --j) {
+			// 직전 원소와 비교하여 원소 교환
 			if (*(pArr + j) < *(pArr + j - 1)) {
 				SWAP(pArr + j, pArr + j - 1);
 				state = false;
 			}
 		}
+		// 원소 교환이 한번도 발생하지 않았다면 정렬이 끝났기 때문에 중단한다.
 		if (state == true) {
 			break;
 		}
@@ -128,7 +134,7 @@ void  insertionSort(int *pArr, int num) {
 	int	i, j, temp;
 	for (i = 1; i < num; ++i) {
 		temp = *(pArr + i);
-		// temp 가 들어갈 공간 확보
+		// 삽입할 데이터 temp의 공간 확보
 		for (j = i - 1; j >= 0 && *(pArr + j) > temp; --j) {
 			*(pArr + j + 1) = *(pArr + j);
 		}
@@ -162,16 +168,20 @@ void  quickSort(int *pArr, int *pFirst, int *pLast) {
 	if (pFirst >= pLast)
 		return;
 
-	// 분할: 기준 값의 왼쪽(작은 값)과 오른쪽(큰 값) 부분 집합
+	// 분할: 기준 값의 왼쪽(작은 값)과 오른쪽(큰 값) 부분 집합으로 분할한다.
 	int	*pi = pFirst - 1;
 	for (int *pj = pFirst; pj < pLast; ++pj) {
-		if (*pj <= *pLast) {				// 기준 값(pivot): 마지막 원소
+		// 기준 값(pivot): 마지막 원소
+		if (*pj <= *pLast) {
 			SWAP(++pi, pj);
 		}
 	}
-	SWAP(pi + 1, pLast);					// 기준 값을 가운데로 위치 시킨다.
+	
+	// 기준 값을 가운데로 위치 시킨다.
+	SWAP(pi + 1, pLast);
 	// PRINT(pFirst, (int)(pLast - pFirst) + 1);
 
+	// 왼쪽과 오른쪽 부분 집합에 대하여 퀵 정렬을 수행한다.
 	int	*mid = pi + 1;						// 기준 값의 위치(주소)
 	quickSort(pArr, pFirst, mid - 1);		// 왼쪽 부분 정렬
 	quickSort(pArr, mid + 1, pLast);		// 오른쪽 부분 정렬
@@ -185,10 +195,10 @@ void  mergeSort(int *pArr, int *pFirst, int *pLast) {
 
 	// 중간 원소의 위치(주소) 계산: pFirst와 pLast 범위에서...
 	int	*pMid = pFirst + (int)(pLast - pFirst) / 2;
-	mergeSort(pArr, pFirst, pMid);			// 왼쪽 부분집합 정렬
-	mergeSort(pArr, pMid + 1, pLast);		// 오른쪽 부분집합 정렬
+	mergeSort(pArr, pFirst, pMid);			// 왼쪽 부분 집합 정렬
+	mergeSort(pArr, pMid + 1, pLast);		// 오른쪽 부분 집합 정렬
 
-	// 각각의 부분집합을 병합(merge)할 메모리 공간 확보
+	// 각각의 부분 집합을 병합(merge)할 메모리 공간(복사본)을 확보한다.
 	int	num = (int)(pLast - pFirst) + 1;
 	int	*pTemp = (int*)malloc(num * (int)sizeof(int));
 	if (pTemp == NULL) {
@@ -196,10 +206,12 @@ void  mergeSort(int *pArr, int *pFirst, int *pLast) {
 		exit(100);
 	}
 
-	// 병합(merge): 정렬된 두 부분집합 병합
-	int	*pi = pFirst;				// 시작 위치: 왼쪽 부분집합
-	int	*pj = pMid + 1;				// 시작 위치: 오른쪽 부분집합
+	// 병합(merge): 정렬된 두 부분 집합을 병합(복사본)한다.
+	int	*pi = pFirst;				// 시작 위치: 왼쪽 부분 집합
+	int	*pj = pMid + 1;				// 시작 위치: 오른쪽 부분 집합
 	int	*pt = pTemp;
+
+	// 정렬된 왼쪽과 오른쪽 부분 집합을 병합(복사본)한다.
 	while (pi <= pMid && pj <= pLast) {
 		if (*pi <= *pj) {
 			*pt++ = *pi++;
@@ -207,26 +219,30 @@ void  mergeSort(int *pArr, int *pFirst, int *pLast) {
 		else {
 			*pt++ = *pj++;
 		}
-	}
+	}	
+	// 왼쪽 부분 집합을 복사한다.
 	while (pi <= pMid) {
 		*pt++ = *pi++;
-	}
+	}	
+	// 오른쪽 부분 집합을 복사한다.
 	while (pj <= pLast) {
 		*pt++ = *pj++;
 	}
 
-	// 정렬된 데이터로 원본 데이터 재구성
+	// 정렬된 데이터로 원본 데이터를 재구성한다.
 	pi = pFirst;	pt = pTemp;
 	while (pi <= pLast) {
 		*pi++ = *pt++;
 	}
+
+	// 정렬된 사본 데이터를 메모리 반납한다.
 	free(pTemp);
 	// PRINT(pFirst, (int)(pLast - pFirst) + 1);
 }
 
 // 계수 정렬: 오름차순
 void	contingSort(int *pArr, int num) {
-	// 원본 데이터에서 최대값
+	// 원본 데이터에서 최댓값
 	int	maxNum = 0;
 	for (int i = 0; i < num; ++i) {
 		if (maxNum < pArr[i]) {
