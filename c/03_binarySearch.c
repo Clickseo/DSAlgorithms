@@ -11,11 +11,12 @@
 #if 1
 
 // 이진 검색: 재귀적 용법
-int		binarySearch(int *pArr, int  first, int  last, int  key);
+int		binarySearch(int *pArr, int first, int last, int key);
 void	PRINT(int *pArr, int num);
 
 int main(void)
 {
+	// 원시 데이터: 중복된 값이 없는 정렬된 데이터
 	int	arr[arrMAXSIZE] = { 5, 9, 13, 17, 21, 28, 37, 46, 55, 88 };
 	printf("원시 데이터: ");
 	PRINT(arr, arrMAXSIZE);
@@ -27,7 +28,10 @@ int main(void)
 		if (key == 0)
 			break;
 
+		// 함수 호출: 이진 검색 알고리즘(재귀적 용법 구현)
 		int	index = binarySearch(arr, 0, arrMAXSIZE - 1, key);
+
+		// 검색된 데이터 출력
 		if (index == EOF)	printf("없다고!!! \n");
 		else				printf("검색 데이터: %d 번째 위치 %d \n", arr[index], index + 1);
 	}
@@ -63,6 +67,7 @@ void	PRINT(int *pArr, int num);
 
 int main(void)
 {
+	// 원시 데이터: 중복된 값이 없는 정렬된 데이터
 	int	arr[arrMAXSIZE] = { 5, 9, 13, 17, 21, 28, 37, 46, 55, 88 };
 	printf("원시 데이터: ");
 	PRINT(arr, arrMAXSIZE);
@@ -74,6 +79,7 @@ int main(void)
 		if (key == 0)
 			break;
 
+		// 함수 호출: 이진 검색 알고리즘(반복적 용법 구현)
 		int	*pIndex = binarySearch(arr, arr, arr + arrMAXSIZE - 1, key);
 		if (pIndex == NULL)	printf("없다고!!! \n");
 		else			printf("검색 데이터: %d 번째 위치 %lld \n", *pIndex, pIndex - arr + 1);
