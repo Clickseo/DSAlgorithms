@@ -2,12 +2,12 @@
 	단순 연결 리스트: 알고리즘 구현(cpp)
 		파일명: SLinkedList(head).h
 			- 클래스: SLinkedList
-				- 스택 생성.소멸		: SLinkedList, ~SLinkedList
+				- 스택 생성.소멸			: SLinkedList, ~SLinkedList
 				- 데이터 삽입.삭제		: addRear, removeFront
 				- 데이터 확인(탐색)		: frontNode, rearNode
 				- 빈 리스트 여부 판단	: isEmpty
 				- 리스트의 총 개수		: countNode
-				- 리스트의 전체 출력	: printLinkedList
+				- 리스트의 전체 출력		: printLinkedList
 */
 
 // #pragma once
