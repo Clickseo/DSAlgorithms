@@ -1,7 +1,7 @@
 #include <iostream>
-#include "SLinkedList(head).h"	// SLinkedList >> head
+#include "SLinkedList(head).h"		// SLinkedList >> head
 // #include "SLinkedList(tail).h"	// SLinkedList >> head, count, tail
-// #include "LinkedNode.h"		// SNode
+// #include "LinkedNode.h"			// SNode
 using namespace std;
 
 // 생성자: 빈 리스트 생성(head)
@@ -48,8 +48,9 @@ SNode* SLinkedList::rearNode(void) const {
 		return nullptr;
 
 	SNode* rNode = head_;
-	while (rNode->link_)
+	while (rNode->link_) {
 		rNode = rNode->link_;
+	}
 	return rNode;
 }
 
@@ -67,8 +68,9 @@ void SLinkedList::addRear(const int& e) {
 
 // 삭제: 첫 번째 노드(head)
 void SLinkedList::removeFront(void) {
-	if (isEmpty())
+	if (isEmpty()) {
 		return;
+	}
 
 	SNode* old = head_;
 	head_ = old->link_;
