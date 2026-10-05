@@ -20,15 +20,15 @@ using namespace std;
 template <typename T>
 class ArrayQueue {
 public:
-	ArrayQueue(int size = 10);		// 빈 큐 생성
-	~ArrayQueue(void);			// 큐 삭제
-	bool	empty(void) const;		// 빈 큐 여부
-	bool	full(void) const;		// 포화 상태 여부
-	int	size(void) const;		// 원소 개수
+	ArrayQueue(int size = 10);			// 빈 큐 생성
+	~ArrayQueue(void);					// 큐 삭제
+	bool	empty(void) const;			// 빈 큐 여부
+	bool	full(void) const;			// 포화 상태 여부
+	int		size(void) const;			// 원소 개수
 	void	push(const T &data);		// 데이터 삽입
-	void	pop(void);			// 데이터 삭제
-	T	front(void) const;		// 첫번째 노드의 데이터 반환
-	T	back(void) const;		// 마지막 노드의 데이터 반환
+	void	pop(void);					// 데이터 삭제
+	T		front(void) const;			// 첫번째 노드의 데이터 반환
+	T		back(void) const;			// 마지막 노드의 데이터 반환
 	void	printQueue(void) const;		// 전체 데이터 출력
 private:
 	int	front_;
