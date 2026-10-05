@@ -33,7 +33,7 @@ public:
 private:
 	SNode<T>	*front_;
 	SNode<T>	*rear_;
-	int		count_;
+	int			count_;
 };
 
 #endif
