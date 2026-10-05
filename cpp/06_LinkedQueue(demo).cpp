@@ -48,6 +48,6 @@ int main(void)
 		system("pause");
 	}
 
-	// q.~LinkedQueue();
 	return 0;
+	// q.~LinkedQueue();	
 }
