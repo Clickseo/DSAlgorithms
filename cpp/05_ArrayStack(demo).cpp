@@ -11,7 +11,7 @@ using namespace std;
 
 int main(void)
 {
-	int			num, choice;
+	int					num, choice;
 	ArrayStack<int>		s = ArrayStack<int>();
 
 	while (true) {
@@ -48,6 +48,6 @@ int main(void)
 		system("pause");
 	}
 
-	// s.~ArrayStack();
 	return 0;
+	// s.~ArrayStack();	
 }
