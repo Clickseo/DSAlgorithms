@@ -11,7 +11,7 @@ using namespace std;
 
 int main(void)
 {
-	int			num, choice;
+	int					num, choice;
 	ArrayQueue<int>		q = ArrayQueue<int>();
 
 	while (true) {
@@ -48,6 +48,6 @@ int main(void)
 		system("pause");
 	}
 
-	// q.~ArrayStack();
 	return 0;
+	// q.~ArrayStack();	
 }
