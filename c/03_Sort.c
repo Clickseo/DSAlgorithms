@@ -86,8 +86,9 @@ void   selectionSort(int *pArr, int num) {
 		// 가장 작은 값을 가진 원소의 위치(주소) 검색
 		pSm = pArr + i;
 		for (int j = i; j < num; ++j) {
-			if (*pSm > *(pArr + j))
+			if (*pSm > *(pArr + j)) {
 				pSm = pArr + j;
+			}
 		}		
 		// 검색된 가장 작은 값을 정렬되지 않은 영역의 가장 첫 번째 원소와 교환한다.
 		SWAP(pSm, pArr + i);
@@ -99,8 +100,9 @@ void   selectionSort(int *pArr, int num) {
 void  bubbleSort(int *pArr, int num) {
 	for (int i=0; i<num; ++i) {
 		for (int j = num - 1; j>0; --j) {
-			if (*(pArr + j) < *(pArr + j - 1))
+			if (*(pArr + j) < *(pArr + j - 1)) {
 				SWAP(pArr + j, pArr + j - 1);
+			}
 		}
 		// PRINT(pArr, num);
 	}
@@ -145,8 +147,9 @@ void  insertionSort(int *pArr, int num) {
 
 // 쉘 정렬: 오름차순
 void shellSort(int *pArr, int num) {
-	for (int interval = num / 2; interval > 0; interval /= 2)
+	for (int interval = num / 2; interval > 0; interval /= 2) {
 		intervalSort(pArr, num, 0, interval);
+	}
 }
 
 // 쉘 정렬에 쓰이는 삽입 정렬: interval 간격만큼 삽입 정렬
@@ -165,8 +168,9 @@ void  intervalSort(int *pArr, int num, int start, int interval) {
 // 퀵 정렬: 오름차순
 void  quickSort(int *pArr, int *pFirst, int *pLast) {
 	// 재귀 함수 탈출 조건
-	if (pFirst >= pLast)
+	if (pFirst >= pLast) {
 		return;
+	}
 
 	// 분할: 기준 값의 왼쪽(작은 값)과 오른쪽(큰 값) 부분 집합으로 분할한다.
 	int	*pi = pFirst - 1;
@@ -190,8 +194,9 @@ void  quickSort(int *pArr, int *pFirst, int *pLast) {
 // 병합 정렬: 오름차순
 void  mergeSort(int *pArr, int *pFirst, int *pLast) {
 	// 재귀 함수 탈출 조건
-	if (pFirst >= pLast)
+	if (pFirst >= pLast) {
 		return;
+	}
 
 	// 중간 원소의 위치(주소) 계산: pFirst와 pLast 범위에서...
 	int	*pMid = pFirst + (int)(pLast - pFirst) / 2;
