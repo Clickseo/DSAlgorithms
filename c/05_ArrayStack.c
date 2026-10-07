@@ -1,7 +1,7 @@
 /*
 	스택: 알고리즘 구현(C) -- 순차 자료구조
 		파일명: ArrayStack.c
-			- 스택 생성.소멸	: stackCreate, stackDestroy
+			- 스택 생성.소멸		: stackCreate, stackDestroy
 			- 스택 상태			: stackEmpty, stackFull
 			- 스택 크기			: stackSize
 			- 데이터 삽입.삭제	: push, pop
@@ -32,15 +32,17 @@ void	stackDestroy(ArrayStack *Stack) {
 
 // 빈 스택 여부 확인
 _Bool	stackEmpty(ArrayStack *Stack) {
-	if (Stack->top == -1)
+	if (Stack->top == -1) {
 		return true;
+	}
 	return false;
 }
 
 // 스택의 포화 상태 여부 확인
 _Bool	stackFull(ArrayStack *Stack) {
-	if (Stack->top + 1 == StackMAXSIZE)
+	if (Stack->top + 1 == StackMAXSIZE) {
 		return true;
+	}
 	return false;
 }
 
@@ -82,7 +84,8 @@ void	printStack(ArrayStack *Stack) {
 
 	printf("\n\t##### 입력된 데이터 #####\n\n");
 	printf("STACK [");
-	for (int i = Stack->top; i >= 0; --i)
+	for (int i = Stack->top; i >= 0; --i) {
 		printf("%3d", Stack->stack[i]);
+	}
 	printf(" ]\n");
 }
