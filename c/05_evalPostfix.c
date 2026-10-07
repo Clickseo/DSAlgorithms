@@ -19,7 +19,6 @@
 element	evalPostfix(char *exp);
 void	InfixToPostfix(char *postfix, char *infix);
 
-
 int main(void)
 {
 	int		res;
@@ -39,18 +38,22 @@ int main(void)
 
 // 후위 표기법: 수식 계산
 element  evalPostfix(char *exp) {
+	// 빈 스택 생성: top = NULL
+	LinkedStack	*Stack = stackCreate();
+
 	int		op1, op2, res;
-	char	temp[bufferMAXSIZE], *p;
-	LinkedStack	*Stack = stackCreate();		// 빈 스택 생성
+	char	*p, temp[bufferMAXSIZE];
 	while (*exp) {
 		// 1) 피연산자 일 경우...
 		if (*exp >= '0' && *exp <= '9') {
 			p = temp;	// 한 자리 이상을 처리 하기 위해...
-			while (*exp >= '0' && *exp <= '9')
+			while (*exp >= '0' && *exp <= '9') {
 				*p++ = *exp++;
+			}
 			*p = '\0';
 			push(Stack, atoi(temp));
 		}
+		
 		// 2) 연산자일 경우...
 		else if (isOperator(*exp)) {
 			op2 = top(Stack);	pop(Stack);
@@ -83,11 +86,15 @@ element  evalPostfix(char *exp) {
 
 // 후위 표기법 변환(중위 표기법 -> 후위 표기법)
 void  InfixToPostfix(char *postfix, char *infix) {
+	// 빈 스택 생성: top = NULL
 	LinkedStack	*Stack = stackCreate();
+	
 	while (*infix) {
 		// 1) '(' 는 스택에 push
-		if (*infix == '(')
+		if (*infix == '(') {
 			push(Stack, *infix++);
+		}
+		
 		// 2) ')'를 만나면 '('가 나올 때까지 pop 한후에 '('는 버린다.
 		else if (*infix == ')') {
 			while (top(Stack) != '(') {
@@ -97,6 +104,7 @@ void  InfixToPostfix(char *postfix, char *infix) {
 			pop(Stack);		// '(' 를 버린다.
 			infix++;
 		}
+			
 		// 3) 연산자이면...
 		else if (isOperator(*infix)) {
 			while (!stackEempty(Stack) &&
@@ -107,6 +115,7 @@ void  InfixToPostfix(char *postfix, char *infix) {
 			}
 			push(s, *infix++);	// 자신을 push
 		}
+		
 		// 4) 피연산자인 경우...
 		else if (*infix >= '0' && *infix <= '9') {
 			while (*infix >= '0' && *infix <= '9')
