@@ -4,7 +4,7 @@
 			- 리스트 성생 및 삭제	: dListCreate, dListDestroy
 			- 노드 탐색				: dListEmpty, countDNode, frontDNode, rearDNode
 			- 노드 삽입 및 삭제		: dListAddRear, dListRemoveFront
-			- 전체 원소 출력		: printDLinkedList
+			- 전체 원소 출력			: printDLinkedList
 */
 
 #include <stdio.h>
@@ -68,15 +68,17 @@ DNode	*rearDNode(DLinkedList *dList) {
 		return NULL;
 
 	DNode	*rNode = dList->head;
-	while (rNode->Rlink)
+	while (rNode->Rlink) {
 		rNode = rNode->Rlink;
+	}
 	return rNode;
 }
 
 // 노드 삽입: 리스트의 맨 마지막 노드로 삽입한다.
 void dListAddRear(DLinkedList *dList, DNode *newNode) {
-	if (dListEmpty(dList))
+	if (dListEmpty(dList)) {
 		dList->head = newNode;
+	}
 	else {
 		DNode	*rNode = rearDNode(dList);
 		rNode->Rlink = newNode;
@@ -91,13 +93,14 @@ void	dListRemoveFront(DLinkedList *dList) {
 
 	DNode	*old = dList->head;
 	dList->head = old->Rlink;
-	if (dList->head != NULL)
+	if (dList->head != NULL) {
 		dList->head->Llink = NULL;
+	}
 	free(old);
 }
 
 // 출력: 리스트 전체 노드의 데이터(순방향)
-void	printDLinkedList(DLinkedList* dList) {
+void	printDLinkedList(DLinkedList *dList) {
 	if (dListEmpty(dList)) {
 		printf("입력된 데이터가 없습니다!!!\n");
 		return;
@@ -113,7 +116,7 @@ void	printDLinkedList(DLinkedList* dList) {
 }
 
 // 출력: 리스트 전체 노드의 데이터(역방향)
-void	printRevDLinkedList(DLinkedList* dList) {
+void	printRevDLinkedList(DLinkedList *dList) {
 	if (dListEmpty(dList)) {
 		printf("입력된 데이터가 없습니다!!!\n");
 		return;
