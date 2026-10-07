@@ -29,7 +29,7 @@ typedef struct _DLinkedList {
 DLinkedList *dListCreate(void);
 DLinkedList *dListDestroy(DLinkedList *dList);
 _Bool	dListEmpty(DLinkedList *dList);						// 빈 리스트 여부 판단
-int	countDNode(DLinkedList *dList);							// 탐색: 노드의 총 개수(count)
+int		countDNode(DLinkedList *dList);						// 탐색: 노드의 총 개수(count)
 DNode	*frontDNode(DLinkedList *dList);					// 탐색: 리스트의 첫 번째 노드(head)
 DNode	*rearDNode(DLinkedList *dList);						// 탐색: 리스트의 맨 마지막 노드
 void	dListAddRear(DLinkedList *dList, DNode *newNode);	// 삽입: 리스트의 맨 마지막 노드로...
