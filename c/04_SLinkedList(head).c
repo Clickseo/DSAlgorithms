@@ -70,8 +70,9 @@ SNode *rearSNode(SLinkedList *sList) {
 		return NULL;
 	
 	SNode *rNode = sList->head;
-	while (rNode->link)
+	while (rNode->link) {
 		rNode = rNode->link;
+	}
 	return rNode;
 }
 
