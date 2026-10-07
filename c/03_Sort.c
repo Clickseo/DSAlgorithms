@@ -168,9 +168,7 @@ void  intervalSort(int *pArr, int num, int start, int interval) {
 // 퀵 정렬: 오름차순
 void  quickSort(int *pArr, int *pFirst, int *pLast) {
 	// 재귀 함수 탈출 조건
-	if (pFirst >= pLast) {
-		return;
-	}
+	if (pFirst >= pLast)	return;
 
 	// 분할: 기준 값의 왼쪽(작은 값)과 오른쪽(큰 값) 부분 집합으로 분할한다.
 	int	*pi = pFirst - 1;
@@ -194,9 +192,7 @@ void  quickSort(int *pArr, int *pFirst, int *pLast) {
 // 병합 정렬: 오름차순
 void  mergeSort(int *pArr, int *pFirst, int *pLast) {
 	// 재귀 함수 탈출 조건
-	if (pFirst >= pLast) {
-		return;
-	}
+	if (pFirst >= pLast)	return;
 
 	// 중간 원소의 위치(주소) 계산: pFirst와 pLast 범위에서...
 	int	*pMid = pFirst + (int)(pLast - pFirst) / 2;
@@ -218,24 +214,15 @@ void  mergeSort(int *pArr, int *pFirst, int *pLast) {
 
 	// 정렬된 왼쪽과 오른쪽 부분 집합을 병합(복사본)한다.
 	while (pi <= pMid && pj <= pLast) {
-		if (*pi <= *pj) {
-			*pt++ = *pi++;
-		}
-		else {
-			*pt++ = *pj++;
-		}
+		if (*pi <= *pj)	*pt++ = *pi++;
+		else			*pt++ = *pj++;		
 	}	
-	// 왼쪽 부분 집합을 복사한다.
-	while (pi <= pMid) {
-		*pt++ = *pi++;
-	}	
-	// 오른쪽 부분 집합을 복사한다.
-	while (pj <= pLast) {
-		*pt++ = *pj++;
-	}
+	while (pi <= pMid)	*pt++ = *pi++;	// 왼쪽 부분 집합을 복사한다.	
+	while (pj <= pLast) *pt++ = *pj++;	// 오른쪽 부분 집합을 복사한다.
 
 	// 정렬된 데이터로 원본 데이터를 재구성한다.
-	pi = pFirst;	pt = pTemp;
+	pi = pFirst;
+	pt = pTemp;
 	while (pi <= pLast) {
 		*pi++ = *pt++;
 	}
@@ -261,13 +248,9 @@ void	contingSort(int *pArr, int num) {
 	if (countArr == NULL) {
 		printf("동적 메모리 공간 할당 실패!!!");
 		exit(100);
-	}
-	for (int i = 0; i < num; ++i) {
-		countArr[pArr[i]]++;
-	}
-	for (int i = 1; i <= maxNum; ++i) {
-		countArr[i] += countArr[i - 1];
-	}
+	}	
+	for (int i = 0; i < num; ++i)		countArr[pArr[i]]++;	
+	for (int i = 1; i <= maxNum; ++i)	countArr[i] += countArr[i - 1];
 
 	// sortArr: countArr의 값을 첨자로 하여 원본 데이터를 정렬된 데이터로 구성한다.
 	int	*sortArr = (int *)calloc(num, sizeof(int));
