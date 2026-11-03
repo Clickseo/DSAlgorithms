@@ -26,12 +26,12 @@ class LinkedBTree {
 public:
 	LinkedBTree();
 	~LinkedBTree();
-	void		  Preorder(DNode<T> *root) const;
-	void		  Inorder(DNode<T> *root) const;
-	void		  Postorder(DNode<T> *root) const;
-	void		  Levelorder(DNode<T> *root) const;
+	void		Preorder(DNode<T> *root) const;
+	void		Inorder(DNode<T> *root) const;
+	void		Postorder(DNode<T> *root) const;
+	void		Levelorder(DNode<T> *root) const;
 	DNode<T>	*makeLinkedBTree(const string str);
-	int			  isOperator(int op);
+	int			isOperator(int op);
 private:
 	DNode<T>	*root_;
 };
