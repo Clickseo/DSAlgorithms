@@ -40,19 +40,26 @@ template <typename T>
 LinkedBSTree<T>::LinkedBSTree() :
     root_(nullptr) {}
 
-// 이진 검색 트리 삭제: 너비 우선 순회
+// 이진 검색 트리 삭제: 모든 노드 삭제
 template <typename T>
 LinkedBSTree<T>::~LinkedBSTree() {
     if (root_ == nullptr)
         return;
 
-    queue<DNode<T>*>	q;
-    DNode<T>            *tNode = nullptr;
+	queue<DNode<T>*>	q;
+	DNode<T>		*tNode = nullptr;
 
-    // 너비 우선 순회
+	// 너비 우선 순회
+	q.push(root_);
+    while (!q.empty()) {
+        tNode = q.front();	q.pop();
+        if (tNode->Llink_)	q.push(tNode->Llink_);
+        if (tNode->Rlink_)	q.push(tNode->Rlink_);
+        delete tNode;
+    }
 }
 
-// 전체 출력: 너비 우선 순회
+// 전체 출력
 template <typename T>
 void    LinkedBSTree<T>::printBSTAll(void) {
     if (root_ == nullptr) {
@@ -60,11 +67,20 @@ void    LinkedBSTree<T>::printBSTAll(void) {
         return;
     }
 
-    cout << "\n이진 검색 트리: 전체 원소 출력" << endl;
-    queue<DNode<T>*>	q;
-    DNode<T>            *tNode = nullptr;
+	cout << "\n이진 검색 트리: 전체 원소 출력" << endl;
+	queue<DNode<T>*>	q;
+	DNode<T>		*tNode = nullptr;
 
-    // 너비 우선 순회
+	// 너비 우선 순회
+	q.push(root_);
+	while (!q.empty()) {
+        tNode = q.front();		q.pop();
+        cout.width(3);
+        cout << tNode->data_;
+        if (tNode->Llink_)	q.push(tNode->Llink_);
+        if (tNode->Rlink_)	q.push(tNode->Rlink_);
+    }
+    cout << endl;
 }
 
 // 데이터 검색: 입출력
