@@ -22,14 +22,30 @@ class LinkedBSTree:
         self.__root = None
 
     # 소멸자: 너비 우선 순회
-    def __del__(self):
+    def __del__(self) :
         if not self.__root : return
+        q = [ self.__root ]
+        while q:
+            tNode = q.pop(0)
+            if tNode.Llink:		q.append(tNode.Llink)
+            elif tNode.Rlink:	q.append(tNode.Rlink)
+            del tNode
 			
-    # 전체 노드 출력: 너비 우선 순회
+    # 전체 노드 출력
     def printBSTAll(self) -> None:
+        # 깊이 우선 순회: 전위 순회
+        def _preorder(root):
+            if root:
+                print(root.data, end=' ')
+                _preorder (root.Llink)
+                _preorder (root.Rlink)
+
         if not self.__root:
             print("\n데이터가 존재하지 않습니다.")
-            return
+            return		
+
+        print("\n이진 검색 트리: 전체 원소 출력")
+        _preorder (self.__root)
 
     # 데이터 검색: 재귀적.비재귀적 용법
     def searchBST(self) -> None:
