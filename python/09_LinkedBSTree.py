@@ -50,7 +50,7 @@ class LinkedBSTree:
     # 데이터 검색: 재귀적.비재귀적 용법
     def searchBST(self) -> None:
         # 데이터 검색: 재귀적 용법,  비재귀적 용법
-        def _searchBST(root, data) -> self.DNode:
+        def _searchBST(root, data):
             pass
 
         if not self.__root:
@@ -69,7 +69,7 @@ class LinkedBSTree:
     # 데이터 삽입: 재귀적.비재귀적 용법
     def insertBST(self) -> None:
         # 데이터 삽입: 재귀적 용법, 비재귀적 용법
-        def _insertBST(root, data) -> self.DNode:
+        def _insertBST(root, data):
             pass
 
         print("\n이진 검색 트리: 데이터 삽입")
