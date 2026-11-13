@@ -4,10 +4,10 @@
         	- __main__: 데이터 삽입.삭제, 전체 원소 출력
 			- 클래스: DNode
 			- 클래스: LinkedBSTree
-				데이터 삽입: InsertBST(_insertBST)
-				데이터 삭제: DeleteBST(_deleteBST)
-				데이터 검색: SearchBST(_searchBST)
-				전체 원소 출력: printBSTAll(Preorder)
+					데이터 삽입: InsertBST(_insertBST)
+					데이터 삭제: DeleteBST(_deleteBST)
+					데이터 검색: SearchBST(_searchBST)
+					전체 원소 출력: printBSTAll(Preorder)
 '''
 
 # 클래스 설계: LinkedBSTree
@@ -22,34 +22,34 @@ class LinkedBSTree:
         self.__root = None
 
     # 소멸자: 너비 우선 순회
-    def __del__(self) :
+    def __del__(self):
         if not self.__root : return
         q = [ self.__root ]
         while q:
             tNode = q.pop(0)
-            if tNode.Llink:		q.append(tNode.Llink)
-            elif tNode.Rlink:	q.append(tNode.Rlink)
+            if tNode.Llink:     q.append(tNode.Llink)
+            elif tNode.Rlink:   q.append(tNode.Rlink)
             del tNode
 			
-    # 전체 노드 출력
+    # 전체 노드 출력: 너비 우선 순회
     def printBSTAll(self) -> None:
-        # 깊이 우선 순회: 전위 순회
-        def _preorder(root):
-            if root:
-                print(root.data, end=' ')
-                _preorder (root.Llink)
-                _preorder (root.Rlink)
-
         if not self.__root:
             print("\n데이터가 존재하지 않습니다.")
-            return		
-
+            return
+        
+        # 너비 우선 순회: 비재귀적 용법
         print("\n이진 검색 트리: 전체 원소 출력")
-        _preorder (self.__root)
+        q = [ self.__root ]
+        while q:
+            tNode = q.pop(0)
+            print(f'{tNode.data}', end= ' ')
+            if tNode.Llink:	q.append(tNode.Llink)
+            if tNode.Rlink: q.append(tNode.Rlink)
+        print()
 
     # 데이터 검색: 재귀적.비재귀적 용법
     def searchBST(self) -> None:
-        # 데이터 검색: 재귀적 용법,  비재귀적 용법
+        # 데이터 검색: 재귀적.비재귀적 용법
         def _searchBST(root, data):
             pass
 
@@ -68,7 +68,7 @@ class LinkedBSTree:
 
     # 데이터 삽입: 재귀적.비재귀적 용법
     def insertBST(self) -> None:
-        # 데이터 삽입: 재귀적 용법, 비재귀적 용법
+        # 데이터 삽입: 재귀적.비재귀적 용법
         def _insertBST(root, data):
             pass
 
@@ -82,8 +82,8 @@ class LinkedBSTree:
     # 데이터 삭제: 재귀적.비재귀적 용법
     def deleteBST(self) -> None:
         # 데이터 삭제: 비재귀적 용법
-        def _deleteBST(root, data) -> self.DNode:
-            pass
+        def _deleteBST(root, data):
+	        pass
         
         if not self.__root:
             print("\n데이터가 존재하지 않습니다.")
@@ -97,8 +97,8 @@ class LinkedBSTree:
             self.__root = _deleteBST(self.__root, num)
 
 if __name__ == '__main__':
-    import os	# system
-    import sys  # exit
+    import os		# system
+    import sys  	# exit
 
     bst = LinkedBSTree()
     while True:
@@ -120,6 +120,3 @@ if __name__ == '__main__':
                 sys.exit("\n프로그램 종료!!!")
             case _: print('\n잘못 선택 하셨습니다. \n')
         os.system('pause')
-
-    # del bst
-    # bst.__del__
