@@ -19,48 +19,24 @@ public:
 	void	insertEdge(int row, int col, int weight);
 	void	printAdjMatrix(void) const;
 private:
-	int	vertex_;	// 정점의 개수
+	int	vertex_;		// 정점의 개수
 	int	**adjMatrix_;	// 인접 행렬
 };
 
 // 생성자: 2차원 배열의 동적 메모리 할당
 GraphType::GraphType(int vertex): vertex_(vertex) {
-	adjMatrix_ = new int * [vertex + 1];		// 포인터 배열
-	for (int i = 0; i < vertex; ++i) {
-		adjMatrix_[i] = new int[vertex];	// 1차원 배열
-		memset(adjMatrix_[i], 0, sizeof(int) * vertex);
-	}
-	adjMatrix_[vertex] = nullptr;
 }
 
 // 그래프 삭제: 모든 노드 삭제
 GraphType::~GraphType(void) {
-	for (int i = 0; i < vertex_; ++i) {
-		delete[] adjMatrix_[i];
-	}
-	delete[] adjMatrix_;
-	// vertex_ = 0;
 }
 
 // 간선 추가
 void  GraphType::insertEdge(int row, int col, int weight = 1) {
-	if (row >= vertex_ || col >= vertex_) {
-		// cout << "그래프에 없는 정점입니다!!!" << endl;
-		return;
-	}
-	adjMatrix_[row][col] = weight;
 }
 
 // 그래프 전체 출력
 void  GraphType::printAdjMatrix(void) const {
-	for (int i = 0; i < vertex_; ++i) {
-		cout << "\n\t";
-		for (int j = 0; j < vertex_; ++j) {
-			cout.width(3);
-			cout << adjMatrix_[i][j];
-		}
-	}
-	cout << endl;
 }
 
 int main(void)
