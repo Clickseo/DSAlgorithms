@@ -4,10 +4,10 @@
 			- main	: 그래프 생성 및 간선 추가
 			구조체: GNode
 			구조체: GraphType
-			- 함  수: 그래프 노드 생성	: makeGNode
-					그래프 생성.소멸	: graphCreate, graphDestroy
-					그래프 간선 추가	: insertEdge
-					그래프 전체 출력	: printAdjSList
+			- 함  수:	그래프 노드 생성: makeGNode
+						그래프 생성.소멸: graphCreate, graphDestroy
+						그래프 간선 추가: insertEdge
+						그래프 전체 출력: printAdjSList
 */
 
 #include <stdio.h>
@@ -17,7 +17,7 @@
 typedef struct _GNode {
 	int				vertex;	// 정점
 	int				weight;	// 가중치
-	struct _GNode*	link;
+	struct _GNode	*link;
 } GNode;
 
 // 그래프 노드(C): 그래프 노드 생성
