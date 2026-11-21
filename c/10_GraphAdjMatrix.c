@@ -13,7 +13,7 @@
 
 // 그래프: GraphType
 typedef  struct _GraphType {
-	int	vertex;			  // 정점의 개수
+	int	vertex;			// 정점의 개수
 	int	**adjMatrix;	// 인접 행렬
 } GraphType;
 
