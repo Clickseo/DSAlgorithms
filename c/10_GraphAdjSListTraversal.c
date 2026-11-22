@@ -12,8 +12,8 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>        // malloc, calloc, free
-#include <stdbool.h>      // bool, true, false
+#include <stdlib.h>			// malloc, calloc, free
+#include <stdbool.h>		// bool, true, false
 #include "LinkedStack.h"	// LinkedStack
 #include "LinkedQueue.h"	// LinkedQueue
 
@@ -44,7 +44,7 @@ void	BFSAdjSList(GraphType *Graph, int vertex);
 int main(void)
 {
 	// G9 : 무향 그래프
-	GraphType* G9 = graphCreate(7);
+	GraphType *G9 = graphCreate(7);
 
 	// 정점: A(0)
 	insertEdge(G9, 0, 1, 0);	// A(0) - B(1)
@@ -168,7 +168,7 @@ void  printAdjSList(GraphType *G) {
 }
 
 // 그래프 순회: 깊이 우선 탐색(DFS)
-void  DFSAdjSList(GraphType *G, int  vertex) {
+void  DFSAdjSList(GraphType *G, int vertex) {
 	// 각 정점의 방문(Visited) 여부: true, false
 	int	*pVisited = (int*)calloc(G->vertex, sizeof(int));
 
@@ -201,7 +201,7 @@ void  DFSAdjSList(GraphType *G, int  vertex) {
 }
 
 // 그래프 순회: 너비 우선 탐색(BFS)
-void	BFSAdjSList(GraphType *G, int  vertex) {
+void	BFSAdjSList(GraphType *G, int vertex) {
 	// 각 정점의 방문(Visited) 여부: true, false
 	int	*pVisited = (int*)calloc(G->vertex, sizeof(int));
 
