@@ -4,10 +4,10 @@
 			- main	: 그래프 생성 및 간선 추가
 			구조체: GNode
 			구조체: GraphType
-			- 함  수:	그래프 노드 생성: makeGNode
-						그래프 생성.소멸: graphCreate, graphDestroy
-						그래프 간선 추가: insertEdge
-						그래프 전체 출력: printAdjSList
+			- 함  수: 그래프 노드 생성	: makeGNode
+						그래프 생성.소멸	: graphCreate, graphDestroy
+						그래프 간선 추가	: insertEdge
+						그래프 전체 출력	: printAdjSList
 */
 
 #include <stdio.h>
@@ -17,7 +17,7 @@
 typedef struct _GNode {
 	int				vertex;	// 정점
 	int				weight;	// 가중치
-	struct _GNode	*link;
+	struct _GNode*	link;
 } GNode;
 
 // 그래프 노드(C): 그래프 노드 생성
@@ -100,9 +100,9 @@ GraphType* graphCreate(int vertex) {
 }
 
 // 그래프 삭제
-GraphType *graphDestroy(GraphType* G) {
+GraphType *graphDestroy(GraphType *G) {
 	GNode *old;
-	for (int i = 0; i < G->vertex; i++) {
+	for (int i = 0; i < G->vertex; ++i) {
 		old = G->adjSList[i];
 		while (old) {
 			G->adjSList[i] = old->link;
@@ -111,12 +111,11 @@ GraphType *graphDestroy(GraphType* G) {
 		}
 	}
 	free(G->adjSList);
-	free(G);
 	return NULL;
 }
 
 // 그래프 간선 추가
-void  insertEdge(GraphType* G, int  row, int  col, int weight) {
+void  insertEdge(GraphType* G, int row, int col, int weight) {
 	if (row >= G->vertex || col >= G->vertex) {
 		// printf("그래프에 없는 정점입니다!!!\n");
 		return;
@@ -142,7 +141,7 @@ void  printAdjSList(GraphType* G) {
 		return;
 	}
 
-	for (int i = 0; i < G->vertex; i++) {
+	for (int i = 0; i < G->vertex; ++i) {
 		printf("\t정점 %c의 인접 리스트: ", i + 65);
 		GNode* tNode = G->adjSList[i];
 		while (tNode) {
