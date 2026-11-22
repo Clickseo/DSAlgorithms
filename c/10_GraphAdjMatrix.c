@@ -4,8 +4,8 @@
 			- main	: 그래프 생성 및 간선 추가
 			- 구조체: GraphType
 			- 함  수: 그래프 생성.소멸	: graphCreate, graphDestroy
-					그래프 간선 추가	: insertEdge
-					그래프 전체 출력	: printAdjSList
+						그래프 간선 추가	: insertEdge
+						그래프 전체 출력	: printAdjSList
 */
 
 #include <stdio.h>
@@ -62,7 +62,7 @@ int main(void)
 	return 0;
 }
 
-// 그래프 생성
+// 그래프 생성: 2차원 배열 동적 메모리 할당
 GraphType *graphCreate(int vertex) {
 	GraphType* G = (GraphType*)malloc(sizeof(GraphType));
 	if (G == NULL) {
@@ -79,7 +79,7 @@ GraphType *graphCreate(int vertex) {
 	return G;
 }
 
-// 그래프 삭제
+// 그래프 삭제: 2차원 배열 동적 메모리 할당
 void	graphDestroy(GraphType *G) {
 	for (int i = 0; i < G->vertex; ++i) {
 		free(G->adjMatrix[i]);
@@ -88,8 +88,8 @@ void	graphDestroy(GraphType *G) {
 	G->vertex = 0;
 }
 
-// 간선 추가
-void  insertEdge(GraphType* G, int  row, int  col, int weight) {
+// 간선 추가: 특정 행과 열의 가중치
+void  insertEdge(GraphType* G, int row, int col, int weight) {
 	if (row >= G->vertex || col >= G->vertex) {
 		// printf("그래프에 없는 정점입니다!!!\n");
 		return;
@@ -97,7 +97,7 @@ void  insertEdge(GraphType* G, int  row, int  col, int weight) {
 	G->adjMatrix[row][col] = weight;
 }
 
-// 그래프 전체 출력
+// 그래프 전체 출력: 2차원 배열 동적 메모리 할당
 void  printAdjMatrix(GraphType* G) {
 	for (int i = 0; i < G->vertex; ++i) {
 		printf("\n\t");
