@@ -2,12 +2,12 @@
 	그래프 표현(인접 리스트): 알고리즘 구현
 		파일명: GraphAdjSListTraversal.c
 			- main	: 그래프 생성 및 간선 추가
-			구조체: GNode
-			구조체: GraphType
-			- 함  수: 그래프 노드 생성	: makeGNode
+				구조체: GNode
+				구조체: GraphType
+					그래프 노드 생성	: makeGNode
 					그래프 생성.소멸	: graphCreate, graphDestroy
 					그래프 간선 추가	: insertEdge
-					그래프 순회			: DFSAdjSList, BFSAdjSList
+					그래프 순회		: DFSAdjSList, BFSAdjSList
 					그래프 전체 출력	: printAdjSList
 */
 
